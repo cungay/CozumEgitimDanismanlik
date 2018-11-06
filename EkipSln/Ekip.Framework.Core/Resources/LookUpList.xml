@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Lists>
+  <!--<List Key="Gender">
+    <Item Name="None" Description="Belirtilmedi" Value="0" />
+    <Item Name="Male" Description="Erkek" Value="1" />
+    <Item Name="Female" Description="Kız" Value="2" />
+  </List>-->
+  <!--<List Key="ClientTitle">
+    <Item Name="None" Description="Belirtilmedi" Value="0"></Item>
+    <Item Name="Student" Description="Öğrenci" Value="1"></Item>
+    <Item Name="Employee" Description="Çalışyor" Value="2"></Item>
+  </List>-->
+  <!--<List Key="ClassLevel">
+    <Item Name="None" Description="Belirtilmedi" Value="0"></Item>
+    <Item Name="" Description="Ana Okulu" Value="1"></Item>
+    <Item Name="" Description="İlkÖğretm" Value="2"></Item>
+    <Item Name="" Description="Lise" Value="3"></Item>
+    <Item Name="" Description="Üniversite" Value="4"></Item>
+    <Item Name="" Description="Lisans" Value="5"></Item>
+    <Item Name="" Description="Lisans Üstü" Value="6"></Item>
+  </List>-->
+  <!--<List Key="EducatorTitle">
+    <Item Name="None" Description="Belirtilmedi" Value="0"></Item>
+    <Item Name="" Description="Sınıf Öğretmeni" Value="1"></Item>
+    <Item Name="" Description="Ders Öğretmeni" Value="2"></Item>
+    <Item Name="" Description="Rehber Öğretmen" Value="3"></Item>
+  </List>-->
+  <!--<List Key="ClassRoom">
+    <Item Name="None" Description="Belirtilmedi" Value="0"></Item>
+    <Item Name="" Description="Ana Sınıfı" Value="1"></Item>
+    <Item Name="" Description="Hazırlık Sınıfı" Value="1"></Item>
+    <Item Name="" Description="1.Sınıf" Value="1"></Item>
+    <Item Name="" Description="2.Sınıf" Value="2"></Item>
+    <Item Name="" Description="3.Sınıf" Value="3"></Item>
+    <Item Name="" Description="4.Sınıf" Value="4"></Item>
+    <Item Name="" Description="5.Sınıf" Value="5"></Item>
+    <Item Name="" Description="6.Sınıf" Value="6"></Item>
+  </List>-->
+  <!--<List Key="SeanceStatus">
+    <Item Name="None" Description="Belirtilmedi" Value="0"></Item>
+    <Item Name="" Description="Randevu Alındı" Value="1"></Item>
+    <Item Name="" Description="Randevu İptal" Value="2"></Item>
+    <Item Name="" Description="Randevuya Gelmedi" Value="3"></Item>
+    <Item Name="" Description="Randevu Ertelendi" Value="4"></Item>
+    <Item Name="" Description="Tamamlandı" Value="5"></Item>
+  </List>-->
+  <!--<List Key="AddressTitle">
+    <Item Name="None" Description="Belirtilmedi" Value="0" />
+    <Item Name="Home" Description="Ev Adresi" Value="1" />
+    <Item Name="Job" Description="İş Adresi" Value="2" />
+    <Item Name="Other" Description="Diğer" Value="3" />
+  </List>-->
+</Lists>

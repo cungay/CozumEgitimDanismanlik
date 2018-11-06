@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Validations>
+  <Validate Key="Client">
+    <Field PropertyName="FullName" FriendlyName="Adı soyadı" Required="True" ErrorMessage="{0} boş geçilemez." Target="txtFullName" Operator="16" Value=""></Field>
+    <Field PropertyName="FirstContactDate" FriendlyName="Geliş Tarihi" Required="True" ErrorMessage="{0} boş geçilemez." Target="deFirstContact" Operator="16" Value=""></Field>
+    <Field PropertyName="MiddleName" FriendlyName="2.isim" Required="False" ErrorMessage="{0} boş geçilemez." Target="txtMiddleName" Operator="16" Value=""></Field>
+    <Field PropertyName="Reference" FriendlyName="Referans" Required="False"  ErrorMessage="{0} boş geçilemez." Target="txtRef" Operator="16" Value=""></Field>
+    <Field PropertyName="IdCard" FriendlyName="TC kimlik No" Required="False" ErrorMessage="{0} boş geçilemez." Target="txtIdCard" Operator="16" Value=""></Field>
+    <Field PropertyName="BirthDate" FriendlyName="Doğum tarihi" Required="True" ErrorMessage="{0} boş geçilemez." Target="deBirthDate"  Operator="16" Value=""></Field>
+    <Field PropertyName="CalenderAge" FriendlyName="Takvim yaşı" Required="False" ErrorMessage="{0} boş geçilemez." Target="txtCalendarAge"  Operator="16" Value=""></Field>
+    <Field PropertyName="Pediatrician" FriendlyName="Çocuk doktoru" Required="False" ErrorMessage="{0} boş geçilemez." Target="txtPediatrician" Operator="16" Value=""></Field>
+    <Field PropertyName="Photo" FriendlyName="Fotoğraf" Required="False" ErrorMessage="{0} boş geçilemez." Target="picClientImage" Operator="16" Value=""></Field>
+    <Field PropertyName="Note" FriendlyName="Açıklama" Required="False" ErrorMessage="{0} boş geçilemez." Target="rgFamilyStatus" Operator="16" Value=""></Field>
+    <Field PropertyName="FamilyStatus" FriendlyName="Anne-Baba Durumu" Required="False" ErrorMessage="{0} belirtilmedi." Target="rgFamilyStatus" Operator="2" Value="0"></Field>
+    <Field PropertyName="Blood" FriendlyName="Özlük Durumu" Required="False" ErrorMessage="{0} belirtilmedi." Target="rgBlood" Operator="2" Value="0"></Field>
+    <Field PropertyName="Gender" FriendlyName="Cinsiyet" Required="True" ErrorMessage="{0} belirtilmedi." Target="cbGender" Operator="2" Value="Belirtilmedi"></Field>
+  </Validate>
+
+  <Validate Key="ClientAddress">
+    <Field PropertyName="AddressLine" FriendlyName="Adres" Required="False" ErrorMessage="{0} boş geçilemez." Target="txtAddressLine" Operator="16" Value=""></Field>
+    <Field PropertyName="CityID" FriendlyName="Şehir" Required="False" ErrorMessage="{0} belirtilmedi." Target="lkCity" Operator="16" Value=""></Field>
+    <Field PropertyName="lkDistrict" FriendlyName="Bölge" Required="False" ErrorMessage="{0} belirtilmedi." Target="lkDistrict" Operator="16" Value=""></Field>
+  </Validate>
+
+  <Validate Key="ClientMother">
+    <Field PropertyName="FullName" FriendlyName="Adı soyadı" Required="False" ErrorMessage="{0} boş geçilemez." Target="" Operator="-1" Value=""></Field>
+    <Field PropertyName="Email" FriendlyName="E-posta" Required="False" ErrorMessage="{0} boş geçilemez." Target="" Operator="-1" Value=""></Field>
+    <Field PropertyName="MobilePhone" FriendlyName="Cep Telefonu" Required="False" ErrorMessage="{0} boş geçilemez." Target="" Operator="-1" Value=""></Field>
+    <Field PropertyName="HomePhone" FriendlyName="Ev Telefonu" Required="False" ErrorMessage="{0} boş geçilemez." Target="" Operator="-1" Value=""></Field>
+  </Validate>
+
+  <Validate Key="ClientFather">
+    <Field PropertyName="FullName" FriendlyName="Adı soyadı" Required="False" ErrorMessage="{0} boş geçilemez." Target="" Operator="-1" Value=""></Field>
+    <Field PropertyName="Email" FriendlyName="E-posta" Required="False" ErrorMessage="{0} boş geçilemez." Target="" Operator="-1" Value=""></Field>
+    <Field PropertyName="MobilePhone" FriendlyName="Cep Telefonu" Required="False" ErrorMessage="{0} boş geçilemez." Target="" Operator="-1" Value=""></Field>
+    <Field PropertyName="HomePhone" FriendlyName="Ev Telefonu" Required="False" ErrorMessage="{0} boş geçilemez." Target="" Operator="-1" Value=""></Field>
+  </Validate>
+  
+</Validations>
