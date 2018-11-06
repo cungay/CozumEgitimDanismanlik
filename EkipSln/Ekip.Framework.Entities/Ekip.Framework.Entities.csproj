@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ekip.Framework.Entities</RootNamespace>
+    <AssemblyName>Ekip.Framework.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\packages\Microsoft.Pratices.EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography">
+      <HintPath>..\packages\Microsoft.Pratices.EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Pratices.EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\Microsoft.Pratices.EnterpriseLibrary\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Pratices.EnterpriseLibrary\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Advisor.cs" />
+    <Compile Include="AdvisorBase.generated.cs" />
+    <Compile Include="Appointment.cs" />
+    <Compile Include="AppointmentBase.generated.cs" />
+    <Compile Include="AppointmentStatus.cs" />
+    <Compile Include="AppointmentStatusBase.generated.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="AreaBase.generated.cs" />
+    <Compile Include="CalenderAge.cs" />
+    <Compile Include="CalenderAgeBase.generated.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="CityBase.generated.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientAddress.cs" />
+    <Compile Include="ClientAddressBase.generated.cs" />
+    <Compile Include="ClientBase.generated.cs" />
+    <Compile Include="ClientDoc.cs" />
+    <Compile Include="ClientDocBase.generated.cs" />
+    <Compile Include="ClientFather.cs" />
+    <Compile Include="ClientFatherBase.generated.cs" />
+    <Compile Include="ClientForm.cs" />
+    <Compile Include="ClientFormBase.generated.cs" />
+    <Compile Include="ClientMother.cs" />
+    <Compile Include="ClientMotherBase.generated.cs" />
+    <Compile Include="ClientSchool.cs" />
+    <Compile Include="ClientSchoolBase.generated.cs" />
+    <Compile Include="ClientSub.cs" />
+    <Compile Include="ClientSubBase.generated.cs" />
+    <Compile Include="ClientTest.cs" />
+    <Compile Include="ClientTestBase.generated.cs" />
+    <Compile Include="District.cs" />
+    <Compile Include="DistrictBase.generated.cs" />
+    <Compile Include="Doctor.cs" />
+    <Compile Include="DoctorBase.generated.cs" />
+    <Compile Include="Education.cs" />
+    <Compile Include="EducationBase.generated.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="EntityBaseCore.generated.cs" />
+    <Compile Include="EntityCache.cs" />
+    <Compile Include="EntityFactory.cs" />
+    <Compile Include="EntityFactoryBase.cs" />
+    <Compile Include="EntityFilter.cs" />
+    <Compile Include="EntityHelper.cs" />
+    <Compile Include="EntityKeyBase.cs" />
+    <Compile Include="EntityKeyBaseCore.generated.cs" />
+    <Compile Include="EntityLocator.cs" />
+    <Compile Include="EntityManager.cs" />
+    <Compile Include="EntityPropertyComparer.cs" />
+    <Compile Include="EntityUtil.cs" />
+    <Compile Include="FormQuestion.cs" />
+    <Compile Include="FormQuestionBase.generated.cs" />
+    <Compile Include="GenericTypeConverter.cs" />
+    <Compile Include="IAdvisor.cs" />
+    <Compile Include="IAppointment.cs" />
+    <Compile Include="IAppointmentStatus.cs" />
+    <Compile Include="IArea.cs" />
+    <Compile Include="ICalenderAge.cs" />
+    <Compile Include="ICity.cs" />
+    <Compile Include="IClient.cs" />
+    <Compile Include="IClientAddress.cs" />
+    <Compile Include="IClientDoc.cs" />
+    <Compile Include="IClientFather.cs" />
+    <Compile Include="IClientForm.cs" />
+    <Compile Include="IClientMother.cs" />
+    <Compile Include="IClientSchool.cs" />
+    <Compile Include="IClientSub.cs" />
+    <Compile Include="IClientTest.cs" />
+    <Compile Include="IDistrict.cs" />
+    <Compile Include="IDoctor.cs" />
+    <Compile Include="IEducation.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IEntityCacheItem.cs" />
+    <Compile Include="IEntityFactory.cs" />
+    <Compile Include="IEntityId.cs" />
+    <Compile Include="IEntityKey.cs" />
+    <Compile Include="IFormQuestion.cs" />
+    <Compile Include="IJob.cs" />
+    <Compile Include="INeighborhood.cs" />
+    <Compile Include="IObservationForm.cs" />
+    <Compile Include="IObservationFormAnswer.cs" />
+    <Compile Include="IObservationFormGroup.cs" />
+    <Compile Include="IObservationFormOption.cs" />
+    <Compile Include="IOption.cs" />
+    <Compile Include="IProvince.cs" />
+    <Compile Include="IQuestion.cs" />
+    <Compile Include="IQuestionForm.cs" />
+    <Compile Include="IQuestionFormAnswer.cs" />
+    <Compile Include="IQuestionFormGroup.cs" />
+    <Compile Include="IQuestionFormOption.cs" />
+    <Compile Include="IQuestionGroup.cs" />
+    <Compile Include="IQuestionOption.cs" />
+    <Compile Include="IReason.cs" />
+    <Compile Include="IRegion.cs" />
+    <Compile Include="ISchool.cs" />
+    <Compile Include="ISeance.cs" />
+    <Compile Include="ISeanceQuestion.cs" />
+    <Compile Include="ISeanceQuestionAnswer.cs" />
+    <Compile Include="ISeanceQuestionOption.cs" />
+    <Compile Include="ISeanceReason.cs" />
+    <Compile Include="ISession.cs" />
+    <Compile Include="ISibling.cs" />
+    <Compile Include="IStreet.cs" />
+    <Compile Include="ITeacher.cs" />
+    <Compile Include="ITest.cs" />
+    <Compile Include="ITestAnswer.cs" />
+    <Compile Include="ITestResult.cs" />
+    <Compile Include="ITown.cs" />
+    <Compile Include="IUser.cs" />
+    <Compile Include="IWippsi.cs" />
+    <Compile Include="IWiscr.cs" />
+    <Compile Include="Job.cs" />
+    <Compile Include="JobBase.generated.cs" />
+    <Compile Include="ListBase.cs" />
+    <Compile Include="Neighborhood.cs" />
+    <Compile Include="NeighborhoodBase.generated.cs" />
+    <Compile Include="ObservationForm.cs" />
+    <Compile Include="ObservationFormAnswer.cs" />
+    <Compile Include="ObservationFormAnswerBase.generated.cs" />
+    <Compile Include="ObservationFormBase.generated.cs" />
+    <Compile Include="ObservationFormGroup.cs" />
+    <Compile Include="ObservationFormGroupBase.generated.cs" />
+    <Compile Include="ObservationFormOption.cs" />
+    <Compile Include="ObservationFormOptionBase.generated.cs" />
+    <Compile Include="Option.cs" />
+    <Compile Include="OptionBase.generated.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Province.cs" />
+    <Compile Include="ProvinceBase.generated.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="QuestionBase.generated.cs" />
+    <Compile Include="QuestionForm.cs" />
+    <Compile Include="QuestionFormAnswer.cs" />
+    <Compile Include="QuestionFormAnswerBase.generated.cs" />
+    <Compile Include="QuestionFormBase.generated.cs" />
+    <Compile Include="QuestionFormGroup.cs" />
+    <Compile Include="QuestionFormGroupBase.generated.cs" />
+    <Compile Include="QuestionFormOption.cs" />
+    <Compile Include="QuestionFormOptionBase.generated.cs" />
+    <Compile Include="QuestionGroup.cs" />
+    <Compile Include="QuestionGroupBase.generated.cs" />
+    <Compile Include="QuestionOption.cs" />
+    <Compile Include="QuestionOptionBase.generated.cs" />
+    <Compile Include="Reason.cs" />
+    <Compile Include="ReasonBase.generated.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="RegionBase.generated.cs" />
+    <Compile Include="School.cs" />
+    <Compile Include="SchoolBase.generated.cs" />
+    <Compile Include="Seance.cs" />
+    <Compile Include="SeanceBase.generated.cs" />
+    <Compile Include="SeanceQuestion.cs" />
+    <Compile Include="SeanceQuestionAnswer.cs" />
+    <Compile Include="SeanceQuestionAnswerBase.generated.cs" />
+    <Compile Include="SeanceQuestionBase.generated.cs" />
+    <Compile Include="SeanceQuestionOption.cs" />
+    <Compile Include="SeanceQuestionOptionBase.generated.cs" />
+    <Compile Include="SeanceReason.cs" />
+    <Compile Include="SeanceReasonBase.generated.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="SessionBase.generated.cs" />
+    <Compile Include="Sibling.cs" />
+    <Compile Include="SiblingBase.generated.cs" />
+    <Compile Include="Street.cs" />
+    <Compile Include="StreetBase.generated.cs" />
+    <Compile Include="Teacher.cs" />
+    <Compile Include="TeacherBase.generated.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="TestAnswer.cs" />
+    <Compile Include="TestAnswerBase.generated.cs" />
+    <Compile Include="TestBase.generated.cs" />
+    <Compile Include="TestResult.cs" />
+    <Compile Include="TestResultBase.generated.cs" />
+    <Compile Include="TList.cs" />
+    <Compile Include="Town.cs" />
+    <Compile Include="TownBase.generated.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserBase.generated.cs" />
+    <Compile Include="Validation\BrokenRule.cs" />
+    <Compile Include="Validation\BrokenRulesList.cs" />
+    <Compile Include="Validation\CommonRules.cs" />
+    <Compile Include="Validation\ValidationRuleArgs.cs" />
+    <Compile Include="Validation\ValidationRuleHandler.cs" />
+    <Compile Include="Validation\ValidationRuleInfo.cs" />
+    <Compile Include="Validation\ValidationRules.cs" />
+    <Compile Include="Views\ClientView.cs" />
+    <Compile Include="Views\ClientViewBase.generated.cs" />
+    <Compile Include="Views\ProvinceView.cs" />
+    <Compile Include="Views\ProvinceViewBase.generated.cs" />
+    <Compile Include="Views\SeanceView.cs" />
+    <Compile Include="Views\SeanceViewBase.generated.cs" />
+    <Compile Include="Views\VList.cs" />
+    <Compile Include="Views\WippsiView.cs" />
+    <Compile Include="Views\WippsiViewBase.generated.cs" />
+    <Compile Include="Views\WiscrView.cs" />
+    <Compile Include="Views\WiscrViewBase.generated.cs" />
+    <Compile Include="WeakRefDictionary.cs" />
+    <Compile Include="Wippsi.cs" />
+    <Compile Include="WippsiBase.generated.cs" />
+    <Compile Include="Wiscr.cs" />
+    <Compile Include="WiscrBase.generated.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

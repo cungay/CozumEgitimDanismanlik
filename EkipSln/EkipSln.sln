@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekip.Framework.Data", "Ekip.Framework.Data\Ekip.Framework.Data.csproj", "{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekip.Framework.Entities", "Ekip.Framework.Entities\Ekip.Framework.Entities.csproj", "{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +31,19 @@ Global
 		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{22E435FB-EA14-48A2-9DEE-D14820B1EF1E} = {AB450296-D213-4AC7-BFFF-7E802150B020}
+		{A60FC179-2520-4044-AE82-C087CFC372A5} = {AB450296-D213-4AC7-BFFF-7E802150B020}
 		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9} = {AB450296-D213-4AC7-BFFF-7E802150B020}
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB} = {AB450296-D213-4AC7-BFFF-7E802150B020}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09DB5B8B-0C25-4BAB-8781-91161A6F1523}

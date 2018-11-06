@@ -85,5 +85,11 @@
   <ItemGroup>
     <None Include="Resources\Validation.xml.bak" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ekip.Framework.Entities\Ekip.Framework.Entities.csproj">
+      <Project>{1f8eaf95-7f11-4db2-9d70-c0c7862050bb}</Project>
+      <Name>Ekip.Framework.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

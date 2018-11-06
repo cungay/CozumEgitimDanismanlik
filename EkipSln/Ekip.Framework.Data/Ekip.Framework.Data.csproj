@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>b09295ae-9ca1-4b68-9ac0-2f1475e1d5f9</ProjectGuid>
+    <ProjectGuid>{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ekip.Framework.Data</RootNamespace>
@@ -31,24 +31,178 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Pratices.EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\packages\Microsoft.Pratices.EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\Microsoft.Pratices.EnterpriseLibrary\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Pratices.EnterpriseLibrary\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Bases\AdvisorProviderBase.cs" />
+    <Compile Include="Bases\AdvisorProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\AppointmentProviderBase.cs" />
+    <Compile Include="Bases\AppointmentProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\AppointmentStatusProviderBase.cs" />
+    <Compile Include="Bases\AppointmentStatusProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\AreaProviderBase.cs" />
+    <Compile Include="Bases\AreaProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\CalenderAgeProviderBase.cs" />
+    <Compile Include="Bases\CalenderAgeProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\CityProviderBase.cs" />
+    <Compile Include="Bases\CityProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ClientAddressProviderBase.cs" />
+    <Compile Include="Bases\ClientAddressProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ClientDocProviderBase.cs" />
+    <Compile Include="Bases\ClientDocProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ClientFatherProviderBase.cs" />
+    <Compile Include="Bases\ClientFatherProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ClientFormProviderBase.cs" />
+    <Compile Include="Bases\ClientFormProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ClientMotherProviderBase.cs" />
+    <Compile Include="Bases\ClientMotherProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ClientProviderBase.cs" />
+    <Compile Include="Bases\ClientProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ClientSchoolProviderBase.cs" />
+    <Compile Include="Bases\ClientSchoolProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ClientSubProviderBase.cs" />
+    <Compile Include="Bases\ClientSubProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ClientTestProviderBase.cs" />
+    <Compile Include="Bases\ClientTestProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\DistrictProviderBase.cs" />
+    <Compile Include="Bases\DistrictProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\DoctorProviderBase.cs" />
+    <Compile Include="Bases\DoctorProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\EducationProviderBase.cs" />
+    <Compile Include="Bases\EducationProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\EntityProviderBase.cs" />
+    <Compile Include="Bases\EntityProviderBaseCore.generated.cs" />
+    <Compile Include="Bases\EntityViewProviderBase.cs" />
+    <Compile Include="Bases\EntityViewProviderBaseCore.generated.cs" />
+    <Compile Include="Bases\FormQuestionProviderBase.cs" />
+    <Compile Include="Bases\FormQuestionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\INetTiersProvider.cs" />
+    <Compile Include="Bases\JobProviderBase.cs" />
+    <Compile Include="Bases\JobProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\NeighborhoodProviderBase.cs" />
+    <Compile Include="Bases\NeighborhoodProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\NetTiersProvider.cs" />
+    <Compile Include="Bases\NetTiersProviderBase.cs" />
+    <Compile Include="Bases\NetTiersProviderCollection.cs" />
+    <Compile Include="Bases\NetTiersServiceSection.cs" />
+    <Compile Include="Bases\ObservationFormAnswerProviderBase.cs" />
+    <Compile Include="Bases\ObservationFormAnswerProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ObservationFormGroupProviderBase.cs" />
+    <Compile Include="Bases\ObservationFormGroupProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ObservationFormOptionProviderBase.cs" />
+    <Compile Include="Bases\ObservationFormOptionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ObservationFormProviderBase.cs" />
+    <Compile Include="Bases\ObservationFormProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\OptionProviderBase.cs" />
+    <Compile Include="Bases\OptionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ProvinceProviderBase.cs" />
+    <Compile Include="Bases\ProvinceProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\QuestionFormAnswerProviderBase.cs" />
+    <Compile Include="Bases\QuestionFormAnswerProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\QuestionFormGroupProviderBase.cs" />
+    <Compile Include="Bases\QuestionFormGroupProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\QuestionFormOptionProviderBase.cs" />
+    <Compile Include="Bases\QuestionFormOptionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\QuestionFormProviderBase.cs" />
+    <Compile Include="Bases\QuestionFormProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\QuestionGroupProviderBase.cs" />
+    <Compile Include="Bases\QuestionGroupProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\QuestionOptionProviderBase.cs" />
+    <Compile Include="Bases\QuestionOptionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\QuestionProviderBase.cs" />
+    <Compile Include="Bases\QuestionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\ReasonProviderBase.cs" />
+    <Compile Include="Bases\ReasonProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\RegionProviderBase.cs" />
+    <Compile Include="Bases\RegionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\SchoolProviderBase.cs" />
+    <Compile Include="Bases\SchoolProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\SeanceProviderBase.cs" />
+    <Compile Include="Bases\SeanceProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\SeanceQuestionAnswerProviderBase.cs" />
+    <Compile Include="Bases\SeanceQuestionAnswerProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\SeanceQuestionOptionProviderBase.cs" />
+    <Compile Include="Bases\SeanceQuestionOptionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\SeanceQuestionProviderBase.cs" />
+    <Compile Include="Bases\SeanceQuestionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\SeanceReasonProviderBase.cs" />
+    <Compile Include="Bases\SeanceReasonProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\SessionProviderBase.cs" />
+    <Compile Include="Bases\SessionProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\SiblingProviderBase.cs" />
+    <Compile Include="Bases\SiblingProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\StreetProviderBase.cs" />
+    <Compile Include="Bases\StreetProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\TeacherProviderBase.cs" />
+    <Compile Include="Bases\TeacherProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\TestAnswerProviderBase.cs" />
+    <Compile Include="Bases\TestAnswerProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\TestProviderBase.cs" />
+    <Compile Include="Bases\TestProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\TestResultProviderBase.cs" />
+    <Compile Include="Bases\TestResultProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\TownProviderBase.cs" />
+    <Compile Include="Bases\TownProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\UserProviderBase.cs" />
+    <Compile Include="Bases\UserProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\Views\ClientViewProviderBase.cs" />
+    <Compile Include="Bases\Views\ClientViewProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\Views\ProvinceViewProviderBase.cs" />
+    <Compile Include="Bases\Views\ProvinceViewProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\Views\SeanceViewProviderBase.cs" />
+    <Compile Include="Bases\Views\SeanceViewProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\Views\WippsiViewProviderBase.cs" />
+    <Compile Include="Bases\Views\WippsiViewProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\Views\WiscrViewProviderBase.cs" />
+    <Compile Include="Bases\Views\WiscrViewProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\WippsiProviderBase.cs" />
+    <Compile Include="Bases\WippsiProviderBase.generatedCore.cs" />
+    <Compile Include="Bases\WiscrProviderBase.cs" />
+    <Compile Include="Bases\WiscrProviderBase.generatedCore.cs" />
+    <Compile Include="DataRepository.cs" />
+    <Compile Include="FileConfigurationSouce.cs" />
+    <Compile Include="FileConfigurationSouceElement.cs" />
+    <Compile Include="IEntityProvider.cs" />
+    <Compile Include="IEntityViewProvider.cs" />
+    <Compile Include="ITransactionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\ExpressionParserBase.cs" />
+    <Compile Include="Query\SqlExpressionParser.cs" />
+    <Compile Include="Query\SqlStringBuilder.cs" />
+    <Compile Include="Query\SqlUtil.cs" />
+    <Compile Include="Query\StringTokenizer.cs" />
+    <Compile Include="TransactionManager.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ekip.Framework.Entities\Ekip.Framework.Entities.csproj">
+      <Project>{1f8eaf95-7f11-4db2-9d70-c0c7862050bb}</Project>
+      <Name>Ekip.Framework.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
