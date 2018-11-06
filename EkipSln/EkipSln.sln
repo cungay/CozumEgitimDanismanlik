@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFramework", "AppFramewor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekip.Framework.Core", "Ekip.Framework.Core\Ekip.Framework.Core.csproj", "{A60FC179-2520-4044-AE82-C087CFC372A5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{AB450296-D213-4AC7-BFFF-7E802150B020}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekip.Framework.Data", "Ekip.Framework.Data\Ekip.Framework.Data.csproj", "{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{A60FC179-2520-4044-AE82-C087CFC372A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A60FC179-2520-4044-AE82-C087CFC372A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A60FC179-2520-4044-AE82-C087CFC372A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9} = {AB450296-D213-4AC7-BFFF-7E802150B020}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09DB5B8B-0C25-4BAB-8781-91161A6F1523}
