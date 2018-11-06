@@ -1,0 +1,1776 @@
+﻿<html>
+  <head>
+    <link href="http://nettiers.net/common/styles.css" rel="stylesheet" type="text/css" />
+    <style>
+				      span.executionTime {font-style: italic; color: #55AEED;}
+	            </style>
+  </head>
+  <body>
+    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="700">
+          <a href="http://code.google.com/p/nettiers/downloads/" target="_blank">
+            <img border="0" src="http://www.nettiers.net/GetFile.aspx?File=Summary_Logo.gif" alt=".netTiers 2.3" />
+          </a>
+          <hr />
+          <div>
+            <a href="http://nettiers.net/">Website</a>
+                                |    
+                             <a href="http://community.codesmithtools.com/nettiers/f/default.aspx">Forums</a>
+                                |    
+                             <a href="http://code.google.com/p/nettiers/">Google Code</a>
+                                |    
+                             <a href="http://code.google.com/p/nettiers/downloads/">Downloads</a></div>
+          <hr />
+          <h2>Generation Report</h2>
+          <div style="width:70%">
+            <span class="content">.netTiers is a set of open source code generation templates that
+                            simplify the tasks of creating customized Application Framework for your Microsoft.Net
+                            applications in just a few minutes. 
+                            <br /><br />
+                            This report shows you a list of all of your selected .net class that were generated.  This report
+                            also shows gives a quick start configuration instructions so that you can get started using .netTiers.
+                            If you need further documentation, please check out the documentation section of this report.
+                         </span>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td>
+          <h2>Sections</h2>
+          <ol>
+            <li>
+              <a href="#summary">Summary</a>
+            </li>
+            <li>
+              <a href="#Configuration">Configuration</a>
+            </li>
+            <li>
+              <a href="#documentation">Documentation</a>
+            </li>
+            <li>
+              <a href="#details">Details - Generated Classes</a>
+            </li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="100%">
+          <div id="Summary" style="display:inline">
+            <a name="summary" />
+            <h3>Generation Summary <a href="#top" class="calloutlink">Top</a></h3>
+            <span class="docSubHeader">Generated Solution Found: </span>
+            <br />
+            <span class="content">
+              <ul>
+                <li>file:\\\D:\GitHub\CozumEgitimDanismanlik\EkipSln\Ekip.Framework.sln</li>
+              </ul>
+            </span>
+            <table>
+              <tr>
+                <td width="200">Total Object Created</td>
+                <td>416</td>
+              </tr>
+              <tr>
+                <td width="200">Total Errors / Warnings</td>
+                <td>0</td>
+              </tr>
+            </table>
+          </div>
+          <div id="Configuration" style="display:inline">
+            <a name="Configuration" />
+            <h3>.netTiers Quick Configuration <a href="#top" class="calloutlink">Top</a></h3>
+            <p> Below are the steps to to configure the .netTiers components.</p>
+            <p>To Configure your application to use .netTiers, add the following sections to your App / Web config files.
+			
+			 You can find more information on how to set this up at<br /><a href="http://nettiers.net/DocumentationPage.ashx">.netTiers 2.3 Install and Configuration Document @ http://nettiers.net/DocumentationPage.ashx</a></p>
+            <p>1. Add a new section to the configSections</p>
+            <pre>
+  &lt;section name="Ekip.Framework.Data"
+		type="Ekip.Framework.Data.Bases.NetTiersServiceSection, Ekip.Framework.Data"
+		allowDefinition="MachineToApplication"
+		restartOnExternalChanges="true" /&gt;
+</pre>
+            <p>2.  Add an item to the ConnectionStrings Section</p>
+            <pre>
+&lt;connectionStrings&gt;
+  &lt;add name="netTiersConnectionString" connectionString="Data Source=.;Initial Catalog=EkipDev;User ID=sa;Password=1" /&gt;
+&lt;/connectionStrings&gt;
+</pre>
+            <p>3.  Add the netTierService configuration section to your configuration file. Comment / Uncomment which provider you plan on using / not using</p>
+            <pre>
+&lt;Ekip.Framework.Data defaultProvider="SqlNetTiersProvider"&gt;
+  &lt;providers&gt;
+    
+    &lt;add 
+	name="SqlNetTiersProvider" 
+	type="Ekip.Framework.Data.SqlClient.SqlNetTiersProvider, Ekip.Framework.Data.SqlClient"
+	connectionStringName="netTiersConnectionString"
+	providerInvariantName="System.Data.SqlClient" 
+	entityFactoryType="Ekip.Framework.Entities.EntityFactory"
+	useEntityFactory="true"
+	enableEntityTracking="false"
+	enableMethodAuthorization="false"
+	useStoredProcedure="false"
+  /&gt;
+    
+  &lt;/providers&gt;
+&lt;/Ekip.Framework.Data&gt;
+ </pre>
+          </div>
+          <div id="Documentation" style="display:inline">
+            <a name="documentation" />
+            <h3>Documentation <a href="#top" class="calloutlink">Top</a></h3>
+            <a href="http://wiki.nettiers.net">.netTiers 2.0 Getting Started</a>
+            <br />
+            <br />
+            <b>Sample API Usage</b>
+            <br />
+            <table style="border: 1px dashed rgb(255, 153, 0); background-color: rgb(255, 255, 223);" bgcolor="#ffffdf">
+              <tbody>
+                <tr>
+                  <td>
+                    <pre>
+                      <font color="black" face="Courier New" size="2">
+AccountService accountsService = <font color="blue">new</font> AccountsService();<font color="green">
+//GetAll()</font>
+TList&lt;Accounts&gt; accountList = accountsService.GetAll();
+
+<font color="green">//GetPagedl()</font>
+TList&lt;Accounts&gt; accountList = 
+accountsService.GetPaged("IsActive = 1 AND AccountName LIKE 'smi%'");
+
+<font color="green">//GetByFk()</font>
+TList&lt;Accounts&gt; accountList = accountsService.GetByCustomerId(25);
+
+<font color="green">//GetIX()</font>
+TList&lt;Accounts&gt; accountList = accountsService.GetByAccountCreatedDate(<font color="blue">new</font> DateTime("1/1/2006"));<br /><br /><font color="green">
+//Get()</font>
+entity.Entitykey;
+Accounts account = accountsService.Get(entity.EntityKey);
+
+<font color="green">//Insert()</font>
+Account accountEntity = <font color="blue">new</font> Account();
+accountEntity.AccountName = "MyAccountName";
+accountEntity.CreatedDate = DateTime.Now;
+
+accountsService.Insert(accountEntity);
+accountEntity.AccountId <font color="green">// is now populated</font><font color="green">
+//Delete()</font>
+bool result = accountsService.Delete(accountEntity);
+
+<font color="green">//Delete()</font>
+bool result = accountsService.Delete(23);
+
+<font color="green">//Update()</font>
+accountEntity.AccountName = "MyAccountName 2";
+accountsService.Update(accountEntity);
+        
+<font color="green">//GetByManyToManyl()</font>
+TList&lt;Customers&gt; accountList = accountsService.GetCustomers_From_AccountsReceivable();
+					            
+<font color="green">//GetCustomProcedureName()</font>
+TList&lt;Accounts&gt; accountList = accountsService.GetByAccountMaturationDate();
+    
+<font color="green">//DeepLoadByIdl() using PK</font>
+Account account = accountsService.DeepLoadByAccountId(id, <font color="blue">false</font>, DeepLoadType.IncludeChildren, typeof(Customers), typeof(TList&lt;ChartOfAccounts&gt;));<br /><br /><font color="green">//DeepLoadByIdl() using FK</font>
+TList&lt;Account&gt; account = accountsService.DeepLoadByCustomerId(id, <font color="blue">false</font>, DeepLoadType.IncludeChildren, typeof(Customers), typeof(TList&lt;ChartOfAccounts&gt;));<br /><br /><font color="green">//already instatiated objects</font><font color="green">//DeepLoad</font>
+accountsService.DeepLoad(myAccountEntity, <font color="blue">false</font>, DeepLoadType.IncludeChildren, typeof(Customers), typeof(TList&lt;ChartOfAccounts&gt;));<br /><br /><font color="green">
+Response.Write(accountsService.CustomerIdSource.LastName); <font color="green">// is now filled</font>
+Response.Write(accountsService.ChartOfAccountsCollection.Count); <font color="green">// is now filled</font>
+
+//DeepSave</font>
+accountsService.DeepSave(myAccountEntity, <font color="blue">false</font>, DeepSaveType.IncludeChildren, typeof(Customers), typeof(TList&lt;ChartOfAccounts&gt;));<br /><br /></font>
+                    </pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+          </div>
+          <div id="ReportDetails" style="display:inline">
+            <a name="details" />
+            <h3>Report Details <a href="#top" class="calloutlink">Top</a></h3>
+            <ul>
+              <li>
+                <h3>Initialization</h3>
+                <ul>
+                  <li>
+                    <span class="message0">Validating parameters.</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message2">Generating .netTiers Entity Mapping</span>
+                    <ul />
+                  </li>
+                  <li>
+                    <span class="message0">Loading templates.</span>
+                    <ul />[00:00:00.9956320]<br /></li>
+                  <li>
+                    <span class="message0">Creating folders and copying dependencies.</span>
+                    <ul />
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:01.1674080</span><p /></li>
+              <li>
+                <h3>Common files</h3>
+                <ul>
+                  <li>
+                    <span class="file">ListBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TList.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">VList.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WeakRefDictionary.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TestUtility.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntity.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityId.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityKey.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityFactory.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityFactoryBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityFactory.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityCacheItem.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityCache.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityLocator.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityManager.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BrokenRule.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">BrokenRulesList.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">CommonRules.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ValidationRuleArgs.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ValidationRuleHandler.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ValidationRuleInfo.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ValidationRules.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityBaseCore.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityKeyBaseCore.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityKeyBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SecurityContext.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SecurityContextBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ContextView.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IProcessor.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IProcessorResult.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProcessorBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">GenericProcessorResult.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DomainUtil.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IConnectionScope.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ConnectionScope.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ConnectionScopeBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IComponentService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceBase.cst.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceBaseCore.cst.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceViewBase.cst.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceViewBaseCore.cst.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ServiceResult.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityFilter.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityPropertyComparer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">GenericTypeConverter.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Procedures.xml</span>
+                  </li>
+                  <li>
+                    <span class="file">Utility.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ITransactionManager.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TransactionManager.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">FileConfigurationSouce.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">FileConfigurationSouceElement.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">DataRepository.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IEntityViewProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityProviderBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityProviderBaseCore.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityViewProviderBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityViewProviderBaseCore.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">INetTiersProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NetTiersProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NetTiersProviderBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NetTiersProviderCollection.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NetTiersServiceSection.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ExpressionParserBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlExpressionParser.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlStringBuilder.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlUtil.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">StringTokenizer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlNetTiersProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">StoredProcedureProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Ekip.Framework.sln</span>
+                  </li>
+                  <li>
+                    <span class="file">Services.csproj</span>
+                  </li>
+                  <li>
+                    <span class="file">Ekip.Framework.Entities.csproj</span>
+                  </li>
+                  <li>
+                    <span class="file">Ekip.Framework.Data.Data.csproj</span>
+                  </li>
+                  <li>
+                    <span class="file">Ekip.Framework.Entities.Data.SqlClient.csproj</span>
+                  </li>
+                  <li>
+                    <span class="file">Ekip.Framework.build</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityHelper.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">EntityUtil.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:02.6761257</span><p /></li>
+              <li>
+                <h3>ClientView</h3>
+                <ul>
+                  <li>
+                    <span class="file">ClientViewBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientView.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientViewProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientViewProviderBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClientViewProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">D:\GitHub\CozumEgitimDanismanlik\EkipSln\Ekip.Framework.Data.SqlClient\Views\ClientViewProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientViewService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientViewServiceBase.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.2567119</span><p /></li>
+              <li>
+                <h3>ProvinceView</h3>
+                <ul>
+                  <li>
+                    <span class="file">ProvinceViewBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProvinceView.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProvinceViewProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProvinceViewProviderBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlProvinceViewProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">D:\GitHub\CozumEgitimDanismanlik\EkipSln\Ekip.Framework.Data.SqlClient\Views\ProvinceViewProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProvinceViewService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProvinceViewServiceBase.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312654</span><p /></li>
+              <li>
+                <h3>WippsiView</h3>
+                <ul>
+                  <li>
+                    <span class="file">WippsiViewBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WippsiView.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WippsiViewProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WippsiViewProviderBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlWippsiViewProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">D:\GitHub\CozumEgitimDanismanlik\EkipSln\Ekip.Framework.Data.SqlClient\Views\WippsiViewProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WippsiViewService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WippsiViewServiceBase.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312351</span><p /></li>
+              <li>
+                <h3>WiscrView</h3>
+                <ul>
+                  <li>
+                    <span class="file">WiscrViewBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WiscrView.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WiscrViewProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WiscrViewProviderBase.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlWiscrViewProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">D:\GitHub\CozumEgitimDanismanlik\EkipSln\Ekip.Framework.Data.SqlClient\Views\WiscrViewProvider.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WiscrViewService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WiscrViewServiceBase.generated.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0156171</span><p /></li>
+              <li>
+                <h3>Advisor</h3>
+                <ul>
+                  <li>
+                    <span class="file">Advisor.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IAdvisor.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Advisor.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">AdvisorService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">AdvisorServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">AdvisorProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">AdvisorProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlAdvisorProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\AdvisorTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.1717922</span><p /></li>
+              <li>
+                <h3>Seance</h3>
+                <ul>
+                  <li>
+                    <span class="file">Seance.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ISeance.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Seance.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlSeanceProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SeanceTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0624405</span><p /></li>
+              <li>
+                <h3>Seance_Reason</h3>
+                <ul>
+                  <li>
+                    <span class="file">SeanceReason.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ISeanceReason.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceReason.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceReasonService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceReasonServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceReasonProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceReasonProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlSeanceReasonProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SeanceReasonTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0468525</span><p /></li>
+              <li>
+                <h3>School</h3>
+                <ul>
+                  <li>
+                    <span class="file">School.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ISchool.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">School.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SchoolService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SchoolServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SchoolProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SchoolProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlSchoolProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SchoolTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0468513</span><p /></li>
+              <li>
+                <h3>Reason</h3>
+                <ul>
+                  <li>
+                    <span class="file">Reason.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IReason.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Reason.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ReasonService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ReasonServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ReasonProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ReasonProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlReasonProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ReasonTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312351</span><p /></li>
+              <li>
+                <h3>QuestionForm_Group</h3>
+                <ul>
+                  <li>
+                    <span class="file">QuestionFormGroup.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IQuestionFormGroup.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormGroup.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormGroupService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormGroupServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormGroupProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormGroupProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlQuestionFormGroupProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\QuestionFormGroupTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312357</span><p /></li>
+              <li>
+                <h3>SeanceQuestion</h3>
+                <ul>
+                  <li>
+                    <span class="file">SeanceQuestion.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ISeanceQuestion.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestion.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlSeanceQuestionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SeanceQuestionTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312351</span><p /></li>
+              <li>
+                <h3>SeanceQuestion_Option</h3>
+                <ul>
+                  <li>
+                    <span class="file">SeanceQuestionOption.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ISeanceQuestionOption.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionOption.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionOptionService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionOptionServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionOptionProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionOptionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlSeanceQuestionOptionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SeanceQuestionOptionTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312644</span><p /></li>
+              <li>
+                <h3>Town</h3>
+                <ul>
+                  <li>
+                    <span class="file">Town.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ITown.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Town.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TownService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TownServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TownProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TownProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlTownProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\TownTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0491983</span><p /></li>
+              <li>
+                <h3>SeanceQuestion_Answer</h3>
+                <ul>
+                  <li>
+                    <span class="file">SeanceQuestionAnswer.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ISeanceQuestionAnswer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionAnswer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionAnswerService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionAnswerServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionAnswerProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SeanceQuestionAnswerProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlSeanceQuestionAnswerProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SeanceQuestionAnswerTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0383080</span><p /></li>
+              <li>
+                <h3>Teacher</h3>
+                <ul>
+                  <li>
+                    <span class="file">Teacher.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ITeacher.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Teacher.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TeacherService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TeacherServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TeacherProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">TeacherProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlTeacherProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\TeacherTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312147</span><p /></li>
+              <li>
+                <h3>Wippsi</h3>
+                <ul>
+                  <li>
+                    <span class="file">Wippsi.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IWippsi.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Wippsi.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WippsiService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WippsiServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WippsiProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WippsiProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlWippsiProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\WippsiTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0624906</span><p /></li>
+              <li>
+                <h3>Session</h3>
+                <ul>
+                  <li>
+                    <span class="file">Session.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ISession.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Session.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SessionService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SessionServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SessionProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SessionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlSessionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SessionTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0468487</span><p /></li>
+              <li>
+                <h3>Street</h3>
+                <ul>
+                  <li>
+                    <span class="file">Street.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IStreet.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Street.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">StreetService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">StreetServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">StreetProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">StreetProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlStreetProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\StreetTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0468290</span><p /></li>
+              <li>
+                <h3>QuestionForm</h3>
+                <ul>
+                  <li>
+                    <span class="file">QuestionForm.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IQuestionForm.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionForm.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlQuestionFormProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\QuestionFormTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312354</span><p /></li>
+              <li>
+                <h3>Sibling</h3>
+                <ul>
+                  <li>
+                    <span class="file">Sibling.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ISibling.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Sibling.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SiblingService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SiblingServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SiblingProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SiblingProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlSiblingProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SiblingTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0570075</span><p /></li>
+              <li>
+                <h3>ClientMother</h3>
+                <ul>
+                  <li>
+                    <span class="file">ClientMother.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IClientMother.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientMother.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientMotherService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientMotherServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientMotherProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientMotherProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlClientMotherProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ClientMotherTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0468627</span><p /></li>
+              <li>
+                <h3>ClientAddress</h3>
+                <ul>
+                  <li>
+                    <span class="file">ClientAddress.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IClientAddress.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientAddress.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientAddressService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientAddressServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientAddressProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientAddressProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlClientAddressProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ClientAddressTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0750039</span><p /></li>
+              <li>
+                <h3>Province</h3>
+                <ul>
+                  <li>
+                    <span class="file">Province.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IProvince.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Province.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProvinceService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProvinceServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProvinceProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ProvinceProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlProvinceProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ProvinceTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0468745</span><p /></li>
+              <li>
+                <h3>ClientFather</h3>
+                <ul>
+                  <li>
+                    <span class="file">ClientFather.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IClientFather.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientFather.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientFatherService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientFatherServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientFatherProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientFatherProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlClientFatherProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ClientFatherTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312391</span><p /></li>
+              <li>
+                <h3>Client</h3>
+                <ul>
+                  <li>
+                    <span class="file">Client.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IClient.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Client.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlClientProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ClientTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.1364606</span><p /></li>
+              <li>
+                <h3>ClientDoc</h3>
+                <ul>
+                  <li>
+                    <span class="file">ClientDoc.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IClientDoc.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientDoc.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientDocService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientDocServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientDocProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientDocProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlClientDocProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ClientDocTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312240</span><p /></li>
+              <li>
+                <h3>ClientSchool</h3>
+                <ul>
+                  <li>
+                    <span class="file">ClientSchool.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IClientSchool.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientSchool.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientSchoolService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientSchoolServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientSchoolProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ClientSchoolProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlClientSchoolProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ClientSchoolTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0468976</span><p /></li>
+              <li>
+                <h3>CalenderAge</h3>
+                <ul>
+                  <li>
+                    <span class="file">CalenderAge.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ICalenderAge.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">CalenderAge.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">CalenderAgeService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">CalenderAgeServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">CalenderAgeProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">CalenderAgeProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlCalenderAgeProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\CalenderAgeTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0311992</span><p /></li>
+              <li>
+                <h3>Area</h3>
+                <ul>
+                  <li>
+                    <span class="file">Area.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IArea.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Area.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">AreaService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">AreaServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">AreaProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">AreaProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlAreaProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\AreaTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312515</span><p /></li>
+              <li>
+                <h3>QuestionForm_Option</h3>
+                <ul>
+                  <li>
+                    <span class="file">QuestionFormOption.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IQuestionFormOption.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormOption.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormOptionService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormOptionServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormOptionProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormOptionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlQuestionFormOptionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\QuestionFormOptionTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312085</span><p /></li>
+              <li>
+                <h3>Job</h3>
+                <ul>
+                  <li>
+                    <span class="file">Job.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IJob.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Job.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">JobService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">JobServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">JobProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">JobProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlJobProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\JobTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312348</span><p /></li>
+              <li>
+                <h3>ObservationForm_Group</h3>
+                <ul>
+                  <li>
+                    <span class="file">ObservationFormGroup.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IObservationFormGroup.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormGroup.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormGroupService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormGroupServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormGroupProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormGroupProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlObservationFormGroupProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ObservationFormGroupTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312611</span><p /></li>
+              <li>
+                <h3>QuestionForm_Answer</h3>
+                <ul>
+                  <li>
+                    <span class="file">QuestionFormAnswer.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IQuestionFormAnswer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormAnswer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormAnswerService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormAnswerServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormAnswerProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">QuestionFormAnswerProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlQuestionFormAnswerProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\QuestionFormAnswerTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0468284</span><p /></li>
+              <li>
+                <h3>ObservationForm</h3>
+                <ul>
+                  <li>
+                    <span class="file">ObservationForm.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IObservationForm.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationForm.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlObservationFormProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ObservationFormTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312335</span><p /></li>
+              <li>
+                <h3>Neighborhood</h3>
+                <ul>
+                  <li>
+                    <span class="file">Neighborhood.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">INeighborhood.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Neighborhood.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NeighborhoodService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NeighborhoodServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NeighborhoodProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">NeighborhoodProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlNeighborhoodProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\NeighborhoodTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0436514</span><p /></li>
+              <li>
+                <h3>ObservationForm_Option</h3>
+                <ul>
+                  <li>
+                    <span class="file">ObservationFormOption.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IObservationFormOption.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormOption.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormOptionService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormOptionServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormOptionProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormOptionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlObservationFormOptionProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ObservationFormOptionTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0468534</span><p /></li>
+              <li>
+                <h3>ObservationForm_Answer</h3>
+                <ul>
+                  <li>
+                    <span class="file">ObservationFormAnswer.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IObservationFormAnswer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormAnswer.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormAnswerService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormAnswerServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormAnswerProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">ObservationFormAnswerProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlObservationFormAnswerProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\ObservationFormAnswerTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0312355</span><p /></li>
+              <li>
+                <h3>Wiscr</h3>
+                <ul>
+                  <li>
+                    <span class="file">Wiscr.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">IWiscr.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">Wiscr.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WiscrService.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WiscrServiceBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WiscrProviderBase.generatedCore.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">WiscrProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\SqlWiscrProviderBase.generated.cs</span>
+                  </li>
+                  <li>
+                    <span class="file">SqlClient\WiscrTest.cs</span>
+                  </li>
+                </ul>
+			Execution time: <span class="executionTime">00:00:00.0624698</span><p /></li>
+              <li>
+                <h3>
+            Custom Stored Procedures
+         </h3>
+                <ul>
+                  <li>
+                    <span class="file">ClientView_Find (applies to view: ClientView)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">WippsiView_GetByClientID (applies to view: WippsiView)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">WiscrView_GetByClientID (applies to view: WiscrView)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Seance_DeleteBySeanceID (applies to table: Seance)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Seance_DeleteByClientID (applies to table: Seance)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Town_GetByProvinceId (applies to table: Town)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Session_Get (applies to table: Session)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Street_GetByNeighborhoodId (applies to table: Street)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">ClientAddress_GetCurrentAddress (applies to table: ClientAddress)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Client_FindByReason_FirstDate_BirthDate (applies to table: Client)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Client_AdvisorReport (applies to table: Client)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Client_GetAllFirstContactYears (applies to table: Client)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Client_GetByFirstContactYears (applies to table: Client)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Client_GetAllBirthDateYears (applies to table: Client)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Client_GetFirst (applies to table: Client)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Client_GetFileNumbers (applies to table: Client)
+         </span>
+                  </li>
+                  <br />
+                  <li>
+                    <span class="file">Client_GetLast (applies to table: Client)
+         </span>
+                  </li>
+                  <br />
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <hr noshade="noshade" />
+    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td />
+        <td />
+      </tr>
+    </table>
+    <div align="center">
+			.netTiers Open Source Group, 2008-2011
+		</div>
+    <div align="center">
+      <a href="http://code.google.com/p/nettiers/">
+        <img src="http://code.google.com/hosting/images/code_sm.png" border="0" alt="Google Code Logo" />
+      </a>
+    </div>
+  </body>
+</html>

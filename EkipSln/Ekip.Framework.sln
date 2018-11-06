@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 13.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekip.Framework.Entities", "Ekip.Framework.Entities\Ekip.Framework.Entities.csproj", "{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekip.Framework.Data", "Ekip.Framework.Data\Ekip.Framework.Data.csproj", "{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekip.Framework.Data.SqlClient", "Ekip.Framework.Data.SqlClient\Ekip.Framework.Data.SqlClient.csproj", "{35328E34-1C95-4AA1-9335-5D4EE2B51D4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekip.Framework.Services", "Ekip.Framework.Services\Ekip.Framework.Services.csproj", "{CDCCCFDD-B532-475E-9B8B-374EC5082F1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetTiers", "NetTiers", "{F3A10C8D-3227-449F-A2CB-014DE2D7F415}"
+	ProjectSection(SolutionItems) = preProject
+		AssemblyInfo.cs = AssemblyInfo.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35328E34-1C95-4AA1-9335-5D4EE2B51D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35328E34-1C95-4AA1-9335-5D4EE2B51D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35328E34-1C95-4AA1-9335-5D4EE2B51D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35328E34-1C95-4AA1-9335-5D4EE2B51D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDCCCFDD-B532-475E-9B8B-374EC5082F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDCCCFDD-B532-475E-9B8B-374EC5082F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDCCCFDD-B532-475E-9B8B-374EC5082F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDCCCFDD-B532-475E-9B8B-374EC5082F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB} = {F3A10C8D-3227-449F-A2CB-014DE2D7F415}
+		{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9} = {F3A10C8D-3227-449F-A2CB-014DE2D7F415}
+		{35328E34-1C95-4AA1-9335-5D4EE2B51D4C} = {F3A10C8D-3227-449F-A2CB-014DE2D7F415}
+		{CDCCCFDD-B532-475E-9B8B-374EC5082F1E} = {F3A10C8D-3227-449F-A2CB-014DE2D7F415}
+	EndGlobalSection
+EndGlobal
