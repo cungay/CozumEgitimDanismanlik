@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title></title>
+<style type="text/css"> 
+body{background-color:rgb(255, 255, 255);margin:5px}
+body,td{color:#2a3d5b;font-family:helvetica,Times New Roman;font-size:10pt;}
+form{margin:0}
+.group{border:2px solid #006699;display:block;margin-bottom:5pt}
+.group,.group td{background-color:rgb(111, 194, 214);color:#253952;font-size:13pt;font-weight:bold;padding:7pt;text-align:center}
+.options,.title{display:block;zoom:1}
+.title{background-color:#c8dee9;padding:3pt;font-size: 12pt;font-weight:bold;}
+.options{padding:7pt;font-size: 9pt;}
+.row_number{color:#253952;font-weight:bold}
+.scale,.question{background-color:#fff;border:2px solid #006699;display:block;margin:0px;margin-bottom:5pt;text-align:left}
+.scale{padding-bottom:2px;padding-top:2px;text-align:center}
+.option{display:block}
+.option input{vertical-align:middle}
+.option label{cursor:pointer}
+.option img.cs__controlimage{margin:2px 6px 2px 0;vertical-align:middle}
+.tbl{border-spacing:0;border-collapse:collapse;width:100%}
+.tbl td,.tbl th{padding:0;vertical-align:baseline}
+.tbl th{white-space:nowrap}
+.tbl td{width:100%}
+.cb,.rb{position:relative}
+.cb input.item,.rb input.item{position:absolute;left:5px;top:6px;margin:0;z-index:0;left:3px\9;top:4px\9}
+.cb label.item,.rb label.item{display:inline-block;position:relative;z-index:1;padding:5px 0 5px 28px;cursor:pointer;zoom:1;*display:inline}
+.cb label.item,.rb label.item{background-position:-13px -15px;background-repeat:no-repeat}
+    .summary {
+        padding: 5pt;
+        background-color: #fff;
+        border: 2px solid #006699;
+        display: block;
+        margin: 0px;
+        margin-bottom: 5pt;
+        text-align: left;
+    }
+    .summary-field {
+        vertical-align: top; border-left: solid 1px #7f7f7f; 
+			 border-right: Solid 1px #7f7f7f; border-bottom: Solid 1px #7f7f7f; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;
+    }
+    .summary-source {
+        vertical-align: top;
+        border-right: solid 1px #7f7f7f;
+        border-bottom: Solid 1px #7f7f7f;
+        padding: 0cm 5.4pt 0cm 5.4pt;
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+    p.summary-column {
+        font-size: 10pt;
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 2pt;
+        margin-left: 2pt;
+        margin-right: 5pt;
+        margin-top: 2pt;
+        float:right;
+    }
+    p.tableText {
+        font-size: 8pt;
+        margin-top: 2pt;
+        margin-bottom: 2pt;
+        margin-left: 5pt;
+        margin-right: 2pt;
+    }
+ </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<form name="survey" method="POST" action="#">
+         <div class="summary">
+             <table style="border: Solid 2px #7f7f7f;margin-left: 80px;width: 680px;" cellspacing="0">
+                 <tbody>
+                     <tr>
+                         <td class="summary-field">
+                             <p class="summary-column">Dosya No:</p>
+                         </td>
+                         <td class="summary-source">
+                             <p class="tableText">[file_number]</p>
+                         </td>
+                         <td class="summary-field">
+                             <p class="summary-column">Adı Soyadı:</p>
+                         </td>
+                         <td class="summary-source">
+                             <p class="tableText">[fullname]</p>
+                         </td>
+                          <td class="summary-field">
+                             <p class="summary-column">Doğum Tarihi:</p>
+                         </td>
+                         <td class="summary-source">
+                             <p class="tableText">[birthdate]</p>
+                         </td>
+                           <td class="summary-field">
+                             <p class="summary-column">Yaş:</p>
+                         </td>
+                         <td class="summary-source">
+                             <p class="tableText">[age]</p>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td class="summary-field">
+                             <p class="summary-column">Anne:</p>
+                         </td>
+                         <td class="summary-source">
+                             <p class="tableText">[mother]</p>
+                         </td>
+                         <td class="summary-field">
+                             <p class="summary-column">Baba:</p>
+                         </td>
+                         <td class="summary-source">
+                             <p class="tableText">[father]</p>
+                         </td>
+                          <td class="summary-field">
+                             <p class="summary-column">Referans:</p>
+                         </td>
+                         <td class="summary-source">
+                             <p class="tableText">[ref]</p>
+                         </td>
+                          <td class="summary-field">
+                             <p class="summary-column">Cinsiyet:</p>
+                         </td>
+                         <td class="summary-source">
+                             <p class="tableText">[gender]</p>
+                         </td>
+                     </tr>
+                 </tbody>
+             </table>
+         </div>
+		 <div class="group">Ekip Değerlendirme Formu</div><div class="question" id=_224><div class="title"><table class="tbl"><tbody><tr><th></th><td>0-2 Yaş</td></tbody></tr></table></div><div class="options"><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1066" value="1066" class="item"><label for="224_1066" id="lbl_224_1066" class="item">Anne - baba ile tanışma görüşmesi yapıldı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1067" value="1067" class="item"><label for="224_1067" id="lbl_224_1067" class="item">Çocukla gözlem yapıldı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1068" value="1068" class="item"><label for="224_1068" id="lbl_224_1068" class="item">Çocukla değerlendirme yapıldı (denver-Arte-SB)</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1069" value="1069" class="item"><label for="224_1069" id="lbl_224_1069" class="item">Aile ile değerlendirme yapıldı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1070" value="1070" class="item"><label for="224_1070" id="lbl_224_1070" class="item">Çocukla bireysel çalışma başlandı-yarım kaldı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1071" value="1071" class="item"><label for="224_1071" id="lbl_224_1071" class="item">Çocukla bireysel çalışma tamamlandı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1072" value="1072" class="item"><label for="224_1072" id="lbl_224_1072" class="item">Çocuk olumsuzlaştı/değişiklik/olmadı/yararlandı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1073" value="1073" class="item"><label for="224_1073" id="lbl_224_1073" class="item">Çocuk grup çalışmasına başladı-yarım kaldı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1074" value="1074" class="item"><label for="224_1074" id="lbl_224_1074" class="item">Çocukla grup çalışması tamamlandı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1075" value="1075" class="item"><label for="224_1075" id="lbl_224_1075" class="item">Çocukla olumsuzlaştı-değişiklik olmadı-yararlandı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1076" value="1076" class="item"><label for="224_1076" id="lbl_224_1076" class="item">Aile ile izleme çalışması yapılıyor</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.224" id="224_1077" value="1077" class="item"><label for="224_1077" id="lbl_224_1077" class="item">Aile ile izleme çalışması yapılmıyor</label></div></div></div></div><div class="question" id=_227><div class="title"><table class="tbl"><tbody><tr><th></th><td>2-6 Yaş</td></tbody></tr></table></div><div class="options"><div class="option"><div class="rb"><input type="checkbox" name="rb.227" id="227_1078" value="1078" class="item"><label for="227_1078" id="lbl_227_1078" class="item">Çocukla grup çalışması tamamlandı.</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.227" id="227_1080" value="1080" class="item"><label for="227_1080" id="lbl_227_1080" class="item">Çocukla olumsuzlaştı-değişiklik olmadı-yararlandı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.227" id="227_1081" value="1081" class="item"><label for="227_1081" id="lbl_227_1081" class="item">Aile ile izleme çalışması yapılıyor</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.227" id="227_1082" value="1082" class="item"><label for="227_1082" id="lbl_227_1082" class="item">Aile ile izleme çalışması yapılmıyor</label></div></div></div></div><div class="question" id=_230><div class="title"><table class="tbl"><tbody><tr><th></th><td>11 Yaş ve Üzeri</td></tbody></tr></table></div><div class="options"><div class="option"><div class="rb"><input type="checkbox" name="rb.230" id="230_1083" value="1083" class="item"><label for="230_1083" id="lbl_230_1083" class="item">Anne - baba ile tanışma görüşmesi yapıldı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.230" id="230_1084" value="1084" class="item"><label for="230_1084" id="lbl_230_1084" class="item">Çocukla gözlem yapıldı</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.230" id="230_1085" value="1085" class="item"><label for="230_1085" id="lbl_230_1085" class="item">Çocukla değerlendirme yapıldı (denver-Arte-SB)</label></div></div><div class="option"><div class="rb"><input type="checkbox" name="rb.230" id="230_1086" value="1086" class="item"><label for="230_1086" id="lbl_230_1086" class="item">Aile ile değerlendirme yapıldı</label></div></div></div></div>
+    </form>
+</body>
+</html>
