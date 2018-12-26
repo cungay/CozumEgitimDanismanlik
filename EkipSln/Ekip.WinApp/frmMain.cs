@@ -5,7 +5,6 @@ using DevExpress.XtraEditors;
 using System.Windows.Forms;
 using AppFramework;
 using Ekip.WinApp.Reports;
-using CustomControls.TaskDialog;
 using Ekip.Win.Framework.Forms;
 using Ekip.Win.Framework.DevEx.Editors;
 
@@ -160,23 +159,23 @@ namespace Ekip.WinApp
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            TaskDialog taskDialog = new TaskDialog();
-            taskDialog.MainIcon = TaskDialogIcon.Warning;
-            taskDialog.FooterIcon = TaskDialogIcon.Information;
-            taskDialog.WindowTitle = this.Text;
-            taskDialog.MainInstruction = "Uygulama kapatılacak\nDevam etmek istiyor musunuz ?";
-            taskDialog.Content = "Bir veya birden fazla dosya üzerinde değişiklik yaptıysanız, bilgileri kaydettiğinizden emin olun.";
-            taskDialog.CanBeMinimized = false;
-            taskDialog.AllowDialogCancellation = false;
-            TaskDialogButton btnClose = new TaskDialogButton();
-            btnClose.ButtonId = 101;
-            btnClose.ButtonText = "Kapat";
-            TaskDialogButton btnCancel = new TaskDialogButton();
-            btnCancel.ButtonId = 102;
-            btnCancel.ButtonText = "Vazgeç";
-            taskDialog.Buttons = new TaskDialogButton[] { btnClose, btnCancel };
-            int result = taskDialog.Show(this);
-            e.Cancel = (result != btnClose.ButtonId);
+            //TaskDialog taskDialog = new TaskDialog();
+            //taskDialog.MainIcon = TaskDialogIcon.Warning;
+            //taskDialog.FooterIcon = TaskDialogIcon.Information;
+            //taskDialog.WindowTitle = this.Text;
+            //taskDialog.MainInstruction = "Uygulama kapatılacak\nDevam etmek istiyor musunuz ?";
+            //taskDialog.Content = "Bir veya birden fazla dosya üzerinde değişiklik yaptıysanız, bilgileri kaydettiğinizden emin olun.";
+            //taskDialog.CanBeMinimized = false;
+            //taskDialog.AllowDialogCancellation = false;
+            //TaskDialogButton btnClose = new TaskDialogButton();
+            //btnClose.ButtonId = 101;
+            //btnClose.ButtonText = "Kapat";
+            //TaskDialogButton btnCancel = new TaskDialogButton();
+            //btnCancel.ButtonId = 102;
+            //btnCancel.ButtonText = "Vazgeç";
+            //taskDialog.Buttons = new TaskDialogButton[] { btnClose, btnCancel };
+            //int result = taskDialog.Show(this);
+            //e.Cancel = (result != btnClose.ButtonId);
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)

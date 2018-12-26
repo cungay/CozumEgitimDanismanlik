@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using CustomControls.TaskDialog;
 using Ekip.Framework.Core.Resources;
+using TaskDialogApi;
 
 namespace Ekip.Win.Framework
 {
@@ -26,22 +26,23 @@ namespace Ekip.Win.Framework
         public static DialogResult Confirm(Control parent, string message, string details = null)
         {
             TaskDialog dlg = new TaskDialog();
-            dlg.WindowTitle = Messages.Confirm_DetaultTitle;
-            dlg.Content = message.Replace("\\n", System.Environment.NewLine);
-            dlg.MainIcon = TaskDialogIcon.Shield;
-            if (details != null)
-            {
-                dlg.ExpandedInformation = details;
-                dlg.ExpandedByDefault = false;
-                dlg.ExpandFooterArea = false;
-                dlg.ExpandedControlText = "Detayları gizle";
-                dlg.CollapsedControlText = "Detayları göster";
-            }
-            List<TaskDialogButton> buttons = new List<TaskDialogButton>();
-            buttons.Add(new TaskDialogButton(Convert.ToInt32(DialogResult.Yes), Messages.DialogResult_Yes));
-            buttons.Add(new TaskDialogButton(Convert.ToInt32(DialogResult.No), Messages.DialogResult_No));
-            dlg.Buttons = buttons.ToArray();
-            return (DialogResult)dlg.Show(parent);
+            //dlg.WindowTitle = Messages.Confirm_DetaultTitle;
+            //dlg.Content = message.Replace("\\n", System.Environment.NewLine);
+            //dlg.MainIcon = TaskDialogIcon.Shield;
+            //if (details != null)
+            //{
+            //    dlg.ExpandedInformation = details;
+            //    dlg.ExpandedByDefault = false;
+            //    dlg.ExpandFooterArea = false;
+            //    dlg.ExpandedControlText = "Detayları gizle";
+            //    dlg.CollapsedControlText = "Detayları göster";
+            //}
+            //List<TaskDialogButton> buttons = new List<TaskDialogButton>();
+            //buttons.Add(new TaskDialogButton(Convert.ToInt32(DialogResult.Yes), Messages.DialogResult_Yes));
+            //buttons.Add(new TaskDialogButton(Convert.ToInt32(DialogResult.No), Messages.DialogResult_No));
+            //dlg.Buttons = buttons.ToArray();
+            //return (DialogResult)dlg.Show(parent);
+            return DialogResult.Yes;
         }
 
         /// <summary>
@@ -52,14 +53,15 @@ namespace Ekip.Win.Framework
         public static int SaveConfirm(Control parent, string caption)
         {
             TaskDialog dlg = new TaskDialog();
-            dlg.WindowTitle = caption;
-            dlg.Content = Messages.Confirm_Save;
-            dlg.MainIcon = TaskDialogIcon.Information;
-            List<TaskDialogButton> buttons = new List<TaskDialogButton>();
-            buttons.Add(new TaskDialogButton(0, "Kaydet"));
-            buttons.Add(new TaskDialogButton(1, "Kaydetme"));
-            dlg.Buttons = buttons.ToArray();
-            return dlg.Show(parent);
+            //dlg.WindowTitle = caption;
+            //dlg.Content = Messages.Confirm_Save;
+            //dlg.MainIcon = TaskDialogIcon.Information;
+            //List<TaskDialogButton> buttons = new List<TaskDialogButton>();
+            //buttons.Add(new TaskDialogButton(0, "Kaydet"));
+            //buttons.Add(new TaskDialogButton(1, "Kaydetme"));
+            //dlg.Buttons = buttons.ToArray();
+            //return dlg.Show(parent);
+            return 0;
         }
 
         public static int SaveConfirm(Control parent)
@@ -75,30 +77,30 @@ namespace Ekip.Win.Framework
         public static void WarningMessage(Control parent, string message, string details)
         {
             TaskDialog dlg = new TaskDialog();
-            dlg.WindowTitle = Messages.Default_Title;
-            dlg.Content = message;
-            dlg.MainIcon = TaskDialogIcon.Warning;
-            if (details != null)
-            {
-                dlg.ExpandedInformation = details;
-                dlg.ExpandedByDefault = true;
-                dlg.ExpandFooterArea = false;
-            }
-            dlg.Show(parent);
+            //dlg.WindowTitle = Messages.Default_Title;
+            //dlg.Content = message;
+            //dlg.MainIcon = TaskDialogIcon.Warning;
+            //if (details != null)
+            //{
+            //    dlg.ExpandedInformation = details;
+            //    dlg.ExpandedByDefault = true;
+            //    dlg.ExpandFooterArea = false;
+            //}
+            //dlg.Show(parent);
         }
 
         public static void WarningMessage(string caption, string message, string details)
         {
             TaskDialog dlg = new TaskDialog();
-            dlg.WindowTitle = caption;
-            dlg.Content = message;
-            dlg.MainIcon = TaskDialogIcon.Warning;
-            if (details != null)
-            {
-                dlg.ExpandedInformation = details;
-                dlg.ExpandedByDefault = true;
-                dlg.ExpandFooterArea = false;
-            }
+            //dlg.WindowTitle = caption;
+            //dlg.Content = message;
+            //dlg.MainIcon = TaskDialogIcon.Warning;
+            //if (details != null)
+            //{
+            //    dlg.ExpandedInformation = details;
+            //    dlg.ExpandedByDefault = true;
+            //    dlg.ExpandFooterArea = false;
+            //}
             dlg.Show();
         }
 
@@ -110,42 +112,42 @@ namespace Ekip.Win.Framework
         public static void InfoMessage(Control parent, string message, string details)
         {
             TaskDialog dlg = new TaskDialog();
-            dlg.WindowTitle = Messages.Default_Title;
-            dlg.Content = message;
-            dlg.MainIcon = TaskDialogIcon.Information;
-            if (details != null)
-            {
-                dlg.ExpandedInformation = details;
-                dlg.ExpandedByDefault = false;
-                dlg.ExpandFooterArea = false;
-                dlg.ExpandedControlText = "Detayları gizle";
-                dlg.CollapsedControlText = "Detayları göster";
-            }
-            dlg.Show(parent);
+            //dlg.WindowTitle = Messages.Default_Title;
+            //dlg.Content = message;
+            //dlg.MainIcon = TaskDialogIcon.Information;
+            //if (details != null)
+            //{
+            //    dlg.ExpandedInformation = details;
+            //    dlg.ExpandedByDefault = false;
+            //    dlg.ExpandFooterArea = false;
+            //    dlg.ExpandedControlText = "Detayları gizle";
+            //    dlg.CollapsedControlText = "Detayları göster";
+            //}
+            //dlg.Show(parent);
         }
 
         public static void ErrorMessage(Control parent, string caption, string details)
         {
             TaskDialog dlg = new TaskDialog();
 
-            if (caption == null)
-            {
-                dlg.WindowTitle = Messages.Default_Title;
-            }
-            else
-            {
-                dlg.WindowTitle = caption;
-            }
+            //if (caption == null)
+            //{
+            //    dlg.WindowTitle = Messages.Default_Title;
+            //}
+            //else
+            //{
+            //    dlg.WindowTitle = caption;
+            //}
 
-            dlg.Content = Messages.Opreration_Failed;
-            dlg.MainIcon = TaskDialogIcon.Error;
-            if (details != null)
-            {
-                dlg.ExpandedInformation = details;
-                dlg.ExpandedByDefault = true;
-                dlg.ExpandFooterArea = false;
-            }
-            dlg.Show(parent);
+            //dlg.Content = Messages.Opreration_Failed;
+            //dlg.MainIcon = TaskDialogIcon.Error;
+            //if (details != null)
+            //{
+            //    dlg.ExpandedInformation = details;
+            //    dlg.ExpandedByDefault = true;
+            //    dlg.ExpandFooterArea = false;
+            //}
+            //dlg.Show(parent);
         }
 
         public static void ErrorMessage(Control parent, string caption)

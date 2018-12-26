@@ -52,7 +52,7 @@ namespace Ekip.Win.Framework.ExceptionDialog
                 }
                 catch { }
             }
-            catch (Exception)
+            catch (Exception ex1)
             {
                 try
                 {

@@ -9,7 +9,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
-using CustomControls.TaskDialog;
+using TaskDialogApi;
 
 namespace Ekip.Win.Framework.DevEx.Grid
 {
@@ -49,24 +49,24 @@ namespace Ekip.Win.Framework.DevEx.Grid
         {
             bool deleted = true;
             TaskDialog dlg = new TaskDialog();
-            dlg.WindowTitle = "Onay";
-            dlg.Content = "Silmek istediğinizden emin misiniz?";
-            dlg.MainIcon = TaskDialogIcon.Shield;
-            List<TaskDialogButton> buttons = new List<TaskDialogButton>();
-            buttons.Add(new TaskDialogButton(0, "Evet"));
-            buttons.Add(new TaskDialogButton(1, "Hayır"));
-            dlg.Buttons = buttons.ToArray();
-            if (dlg.Show(this.Parent) == 1) return false;
-            int[] selectedRows = DxView.GetSelectedRows();
-            if (selectedRows.Length > 0)
-            {
-                if (OnRowDelete != null)
-                {
-                    DxRowClickArgs arg = new DxRowClickArgs(DxView.GetRow(DxView.FocusedRowHandle), DxView.FocusedRowHandle, selectedRows);
-                    OnRowDelete(this, arg);
-                    deleted = !arg.Cancel;
-                }
-            }
+            //dlg.WindowTitle = "Onay";
+            //dlg.Content = "Silmek istediğinizden emin misiniz?";
+            //dlg.MainIcon = TaskDialogIcon.Shield;
+            //List<TaskDialogButton> buttons = new List<TaskDialogButton>();
+            //buttons.Add(new TaskDialogButton(0, "Evet"));
+            //buttons.Add(new TaskDialogButton(1, "Hayır"));
+            //dlg.Buttons = buttons.ToArray();
+            //if (dlg.Show(this.Parent) == 1) return false;
+            //int[] selectedRows = DxView.GetSelectedRows();
+            //if (selectedRows.Length > 0)
+            //{
+            //    if (OnRowDelete != null)
+            //    {
+            //        DxRowClickArgs arg = new DxRowClickArgs(DxView.GetRow(DxView.FocusedRowHandle), DxView.FocusedRowHandle, selectedRows);
+            //        OnRowDelete(this, arg);
+            //        deleted = !arg.Cancel;
+            //    }
+            //}
             return deleted;
         }
 

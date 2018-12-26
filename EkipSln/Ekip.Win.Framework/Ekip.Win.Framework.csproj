@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ekip.Win.Framework</RootNamespace>
     <AssemblyName>Ekip.Win.Framework</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,6 +60,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\DevExpress.XtraPrinting.v17.1.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -70,7 +73,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="TaskDialog">
-      <HintPath>..\packages\TaskDialog.dll</HintPath>
+      <HintPath>..\..\..\..\Projects\TaskDialog-Api\TaskDialog\bin\Debug\net472\TaskDialog.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

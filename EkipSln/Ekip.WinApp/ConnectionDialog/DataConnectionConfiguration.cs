@@ -7,16 +7,17 @@ using System.Collections.Specialized;
 using Microsoft.Data.ConnectionUI;
 using Ekip.Framework.Data;
 using Ekip.Framework.Data.SqlClient;
+using Ekip.Framework.Core;
 
 namespace Ekip.WinApp.ConnectionDialog
 {
     public class DataConnectionConfiguration : IDataConnectionConfiguration
     {
-        private const string configFileName = @"DataConnection.xml";
-        const string entityCreationalFactoryType = "Ekip.Entities.EntityFactory";
-        const string connectionStringName = "EkipConnectionString";
-        const string providerInvariantName = "System.Data.SqlClient";
-        private string fullFilePath = null;
+        //private const string configFileName = @"DataConnection.xml";
+        //const string entityCreationalFactoryType = "Ekip.Entities.EntityFactory";
+        //const string connectionStringName = "EkipConnectionString";
+        //const string providerInvariantName = "System.Data.SqlClient";
+        //private string fullFilePath = null;
         private XDocument xDoc = null;
         
         //private IDictionary<string, DataSource> dataSources = null;
@@ -26,23 +27,23 @@ namespace Ekip.WinApp.ConnectionDialog
         {
             if (!string.IsNullOrEmpty(path))
             {
-                fullFilePath = Path.GetFullPath(Path.Combine(path, configFileName));
+                //fullFilePath = Path.GetFullPath(Path.Combine(path, configFileName));
             }
             else
             {
-                fullFilePath = Path.Combine(System.Environment.CurrentDirectory, configFileName);
+                //fullFilePath = Path.Combine(System.Environment.CurrentDirectory, configFileName);
             }
-            if (!string.IsNullOrEmpty(fullFilePath) && File.Exists(fullFilePath))
-            {
-                xDoc = XDocument.Load(fullFilePath);
-            }
-            else
-            {
-                xDoc = new XDocument();
-                xDoc.Add(new XElement("ConnectionDialog", new XElement("DataSourceSelection")));
-            }
+            //if (!string.IsNullOrEmpty(fullFilePath) && File.Exists(fullFilePath))
+            //{
+            //    xDoc = XDocument.Load(fullFilePath);
+            //}
+            //else
+            //{
+            //    xDoc = new XDocument();
+            //    xDoc.Add(new XElement("ConnectionDialog", new XElement("DataSourceSelection")));
+            //}
 
-            this.RootElement = xDoc.Root;
+            //this.RootElement = xDoc.Root;
         }
 
         public XElement RootElement { get; set; }
@@ -154,7 +155,7 @@ namespace Ekip.WinApp.ConnectionDialog
             if (!string.IsNullOrEmpty(scsb.Password)) this.SavePassword(scsb.Password);
             SaveMultipleActiveResultSets(scsb.MultipleActiveResultSets);
             SaveConnectionTimeout(scsb.ConnectTimeout);
-            xDoc.Save(fullFilePath);
+            //xDoc.Save(fullFilePath);
         }
 
         public string GetSelectedSource()
@@ -475,25 +476,25 @@ namespace Ekip.WinApp.ConnectionDialog
 
         public void InitializeProvider()
         {
-            SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder();
-            sb.DataSource = GetSelectedDataSource();
-            sb.InitialCatalog = GetInitialCatalog();
-            sb.IntegratedSecurity = GetIntegratedSecurity().Value;
-            sb.UserID = GetUserName();
-            sb.Password = GetPassword();
-            sb.MultipleActiveResultSets = GetMultipleActiveResultSets();
-            sb.ConnectTimeout = GetConnectionTimeout();
+            //SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder(ConfigManager.ConnectionString);
+            //sb.DataSource = GetSelectedDataSource();
+            //sb.InitialCatalog = GetInitialCatalog();
+            //sb.IntegratedSecurity = GetIntegratedSecurity().Value;
+            //sb.UserID = GetUserName();
+            //sb.Password = GetPassword();
+            //sb.MultipleActiveResultSets = GetMultipleActiveResultSets();
+            //sb.ConnectTimeout = GetConnectionTimeout();
             
             SqlNetTiersProvider provider = new SqlNetTiersProvider();
             NameValueCollection collection = new NameValueCollection();
-            collection.Add("UseStoredProcedure", "true");
-            collection.Add("EnableEntityTracking", "true");
-            collection.Add("EntityCreationalFactoryType", entityCreationalFactoryType);
-            collection.Add("EnableMethodAuthorization", "false");
-            collection.Add("DefaultCommandTimeout", "600");
-            collection.Add("ConnectionString", sb.ConnectionString);
-            collection.Add("ConnectionStringName", connectionStringName);
-            collection.Add("ProviderInvariantName", providerInvariantName);
+            collection.Add("UseStoredProcedure", ConfigManager.UseStoredProcedure);
+            collection.Add("EnableEntityTracking", ConfigManager.EnableEntityTracking);
+            collection.Add("EntityCreationalFactoryType", ConfigManager.EntityCreationalFactoryType);
+            collection.Add("EnableMethodAuthorization", ConfigManager.EnableMethodAuthorization);
+            collection.Add("DefaultCommandTimeout", ConfigManager.DefaultCommandTimeout);
+            collection.Add("ConnectionString", ConfigManager.ConnectionString);
+            collection.Add("ConnectionStringName", ConfigManager.ConnectionStringName);
+            collection.Add("ProviderInvariantName", ConfigManager.ProviderInvariantName);
             provider.Initialize("DynamicSqlNetTiersProvider", collection);
             DataRepository.LoadProvider(provider, true);
         }

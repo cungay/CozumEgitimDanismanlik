@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
 <codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
   <variables>
-    <add key="ConnectionString1" value="Data Source=.;Initial Catalog=EkipDev;User ID=sa;Password=1" />
+    <add key="ConnectionString1" value="Data Source=PC-34149;Initial Catalog=EkipDev;User ID=sa;Password=1q2w3e" />
+    <add key="ConnectionString2" value="Data Source=.;Initial Catalog=EkipDev;User ID=sa;Password=1q2w3e" />
   </variables>
   <propertySets>
-    <propertySet name="NetTiers.txt" output="NetTiers.txt" template="D:\GitHub\CozumEgitimDanismanlik\EkipSln\NetTiers\NetTiers.cst">
+    <propertySet name="NetTiers.txt" output="NetTiers.txt" template="E:\GitHub\CozumEgitimDanismanlik\EkipSln\NetTiers\NetTiers.cst">
       <property name="ExecuteSql">True</property>
       <property name="SQLFolderName">SQL</property>
       <property name="ViewReport">True</property>
       <property name="AutoIncrementBuildVersion">True</property>
       <property name="LaunchVisualStudio">False</property>
-      <property name="IncludeUnitTest">None</property>
+      <property name="IncludeUnitTest">NUnit</property>
       <property name="IncludeComponentLayer">ServiceLayer</property>
       <property name="IncludeWCFDataAttributes">True</property>
       <property name="SerializeEntityState">True</property>
@@ -67,8 +68,8 @@
       <property name="FindSuffix">_Find</property>
       <property name="GenerateWinLibrary">False</property>
       <property name="RootNameSpace">Ekip.Framework</property>
-      <property name="OutputDirectory">D:\GitHub\CozumEgitimDanismanlik\EkipSln</property>
-      <property name="MappingFile">D:\GitHub\CozumEgitimDanismanlik\Mapping.config</property>
+      <property name="OutputDirectory">E:\GitHub\CozumEgitimDanismanlik\EkipSln</property>
+      <property name="MappingFile">E:\GitHub\CozumEgitimDanismanlik\Mapping.config</property>
       <property name="ComponentLayerNameSpace">Services</property>
       <property name="SourceTables">
         <connectionString>$(ConnectionString1)</connectionString>
@@ -234,14 +235,14 @@
       </view>
     </viewList>
       </property>
-      <property name="WebServiceOutputPath">E:\Projects\EkipSln\Framework\WebServices</property>
+      <property name="WebServiceOutputPath">E:\GitHub\CozumEgitimDanismanlik\EkipSln\WebServices</property>
       <property name="WebServiceUrl">http://localhost/</property>
       <property name="WebAdminSiteName">EkipDev Application</property>
       <property name="ValidationType">NetTiers</property>
       <property name="GenerateWebSecurity">False</property>
       <property name="UseMD5Hash">False</property>
       <property name="ChooseSourceDatabase">
-        <connectionString>$(ConnectionString1)</connectionString>
+        <connectionString>$(ConnectionString2)</connectionString>
         <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
       </property>
       <property name="RetrySleepStyle">Constant</property>
