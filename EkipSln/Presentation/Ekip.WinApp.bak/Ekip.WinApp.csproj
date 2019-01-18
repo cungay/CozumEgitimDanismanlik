@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50A973F8-5183-4DA9-AB16-6BEFF60E7E8C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ekip.WinApp</RootNamespace>
+    <AssemblyName>Ekip.WinApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.BonusSkins.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.Data.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.Printing.v17.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.Utils.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraBars.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraEditors.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraGrid.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraLayout.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraNavBar.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraPrinting.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraVerticalGrid.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.ConnectionUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaskDialog">
+      <HintPath>..\..\..\..\Projects\TaskDialog-Api\TaskDialog\bin\Debug\net472\TaskDialog.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionDialog\DataConnectionConfiguration.cs" />
+    <Compile Include="ConnectionDialog\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionDialog\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionDialog\IDataConnectionConfiguration.cs" />
+    <Compile Include="Forms\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConsultantList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsultantList.Designer.cs">
+      <DependentUpon>frmConsultantList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReasonList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReasonList.Designer.cs">
+      <DependentUpon>frmReasonList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSeanceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSeanceEdit.Designer.cs">
+      <DependentUpon>frmSeanceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSiblingEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSiblingEdit.Designer.cs">
+      <DependentUpon>frmSiblingEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTeacherEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTeacherEdit.Designer.cs">
+      <DependentUpon>frmTeacherEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWippsiEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWippsiEdit.Designer.cs">
+      <DependentUpon>frmWippsiEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWiscrEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWiscrEdit.Designer.cs">
+      <DependentUpon>frmWiscrEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModulesRegistration.cs" />
+    <Compile Include="Modules\ClientInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ClientInfo.Designer.cs">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ObservationForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ObservationForm.Designer.cs">
+      <DependentUpon>ObservationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\QuestionForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\QuestionForm.Designer.cs">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wippsi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wippsi.Designer.cs">
+      <DependentUpon>Wippsi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Wiscr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Wiscr.Designer.cs">
+      <DependentUpon>Wiscr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\ResQuestionForm.Designer.cs" />
+    <Compile Include="Reports\frmAdvisorReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmAdvisorReport.Designer.cs">
+      <DependentUpon>frmAdvisorReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmBetweenYears.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmBetweenYears.Designer.cs">
+      <DependentUpon>frmBetweenYears.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmReasonsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReasonsReport.Designer.cs">
+      <DependentUpon>frmReasonsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucClientTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucClientTab.Designer.cs">
+      <DependentUpon>ucClientTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucFileExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucFileExplorer.Designer.cs">
+      <DependentUpon>ucFileExplorer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConnectionDialog\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsultantList.resx">
+      <DependentUpon>frmConsultantList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReasonList.resx">
+      <DependentUpon>frmReasonList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSeanceEdit.resx">
+      <DependentUpon>frmSeanceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSiblingEdit.resx">
+      <DependentUpon>frmSiblingEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTeacherEdit.resx">
+      <DependentUpon>frmTeacherEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWippsiEdit.resx">
+      <DependentUpon>frmWippsiEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWiscrEdit.resx">
+      <DependentUpon>frmWiscrEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ClientInfo.resx">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ObservationForm.resx">
+      <DependentUpon>ObservationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\QuestionForm.resx">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wippsi.resx">
+      <DependentUpon>Wippsi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Wiscr.resx">
+      <DependentUpon>Wiscr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Properties\ResQuestionForm.resx" />
+    <EmbeddedResource Include="Reports\frmAdvisorReport.resx">
+      <DependentUpon>frmAdvisorReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmBetweenYears.resx">
+      <DependentUpon>frmBetweenYears.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReasonsReport.resx">
+      <DependentUpon>frmReasonsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucClientTab.resx">
+      <DependentUpon>ucClientTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucFileExplorer.resx">
+      <DependentUpon>ucFileExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppFramework\AppFramework.csproj">
+      <Project>{22e435fb-ea14-48a2-9dee-d14820b1ef1e}</Project>
+      <Name>AppFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ekip.Win.Framework\Ekip.Win.Framework.csproj">
+      <Project>{8b7898a1-2994-4f7f-bc1e-038c484fc7ee}</Project>
+      <Name>Ekip.Win.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Core\Ekip.Framework.Core.csproj">
+      <Project>{A60FC179-2520-4044-AE82-C087CFC372A5}</Project>
+      <Name>Ekip.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Data.SqlClient\Ekip.Framework.Data.SqlClient.csproj">
+      <Project>{35328E34-1C95-4AA1-9335-5D4EE2B51D4C}</Project>
+      <Name>Ekip.Framework.Data.SqlClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Data\Ekip.Framework.Data.csproj">
+      <Project>{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}</Project>
+      <Name>Ekip.Framework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Entities\Ekip.Framework.Entities.csproj">
+      <Project>{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}</Project>
+      <Name>Ekip.Framework.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Services\Ekip.Framework.Services.csproj">
+      <Project>{CDCCCFDD-B532-475E-9B8B-374EC5082F1E}</Project>
+      <Name>Ekip.Framework.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="family_3816.ico" />
+    <Content Include="Resources\7598_-_Reasoning_Skills-512.png" />
+    <Content Include="Resources\attach.png" />
+    <Content Include="Resources\cause_reason_process_flow-512.png" />
+    <Content Include="Resources\copy16.png" />
+    <Content Include="Resources\export_excel.png" />
+    <Content Include="Resources\if_8_1320804.png" />
+    <Content Include="Resources\if_office-11_809573.png" />
+    <Content Include="Resources\if_support_477135.png" />
+    <Content Include="Resources\insert_image.png" />
+    <Content Include="Resources\insert_table.png" />
+    <Content Include="Resources\kghostview.png" />
+    <Content Include="Resources\logo1.png" />
+    <Content Include="Resources\mailSend.png" />
+    <Content Include="Resources\print16.png" />
+    <Content Include="Resources\sendMail16.png" />
+    <Content Include="Resources\splash_screen.png" />
+    <Content Include="Resources\ToolbarBold.bmp" />
+    <Content Include="Resources\ToolbarFileOpen.bmp" />
+    <Content Include="Resources\ToolbarFileSave.bmp" />
+    <Content Include="Resources\ToolbarJustifyLeft.bmp" />
+    <Content Include="Resources\ToolbarJustifyRight.bmp" />
+    <Content Include="Resources\ToolbarLine.bmp" />
+    <Content Include="Resources\ToolbarListOrdered.bmp" />
+    <Content Include="Resources\ToolbarListUnordered.bmp" />
+    <Content Include="Resources\ToolbarUnderline.bmp" />
+    <Content Include="Survey\gozlem_formu.html" />
+    <Content Include="Survey\question_form.html" />
+    <Content Include="Survey\rating.html" />
+    <Content Include="Survey\soru_formu.html" />
+    <Content Include="UserControls\images\doc.png" />
+    <Content Include="UserControls\images\jpg.png" />
+    <Content Include="UserControls\images\pdf.png" />
+    <Content Include="UserControls\images\rar.png" />
+    <Content Include="UserControls\images\txt.png" />
+    <Content Include="UserControls\images\xls.png" />
+    <Content Include="UserControls\images\zip.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

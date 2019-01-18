@@ -68,7 +68,7 @@
       <property name="FindSuffix">_Find</property>
       <property name="GenerateWinLibrary">False</property>
       <property name="RootNameSpace">Ekip.Framework</property>
-      <property name="OutputDirectory">E:\GitHub\CozumEgitimDanismanlik\EkipSln</property>
+      <property name="OutputDirectory">E:\GitHub\CozumEgitimDanismanlik\EkipSln\Libraries</property>
       <property name="MappingFile">E:\GitHub\CozumEgitimDanismanlik\Mapping.config</property>
       <property name="ComponentLayerNameSpace">Services</property>
       <property name="SourceTables">
@@ -97,7 +97,7 @@
       </table>
       <table>
         <owner>dbo</owner>
-        <name>ClientDoc</name>
+        <name>ClientEducation</name>
       </table>
       <table>
         <owner>dbo</owner>
@@ -106,10 +106,6 @@
       <table>
         <owner>dbo</owner>
         <name>ClientMother</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>ClientSchool</name>
       </table>
       <table>
         <owner>dbo</owner>
@@ -145,15 +141,15 @@
       </table>
       <table>
         <owner>dbo</owner>
-        <name>QuestionForm_Answer</name>
+        <name>QuestionFormAnswer</name>
       </table>
       <table>
         <owner>dbo</owner>
-        <name>QuestionForm_Group</name>
+        <name>QuestionFormGroup</name>
       </table>
       <table>
         <owner>dbo</owner>
-        <name>QuestionForm_Option</name>
+        <name>QuestionFormOption</name>
       </table>
       <table>
         <owner>dbo</owner>
@@ -169,23 +165,19 @@
       </table>
       <table>
         <owner>dbo</owner>
-        <name>Seance_Reason</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
         <name>SeanceQuestion</name>
       </table>
       <table>
         <owner>dbo</owner>
-        <name>SeanceQuestion_Answer</name>
+        <name>SeanceQuestionAnswer</name>
       </table>
       <table>
         <owner>dbo</owner>
-        <name>SeanceQuestion_Option</name>
+        <name>SeanceQuestionOption</name>
       </table>
       <table>
         <owner>dbo</owner>
-        <name>Session</name>
+        <name>SeanceReason</name>
       </table>
       <table>
         <owner>dbo</owner>
@@ -219,19 +211,7 @@
         <viewList>
       <view>
         <owner>dbo</owner>
-        <name>ClientView</name>
-      </view>
-      <view>
-        <owner>dbo</owner>
         <name>ProvinceView</name>
-      </view>
-      <view>
-        <owner>dbo</owner>
-        <name>WippsiView</name>
-      </view>
-      <view>
-        <owner>dbo</owner>
-        <name>WiscrView</name>
       </view>
     </viewList>
       </property>

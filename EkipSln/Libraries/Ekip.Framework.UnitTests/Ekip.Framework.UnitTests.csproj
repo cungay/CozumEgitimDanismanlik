@@ -1,0 +1,426 @@
+﻿
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.21005.1</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61884D9B-CAC0-4E25-91C8-F7C57D101B96}</ProjectGuid>
+    <ProjectType>Local</ProjectType>
+	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OutputType>Library</OutputType>
+    <ApplicationIcon>
+	</ApplicationIcon>
+    <AssemblyKeyContainerName>
+	</AssemblyKeyContainerName>
+    <AssemblyName>Ekip.Framework.UnitTests</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\Ekip.Framework.snk</AssemblyOriginatorKeyFile>
+	<SignAssembly>false</SignAssembly>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <RootNamespace>Ekip.Framework.UnitTests</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject></StartupObject>
+    <FileUpgradeFlags></FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>Ekip.Framework.UnitTests.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>Ekip.Framework.UnitTests.xml</DocumentationFile>
+	 <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'GenerateDebug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>Ekip.Framework.UnitTests.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System"/>
+	<Reference Include="System.Core">
+		<RequiredTargetFramework>4.5</RequiredTargetFramework>
+	</Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations"/>
+    <Reference Include="System.Web"/>
+    <Reference Include="System.Data"/>
+    <Reference Include="System.Design"/>
+    <Reference Include="System.Xml"/>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+     
+	<ProjectReference Include="..\Ekip.Framework.Entities\Ekip.Framework.Entities.csproj">
+      <Name>Ekip.Framework.Entities</Name>
+      <Project>{1F8EAF95-7F11-4DB2-9D70-C0C7862050BB}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+	
+	
+	
+	
+    
+    
+    <!-- check the GAC ? -->
+    <Reference Include="nunit.framework, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\nunit.framework.dll</HintPath>
+    </Reference>
+
+    <ProjectReference Include="..\Ekip.Framework.Data\Ekip.Framework.Data.csproj">
+        <Name>Ekip.Framework.Data</Name>
+        <Project>{B09295AE-9CA1-4B68-9AC0-2F1475E1D5F9}</Project>
+        <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
+    </ProjectReference>
+	<ProjectReference Include="..\Ekip.Framework.Data.SqlClient\Ekip.Framework.Data.SqlClient.csproj">
+        <Name>Ekip.Framework.Data.SqlClient</Name>
+        <Project>{35328E34-1C95-4AA1-9335-5D4EE2B51D4C}</Project>
+        <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+	<ProjectReference Include="..\Ekip.Framework.Services\Ekip.Framework.Services.csproj">
+        <Name>Ekip.Framework.Services</Name>
+        <Project>{CDCCCFDD-B532-475E-9B8B-374EC5082F1E}</Project>
+        <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
+    </ProjectReference>
+	     
+    	
+	
+	
+	
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Include="Ekip.Framework.UnitTests.dll.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Include="entlib.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+		
+	<!-- Custom code folder: E:\GitHub\CozumEgitimDanismanlik\EkipSln\Libraries\Ekip.Framework.UnitTests\App_Code -->
+	<ItemGroup>	
+		<Folder Include="App_Code\" />
+        <Compile Include="App_Code\**\*.cs">
+          <SubType>Code</SubType>
+        </Compile>		
+	</ItemGroup>
+
+	<!-- Include any user files -->
+	<ItemGroup>	
+		<Compile Include="**\*.user.*" Exclude="**\*.csproj.user;**\.svn\**" >
+          <SubType>Code</SubType>
+        </Compile>		
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Compile Include="Views\ProvinceViewTest.cs">
+			<SubType>Code</SubType>
+		</Compile>					
+		<Compile Include="Views\ProvinceViewTest.generated.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>ProvinceViewTest.cs</DependentUpon>
+		</Compile>
+			<Compile Include="AdvisorTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="AdvisorTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>AdvisorTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="SeanceQuestionTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="SeanceQuestionTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>SeanceQuestionTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="SeanceTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="SeanceTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>SeanceTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="SchoolTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="SchoolTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>SchoolTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ReasonTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ReasonTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ReasonTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="QuestionFormGroupTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="QuestionFormGroupTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>QuestionFormGroupTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="SeanceQuestionOptionTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="SeanceQuestionOptionTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>SeanceQuestionOptionTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="TownTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="TownTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>TownTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="SeanceReasonTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="SeanceReasonTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>SeanceReasonTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="TeacherTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="TeacherTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>TeacherTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="WippsiTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="WippsiTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>WippsiTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="SeanceQuestionAnswerTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="SeanceQuestionAnswerTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>SeanceQuestionAnswerTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="StreetTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="StreetTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>StreetTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="QuestionFormTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="QuestionFormTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>QuestionFormTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="SiblingTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="SiblingTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>SiblingTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ClientFatherTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ClientFatherTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ClientFatherTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ClientMotherTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ClientMotherTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ClientMotherTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ClientAddressTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ClientAddressTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ClientAddressTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ProvinceTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ProvinceTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ProvinceTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="CalenderAgeTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="CalenderAgeTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>CalenderAgeTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ClientTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ClientTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ClientTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ClientEducationTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ClientEducationTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ClientEducationTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="AreaTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="AreaTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>AreaTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="JobTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="JobTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>JobTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="NeighborhoodTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="NeighborhoodTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>NeighborhoodTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="QuestionFormOptionTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="QuestionFormOptionTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>QuestionFormOptionTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="QuestionFormAnswerTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="QuestionFormAnswerTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>QuestionFormAnswerTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ObservationFormGroupTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ObservationFormGroupTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ObservationFormGroupTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ObservationFormTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ObservationFormTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ObservationFormTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ObservationFormOptionTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ObservationFormOptionTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ObservationFormOptionTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="ObservationFormAnswerTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="ObservationFormAnswerTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>ObservationFormAnswerTest.cs</DependentUpon>
+			</Compile>
+			<Compile Include="WiscrTest.cs">
+			  	<SubType>Code</SubType>
+			</Compile>	
+			<Compile Include="WiscrTest.generated.cs">
+			  	<SubType>Code</SubType>
+				<DependentUpon>WiscrTest.cs</DependentUpon>
+			</Compile>
+		<Compile Include="..\AssemblyInfo.cs">
+		  <SubType>Code</SubType>
+		</Compile>
+			
+
+		
+		
+
+			<Compile Include="TestUtility.cs">
+			  <SubType>Code</SubType>
+			</Compile>			
+		
+		
+		
+		
+		 <AppDesigner Include="Properties\" />
+	</ItemGroup>
+	
+	
+	
+	
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+	<PostBuildEvent>
+	</PostBuildEvent>
+  </PropertyGroup>
+
+</Project>
