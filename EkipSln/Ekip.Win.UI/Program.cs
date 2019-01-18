@@ -64,7 +64,7 @@ namespace Ekip.Win.UI
         private static void OnThreadException(object sender, ThreadExceptionEventArgs e)
         {
             Debug.WriteLine(e.Exception.Message);
-            throw new NotImplementedException();
+            throw new NotImplementedException(); 
         }
     }
 }
