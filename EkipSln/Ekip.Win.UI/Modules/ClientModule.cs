@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using Ekip.Framework.UI.Forms;
 using Ekip.Framework.UI.Extensions;
 using Ekip.Framework.UI.XAF;
+using Ekip.Framework.Core.ErrorHandling;
 
 namespace Ekip.Win.UI.Modules
 {
@@ -297,8 +298,9 @@ namespace Ekip.Win.UI.Modules
         }
 
         private void BirthDateOnInvalidValue(object sender, InvalidValueExceptionEventArgs e) {
-            e.ExceptionMode = DevExpress.XtraEditors.Controls.ExceptionMode.DisplayError;
-            MessageBox.Show("Enter a date within the current month.", "Error");
+            e.ExceptionMode = DevExpress.XtraEditors.Controls.ExceptionMode.ThrowException;
+            //MessageBox.Show("Enter a date within the current month.", "Error");
+            throw new ValidateException("Enter a date within the current month.");
         }
 
         #endregion

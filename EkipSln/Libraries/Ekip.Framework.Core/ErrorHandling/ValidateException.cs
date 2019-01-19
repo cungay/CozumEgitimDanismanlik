@@ -1,5 +1,6 @@
-﻿using Ekip.Framework.Core.Resources;
-using System;
+﻿using System;
+using System.Runtime.Serialization;
+using Ekip.Framework.Core.Resources;
 
 namespace Ekip.Framework.Core.ErrorHandling
 {
@@ -18,7 +19,7 @@ namespace Ekip.Framework.Core.ErrorHandling
         /// </summary>
         /// <param name="entityKey">object name</param>
         public ValidateException(String message)
-          : base(string.Format("<p>{0}</p>", message))
+          : base(message)
         {
         }
 
@@ -28,8 +29,12 @@ namespace Ekip.Framework.Core.ErrorHandling
         /// <param name="entityKey">object name</param>
         /// <param name="innerException">Exception inner cause</param>
         public ValidateException(String message, Exception innerException)
-          : base(string.Format("<u>{0}</u><br>{1}", message, innerException.Message))
+           : base(message, innerException)
         {
         }
+
+        protected ValidateException(SerializationInfo info, StreamingContext context)
+         : base(info, context)
+        { }
     }
 }

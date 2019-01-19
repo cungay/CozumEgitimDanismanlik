@@ -1,0 +1,70 @@
+﻿using System;
+using System.Diagnostics;
+using TaskDialogInterop;
+using Ekip.Framework.Core.Resources;
+using Ekip.Framework.Core;
+using Ekip.Framework.Core.ErrorHandling;
+
+namespace Ekip.Framework.UI
+{
+    public class TaskDialogHandler
+    {
+        public TaskDialogHandler()
+        {
+
+        }
+
+        public static TaskDialogResult ExceptionDialog(Exception exception)
+        {
+            var messages = string.Join("\n", exception.Messages());
+            Debug.WriteLine(messages);
+
+            TaskDialogOptions config = new TaskDialogOptions();
+
+            if (exception is ValidateException)
+            {
+                config = ValidationDialogOptions();
+            }
+            else
+            {
+                config = ExceptionDialogOptions();
+            }
+
+            config.Title = Messages.Default_Title;
+            config.Content = string.Format("Source: {0}\n{1}", exception.Source, messages);
+            config.ExpandedInfo = string.Format("StackTrace:\n{0}", exception.StackTrace);
+            config.AllowDialogCancellation = false;
+            return TaskDialog.Show(config);
+        }
+
+        private static TaskDialogOptions ValidationDialogOptions()
+        {
+            TaskDialogOptions config = new TaskDialogOptions();
+            config.MainInstruction = Messages.Validate_Error;
+            config.MainIcon = VistaTaskDialogIcon.Warning;
+            config.FooterIcon = VistaTaskDialogIcon.None;
+            config.VerificationText = null;
+            config.FooterText = null;
+            config.CustomButtons = new string[] { "&Tamam" };
+            return config;
+        }
+
+        private static TaskDialogOptions ExceptionDialogOptions()
+        {
+            TaskDialogOptions config = new TaskDialogOptions();
+            config.MainInstruction = FormatMessage(Messages.System_Error);
+            config.MainIcon = VistaTaskDialogIcon.Error;
+            config.FooterIcon = VistaTaskDialogIcon.Error;
+            config.VerificationText = null;
+            config.FooterText = null;
+            config.CustomButtons = new string[] { "&Tamam" };
+            return config;
+        }
+
+        private static string FormatMessage(string message)
+        {
+            message = message.Replace("_", "\\n");
+            return message;
+        }
+    }
+}

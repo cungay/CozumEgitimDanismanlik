@@ -12,28 +12,18 @@ namespace Ekip.Framework.Core
         /// logs and error pages easier to read when dealing with exceptions.
         /// Usage: Exception.Messages()
         /// </summary>
-        public static IEnumerable<string> Messages(this Exception ex)
-        {
-            // return an empty sequence if the provided exception is null
+        public static IEnumerable<string> Messages(this Exception ex) {
             if (ex == null) { yield break; }
-            // first return THIS exception's message at the beginning of the list
             yield return ex.Message;
-            // then get all the lower-level exception messages recursively (if any)
             IEnumerable<Exception> innerExceptions = Enumerable.Empty<Exception>();
-
-            if (ex is AggregateException && (ex as AggregateException).InnerExceptions.Any())
-            {
+            if (ex is AggregateException && (ex as AggregateException).InnerExceptions.Any()) {
                 innerExceptions = (ex as AggregateException).InnerExceptions;
             }
-            else if (ex.InnerException != null)
-            {
+            else if (ex.InnerException != null) {
                 innerExceptions = new Exception[] { ex.InnerException };
             }
-
-            foreach (var innerEx in innerExceptions)
-            {
-                foreach (string msg in innerEx.Messages())
-                {
+            foreach (var innerEx in innerExceptions) {
+                foreach (string msg in innerEx.Messages()) {
                     yield return msg;
                 }
             }

@@ -166,6 +166,6 @@
     <value>Sistem bir ya da birden fazla hata ile karşılaştı.</value>
   </data>
   <data name="Validate_Error" xml:space="preserve">
-    <value>Bir ya da birden fazla veri giriş hatası bulundu.\nLütfen formu kontrol edin.</value>
+    <value>Bir ya da birden fazla veri giriş hatası bulundu.</value>
   </data>
 </root>

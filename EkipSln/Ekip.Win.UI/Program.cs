@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
-using Ekip.Framework.Entities;
+using Ekip.Framework.UI.Extensions;
 
 namespace Ekip.Win.UI
 {
@@ -11,7 +11,7 @@ namespace Ekip.Win.UI
     {
         //public static DataConnectionConfiguration DataConfig { get; set; }
 
-        public static Client CurrentClient { get; set; }
+        public static Ekip.Framework.Entities.Client CurrentClient { get; set; }
 
         public static CultureInfo CurrentCulture
         {
@@ -51,20 +51,18 @@ namespace Ekip.Win.UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ModulesRegistration.Register();
-            Application.Run(new Forms.frmLogin());
+            Application.Run(new Framework.Forms.TaskDialog());
         }
 
         private static void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            
-            Debug.WriteLine((e.ExceptionObject as Exception).Message);
-            //throw new NotImplementedException();
+            var exception = (e.ExceptionObject as Exception);
+            TaskDialogExtensions.ExceptionDialog(exception);
         }
 
         private static void OnThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            Debug.WriteLine(e.Exception.Message);
-            throw new NotImplementedException(); 
+            TaskDialogExtensions.ExceptionDialog(e.Exception);
         }
     }
 }

@@ -30,49 +30,49 @@
         {
             this.clientTab = new DevExpress.XtraTab.XtraTabControl();
             this.tpSeance = new DevExpress.XtraTab.XtraTabPage();
-            this.gcSeanse = new Framework.UI.DevEx.Grid.DxGridControl();
-            this.gwSeance = new Framework.UI.DevEx.Grid.DxGridView();
-            this.colSeanceDate = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colSeanceTime = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colSenaceNote = new Framework.UI.DevEx.Grid.DxGridColumn();
+            this.gcSeanse = new Ekip.Framework.UI.DevEx.Grid.DxGridControl();
+            this.gwSeance = new Ekip.Framework.UI.DevEx.Grid.DxGridView();
+            this.colSeanceDate = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colSeanceTime = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colSenaceNote = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
             this.rlkNotes = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
-            this.colSeanceStatus = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colAdvisorName = new Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colSeanceStatus = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colAdvisorName = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
             this.rlkAdvisor = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dxSeanceNav = new Framework.UI.DevEx.Editors.DxDataNavigator();
+            this.dxSeanceNav = new Ekip.Framework.UI.DevEx.Editors.DxDataNavigator();
             this.tpSibling = new DevExpress.XtraTab.XtraTabPage();
-            this.gcSibling = new Framework.UI.DevEx.Grid.DxGridControl();
-            this.gwSibling = new Framework.UI.DevEx.Grid.DxGridView();
-            this.colFullName = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colBirthDate = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colAge = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colGender = new Framework.UI.DevEx.Grid.DxGridColumn();
+            this.gcSibling = new Ekip.Framework.UI.DevEx.Grid.DxGridControl();
+            this.gwSibling = new Ekip.Framework.UI.DevEx.Grid.DxGridView();
+            this.colFullName = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colBirthDate = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colAge = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colGender = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
             this.rlkGender = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.colNote = new Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colNote = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
             this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
-            this.colSchool = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colClassRoom = new Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colSchool = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colClassRoom = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
             this.rlkClassRoom = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tpSchool = new DevExpress.XtraTab.XtraTabPage();
-            this.gcSchool = new Framework.UI.DevEx.Grid.DxGridControl();
-            this.gwSchool = new Framework.UI.DevEx.Grid.DxGridView();
-            this.dxGridColumn1 = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.dxGridColumn2 = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.dxGridColumn3 = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.dxGridColumn4 = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.dxGridColumn5 = new Framework.UI.DevEx.Grid.DxGridColumn();
+            this.gcSchool = new Ekip.Framework.UI.DevEx.Grid.DxGridControl();
+            this.gwSchool = new Ekip.Framework.UI.DevEx.Grid.DxGridView();
+            this.dxGridColumn1 = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.dxGridColumn2 = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.dxGridColumn3 = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.dxGridColumn4 = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.dxGridColumn5 = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
             this.repositoryItemMemoExEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tpTeacher = new DevExpress.XtraTab.XtraTabPage();
-            this.gcTeacher = new Framework.UI.DevEx.Grid.DxGridControl();
-            this.gwTeacher = new Framework.UI.DevEx.Grid.DxGridView();
-            this.colBranchID = new Framework.UI.DevEx.Grid.DxGridColumn();
+            this.gcTeacher = new Ekip.Framework.UI.DevEx.Grid.DxGridControl();
+            this.gwTeacher = new Ekip.Framework.UI.DevEx.Grid.DxGridView();
+            this.colBranchID = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
             this.rlkBranch = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.colTeacherName = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colTeacherEmail = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colTeacherPhone = new Framework.UI.DevEx.Grid.DxGridColumn();
-            this.colTeacherNote = new Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colTeacherName = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colTeacherEmail = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colTeacherPhone = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
+            this.colTeacherNote = new Ekip.Framework.UI.DevEx.Grid.DxGridColumn();
             this.repositoryItemMemoExEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             ((System.ComponentModel.ISupportInitialize)(this.clientTab)).BeginInit();
             this.clientTab.SuspendLayout();
@@ -140,8 +140,8 @@
             this.gcSeanse.TabIndex = 8;
             this.gcSeanse.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gwSeance});
-            this.gcSeanse.OnRowClick += new Framework.UI.DevEx.Grid.DxGridControl.RowClickHandler(this.GcSeanse_OnRowClick);
-            this.gcSeanse.OnRowDelete += new Framework.UI.DevEx.Grid.DxGridControl.RowDeleteHandler(this.GcSeanse_OnRowDelete);
+            this.gcSeanse.OnRowClick += new Ekip.Framework.UI.DevEx.Grid.DxGridControl.RowClickHandler(this.GcSeanse_OnRowClick);
+            this.gcSeanse.OnRowDelete += new Ekip.Framework.UI.DevEx.Grid.DxGridControl.RowDeleteHandler(this.GcSeanse_OnRowDelete);
             // 
             // gwSeance
             // 
@@ -314,7 +314,7 @@
             this.gcSibling.TabIndex = 1;
             this.gcSibling.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gwSibling});
-            this.gcSibling.OnRowClick += new Framework.UI.DevEx.Grid.DxGridControl.RowClickHandler(this.gcClientSub_OnRowClick);
+            this.gcSibling.OnRowClick += new Ekip.Framework.UI.DevEx.Grid.DxGridControl.RowClickHandler(this.gcClientSub_OnRowClick);
             // 
             // gwSibling
             // 
@@ -574,7 +574,7 @@
             this.gcTeacher.TabIndex = 2;
             this.gcTeacher.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gwTeacher});
-            this.gcTeacher.OnRowClick += new Framework.UI.DevEx.Grid.DxGridControl.RowClickHandler(this.gcEducation_OnRowClick);
+            this.gcTeacher.OnRowClick += new Ekip.Framework.UI.DevEx.Grid.DxGridControl.RowClickHandler(this.gcEducation_OnRowClick);
             // 
             // gwTeacher
             // 
