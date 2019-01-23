@@ -1,0 +1,42 @@
+﻿using DevExpress.Skins;
+using DevExpress.Skins.XtraForm;
+using DevExpress.LookAndFeel;
+using DevExpress.Utils;
+using DevExpress.Utils.Drawing;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Ekip.Win.Framework.Forms
+{
+    public class TaskDialogPainter : FormPainter
+    {
+        public TaskDialogPainter(Control owner, ISkinProvider provider)
+            : base(owner, provider) { }
+        public TaskDialogPainter(TaskDialog owner, UserLookAndFeel provider, HorzAlignment captionAlignment)
+            : base(owner, provider) {
+            CaptionAlignment = captionAlignment;
+        }
+        private HorzAlignment captionAligment = HorzAlignment.Default;
+        public HorzAlignment CaptionAlignment
+        {
+            get { return captionAligment; }
+            set { captionAligment = value; }
+        }
+        protected override void DrawText(GraphicsCache cache) {
+            string text = Text;
+            if (text == null || text.Length == 0 || TextBounds.IsEmpty)
+                return;
+            AppearanceObject appearance = new AppearanceObject(GetDefaultAppearance());
+            appearance.TextOptions.Trimming = Trimming.EllipsisCharacter;
+            appearance.TextOptions.HAlignment = CaptionAlignment;
+            if (AllowHtmlDraw) {
+                DrawHtmlText(cache, appearance);
+                return;
+            }
+            Rectangle r = RectangleHelper.GetCenterBounds(TextBounds, new Size(TextBounds.Width, CalcTextHeight(cache.Graphics, appearance)));
+            //Rectangle r = RectangleHelper.GetCenterBounds(TextBounds, new Size(TextBounds.Width, CalcTextHeight(cache, appearance)));
+            DrawTextShadow(cache, appearance, r);
+            cache.DrawString(text, appearance.Font, appearance.GetForeBrush(cache), r, appearance.GetStringFormat());
+        }
+    }
+}

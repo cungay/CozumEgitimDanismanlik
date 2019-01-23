@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
   <variables>
+    <!-- <add key="ConnectionString" value="Data Source=.;Initial Catalog=EkipDev;User ID=sa;Password=1q2w3e" /> -->
     <add key="ConnectionString" value="Data Source=.;Initial Catalog=EkipDev;User ID=sa;Password=1q2w3e" />
-    <add key="ConnectionString1" value="Data Source=PC-34149;Initial Catalog=EkipDev;User ID=sa;Password=1q2w3e" />
   </variables>
   <propertySets>
     <propertySet name="NetTiers.txt" output="NetTiers.txt" template="NetTiers\NetTiers.cst">
@@ -72,7 +72,7 @@
       <property name="MappingFile">E:\GitHub\CozumEgitimDanismanlik\Mapping.config</property>
       <property name="ComponentLayerNameSpace">Services</property>
       <property name="SourceTables">
-        <connectionString>$(ConnectionString1)</connectionString>
+        <connectionString>$(ConnectionString)</connectionString>
         <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
         <tableList>
       <table>
@@ -206,7 +206,7 @@
     </tableList>
       </property>
       <property name="SourceViews">
-        <connectionString>$(ConnectionString1)</connectionString>
+        <connectionString>$(ConnectionString)</connectionString>
         <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
         <viewList>
       <view>

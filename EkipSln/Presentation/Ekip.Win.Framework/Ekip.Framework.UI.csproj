@@ -56,6 +56,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\DevExpress.XtraGrid.v17.1.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\DevExpress.XtraPrinting.v17.1.dll</HintPath>
@@ -88,6 +89,7 @@
     <Compile Include="Editors\TextItemAction.cs" />
     <Compile Include="Extensions\ComboBoxExtension.cs" />
     <Compile Include="Extensions\TaskDialogExtensions.cs" />
+    <Compile Include="Forms\TaskDialogPainter.cs" />
     <Compile Include="Forms\TaskDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +154,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\TaskDialog.resx">
+      <DependentUpon>TaskDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\WaitForm.resx">
       <DependentUpon>WaitForm.cs</DependentUpon>
     </EmbeddedResource>
