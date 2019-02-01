@@ -49,7 +49,7 @@ namespace Ekip.Win.UI.Modules
             rgBlood.BindEnum(typeof(Blood));
             lkFamilyStatus.BindEnum(typeof(FamilyStatus));
             lkAddressTitle.BindEnum(typeof(AddressTitles));
-
+            
             var calendarAgeSource = DataRepository.CalendarAgeProvider.GetAll();
             lkCalendarAge.BindEnumarable<CalendarAge>(calendarAgeSource, "AgeDescription", "CalendarAgeId");
 
