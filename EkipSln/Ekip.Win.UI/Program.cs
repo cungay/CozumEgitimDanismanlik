@@ -51,18 +51,18 @@ namespace Ekip.Win.UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ModulesRegistration.Register();
-            Application.Run(new Framework.Forms.TaskDialog());
+            Application.Run(new Ekip.Win.UI.Forms.frmMain());
         }
 
         private static void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             var exception = (e.ExceptionObject as Exception);
-            TaskDialogExtensions.ExceptionDialog(exception);
+            //TaskDialogExtensions.ExceptionDialog(exception);
         }
 
         private static void OnThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            TaskDialogExtensions.ExceptionDialog(e.Exception);
+            //TaskDialogExtensions.ExceptionDialog(e.Exception);
         }
     }
 }

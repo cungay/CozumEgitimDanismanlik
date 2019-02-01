@@ -147,6 +147,12 @@
   <data name="Login_Failed" xml:space="preserve">
     <value>Giriş başarısız. Kullanıcı bilgilerini kontrol ediniz.</value>
   </data>
+  <data name="Lookup_Not_Specified" xml:space="preserve">
+    <value>Belirtilmedi</value>
+  </data>
+  <data name="Lookup_No_Choice" xml:space="preserve">
+    <value>Seçiniz</value>
+  </data>
   <data name="Operation_Canceled" xml:space="preserve">
     <value>İşlem kullanıcı tarafından iptal edildi.</value>
   </data>
@@ -165,7 +171,10 @@
   <data name="System_Error" xml:space="preserve">
     <value>Sistem bir ya da birden fazla hata ile karşılaştı.</value>
   </data>
-  <data name="Validate_Error" xml:space="preserve">
+  <data name="Validate_Error_Caption" xml:space="preserve">
     <value>Bir ya da birden fazla veri giriş hatası bulundu.</value>
+  </data>
+  <data name="Validate_Error_Content" xml:space="preserve">
+    <value>&lt;u&gt;İşleme devam edilemiyor. Lütfen formu kontrol edin.&lt;/u&gt;</value>
   </data>
 </root>

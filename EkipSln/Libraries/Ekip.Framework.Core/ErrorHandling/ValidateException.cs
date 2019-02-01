@@ -1,40 +1,108 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
+using System.Security.Permissions;
 using Ekip.Framework.Core.Resources;
 
 namespace Ekip.Framework.Core.ErrorHandling
 {
-    public class ValidateException : Exception
+    [Serializable()]
+    public class ValidateException : Exception, ISerializable
     {
-        /// <summary>
-        /// Just create the exception
-        /// </summary>
-        public ValidateException()
-          : base(Messages.Validate_Error)
+        #region Fields
+
+        private string caption = null;
+        private List<ValidationError> validationErrors = null;
+
+        #endregion
+
+        #region Properties
+
+        public string Caption
+        {
+            get { return SystemMessages.Validate_Error_Caption; }
+            set { caption = value; }
+        }
+
+        public List<ValidationError> ValidationErrors
+        {
+            get
+            {
+                if (validationErrors == null)
+                    validationErrors = new List<ValidationError>();
+                return validationErrors;
+            }
+            set
+            {
+                validationErrors = value;
+            }
+        }
+
+        #endregion
+
+        public ValidateException(string message = null)
+            : base(SystemMessages.Validate_Error_Content)
         {
         }
 
-        /// <summary>
-        /// Create the exception with description
-        /// </summary>
-        /// <param name="entityKey">object name</param>
-        public ValidateException(String message)
-          : base(message)
+        public ValidateException(string message, Exception innerException)
+            : base(SystemMessages.Validate_Error_Content, innerException)
         {
         }
 
-        /// <summary>
-        /// Create the exception with description and inner cause
-        /// </summary>
-        /// <param name="entityKey">object name</param>
-        /// <param name="innerException">Exception inner cause</param>
-        public ValidateException(String message, Exception innerException)
-           : base(message, innerException)
+        public ValidateException(string message, string caption, List<ValidationError> validationErrors)
+            : base(SystemMessages.Validate_Error_Content)
         {
+            this.Caption = caption;
+            this.ValidationErrors = validationErrors;
         }
 
+        public ValidateException(string message, string caption, List<ValidationError> validationErrors, Exception innerException)
+            : base(SystemMessages.Validate_Error_Content, innerException)
+        {
+            this.Caption = caption;
+            this.ValidationErrors = validationErrors;
+        }
+
+        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
+        // Constructor should be protected for unsealed classes, private for sealed classes.
+        // (The Serializer invokes this constructor through reflection, so it can be private)
         protected ValidateException(SerializationInfo info, StreamingContext context)
-         : base(info, context)
-        { }
+            : base(info, context)
+        {
+            this.Caption = info.GetString("Caption");
+            this.ValidationErrors = (List<ValidationError>)info.GetValue("ValidationErrors", typeof(List<ValidationError>));
+        }
+
+        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            if (info == null)
+            {
+                throw new ArgumentNullException("info");
+            }
+
+            info.AddValue("Caption", this.Caption);
+
+            // Note: if "List<T>" isn't serializable you may need to work out another
+            //       method of adding your list, this is just for show...
+            info.AddValue("ValidationErrors", this.ValidationErrors, typeof(List<ValidationError>));
+
+            // MUST call through to the base class to let it save its own state
+            base.GetObjectData(info, context);
+        }
+    }
+
+    [Serializable()]
+    public class ValidationError
+    {
+        public string PropertyName { get; set; }
+
+        public string ErrorMessage { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}: {1}", PropertyName, ErrorMessage);
+        }
     }
 }

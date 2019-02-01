@@ -627,18 +627,18 @@ namespace Ekip.Framework.Data
 		
 		#endregion
 		
-		#region CalenderAgeProvider
+		#region CalendarAgeProvider
 
 		///<summary>
-		/// Gets the current instance of the Data Access Logic Component for the <see cref="CalenderAge"/> business entity.
+		/// Gets the current instance of the Data Access Logic Component for the <see cref="CalendarAge"/> business entity.
 		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
 		///</summary>
-		public static CalenderAgeProviderBase CalenderAgeProvider
+		public static CalendarAgeProviderBase CalendarAgeProvider
 		{
 			get 
 			{
 				LoadProviders();
-				return _provider.CalenderAgeProvider;
+				return _provider.CalendarAgeProvider;
 			}
 		}
 		
@@ -2163,73 +2163,73 @@ namespace Ekip.Framework.Data
 
 	#endregion ProvinceQuery
 		
-	#region CalenderAgeFilters
+	#region CalendarAgeFilters
 	
 	/// <summary>
 	/// A strongly-typed instance of the <see cref="SqlFilterBuilder&lt;EntityColumn&gt;"/> class
-	/// that is used exclusively with a <see cref="CalenderAge"/> object.
+	/// that is used exclusively with a <see cref="CalendarAge"/> object.
 	/// </summary>
 	[CLSCompliant(true)]
-	public class CalenderAgeFilters : CalenderAgeFilterBuilder
+	public class CalendarAgeFilters : CalendarAgeFilterBuilder
 	{
 		#region Constructors
 
 		/// <summary>
-		/// Initializes a new instance of the CalenderAgeFilters class.
+		/// Initializes a new instance of the CalendarAgeFilters class.
 		/// </summary>
-		public CalenderAgeFilters() : base() { }
+		public CalendarAgeFilters() : base() { }
 
 		/// <summary>
-		/// Initializes a new instance of the CalenderAgeFilters class.
+		/// Initializes a new instance of the CalendarAgeFilters class.
 		/// </summary>
 		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
-		public CalenderAgeFilters(bool ignoreCase) : base(ignoreCase) { }
+		public CalendarAgeFilters(bool ignoreCase) : base(ignoreCase) { }
 
 		/// <summary>
-		/// Initializes a new instance of the CalenderAgeFilters class.
+		/// Initializes a new instance of the CalendarAgeFilters class.
 		/// </summary>
 		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
 		/// <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
-		public CalenderAgeFilters(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
+		public CalendarAgeFilters(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
 
 		#endregion Constructors
 	}
 
-	#endregion CalenderAgeFilters
+	#endregion CalendarAgeFilters
 	
-	#region CalenderAgeQuery
+	#region CalendarAgeQuery
 	
 	/// <summary>
-	/// A strongly-typed instance of the <see cref="CalenderAgeParameterBuilder"/> class
-	/// that is used exclusively with a <see cref="CalenderAge"/> object.
+	/// A strongly-typed instance of the <see cref="CalendarAgeParameterBuilder"/> class
+	/// that is used exclusively with a <see cref="CalendarAge"/> object.
 	/// </summary>
 	[CLSCompliant(true)]
-	public class CalenderAgeQuery : CalenderAgeParameterBuilder
+	public class CalendarAgeQuery : CalendarAgeParameterBuilder
 	{
 		#region Constructors
 
 		/// <summary>
-		/// Initializes a new instance of the CalenderAgeQuery class.
+		/// Initializes a new instance of the CalendarAgeQuery class.
 		/// </summary>
-		public CalenderAgeQuery() : base() { }
+		public CalendarAgeQuery() : base() { }
 
 		/// <summary>
-		/// Initializes a new instance of the CalenderAgeQuery class.
+		/// Initializes a new instance of the CalendarAgeQuery class.
 		/// </summary>
 		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
-		public CalenderAgeQuery(bool ignoreCase) : base(ignoreCase) { }
+		public CalendarAgeQuery(bool ignoreCase) : base(ignoreCase) { }
 
 		/// <summary>
-		/// Initializes a new instance of the CalenderAgeQuery class.
+		/// Initializes a new instance of the CalendarAgeQuery class.
 		/// </summary>
 		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
 		/// <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
-		public CalenderAgeQuery(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
+		public CalendarAgeQuery(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
 
 		#endregion Constructors
 	}
 
-	#endregion CalenderAgeQuery
+	#endregion CalendarAgeQuery
 		
 	#region ClientFilters
 	

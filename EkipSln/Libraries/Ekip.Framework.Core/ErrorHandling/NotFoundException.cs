@@ -10,7 +10,7 @@ namespace Ekip.Framework.Core.ErrorHandling
         /// Just create the exception
         /// </summary>
         public NotFoundException()
-          : base(Messages.Record_NotFound)
+          : base(SystemMessages.Record_NotFound)
         {
         }
     }

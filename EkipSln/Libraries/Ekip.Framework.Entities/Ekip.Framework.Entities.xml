@@ -17573,80 +17573,84 @@
             which are related to this object through the relation _townProvinceId
             </summary>	
         </member>
-        <member name="T:Ekip.Framework.Entities.CalenderAge">
+        <member name="T:Ekip.Framework.Entities.CalendarAge">
             <summary>
-             An object representation of the 'CalenderAge' table. [No description found the database]	
+             An object representation of the 'CalendarAge' table. [No description found the database]	
             </summary>
              <remarks>
              This file is generated once and will never be overwritten.
              </remarks>	
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAge.#ctor">
+        <member name="M:Ekip.Framework.Entities.CalendarAge.#ctor">
             <summary>
-             Creates a new <see cref="T:Ekip.Framework.Entities.CalenderAge"/> instance.
+             Creates a new <see cref="T:Ekip.Framework.Entities.CalendarAge"/> instance.
             </summary>
         </member>
-        <member name="T:Ekip.Framework.Entities.CalenderAgeBase">
+        <member name="T:Ekip.Framework.Entities.CalendarAgeBase">
             <summary>
-             An object representation of the 'CalenderAge' table. [No description found the database]	
+             An object representation of the 'CalendarAge' table. [No description found the database]	
             </summary>
         </member>
-        <member name="F:Ekip.Framework.Entities.CalenderAgeBase.entityData">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeBase.entityData">
             <summary>
              Hold the inner data of the entity.
             </summary>
         </member>
-        <member name="F:Ekip.Framework.Entities.CalenderAgeBase._originalData">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeBase._originalData">
             <summary>
             	Hold the original data of the entity, as loaded from the repository.
             </summary>
         </member>
-        <member name="F:Ekip.Framework.Entities.CalenderAgeBase.backupData">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeBase.backupData">
             <summary>
             	Hold a backup of the inner data of the entity.
             </summary>
         </member>
-        <member name="F:Ekip.Framework.Entities.CalenderAgeBase.entityTrackingKey">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeBase.entityTrackingKey">
             <summary>
             	Key used if Tracking is Enabled for the <see cref="T:Ekip.Framework.Entities.EntityLocator" />.
             </summary>
         </member>
-        <member name="F:Ekip.Framework.Entities.CalenderAgeBase.parentCollection">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeBase.parentCollection">
             <summary>
             	Hold the parent TList&lt;entity&gt; in which this entity maybe contained.
             </summary>
             <remark>Mostly used for databinding</remark>
         </member>
-        <member name="E:Ekip.Framework.Entities.CalenderAgeBase.ColumnChanging">
+        <member name="E:Ekip.Framework.Entities.CalendarAgeBase.ColumnChanging">
             <summary>
             Occurs when a value is being changed for the specified column.
             </summary>
         </member>
-        <member name="E:Ekip.Framework.Entities.CalenderAgeBase.ColumnChanged">
+        <member name="E:Ekip.Framework.Entities.CalendarAgeBase.ColumnChanged">
             <summary>
             Occurs after a value has been changed for the specified column.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.#ctor">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.#ctor">
             <summary>
-             Creates a new <see cref="T:Ekip.Framework.Entities.CalenderAgeBase"/> instance.
+             Creates a new <see cref="T:Ekip.Framework.Entities.CalendarAgeBase"/> instance.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.#ctor(System.String)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.#ctor(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
-             Creates a new <see cref="T:Ekip.Framework.Entities.CalenderAgeBase"/> instance.
+             Creates a new <see cref="T:Ekip.Framework.Entities.CalendarAgeBase"/> instance.
             </summary>
-            <param name="_ageValue"></param>
+            <param name="_ageDescription"></param>
+            <param name="_minValue"></param>
+            <param name="_maxValue"></param>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.CreateCalenderAge(System.String)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.CreateCalendarAge(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
-             A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.CalenderAge"/> instance.
+             A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.CalendarAge"/> instance.
             </summary>
-            <param name="_ageValue"></param>
+            <param name="_ageDescription"></param>
+            <param name="_minValue"></param>
+            <param name="_maxValue"></param>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.CalenderAgeId">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.CalendarAgeId">
             <summary>
-            	Gets or sets the CalenderAgeId property. 
+            	Gets or sets the CalendarAgeId property. 
             	
             </summary>
             <value>This type is int.</value>
@@ -17654,9 +17658,9 @@
             This property can not be set to null. 
             </remarks>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.AgeValue">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.AgeDescription">
             <summary>
-            	Gets or sets the AgeValue property. 
+            	Gets or sets the AgeDescription property. 
             	
             </summary>
             <value>This type is varchar.</value>
@@ -17665,106 +17669,130 @@
             </remarks>
             <exception cref="T:System.ArgumentNullException">If you attempt to set to null.</exception>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.AddValidationRules">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.MinValue">
+            <summary>
+            	Gets or sets the MinValue property. 
+            	
+            </summary>
+            <value>This type is int.</value>
+            <remarks>
+            This property can be set to null. 
+            If this column is null it is up to the developer to check using the HasValue property
+            and perform business logic appropriately.
+            </remarks>
+        </member>
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.MaxValue">
+            <summary>
+            	Gets or sets the MaxValue property. 
+            	
+            </summary>
+            <value>This type is int.</value>
+            <remarks>
+            This property can be set to null. 
+            If this column is null it is up to the developer to check using the HasValue property
+            and perform business logic appropriately.
+            </remarks>
+        </member>
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.AddValidationRules">
             <summary>
             Assigns validation rules to this object based on model definition.
             </summary>
             <remarks>This method overrides the base class to add schema related validation.</remarks>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.TableName">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.TableName">
             <summary>
             	The name of the underlying database table.
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.TableColumns">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.TableColumns">
             <summary>
             	The name of the underlying database table's columns.
             </summary>
         </member>
-        <member name="T:Ekip.Framework.Entities.CalenderAgeBase.CancelAddNewEventHandler">
+        <member name="T:Ekip.Framework.Entities.CalendarAgeBase.CancelAddNewEventHandler">
             <summary>
             The delegate for the CancelAddNew event.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="E:Ekip.Framework.Entities.CalenderAgeBase.CancelAddNew">
+        <member name="E:Ekip.Framework.Entities.CalendarAgeBase.CancelAddNew">
             <summary>
             The CancelAddNew event.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.OnCancelAddNew">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.OnCancelAddNew">
             <summary>
             Called when [cancel add new].
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.System#ComponentModel#IEditableObject#BeginEdit">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.System#ComponentModel#IEditableObject#BeginEdit">
             <summary>
             Begins an edit on an object.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.System#ComponentModel#IEditableObject#CancelEdit">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.System#ComponentModel#IEditableObject#CancelEdit">
             <summary>
             Discards changes since the last <c>BeginEdit</c> call.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.System#ComponentModel#IEditableObject#EndEdit">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.System#ComponentModel#IEditableObject#EndEdit">
             <summary>
             Pushes changes since the last <c>BeginEdit</c> or <c>IBindingList.AddNew</c> call into the underlying object.
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.ParentCollection">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.ParentCollection">
             <summary>
             Gets or sets the parent collection of this current entity, if available.
             </summary>
             <value>The parent collection.</value>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.OnEntityChanged">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.OnEntityChanged">
             <summary>
             Called when the entity is changed.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Copy(System.Collections.IDictionary)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Copy(System.Collections.IDictionary)">
             <summary>
-              Returns a Typed CalenderAge Entity 
+              Returns a Typed CalendarAge Entity 
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Copy">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Copy">
             <summary>
-              Returns a Typed CalenderAge Entity 
+              Returns a Typed CalendarAge Entity 
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Clone">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Clone">
             <summary>
              ICloneable.Clone() Member, returns the Shallow Copy of this entity.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Clone(System.Collections.IDictionary)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Clone(System.Collections.IDictionary)">
             <summary>
              ICloneableEx.Clone() Member, returns the Shallow Copy of this entity.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.MakeCopyOf(System.Object)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.MakeCopyOf(System.Object)">
             <summary>
              Returns a deep copy of the child collection object passed in.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.MakeCopyOf(System.Object,System.Collections.IDictionary)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.MakeCopyOf(System.Object,System.Collections.IDictionary)">
             <summary>
              Returns a deep copy of the child collection object passed in.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.DeepCopy">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.DeepCopy">
             <summary>
-              Returns a Typed CalenderAge Entity which is a deep copy of the current entity.
+              Returns a Typed CalendarAge Entity which is a deep copy of the current entity.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.CancelChanges">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.CancelChanges">
             <summary>
              Revert all changes and restore original values.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.AcceptChanges">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.AcceptChanges">
             <summary>
             Accepts the changes made to this object.
             </summary>
@@ -17772,7 +17800,7 @@
             After calling this method, properties: IsDirty, IsNew are false. IsDeleted flag remains unchanged as it is handled by the parent List.
             </remarks>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.IsPropertyChanged(Ekip.Framework.Entities.CalenderAgeColumn)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.IsPropertyChanged(Ekip.Framework.Entities.CalendarAgeColumn)">
             <summary>
             Determines whether the property value has changed from the original data.
             </summary>
@@ -17781,7 +17809,7 @@
             	<c>true</c> if the property value has changed; otherwise, <c>false</c>.
             </returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.IsPropertyChanged(System.String)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.IsPropertyChanged(System.String)">
             <summary>
             Determines whether the property value has changed from the original data.
             </summary>
@@ -17790,7 +17818,7 @@
             	<c>true</c> if the property value has changed; otherwise, <c>false</c>.
             </returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.HasDataChanged">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.HasDataChanged">
             <summary>
             Determines whether the data has changed from original.
             </summary>
@@ -17798,230 +17826,240 @@
             	<c>true</c> if data has changed; otherwise, <c>false</c>.
             </returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.GetOriginalEntity">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.GetOriginalEntity">
             <summary>
-              Returns a CalenderAge Entity with the original data.
+              Returns a CalendarAge Entity with the original data.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Equals(System.Object)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Equals(System.Object)">
             <summary>
              Returns a value indicating whether this instance is equal to a specified object using value semantics.
             </summary>
             <param name="Object1">An object to compare to this instance.</param>
-            <returns>true if Object1 is a <see cref="T:Ekip.Framework.Entities.CalenderAgeBase"/> and has the same value as this instance; otherwise, false.</returns>
+            <returns>true if Object1 is a <see cref="T:Ekip.Framework.Entities.CalendarAgeBase"/> and has the same value as this instance; otherwise, false.</returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.GetHashCode">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.GetHashCode">
             <summary>
             Serves as a hash function for a particular type, suitable for use in hashing algorithms and data structures like a hash table.
-            Provides a hash function that is appropriate for <see cref="T:Ekip.Framework.Entities.CalenderAgeBase"/> class 
+            Provides a hash function that is appropriate for <see cref="T:Ekip.Framework.Entities.CalendarAgeBase"/> class 
             and that ensures a better distribution in the hash table
             </summary>
             <returns>number (hash code) that corresponds to the value of an object</returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Equals(Ekip.Framework.Entities.CalenderAgeBase)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Equals(Ekip.Framework.Entities.CalendarAgeBase)">
             <summary>
              Returns a value indicating whether this instance is equal to a specified object using value semantics.
             </summary>
             <param name="toObject">An object to compare to this instance.</param>
-            <returns>true if toObject is a <see cref="T:Ekip.Framework.Entities.CalenderAgeBase"/> and has the same value as this instance; otherwise, false.</returns>
+            <returns>true if toObject is a <see cref="T:Ekip.Framework.Entities.CalendarAgeBase"/> and has the same value as this instance; otherwise, false.</returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.ValueEquals(Ekip.Framework.Entities.CalenderAgeBase,Ekip.Framework.Entities.CalenderAgeBase)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.ValueEquals(Ekip.Framework.Entities.CalendarAgeBase,Ekip.Framework.Entities.CalendarAgeBase)">
             <summary>
-             Determines whether the specified <see cref="T:Ekip.Framework.Entities.CalenderAgeBase"/> instances are considered equal using value semantics.
+             Determines whether the specified <see cref="T:Ekip.Framework.Entities.CalendarAgeBase"/> instances are considered equal using value semantics.
             </summary>
-            <param name="Object1">The first <see cref="T:Ekip.Framework.Entities.CalenderAgeBase"/> to compare.</param>
-            <param name="Object2">The second <see cref="T:Ekip.Framework.Entities.CalenderAgeBase"/> to compare. </param>
+            <param name="Object1">The first <see cref="T:Ekip.Framework.Entities.CalendarAgeBase"/> to compare.</param>
+            <param name="Object2">The second <see cref="T:Ekip.Framework.Entities.CalendarAgeBase"/> to compare. </param>
             <returns>true if Object1 is the same instance as Object2 or if both are null references or if objA.Equals(objB) returns true; otherwise, false.</returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.CompareTo(System.Object)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.CompareTo(System.Object)">
             <summary>
              Compares this instance to a specified object and returns an indication of their relative values.
             <param name="obj">An object to compare to this instance, or a null reference (Nothing in Visual Basic).</param>
             </summary>
             <returns>A signed integer that indicates the relative order of this instance and obj.</returns>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.Site">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.Site">
             <summary>
             Gets or Sets the site where this data is located.
             </summary>
         </member>
-        <member name="E:Ekip.Framework.Entities.CalenderAgeBase.Disposed">
+        <member name="E:Ekip.Framework.Entities.CalendarAgeBase.Disposed">
             <summary>
             Notify those that care when we dispose.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Dispose">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Dispose">
             <summary>
             Clean up. Nothing here though.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Dispose(System.Boolean)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Dispose(System.Boolean)">
             <summary>
             Clean up.
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.EntityId">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.EntityId">
             <summary>
             Gets or sets the EntityId property.
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.EntityState">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.EntityState">
             <summary>
             	Indicates state of object
             </summary>
             <remarks>0=Unchanged, 1=Added, 2=Changed</remarks>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.EntityTrackingKey">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.EntityTrackingKey">
             <summary>
              Provides the tracking key for the <see cref="T:Ekip.Framework.Entities.EntityLocator"/>
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.ToString">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.ToString">
             <summary>
              Returns a String that represents the current object.
             </summary>
         </member>
-        <member name="T:Ekip.Framework.Entities.CalenderAgeBase.CalenderAgeEntityData">
+        <member name="T:Ekip.Framework.Entities.CalendarAgeBase.CalendarAgeEntityData">
             <summary>
-            	The data structure representation of the 'CalenderAge' table.
+            	The data structure representation of the 'CalendarAge' table.
             </summary>
             <remarks>
             	This struct is generated by a tool and should never be modified.
             </remarks>
         </member>
-        <member name="F:Ekip.Framework.Entities.CalenderAgeBase.CalenderAgeEntityData.CalenderAgeId">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeBase.CalendarAgeEntityData.CalendarAgeId">
             <summary>			
-            CalenderAgeId : 
+            CalendarAgeId : 
             </summary>
-            <remarks>Member of the primary key of the underlying table "CalenderAge"</remarks>
+            <remarks>Member of the primary key of the underlying table "CalendarAge"</remarks>
         </member>
-        <member name="F:Ekip.Framework.Entities.CalenderAgeBase.CalenderAgeEntityData.AgeValue">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeBase.CalendarAgeEntityData.AgeDescription">
             <summary>
-            AgeValue : 
+            AgeDescription : 
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.CalenderAgeEntityData.Clone">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeBase.CalendarAgeEntityData.MinValue">
+            <summary>
+            MinValue : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.CalendarAgeBase.CalendarAgeEntityData.MaxValue">
+            <summary>
+            MaxValue : 
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.CalendarAgeEntityData.Clone">
             <summary>
             Creates a new object that is a copy of the current instance.
             </summary>
             <returns>A new object that is a copy of this instance.</returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.CalenderAgeEntityData.Clone(System.Collections.IDictionary)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.CalendarAgeEntityData.Clone(System.Collections.IDictionary)">
             <summary>
             Creates a new object that is a copy of the current instance.
             </summary>
             <returns>A new object that is a copy of this instance.</returns>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeBase.CalenderAgeEntityData.EntityState">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeBase.CalendarAgeEntityData.EntityState">
             <summary>
             	Indicates state of object
             </summary>
             <remarks>0=Unchanged, 1=Added, 2=Changed</remarks>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Initialize_BeforeDeserializing(System.Runtime.Serialization.StreamingContext)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Initialize_BeforeDeserializing(System.Runtime.Serialization.StreamingContext)">
             <summary>
             Called before deserializing the type.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.Initialize_Deserialized(System.Runtime.Serialization.StreamingContext)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.Initialize_Deserialized(System.Runtime.Serialization.StreamingContext)">
             <summary>
             Called after deserializing the type.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.OnColumnChanging(Ekip.Framework.Entities.CalenderAgeColumn)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.OnColumnChanging(Ekip.Framework.Entities.CalendarAgeColumn)">
             <summary>
-            Raises the <see cref="E:Ekip.Framework.Entities.CalenderAgeBase.ColumnChanging" /> event.
+            Raises the <see cref="E:Ekip.Framework.Entities.CalendarAgeBase.ColumnChanging" /> event.
             </summary>
-            <param name="column">The <see cref="T:Ekip.Framework.Entities.CalenderAgeColumn"/> which has raised the event.</param>
+            <param name="column">The <see cref="T:Ekip.Framework.Entities.CalendarAgeColumn"/> which has raised the event.</param>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.OnColumnChanged(Ekip.Framework.Entities.CalenderAgeColumn)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.OnColumnChanged(Ekip.Framework.Entities.CalendarAgeColumn)">
             <summary>
-            Raises the <see cref="E:Ekip.Framework.Entities.CalenderAgeBase.ColumnChanged" /> event.
+            Raises the <see cref="E:Ekip.Framework.Entities.CalendarAgeBase.ColumnChanged" /> event.
             </summary>
-            <param name="column">The <see cref="T:Ekip.Framework.Entities.CalenderAgeColumn"/> which has raised the event.</param>
+            <param name="column">The <see cref="T:Ekip.Framework.Entities.CalendarAgeColumn"/> which has raised the event.</param>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.OnColumnChanging(Ekip.Framework.Entities.CalenderAgeColumn,System.Object)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.OnColumnChanging(Ekip.Framework.Entities.CalendarAgeColumn,System.Object)">
             <summary>
-            Raises the <see cref="E:Ekip.Framework.Entities.CalenderAgeBase.ColumnChanging" /> event.
+            Raises the <see cref="E:Ekip.Framework.Entities.CalendarAgeBase.ColumnChanging" /> event.
             </summary>
-            <param name="column">The <see cref="T:Ekip.Framework.Entities.CalenderAgeColumn"/> which has raised the event.</param>
+            <param name="column">The <see cref="T:Ekip.Framework.Entities.CalendarAgeColumn"/> which has raised the event.</param>
             <param name="value">The changed value.</param>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeBase.OnColumnChanged(Ekip.Framework.Entities.CalenderAgeColumn,System.Object)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeBase.OnColumnChanged(Ekip.Framework.Entities.CalendarAgeColumn,System.Object)">
             <summary>
-            Raises the <see cref="E:Ekip.Framework.Entities.CalenderAgeBase.ColumnChanged" /> event.
+            Raises the <see cref="E:Ekip.Framework.Entities.CalendarAgeBase.ColumnChanged" /> event.
             </summary>
-            <param name="column">The <see cref="T:Ekip.Framework.Entities.CalenderAgeColumn"/> which has raised the event.</param>
+            <param name="column">The <see cref="T:Ekip.Framework.Entities.CalendarAgeColumn"/> which has raised the event.</param>
             <param name="value">The changed value.</param>
         </member>
-        <member name="T:Ekip.Framework.Entities.CalenderAgeEventArgs">
+        <member name="T:Ekip.Framework.Entities.CalendarAgeEventArgs">
             <summary>
             Provides data for the ColumnChanging and ColumnChanged events.
             </summary>
             <remarks>
             The ColumnChanging and ColumnChanged events occur when a change is made to the value 
-            of a property of a <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object.
+            of a property of a <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object.
             </remarks>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeEventArgs.#ctor(Ekip.Framework.Entities.CalenderAgeColumn)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeEventArgs.#ctor(Ekip.Framework.Entities.CalendarAgeColumn)">
             <summary>
-             Initalizes a new Instance of the CalenderAgeEventArgs class.
+             Initalizes a new Instance of the CalendarAgeEventArgs class.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeEventArgs.#ctor(Ekip.Framework.Entities.CalenderAgeColumn,System.Object)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeEventArgs.#ctor(Ekip.Framework.Entities.CalendarAgeColumn,System.Object)">
             <summary>
-             Initalizes a new Instance of the CalenderAgeEventArgs class.
+             Initalizes a new Instance of the CalendarAgeEventArgs class.
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeEventArgs.Column">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeEventArgs.Column">
             <summary>
-             The CalenderAgeColumn that was modified, which has raised the event.
+             The CalendarAgeColumn that was modified, which has raised the event.
             </summary>
-            <value cref="T:Ekip.Framework.Entities.CalenderAgeColumn" />
+            <value cref="T:Ekip.Framework.Entities.CalendarAgeColumn" />
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeEventArgs.Value">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeEventArgs.Value">
             <summary>
             Gets the current value of the column.
             </summary>
             <value>The current value of the column.</value>
         </member>
-        <member name="T:Ekip.Framework.Entities.CalenderAgeEventHandler">
+        <member name="T:Ekip.Framework.Entities.CalendarAgeEventHandler">
             <summary>
-             Define a delegate for all CalenderAge related events.
+             Define a delegate for all CalendarAge related events.
             </summary>
         </member>
-        <member name="T:Ekip.Framework.Entities.CalenderAgeComparer">
+        <member name="T:Ekip.Framework.Entities.CalendarAgeComparer">
             <summary>
             Strongly Typed IComparer
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeComparer.#ctor">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeComparer.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:CalenderAgeComparer"/> class.
+            Initializes a new instance of the <see cref="T:CalendarAgeComparer"/> class.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeComparer.#ctor(Ekip.Framework.Entities.CalenderAgeColumn)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeComparer.#ctor(Ekip.Framework.Entities.CalendarAgeColumn)">
             <summary>
-            Initializes a new instance of the <see cref="T:CalenderAgeComparer"/> class.
+            Initializes a new instance of the <see cref="T:CalendarAgeComparer"/> class.
             </summary>
             <param name="column">The column to sort on.</param>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeComparer.Equals(Ekip.Framework.Entities.CalenderAge,Ekip.Framework.Entities.CalenderAge)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeComparer.Equals(Ekip.Framework.Entities.CalendarAge,Ekip.Framework.Entities.CalendarAge)">
             <summary>
-            Determines whether the specified <see cref="T:Ekip.Framework.Entities.CalenderAge"/> instances are considered equal.
+            Determines whether the specified <see cref="T:Ekip.Framework.Entities.CalendarAge"/> instances are considered equal.
             </summary>
-            <param name="a">The first <see cref="T:Ekip.Framework.Entities.CalenderAge"/> to compare.</param>
-            <param name="b">The second <c>CalenderAge</c> to compare.</param>
+            <param name="a">The first <see cref="T:Ekip.Framework.Entities.CalendarAge"/> to compare.</param>
+            <param name="b">The second <c>CalendarAge</c> to compare.</param>
             <returns>true if objA is the same instance as objB or if both are null references or if objA.Equals(objB) returns true; otherwise, false.</returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeComparer.GetHashCode(Ekip.Framework.Entities.CalenderAge)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeComparer.GetHashCode(Ekip.Framework.Entities.CalendarAge)">
             <summary>
             Gets the hash code of the specified entity.
             </summary>
             <param name="entity">The entity.</param>
             <returns></returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeComparer.Compare(Ekip.Framework.Entities.CalenderAge,Ekip.Framework.Entities.CalenderAge)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeComparer.Compare(Ekip.Framework.Entities.CalendarAge,Ekip.Framework.Entities.CalendarAge)">
             <summary>
             Performs a case-insensitive comparison of two objects of the same type and returns a value indicating whether one is less than, equal to, or greater than the other.
             </summary>
@@ -18029,43 +18067,43 @@
             <param name="b">The second object to compare.</param>
             <returns></returns>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeComparer.WhichComparison">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeComparer.WhichComparison">
             <summary>
             Gets or sets the column that will be used for comparison.
             </summary>
             <value>The comparison column.</value>
         </member>
-        <member name="T:Ekip.Framework.Entities.CalenderAgeKey">
+        <member name="T:Ekip.Framework.Entities.CalendarAgeKey">
             <summary>
-            Wraps the unique identifier values for the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object.
+            Wraps the unique identifier values for the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeKey.#ctor">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeKey.#ctor">
             <summary>
-            Initializes a new instance of the CalenderAgeKey class.
+            Initializes a new instance of the CalendarAgeKey class.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeKey.#ctor(Ekip.Framework.Entities.CalenderAgeBase)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeKey.#ctor(Ekip.Framework.Entities.CalendarAgeBase)">
             <summary>
-            Initializes a new instance of the CalenderAgeKey class.
+            Initializes a new instance of the CalendarAgeKey class.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeKey.#ctor(System.Int32)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeKey.#ctor(System.Int32)">
             <summary>
-            Initializes a new instance of the CalenderAgeKey class.
+            Initializes a new instance of the CalendarAgeKey class.
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeKey.Entity">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeKey.Entity">
             <summary>
             Gets or sets the Entity property.
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Entities.CalenderAgeKey.CalenderAgeId">
+        <member name="P:Ekip.Framework.Entities.CalendarAgeKey.CalendarAgeId">
             <summary>
-            Gets or sets the CalenderAgeId property.
+            Gets or sets the CalendarAgeId property.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeKey.Load(System.Collections.IDictionary)">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeKey.Load(System.Collections.IDictionary)">
             <summary>
             Reads values from the supplied <see cref="T:System.Collections.IDictionary"/> object into
             properties of the current object.
@@ -18073,53 +18111,73 @@
             <param name="values">An <see cref="T:System.Collections.IDictionary"/> instance that contains
             the key/value pairs to be used as property values.</param>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeKey.ToDictionary">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeKey.ToDictionary">
             <summary>
             Creates a new <see cref="T:System.Collections.IDictionary"/> object and populates it
             with the property values of the current object.
             </summary>
             <returns>A collection of name/value pairs.</returns>
         </member>
-        <member name="M:Ekip.Framework.Entities.CalenderAgeKey.ToString">
+        <member name="M:Ekip.Framework.Entities.CalendarAgeKey.ToString">
             <summary>
              Returns a String that represents the current object.
             </summary>
         </member>
-        <member name="T:Ekip.Framework.Entities.CalenderAgeColumn">
+        <member name="T:Ekip.Framework.Entities.CalendarAgeColumn">
             <summary>
-            Enumerate the CalenderAge columns.
+            Enumerate the CalendarAge columns.
             </summary>
         </member>
-        <member name="F:Ekip.Framework.Entities.CalenderAgeColumn.CalenderAgeId">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeColumn.CalendarAgeId">
             <summary>
-            CalenderAgeId : 
+            CalendarAgeId : 
             </summary>
         </member>
-        <member name="F:Ekip.Framework.Entities.CalenderAgeColumn.AgeValue">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeColumn.AgeDescription">
             <summary>
-            AgeValue : 
+            AgeDescription : 
             </summary>
         </member>
-        <member name="T:Ekip.Framework.Entities.ICalenderAge">
+        <member name="F:Ekip.Framework.Entities.CalendarAgeColumn.MinValue">
             <summary>
-            	The data structure representation of the 'CalenderAge' table via interface.
+            MinValue : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.CalendarAgeColumn.MaxValue">
+            <summary>
+            MaxValue : 
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Entities.ICalendarAge">
+            <summary>
+            	The data structure representation of the 'CalendarAge' table via interface.
             </summary>
             <remarks>
             	This struct is generated by a tool and should never be modified.
             </remarks>
         </member>
-        <member name="P:Ekip.Framework.Entities.ICalenderAge.CalenderAgeId">
+        <member name="P:Ekip.Framework.Entities.ICalendarAge.CalendarAgeId">
             <summary>			
-            CalenderAgeId : 
+            CalendarAgeId : 
             </summary>
-            <remarks>Member of the primary key of the underlying table "CalenderAge"</remarks>
+            <remarks>Member of the primary key of the underlying table "CalendarAge"</remarks>
         </member>
-        <member name="P:Ekip.Framework.Entities.ICalenderAge.AgeValue">
+        <member name="P:Ekip.Framework.Entities.ICalendarAge.AgeDescription">
             <summary>
-            AgeValue : 
+            AgeDescription : 
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.ICalenderAge.Clone">
+        <member name="P:Ekip.Framework.Entities.ICalendarAge.MinValue">
+            <summary>
+            MinValue : 
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Entities.ICalendarAge.MaxValue">
+            <summary>
+            MaxValue : 
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.ICalendarAge.Clone">
             <summary>
             Creates a new object that is a copy of the current instance.
             </summary>
@@ -18184,15 +18242,16 @@
              Creates a new <see cref="T:Ekip.Framework.Entities.ClientBase"/> instance.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.ClientBase.#ctor(System.Int32,System.DateTime,System.Int32,System.DateTime,System.Nullable{System.Byte},System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Byte,System.Byte,System.String,System.Int32,System.Byte,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Entities.ClientBase.#ctor(System.Int32,System.DateTime,System.Int32,System.Int32,System.DateTime,System.Nullable{System.Int32},System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Byte,System.Byte,System.String,System.Int32,System.Byte,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
             <summary>
              Creates a new <see cref="T:Ekip.Framework.Entities.ClientBase"/> instance.
             </summary>
             <param name="_fileNumber"></param>
             <param name="_firstContactDate"></param>
             <param name="_firstContactAge"></param>
+            <param name="_currentAge"></param>
             <param name="_birthDate"></param>
-            <param name="_calenderAgeId"></param>
+            <param name="_calendarAgeId"></param>
             <param name="_fullName"></param>
             <param name="_middleName"></param>
             <param name="_reference"></param>
@@ -18213,15 +18272,16 @@
             <param name="_active"></param>
             <param name="_deleted"></param>
         </member>
-        <member name="M:Ekip.Framework.Entities.ClientBase.CreateClient(System.Int32,System.DateTime,System.Int32,System.DateTime,System.Nullable{System.Byte},System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Byte,System.Byte,System.String,System.Int32,System.Byte,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Entities.ClientBase.CreateClient(System.Int32,System.DateTime,System.Int32,System.Int32,System.DateTime,System.Nullable{System.Int32},System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Byte,System.Byte,System.String,System.Int32,System.Byte,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
             <summary>
              A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.Client"/> instance.
             </summary>
             <param name="_fileNumber"></param>
             <param name="_firstContactDate"></param>
             <param name="_firstContactAge"></param>
+            <param name="_currentAge"></param>
             <param name="_birthDate"></param>
-            <param name="_calenderAgeId"></param>
+            <param name="_calendarAgeId"></param>
             <param name="_fullName"></param>
             <param name="_middleName"></param>
             <param name="_reference"></param>
@@ -18282,6 +18342,16 @@
             This property can not be set to null. 
             </remarks>
         </member>
+        <member name="P:Ekip.Framework.Entities.ClientBase.CurrentAge">
+            <summary>
+            	Gets or sets the CurrentAge property. 
+            	
+            </summary>
+            <value>This type is int.</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+        </member>
         <member name="P:Ekip.Framework.Entities.ClientBase.BirthDate">
             <summary>
             	Gets or sets the BirthDate property. 
@@ -18292,12 +18362,12 @@
             This property can not be set to null. 
             </remarks>
         </member>
-        <member name="P:Ekip.Framework.Entities.ClientBase.CalenderAgeId">
+        <member name="P:Ekip.Framework.Entities.ClientBase.CalendarAgeId">
             <summary>
-            	Gets or sets the CalenderAgeId property. 
+            	Gets or sets the CalendarAgeId property. 
             	
             </summary>
-            <value>This type is tinyint.</value>
+            <value>This type is int.</value>
             <remarks>
             This property can be set to null. 
             If this column is null it is up to the developer to check using the HasValue property
@@ -18800,14 +18870,19 @@
             FirstContactAge : 
             </summary>
         </member>
+        <member name="F:Ekip.Framework.Entities.ClientBase.ClientEntityData.CurrentAge">
+            <summary>
+            CurrentAge : 
+            </summary>
+        </member>
         <member name="F:Ekip.Framework.Entities.ClientBase.ClientEntityData.BirthDate">
             <summary>
             BirthDate : 
             </summary>
         </member>
-        <member name="F:Ekip.Framework.Entities.ClientBase.ClientEntityData.CalenderAgeId">
+        <member name="F:Ekip.Framework.Entities.ClientBase.ClientEntityData.CalendarAgeId">
             <summary>
-            CalenderAgeId : 
+            CalendarAgeId : 
             </summary>
         </member>
         <member name="F:Ekip.Framework.Entities.ClientBase.ClientEntityData.FullName">
@@ -19169,14 +19244,19 @@
             FirstContactAge : 
             </summary>
         </member>
+        <member name="F:Ekip.Framework.Entities.ClientColumn.CurrentAge">
+            <summary>
+            CurrentAge : 
+            </summary>
+        </member>
         <member name="F:Ekip.Framework.Entities.ClientColumn.BirthDate">
             <summary>
             BirthDate : 
             </summary>
         </member>
-        <member name="F:Ekip.Framework.Entities.ClientColumn.CalenderAgeId">
+        <member name="F:Ekip.Framework.Entities.ClientColumn.CalendarAgeId">
             <summary>
-            CalenderAgeId : 
+            CalendarAgeId : 
             </summary>
         </member>
         <member name="F:Ekip.Framework.Entities.ClientColumn.FullName">
@@ -19303,14 +19383,19 @@
             FirstContactAge : 
             </summary>
         </member>
+        <member name="P:Ekip.Framework.Entities.IClient.CurrentAge">
+            <summary>
+            CurrentAge : 
+            </summary>
+        </member>
         <member name="P:Ekip.Framework.Entities.IClient.BirthDate">
             <summary>
             BirthDate : 
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Entities.IClient.CalenderAgeId">
+        <member name="P:Ekip.Framework.Entities.IClient.CalendarAgeId">
             <summary>
-            CalenderAgeId : 
+            CalendarAgeId : 
             </summary>
         </member>
         <member name="P:Ekip.Framework.Entities.IClient.FullName">

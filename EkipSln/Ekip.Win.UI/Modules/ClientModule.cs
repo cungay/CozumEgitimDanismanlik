@@ -12,6 +12,8 @@ using Ekip.Framework.UI.Forms;
 using Ekip.Framework.UI.Extensions;
 using Ekip.Framework.UI.XAF;
 using Ekip.Framework.Core.ErrorHandling;
+using DevExpress.XtraEditors.DXErrorProvider;
+using Ekip.Win.Framework.Forms;
 
 namespace Ekip.Win.UI.Modules
 {
@@ -20,6 +22,7 @@ namespace Ekip.Win.UI.Modules
         #region Fields
 
         private readonly ClientService clientService = null;
+        private readonly CalendarAgeService calendarAgeService = null;
         private readonly ProvinceService provinceService = null;
         private readonly ClientAddressService addressService = null;
         private readonly ClientMotherService motherService = null;
@@ -35,6 +38,7 @@ namespace Ekip.Win.UI.Modules
             CheckForIllegalCrossThreadCalls = false;
 
             clientService = new ClientService();
+            calendarAgeService = new CalendarAgeService();
 
             provinceService = new ProvinceService();
             addressService = new ClientAddressService();
@@ -43,8 +47,11 @@ namespace Ekip.Win.UI.Modules
 
             lkGender.BindEnum(typeof(Gender));
             rgBlood.BindEnum(typeof(Blood));
-            //rgFamilyStatus.BindEnum(typeof(FamilyStatus));
+            lkFamilyStatus.BindEnum(typeof(FamilyStatus));
             lkAddressTitle.BindEnum(typeof(AddressTitles));
+
+            var calendarAgeSource = DataRepository.CalendarAgeProvider.GetAll();
+            lkCalendarAge.BindEnumarable<CalendarAge>(calendarAgeSource, "AgeDescription", "CalendarAgeId");
 
             VList<ProvinceView> provinces = DataRepository.ProvinceViewProvider.Get(whereClause: null, orderBy: "RowNumber ASC");
             lkProvince.Properties.DataSource = provinces;
@@ -61,16 +68,16 @@ namespace Ekip.Win.UI.Modules
 
             Navigate(NavigateAction.Last);
 
-            var startTimeSpan = TimeSpan.Zero;
-            var periodTimeSpan = TimeSpan.FromMinutes(5);
+            //var startTimeSpan = TimeSpan.Zero;
+            //var periodTimeSpan = TimeSpan.FromMinutes(5);
 
-            var timer = new System.Threading.Timer((e) =>
-            {
-                Application.DoEvents();
-                //grpClient.Select();
-                //txtFullName.Select();
-                //txtFullName.Focus();
-            }, null, startTimeSpan, periodTimeSpan);
+            //var timer = new System.Threading.Timer((e) =>
+            //{
+            //    Application.DoEvents();
+            //    //grpClient.Select();
+            //    txtFullName.Select();
+            //    txtFullName.Focus();
+            //}, null, startTimeSpan, periodTimeSpan);
 
             txtFullName.EditValueChanged += Editor_ToUpper;
             txtMiddleName.EditValueChanged += Editor_ToUpper;
@@ -82,16 +89,18 @@ namespace Ekip.Win.UI.Modules
             txtFamilyNotes.EditValueChanged += Editor_ToUpper;
 
             //deFirstContact.Properties.MaxValue = DateTime.Today;
-            deFirstContact.EditValueChanged += FirstContactDateOnChanged;
-            deFirstContact.CustomDisplayText += FirstContactDate_CustomDisplayText;
+            //deFirstContact.CustomDisplayText += FirstContactDate_CustomDisplayText;
+            //deFirstContact.EditValueChanged += FirstContactDateOnChanged;
+            deFirstContact.Validating += FirstContactOnValidating;
+            deFirstContact.InvalidValue += FirstDateOnInvalidValue;
 
             //deBirthDate.Properties.MaxValue = DateTime.Today;
-            deBirthDate.CustomDisplayText += BirthDate_CustomDisplayText;
-            deBirthDate.EditValueChanged += BirthDateOnChanged;
+            //deBirthDate.CustomDisplayText += BirthDate_CustomDisplayText;
+            //deBirthDate.EditValueChanged += BirthDateOnChanged;
             deBirthDate.Validating += BirthDateOnValidating;
             deBirthDate.InvalidValue += BirthDateOnInvalidValue;
         }
-        
+
         #endregion
 
         #region Override ToolBar
@@ -240,46 +249,31 @@ namespace Ekip.Win.UI.Modules
 
         #endregion
 
-        #region Calculate FirstContactAge
-
-        private void CalcFirstContactAge() {
-            var firstContactDate = deFirstContact.DateTime;
-            var birthDate = deBirthDate.DateTime;
-            if (firstContactDate > DateTime.MinValue && birthDate > DateTime.MinValue) {
-                var client = Program.CurrentClient;
-                var firstContactAge = clientService.CalcAge(firstContactDate, birthDate);
-                client.FirstContactAge = firstContactAge;
-                this.DataBind(client);
-            }
-        }
-
-        private void FirstContactDateOnChanged(object sender, EventArgs e) {
-            //CalcFirstContactAge();
-        }
-
-        private void BirthDateOnChanged(object sender, EventArgs e) {
-            //CalcFirstContactAge();
-        }
-        
-        #endregion
-
         #region DateEdit CustomDisplayText
 
-        private void FirstContactDate_CustomDisplayText(object sender, CustomDisplayTextEventArgs e) {
-            DateTime? selectedDate = null;
+        private void FirstContactDate_CustomDisplayText(object sender, CustomDisplayTextEventArgs e)
+        {
+            DateTime? contactDate = null;
+            DateTime birthDate = deBirthDate.DateTime.Date;
             if (e.Value != null && e.Value != DBNull.Value)
-                selectedDate = Convert.ToDateTime(e.Value);
-            if (selectedDate.HasValue && selectedDate.Value > DateTime.MinValue) {
-                int calculatedAge = clientService.CalcAge(DateTime.Now, selectedDate.Value);
-                e.DisplayText = selectedDate.Value.ToLongDateString().ToUpper();
+                contactDate = Convert.ToDateTime(e.Value);
+            if (contactDate.HasValue && contactDate.Value > DateTime.MinValue)
+            {
+                int calculatedAge = clientService.CalcAge(contactDate.Value, birthDate);
+                var calendarAge = calendarAgeService.CalcCalendarAge(birthDate, contactDate.Value);
+                e.DisplayText = StringExtensions.FormatCurrentCulture("{0} - (Başvuru Yaşı {1})",
+                    contactDate.Value.ToLongDateString(),
+                    calculatedAge).ToUpper();
             }
         }
 
-        private void BirthDate_CustomDisplayText(object sender, CustomDisplayTextEventArgs e) {
+        private void BirthDate_CustomDisplayText(object sender, CustomDisplayTextEventArgs e)
+        {
             DateTime? selectedDate = null;
             if (e.Value != null && e.Value != DBNull.Value)
                 selectedDate = Convert.ToDateTime(e.Value);
-            if (selectedDate.HasValue && selectedDate.Value > DateTime.MinValue) {
+            if (selectedDate.HasValue && selectedDate.Value > DateTime.MinValue)
+            {
                 int calculatedAge = clientService.CalcAge(DateTime.Now, selectedDate.Value);
                 e.DisplayText = StringExtensions.FormatCurrentCulture("{0} - (Şu anda {1} Yaşında)",
                     selectedDate.Value.ToLongDateString(),
@@ -289,18 +283,94 @@ namespace Ekip.Win.UI.Modules
 
         #endregion
 
-        #region DateEdit Validation
+        #region BirthDate Validation
 
-        private void BirthDateOnValidating(object sender, CancelEventArgs e) {
+        private void BirthDateOnValidating(object sender, CancelEventArgs e)
+        {
             DateTime birthDate = (sender as DateEdit).DateTime;
-            if (birthDate.Year > DateTime.Today.Year)
+            if (birthDate.Date > DateTime.Today)
                 e.Cancel = true;
+            DateTime contactDate = deFirstContact.DateTime;
+            if (contactDate > DateTime.MinValue)
+            {
+                if (contactDate.Date < birthDate.Date)
+                    e.Cancel = true;
+            }
         }
 
-        private void BirthDateOnInvalidValue(object sender, InvalidValueExceptionEventArgs e) {
-            e.ExceptionMode = DevExpress.XtraEditors.Controls.ExceptionMode.ThrowException;
-            //MessageBox.Show("Enter a date within the current month.", "Error");
-            throw new ValidateException("Enter a date within the current month.");
+        private void BirthDateOnInvalidValue(object sender, InvalidValueExceptionEventArgs e)
+        {
+            e.ExceptionMode = ExceptionMode.DisplayError;
+            DateTime birthDate = (sender as DateEdit).DateTime;
+            DateTime firstContactDate = deFirstContact.DateTime;
+            if (birthDate.Year > DateTime.Today.Year)
+                e.ErrorText = string.Format("Doğum tarihi {0} olamaz.", birthDate.ConvertToString());
+            else if (firstContactDate > DateTime.MinValue)
+            {
+                if (firstContactDate.Date < birthDate.Date)
+                {
+                    e.ErrorText = "Doğum tarihi başvuru tarihinden sonraki bir tarih olamaz.\n";
+                    e.ErrorText += string.Format("Doğum Tarihi: {0}\n", birthDate.ToLongDateString().ToUpper());
+                    e.ErrorText += string.Format("Başvuru Tarihi: {0}\n", firstContactDate.ToLongDateString().ToUpper());
+                }
+
+            }
+            if (!string.IsNullOrWhiteSpace(e.ErrorText))
+            {
+                ValidateException args = new ValidateException();
+                e.ErrorText.Split(new[] { "\n" }, StringSplitOptions.None).ForEach(delegate (string errorMessage)
+                {
+                    args.ValidationErrors.Add(new ValidationError() { ErrorMessage = errorMessage });
+                });
+                DialogResult dialogResult = TaskDialog.ValidateException(args);
+                if (dialogResult == DialogResult.Ignore)
+                    e.ExceptionMode = ExceptionMode.Ignore;
+            }
+        }
+
+        #endregion
+
+        #region FirstContactDate Validation
+
+        private void FirstContactOnValidating(object sender, CancelEventArgs e)
+        {
+            DateTime contactDate = (sender as DateEdit).DateTime.Date;
+            DateTime birthDate = deBirthDate.DateTime.Date;
+            if (contactDate > DateTime.Today)
+                e.Cancel = true;
+            else if (birthDate > DateTime.MinValue)
+            {
+                if (contactDate < birthDate)
+                    e.Cancel = true;
+            }
+        }
+
+        private void FirstDateOnInvalidValue(object sender, InvalidValueExceptionEventArgs e)
+        {
+            DateTime contactDate = deFirstContact.DateTime.Date;
+            DateTime birthDate = deBirthDate.DateTime.Date;
+            if (contactDate > DateTime.Today)
+                e.ErrorText = string.Format("Başvuru tarihi {0} olamaz.", contactDate.ToLongDateString().ToUpper());
+            else if (birthDate > DateTime.MinValue)
+            {
+                if (contactDate < birthDate)
+                {
+                    e.ErrorText = "Başvuru tarihi doğum tarihinden önceki bir tarih olamaz.\n";
+                    e.ErrorText += string.Format("Başvuru Tarihi: {0}\n", contactDate.ToLongDateString().ToUpper());
+                    e.ErrorText += string.Format("Doğum Tarihi: {0}\n", birthDate.ToLongDateString().ToUpper());
+                }
+            }
+            if (!string.IsNullOrWhiteSpace(e.ErrorText))
+            {
+                ValidateException args = new ValidateException();
+                e.ErrorText.Split(new[] { "\n" }, StringSplitOptions.None).ForEach(delegate (string errorMessage)
+                {
+                    args.ValidationErrors.Add(new ValidationError() { ErrorMessage = errorMessage });
+                });
+                DialogResult dialogResult = TaskDialog.ValidateException(args);
+                if (dialogResult == DialogResult.Ignore)
+                    e.ExceptionMode = ExceptionMode.Ignore;
+            }
         }
 
         #endregion
@@ -311,21 +381,39 @@ namespace Ekip.Win.UI.Modules
         {
             Actions[ActionKeys.Search].EditValue = client.FileNumber;
 
+            #region Client
+            txtFileNumber.DataBind(client);
             deFirstContact.DataBind(client);
             deBirthDate.DataBind(client);
-            txtFirstContactAge.DataBind(client);
-
-            //panelControl1.DataBind(client);
+            lkCalendarAge.DataBind(client);
+            lkGender.DataBind(client);
+            rgBlood.DataBind(client);
+            txtFullName.DataBind(client);
+            txtMiddleName.DataBind(client);
+            txtPediatrician.DataBind(client);
+            txtIdCard.DataBind(client);
+            txtReference.DataBind(client);
+            txtNotes.DataBind(client);
             client.AcceptChanges();
             client.PropertyChanged += Client_PropertyChanged;
+            #endregion
 
             #region Address
-
+            
             if (client.AddressId.HasValue && client.AddressId.Value > 0)
                 client.AddressIdSource = addressService.GetByAddressId(client.AddressId.Value);
             else
                 client.AddressIdSource = new ClientAddress();
-            //grpAddress.DataBind(client.AddressIdSource);
+
+            lkAddressTitle.DataBind(client.AddressIdSource);
+            lkProvince.DataBind(client.AddressIdSource);
+            lkTown.DataBind(client.AddressIdSource);
+            lkNeighborhood.DataBind(client.AddressIdSource);
+            lkStreet.DataBind(client.AddressIdSource);
+            txtAddressLine.DataBind(client.AddressIdSource);
+            txtPhone1.DataBind(client.AddressIdSource);
+            txtPhone2.DataBind(client.AddressIdSource);
+            txtGsm.DataBind(client.AddressIdSource);
             client.AddressIdSource.AcceptChanges();
             client.AddressIdSource.PropertyChanged += Address_PropertyChanged;
 
@@ -371,10 +459,12 @@ namespace Ekip.Win.UI.Modules
 
             Program.CurrentClient = client;
 
+            //Application.DoEvents();
+            deFirstContact.Focus();
             Application.DoEvents();
-            //grpClient.Select();
             //txtFullName.Select();
             //txtFullName.Focus();
+            txtFileNumber.Select();
         }
 
         #endregion

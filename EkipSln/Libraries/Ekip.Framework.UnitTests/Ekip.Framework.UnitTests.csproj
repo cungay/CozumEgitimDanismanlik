@@ -303,12 +303,12 @@
 			  	<SubType>Code</SubType>
 				<DependentUpon>ProvinceTest.cs</DependentUpon>
 			</Compile>
-			<Compile Include="CalenderAgeTest.cs">
+			<Compile Include="CalendarAgeTest.cs">
 			  	<SubType>Code</SubType>
 			</Compile>	
-			<Compile Include="CalenderAgeTest.generated.cs">
+			<Compile Include="CalendarAgeTest.generated.cs">
 			  	<SubType>Code</SubType>
-				<DependentUpon>CalenderAgeTest.cs</DependentUpon>
+				<DependentUpon>CalendarAgeTest.cs</DependentUpon>
 			</Compile>
 			<Compile Include="ClientTest.cs">
 			  	<SubType>Code</SubType>

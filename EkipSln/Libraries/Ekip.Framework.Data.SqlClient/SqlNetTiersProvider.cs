@@ -933,40 +933,40 @@ namespace Ekip.Framework.Data.SqlClient
 		#endregion
 		
 		
-		#region "CalenderAgeProvider"
+		#region "CalendarAgeProvider"
 			
-		private SqlCalenderAgeProvider innerSqlCalenderAgeProvider;
+		private SqlCalendarAgeProvider innerSqlCalendarAgeProvider;
 
 		///<summary>
-		/// This class is the Data Access Logic Component for the <see cref="CalenderAge"/> business entity.
+		/// This class is the Data Access Logic Component for the <see cref="CalendarAge"/> business entity.
 		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
 		///</summary>
 		/// <value></value>
-		public override CalenderAgeProviderBase CalenderAgeProvider
+		public override CalendarAgeProviderBase CalendarAgeProvider
 		{
 			get
 			{
-				if (innerSqlCalenderAgeProvider == null) 
+				if (innerSqlCalendarAgeProvider == null) 
 				{
 					lock (syncRoot) 
 					{
-						if (innerSqlCalenderAgeProvider == null)
+						if (innerSqlCalendarAgeProvider == null)
 						{
-							this.innerSqlCalenderAgeProvider = new SqlCalenderAgeProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+							this.innerSqlCalendarAgeProvider = new SqlCalendarAgeProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
 						}
 					}
 				}
-				return innerSqlCalenderAgeProvider;
+				return innerSqlCalendarAgeProvider;
 			}
 		}
 		
 		/// <summary>
-		/// Gets the current <see cref="SqlCalenderAgeProvider"/>.
+		/// Gets the current <see cref="SqlCalendarAgeProvider"/>.
 		/// </summary>
 		/// <value></value>
-		public SqlCalenderAgeProvider SqlCalenderAgeProvider
+		public SqlCalendarAgeProvider SqlCalendarAgeProvider
 		{
-			get {return CalenderAgeProvider as SqlCalenderAgeProvider;}
+			get {return CalendarAgeProvider as SqlCalendarAgeProvider;}
 		}
 		
 		#endregion

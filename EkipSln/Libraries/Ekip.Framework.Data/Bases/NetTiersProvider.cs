@@ -116,9 +116,9 @@ namespace Ekip.Framework.Data.Bases
 		public virtual ProvinceProviderBase ProvinceProvider{get {throw new NotImplementedException();}}
 		
 		///<summary>
-		/// Current CalenderAgeProviderBase instance.
+		/// Current CalendarAgeProviderBase instance.
 		///</summary>
-		public virtual CalenderAgeProviderBase CalenderAgeProvider{get {throw new NotImplementedException();}}
+		public virtual CalendarAgeProviderBase CalendarAgeProvider{get {throw new NotImplementedException();}}
 		
 		///<summary>
 		/// Current ClientProviderBase instance.

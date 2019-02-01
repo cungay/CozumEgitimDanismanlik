@@ -3594,62 +3594,62 @@
             <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
             <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
         </member>
-        <member name="T:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProvider">
+        <member name="T:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProvider">
             <summary>
-             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> entity.
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> entity.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProvider.#ctor(System.String,System.Boolean,System.String)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProvider.#ctor(System.String,System.Boolean,System.String)">
             <summary>
-            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProvider"/> instance.
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProvider"/> instance.
             Uses connection string to connect to datasource.
             </summary>
             <param name="connectionString">The connection string to the database.</param>
             <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
             <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
         </member>
-        <member name="T:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase">
+        <member name="T:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase">
             <summary>
-             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> entity.
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> entity.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.#ctor">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.#ctor">
             <summary>
-            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase"/> instance.
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase"/> instance.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.#ctor(System.String,System.Boolean,System.String)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.#ctor(System.String,System.Boolean,System.String)">
             <summary>
-            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase"/> instance.
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase"/> instance.
             Uses connection string to connect to datasource.
             </summary>
             <param name="connectionString">The connection string to the database.</param>
             <param name="useStoredProcedure">A boolean value that indicates if we should use stored procedures or embedded queries.</param>
             <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
         </member>
-        <member name="P:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.ConnectionString">
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.ConnectionString">
             <summary>
             Gets or sets the connection string.
             </summary>
             <value>The connection string.</value>
         </member>
-        <member name="P:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.UseStoredProcedure">
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.UseStoredProcedure">
             <summary>
             Gets or sets a value indicating whether to use stored procedures.
             </summary>
             <value><c>true</c> if we choose to use use stored procedures; otherwise, <c>false</c>.</value>
         </member>
-        <member name="P:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.ProviderInvariantName">
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.ProviderInvariantName">
             <summary>
             Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
             </summary>
             <value>The name of the provider invariant.</value>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.Delete(Ekip.Framework.Data.TransactionManager,System.Int32)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.Delete(Ekip.Framework.Data.TransactionManager,System.Int32)">
             <summary>
             	Deletes a row from the DataSource.
             </summary>
-            <param name="_calenderAgeId">. Primary Key.</param>	
+            <param name="_calendarAgeId">. Primary Key.</param>	
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
             <remarks>Deletes based on primary key(s).</remarks>
             <returns>Returns true if operation suceeded.</returns>
@@ -3657,7 +3657,7 @@
             <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
             <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.Find(Ekip.Framework.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.Find(Ekip.Framework.Data.TransactionManager,System.String,System.Int32,System.Int32,System.Int32@)">
             <summary>
             	Returns rows meeting the whereClause condition from the DataSource.
             </summary>
@@ -3667,9 +3667,9 @@
             <param name="pageLength">Number of rows to return.</param>
             <param name="count">out. The number of rows that match this query.</param>
             <remarks>Operators must be capitalized (OR, AND).</remarks>
-            <returns>Returns a typed collection of Ekip.Framework.Entities.CalenderAge objects.</returns>
+            <returns>Returns a typed collection of Ekip.Framework.Entities.CalendarAge objects.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.Find(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.Find(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
             <summary>
             	Returns rows from the DataSource that meet the parameter conditions.
             </summary>
@@ -3679,9 +3679,9 @@
             <param name="start">Row number at which to start reading.</param>
             <param name="pageLength">Number of rows to return.</param>
             <param name="count">out. The number of rows that match this query.</param>
-            <returns>Returns a typed collection of Ekip.Framework.Entities.CalenderAge objects.</returns>
+            <returns>Returns a typed collection of Ekip.Framework.Entities.CalendarAge objects.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.GetAll(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.GetAll(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
             <summary>
             	Gets All rows from the DataSource.
             </summary>
@@ -3690,12 +3690,12 @@
             <param name="pageLength">Number of rows to return.</param>
             <param name="count">out. The number of rows that match this query.</param>
             <remarks></remarks>
-            <returns>Returns a typed collection of Ekip.Framework.Entities.CalenderAge objects.</returns>
+            <returns>Returns a typed collection of Ekip.Framework.Entities.CalendarAge objects.</returns>
             <exception cref="T:System.Exception">The command could not be executed.</exception>
             <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
             <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.GetPaged(Ekip.Framework.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.GetPaged(Ekip.Framework.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
             <summary>
             Gets a page of rows from the DataSource.
             </summary>
@@ -3706,42 +3706,42 @@
             <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
             <remarks></remarks>
-            <returns>Returns a typed collection of Ekip.Framework.Entities.CalenderAge objects.</returns>
+            <returns>Returns a typed collection of Ekip.Framework.Entities.CalendarAge objects.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.GetByCalenderAgeId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32,System.Int32@)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.GetByCalendarAgeId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32,System.Int32@)">
             <summary>
-            	Gets rows from the datasource based on the PK_CalenderAge index.
+            	Gets rows from the datasource based on the PK_CalendarAge index.
             </summary>
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
-            <param name="_calenderAgeId"></param>
+            <param name="_calendarAgeId"></param>
             <param name="start">Row number at which to start reading.</param>
             <param name="pageLength">Number of rows to return.</param>
             <param name="count">out parameter to get total records for query.</param>
-            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> class.</returns>
+            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> class.</returns>
             <remarks></remarks>
             <exception cref="T:System.Exception">The command could not be executed.</exception>
             <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
             <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.BulkInsert(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.TList{Ekip.Framework.Entities.CalenderAge})">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.BulkInsert(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.TList{Ekip.Framework.Entities.CalendarAge})">
             <summary>
             Lets you efficiently bulk insert many entities to the database.
             </summary>
             <param name="transactionManager">The transaction manager.</param>
             <param name="entities">The entities.</param>
             <remarks>
-            	After inserting into the datasource, the Ekip.Framework.Entities.CalenderAge object will be updated
+            	After inserting into the datasource, the Ekip.Framework.Entities.CalendarAge object will be updated
             	to refelect any changes made by the datasource. (ie: identity or computed columns)
             </remarks>	
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.Insert(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalenderAge)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.Insert(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalendarAge)">
             <summary>
-            	Inserts a Ekip.Framework.Entities.CalenderAge object into the datasource using a transaction.
+            	Inserts a Ekip.Framework.Entities.CalendarAge object into the datasource using a transaction.
             </summary>
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
-            <param name="entity">Ekip.Framework.Entities.CalenderAge object to insert.</param>
+            <param name="entity">Ekip.Framework.Entities.CalendarAge object to insert.</param>
             <remarks>
-            	After inserting into the datasource, the Ekip.Framework.Entities.CalenderAge object will be updated
+            	After inserting into the datasource, the Ekip.Framework.Entities.CalendarAge object will be updated
             	to refelect any changes made by the datasource. (ie: identity or computed columns)
             </remarks>	
             <returns>Returns true if operation is successful.</returns>
@@ -3749,20 +3749,32 @@
             <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
             <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
         </member>
-        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalenderAgeProviderBase.Update(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalenderAge)">
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.Update(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalendarAge)">
             <summary>
             	Update an existing row in the datasource.
             </summary>
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
-            <param name="entity">Ekip.Framework.Entities.CalenderAge object to update.</param>
+            <param name="entity">Ekip.Framework.Entities.CalendarAge object to update.</param>
             <remarks>
-            	After updating the datasource, the Ekip.Framework.Entities.CalenderAge object will be updated
+            	After updating the datasource, the Ekip.Framework.Entities.CalendarAge object will be updated
             	to refelect any changes made by the datasource. (ie: identity or computed columns)
             </remarks>
             <returns>Returns true if operation is successful.</returns>
             <exception cref="T:System.Exception">The command could not be executed.</exception>
             <exception cref="T:System.Data.DataException">The <paramref name="transactionManager"/> is not open.</exception>
             <exception cref="T:System.Data.Common.DbException">The command could not be executed.</exception>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlCalendarAgeProviderBase.GetByYearAndMonth(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            This method wraps the 'CalendarAge_GetByYearAndMonth' stored procedure. 
+            </summary>	
+            <param name="year"> A <c>System.Int32?</c> instance.</param>
+            <param name="month"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object.</param>
+            <remark>This method is generated from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.TList`1"/> instance.</returns>
         </member>
         <member name="T:Ekip.Framework.Data.SqlClient.SqlClientProvider">
             <summary>
@@ -6454,16 +6466,16 @@
             </summary>
             <value></value>
         </member>
-        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.CalenderAgeProvider">
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.CalendarAgeProvider">
             <summary>
-             This class is the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> business entity.
+             This class is the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> business entity.
              It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
             </summary>
              <value></value>
         </member>
-        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlCalenderAgeProvider">
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlCalendarAgeProvider">
             <summary>
-            Gets the current <see cref="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlCalenderAgeProvider"/>.
+            Gets the current <see cref="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlCalendarAgeProvider"/>.
             </summary>
             <value></value>
         </member>

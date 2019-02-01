@@ -73,26 +73,27 @@
     <Compile Include="GenericExtensions.cs" />
     <Compile Include="PagedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Messages.Designer.cs" />
+    <Compile Include="Resources\SystemMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SystemMessages.resx</DependentUpon>
+    </Compile>
     <Compile Include="Serializer.cs" />
     <Compile Include="StreamExtensions.cs" />
     <Compile Include="StringExtension.cs" />
     <Compile Include="TypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\LookUpList.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Messages.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Validation.xml.bak" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Ekip.Framework.Entities\Ekip.Framework.Entities.csproj">
       <Project>{1f8eaf95-7f11-4db2-9d70-c0c7862050bb}</Project>
       <Name>Ekip.Framework.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SystemMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SystemMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

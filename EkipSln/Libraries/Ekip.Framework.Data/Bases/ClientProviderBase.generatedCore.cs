@@ -945,8 +945,9 @@ namespace Ekip.Framework.Data.Bases
 					c.FileNumber = (System.Int32)reader[((int)ClientColumn.FileNumber - 1)];
 					c.FirstContactDate = (System.DateTime)reader[((int)ClientColumn.FirstContactDate - 1)];
 					c.FirstContactAge = (System.Int32)reader[((int)ClientColumn.FirstContactAge - 1)];
+					c.CurrentAge = (System.Int32)reader[((int)ClientColumn.CurrentAge - 1)];
 					c.BirthDate = (System.DateTime)reader[((int)ClientColumn.BirthDate - 1)];
-					c.CalenderAgeId = (reader.IsDBNull(((int)ClientColumn.CalenderAgeId - 1)))?null:(System.Byte?)reader[((int)ClientColumn.CalenderAgeId - 1)];
+					c.CalendarAgeId = (reader.IsDBNull(((int)ClientColumn.CalendarAgeId - 1)))?null:(System.Int32?)reader[((int)ClientColumn.CalendarAgeId - 1)];
 					c.FullName = (System.String)reader[((int)ClientColumn.FullName - 1)];
 					c.MiddleName = (reader.IsDBNull(((int)ClientColumn.MiddleName - 1)))?null:(System.String)reader[((int)ClientColumn.MiddleName - 1)];
 					c.Reference = (reader.IsDBNull(((int)ClientColumn.Reference - 1)))?null:(System.String)reader[((int)ClientColumn.Reference - 1)];
@@ -987,8 +988,9 @@ namespace Ekip.Framework.Data.Bases
 			entity.FileNumber = (System.Int32)reader[((int)ClientColumn.FileNumber - 1)];
 			entity.FirstContactDate = (System.DateTime)reader[((int)ClientColumn.FirstContactDate - 1)];
 			entity.FirstContactAge = (System.Int32)reader[((int)ClientColumn.FirstContactAge - 1)];
+			entity.CurrentAge = (System.Int32)reader[((int)ClientColumn.CurrentAge - 1)];
 			entity.BirthDate = (System.DateTime)reader[((int)ClientColumn.BirthDate - 1)];
-			entity.CalenderAgeId = (reader.IsDBNull(((int)ClientColumn.CalenderAgeId - 1)))?null:(System.Byte?)reader[((int)ClientColumn.CalenderAgeId - 1)];
+			entity.CalendarAgeId = (reader.IsDBNull(((int)ClientColumn.CalendarAgeId - 1)))?null:(System.Int32?)reader[((int)ClientColumn.CalendarAgeId - 1)];
 			entity.FullName = (System.String)reader[((int)ClientColumn.FullName - 1)];
 			entity.MiddleName = (reader.IsDBNull(((int)ClientColumn.MiddleName - 1)))?null:(System.String)reader[((int)ClientColumn.MiddleName - 1)];
 			entity.Reference = (reader.IsDBNull(((int)ClientColumn.Reference - 1)))?null:(System.String)reader[((int)ClientColumn.Reference - 1)];
@@ -1024,8 +1026,9 @@ namespace Ekip.Framework.Data.Bases
 			entity.FileNumber = (System.Int32)dataRow["FileNumber"];
 			entity.FirstContactDate = (System.DateTime)dataRow["FirstContactDate"];
 			entity.FirstContactAge = (System.Int32)dataRow["FirstContactAge"];
+			entity.CurrentAge = (System.Int32)dataRow["CurrentAge"];
 			entity.BirthDate = (System.DateTime)dataRow["BirthDate"];
-			entity.CalenderAgeId = Convert.IsDBNull(dataRow["CalenderAgeId"]) ? null : (System.Byte?)dataRow["CalenderAgeId"];
+			entity.CalendarAgeId = Convert.IsDBNull(dataRow["CalendarAgeId"]) ? null : (System.Int32?)dataRow["CalendarAgeId"];
 			entity.FullName = (System.String)dataRow["FullName"];
 			entity.MiddleName = Convert.IsDBNull(dataRow["MiddleName"]) ? null : (System.String)dataRow["MiddleName"];
 			entity.Reference = Convert.IsDBNull(dataRow["Reference"]) ? null : (System.String)dataRow["Reference"];

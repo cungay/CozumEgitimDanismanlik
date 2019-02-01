@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
   <variables>
-    <!-- <add key="ConnectionString" value="Data Source=.;Initial Catalog=EkipDev;User ID=sa;Password=1q2w3e" /> -->
     <add key="ConnectionString" value="Data Source=.;Initial Catalog=EkipDev;User ID=sa;Password=1q2w3e" />
   </variables>
   <propertySets>
@@ -85,7 +84,7 @@
       </table>
       <table>
         <owner>dbo</owner>
-        <name>CalenderAge</name>
+        <name>CalendarAge</name>
       </table>
       <table>
         <owner>dbo</owner>

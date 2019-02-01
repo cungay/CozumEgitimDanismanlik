@@ -28,8 +28,7 @@ namespace Ekip.Framework.Core
             return list.ToDataTable();
         }
 
-        public static DataTable ToDataTable<T>(this IEnumerable<T> source, DataTable table,
-            LoadOption? options)
+        public static DataTable ToDataTable<T>(this IEnumerable<T> source, DataTable table, LoadOption? options)
         {
             return new ObjectShredder<T>().Shred(source, table, options);
         }
@@ -40,8 +39,7 @@ namespace Ekip.Framework.Core
             return new ObjectShredder<T>().ExtendTable(dt, typeof(T));
         }
 
-        public static DataTable ListTable<T>(this IEnumerable<T> source, string keyMember,
-            string valueMember)
+        public static DataTable ListTable<T>(this IEnumerable<T> source, string keyMember, string valueMember)
         {
             return new ObjectShredder<T>().ListTable(source, keyMember, valueMember);
         }
@@ -257,6 +255,8 @@ namespace Ekip.Framework.Core
 
                 foreach (PropertyInfo p in pi)
                 {
+                    if (p.Name == "Item")
+                        continue;
                     values[_ordinalMap[p.Name]] = p.GetValue(instance, null);
                 }
                 return values;
@@ -285,5 +285,59 @@ namespace Ekip.Framework.Core
             }
             return dataTable;
         }
+
+        /// <summary>
+        /// Convert a List{T} to a DataTable.
+        /// </summary>
+        //public static DataTable ToDataTable<T>(this List<T> items)
+        //{
+        //    var tb = new DataTable(typeof(T).Name);
+        //    PropertyInfo[] props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+        //    foreach (PropertyInfo prop in props) {
+        //        Type t = GetCoreType(prop.PropertyType);
+        //        tb.Columns.Add(prop.Name, t);
+        //    }
+        //    foreach (T item in items) {
+        //        var count = props.Count();
+        //        var values = new object[count];
+        //        for (int i = 0; i < count; i++) {
+        //            if (props[i].Name == "Item")
+        //                continue;
+        //            values[i] = props[i].GetValue(item, null);
+        //        }
+        //        tb.Rows.Add(values);
+        //    }
+        //    return tb;
+        //}
+
+        /// <summary>
+        /// Determine of specified type is nullable
+        /// </summary>
+        //public static bool IsNullable(Type t)
+        //{
+        //    return !t.IsValueType || (t.IsGenericType && t.GetGenericTypeDefinition() == typeof(Nullable<>));
+        //}
+
+        /// <summary>
+        /// Return underlying type if type is Nullable otherwise return the type
+        /// </summary>
+        //public static Type GetCoreType(Type t)
+        //{
+        //    if (t != null && IsNullable(t))
+        //    {
+        //        if (!t.IsValueType)
+        //        {
+        //            return t;
+        //        }
+        //        else
+        //        {
+        //            return Nullable.GetUnderlyingType(t);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return t;
+        //    }
+        //}
     }
 }

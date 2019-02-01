@@ -1,33 +1,52 @@
-﻿using DevExpress.Utils;
+﻿using DevExpress.Utils.Drawing.Helpers;
 using DevExpress.XtraEditors;
+using Ekip.Framework.Core.ErrorHandling;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace Ekip.Win.Framework.Forms
 {
-    public partial class TaskDialog : XtraForm
+    public static class TaskDialog
     {
-        public TaskDialog()
+        public static DialogResult ValidateException(ValidateException exception)
         {
-            InitializeComponent();
-            this.ShowIcon = false;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.HtmlText = Ekip.Framework.Core.Resources.Messages.Default_Title;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            Rectangle rect = Screen.GetWorkingArea(this);
-            this.Location = new Point(rect.Width / 2 - this.Width / 2, rect.Height / 2 - this.Height / 2);
+            XtraMessageBoxArgs args = new XtraMessageBoxArgs();
+            args.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            args.MessageBeepSound = MessageBeepSound.Warning;
+            args.Icon = StockIconHelper.GetStockIcon(StockIconHelper.StockIconId.Error);
+            args.Caption = exception.Caption;
+            args.Text = exception.Message;
+            if (exception.ValidationErrors.Count > 0) {
+                args.Text += "\n";
+                exception.ValidationErrors.ForEach(delegate (ValidationError error) {
+                    if (!string.IsNullOrWhiteSpace(error.ErrorMessage))
+                        args.Text += string.Format("\n<b>(*) {0}</b>", error.ErrorMessage);
+                });
+            }
+            args.Buttons = new DialogResult[] { DialogResult.OK, DialogResult.Ignore };
+            args.Showing += ValidateExceptionOnShowing;
+            DialogResult result = XtraMessageBox.Show(args);
+            return result;
         }
 
-        protected override DevExpress.Skins.XtraForm.FormPainter CreateFormBorderPainter()
+        private static void ValidateExceptionOnShowing(object sender, XtraMessageShowingArgs e)
         {
-            HorzAlignment formCaptionAlignment = HorzAlignment.Center;
-            return new TaskDialogPainter(this, LookAndFeel, formCaptionAlignment);
-        }
-
-        private void pictureEdit1_EditValueChanged(object sender, System.EventArgs e)
-        {
-
+            //e.Form.Appearance.Font = new Font(e.Form.Appearance.Font, FontStyle.Bold);
+            MessageButtonCollection buttons = e.Buttons as MessageButtonCollection;
+            SimpleButton btnOk = buttons[DialogResult.OK] as SimpleButton;
+            SimpleButton btnIgnore = buttons[DialogResult.Ignore] as SimpleButton;
+            btnOk.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
+            btnIgnore.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
+            if (btnOk != null)
+            {
+                btnOk.Text = "<u>H</u>atayı Düzelt";
+                btnOk.Width += 10;
+            }
+            if (btnIgnore != null)
+            {
+                btnIgnore.Text = "<u>G</u>eri Al";
+                btnIgnore.Width += 10;
+            }
         }
     }
 }

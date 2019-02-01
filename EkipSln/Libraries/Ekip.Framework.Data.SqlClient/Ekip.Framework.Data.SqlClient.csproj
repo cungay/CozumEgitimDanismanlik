@@ -313,12 +313,12 @@
 			  <DependentUpon>SqlProvinceProvider.cs</DependentUpon>
 			  <SubType>Code</SubType>
 			</Compile>
-			<Compile Include="SqlCalenderAgeProvider.cs">
+			<Compile Include="SqlCalendarAgeProvider.cs">
 			  <SubType>Code</SubType>
 			</Compile>
 			
-			<Compile Include="SqlCalenderAgeProviderBase.generated.cs">
-			  <DependentUpon>SqlCalenderAgeProvider.cs</DependentUpon>
+			<Compile Include="SqlCalendarAgeProviderBase.generated.cs">
+			  <DependentUpon>SqlCalendarAgeProvider.cs</DependentUpon>
 			  <SubType>Code</SubType>
 			</Compile>
 			<Compile Include="SqlClientProvider.cs">

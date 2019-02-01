@@ -64,6 +64,7 @@ namespace Ekip.Framework.Entities
     }
 
     [DefaultValue(0)]
+    [Description("Anne - Baba Durumu")]
     public enum FamilyStatus
     {
         [Description("Belirtilmedi")]

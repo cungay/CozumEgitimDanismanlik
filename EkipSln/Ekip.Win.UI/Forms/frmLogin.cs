@@ -51,18 +51,18 @@ namespace Ekip.Win.UI.Forms
             //Session user = sessionService.GetByUserName(txtUid.Text);
             //Program.CurrentUser = user ?? throw new Exception("Giriş başarısız.\nKullanıcı adı ve şifrenizi kontrol ediniz.");
 
-            SqlNetTiersProvider provider = new SqlNetTiersProvider();
-            NameValueCollection collection = new NameValueCollection();
-            collection.Add("UseStoredProcedure", ConfigManager.UseStoredProcedure);
-            collection.Add("EnableEntityTracking", ConfigManager.EnableEntityTracking);
-            collection.Add("EntityCreationalFactoryType", ConfigManager.EntityCreationalFactoryType);
-            collection.Add("EnableMethodAuthorization", ConfigManager.EnableMethodAuthorization);
-            collection.Add("DefaultCommandTimeout", ConfigManager.DefaultCommandTimeout);
-            collection.Add("ConnectionString", ConfigManager.ConnectionString);
-            collection.Add("ConnectionStringName", ConfigManager.ConnectionStringName);
-            collection.Add("ProviderInvariantName", ConfigManager.ProviderInvariantName);
-            provider.Initialize("DynamicSqlNetTiersProvider", collection);
-            DataRepository.LoadProvider(provider, true);
+            //SqlNetTiersProvider provider = new SqlNetTiersProvider();
+            //NameValueCollection collection = new NameValueCollection();
+            //collection.Add("UseStoredProcedure", ConfigManager.UseStoredProcedure);
+            //collection.Add("EnableEntityTracking", ConfigManager.EnableEntityTracking);
+            //collection.Add("EntityCreationalFactoryType", ConfigManager.EntityCreationalFactoryType);
+            //collection.Add("EnableMethodAuthorization", ConfigManager.EnableMethodAuthorization);
+            //collection.Add("DefaultCommandTimeout", ConfigManager.DefaultCommandTimeout);
+            //collection.Add("ConnectionString", ConfigManager.ConnectionString);
+            //collection.Add("ConnectionStringName", ConfigManager.ConnectionStringName);
+            //collection.Add("ProviderInvariantName", ConfigManager.ProviderInvariantName);
+            //provider.Initialize("DynamicSqlNetTiersProvider", collection);
+            //DataRepository.LoadProvider(provider, true);
 
             this.Hide();
             SplashScreenManager.ShowForm(this, typeof(frmSplashScreen), true, true, false);

@@ -598,5 +598,10 @@ namespace Ekip.Framework.Core
 
             return TimeZoneInfo.ConvertTimeToUtc(dt, sourceTimeZone);
         }
+
+        public static string ConvertToString(this DateTime dateTime, string formatString = "dd/MM/yyyy")
+        {
+            return dateTime.ToString(formatString);
+        }
     }
 }

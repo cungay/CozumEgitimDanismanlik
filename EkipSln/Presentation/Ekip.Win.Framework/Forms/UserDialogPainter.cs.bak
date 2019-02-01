@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace Ekip.Win.Framework.Forms
 {
-    public class TaskDialogPainter : FormPainter
+    public class UserDialogPainter : FormPainter
     {
-        public TaskDialogPainter(Control owner, ISkinProvider provider)
+        public UserDialogPainter(Control owner, ISkinProvider provider)
             : base(owner, provider) { }
-        public TaskDialogPainter(TaskDialog owner, UserLookAndFeel provider, HorzAlignment captionAlignment)
+        public UserDialogPainter(UserDialog owner, UserLookAndFeel provider, HorzAlignment captionAlignment)
             : base(owner, provider) {
             CaptionAlignment = captionAlignment;
         }

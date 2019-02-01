@@ -22,14 +22,14 @@ namespace Ekip.Framework.Core.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Messages {
+    public class SystemMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Messages() {
+        internal SystemMessages() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Ekip.Framework.Core.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ekip.Framework.Core.Resources.Messages", typeof(Messages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ekip.Framework.Core.Resources.SystemMessages", typeof(SystemMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -151,6 +151,24 @@ namespace Ekip.Framework.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Seçiniz.
+        /// </summary>
+        public static string Lookup_No_Choice {
+            get {
+                return ResourceManager.GetString("Lookup_No_Choice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Belirtilmedi.
+        /// </summary>
+        public static string Lookup_Not_Specified {
+            get {
+                return ResourceManager.GetString("Lookup_Not_Specified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to İşlem kullanıcı tarafından iptal edildi..
         /// </summary>
         public static string Operation_Canceled {
@@ -205,11 +223,20 @@ namespace Ekip.Framework.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bir ya da birden fazla veri giriş hatası bulundu.\nLütfen formu kontrol edin..
+        ///   Looks up a localized string similar to Bir ya da birden fazla veri giriş hatası bulundu..
         /// </summary>
-        public static string Validate_Error {
+        public static string Validate_Error_Caption {
             get {
-                return ResourceManager.GetString("Validate_Error", resourceCulture);
+                return ResourceManager.GetString("Validate_Error_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;u&gt;İşleme devam edilemiyor. Lütfen formu kontrol edin.&lt;/u&gt;.
+        /// </summary>
+        public static string Validate_Error_Content {
+            get {
+                return ResourceManager.GetString("Validate_Error_Content", resourceCulture);
             }
         }
     }

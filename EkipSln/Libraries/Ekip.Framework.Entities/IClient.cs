@@ -35,14 +35,19 @@ namespace Ekip.Framework.Entities
 		System.Int32  FirstContactAge  { get; set; }
 		
 		/// <summary>
+		/// CurrentAge : 
+		/// </summary>
+		System.Int32  CurrentAge  { get; set; }
+		
+		/// <summary>
 		/// BirthDate : 
 		/// </summary>
 		System.DateTime  BirthDate  { get; set; }
 		
 		/// <summary>
-		/// CalenderAgeId : 
+		/// CalendarAgeId : 
 		/// </summary>
-		System.Byte?  CalenderAgeId  { get; set; }
+		System.Int32?  CalendarAgeId  { get; set; }
 		
 		/// <summary>
 		/// FullName : 

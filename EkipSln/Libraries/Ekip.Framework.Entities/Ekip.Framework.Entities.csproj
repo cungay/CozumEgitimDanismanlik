@@ -403,15 +403,15 @@
 			</Compile>
 		
 		
-			<Compile Include="CalenderAge.cs">
+			<Compile Include="CalendarAge.cs">
 			  <SubType>Code</SubType>
 			</Compile>
-			<Compile Include="CalenderAgeBase.generated.cs">
-			  <DependentUpon>CalenderAge.cs</DependentUpon>
+			<Compile Include="CalendarAgeBase.generated.cs">
+			  <DependentUpon>CalendarAge.cs</DependentUpon>
 			  <SubType>Code</SubType>
 			</Compile>
-			<Compile Include="ICalenderAge.cs">
-			  <DependentUpon>CalenderAge.cs</DependentUpon>
+			<Compile Include="ICalendarAge.cs">
+			  <DependentUpon>CalendarAge.cs</DependentUpon>
 			  <SubType>Code</SubType>
 			</Compile>
 		

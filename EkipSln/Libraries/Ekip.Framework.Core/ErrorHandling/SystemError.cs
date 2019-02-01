@@ -10,7 +10,7 @@ namespace Ekip.Framework.Core.ErrorHandling
         /// Just create the exception
         /// </summary>
         public SystemError()
-          : base(Messages.System_Error)
+          : base(SystemMessages.System_Error)
         {
         }
 

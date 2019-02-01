@@ -5528,19 +5528,19 @@
             Initializes a new instance of the ProvinceSqlSortBuilder class.
             </summary>
         </member>
-        <member name="T:Ekip.Framework.Data.Bases.CalenderAgeProviderBase">
+        <member name="T:Ekip.Framework.Data.Bases.CalendarAgeProviderBase">
             <summary>
-             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.CalenderAgeProviderBase"/> implementation.
+             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.CalendarAgeProviderBase"/> implementation.
              It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
             </summary>
         </member>
-        <member name="T:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore">
+        <member name="T:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore">
             <summary>
-             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.CalenderAgeProviderBase"/> implementation.
+             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.CalendarAgeProviderBase"/> implementation.
              It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.Delete(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalenderAgeKey)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.Delete(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalendarAgeKey)">
             <summary>
             	Deletes a row from the DataSource.
             </summary>
@@ -5548,24 +5548,24 @@
             <param name="key">The unique identifier of the row to delete.</param>
             <returns>Returns true if operation suceeded.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.Delete(System.Int32)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.Delete(System.Int32)">
             <summary>
             	Deletes a row from the DataSource.
             </summary>
-            <param name="_calenderAgeId">. Primary Key.</param>
+            <param name="_calendarAgeId">. Primary Key.</param>
             <remarks>Deletes based on primary key(s).</remarks>
             <returns>Returns true if operation suceeded.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.Delete(Ekip.Framework.Data.TransactionManager,System.Int32)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.Delete(Ekip.Framework.Data.TransactionManager,System.Int32)">
             <summary>
             	Deletes a row from the DataSource.
             </summary>
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
-            <param name="_calenderAgeId">. Primary Key.</param>
+            <param name="_calendarAgeId">. Primary Key.</param>
             <remarks>Deletes based on primary key(s).</remarks>
             <returns>Returns true if operation suceeded.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.Get(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalenderAgeKey,System.Int32,System.Int32)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.Get(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalendarAgeKey,System.Int32,System.Int32)">
             <summary>
             	Gets a row from the DataSource based on its primary key.
             </summary>
@@ -5575,68 +5575,110 @@
             <param name="pageLength">Number of rows to return.</param>
             <returns>Returns an instance of the Entity class.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.GetByCalenderAgeId(System.Int32)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByCalendarAgeId(System.Int32)">
             <summary>
-            	Gets rows from the datasource based on the primary key PK_CalenderAge index.
+            	Gets rows from the datasource based on the primary key PK_CalendarAge index.
             </summary>
-            <param name="_calenderAgeId"></param>
-            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> class.</returns>
+            <param name="_calendarAgeId"></param>
+            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> class.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.GetByCalenderAgeId(System.Int32,System.Int32,System.Int32)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByCalendarAgeId(System.Int32,System.Int32,System.Int32)">
             <summary>
-            	Gets rows from the datasource based on the PK_CalenderAge index.
+            	Gets rows from the datasource based on the PK_CalendarAge index.
             </summary>
-            <param name="_calenderAgeId"></param>
+            <param name="_calendarAgeId"></param>
             <param name="start">Row number at which to start reading, the first row is 0.</param>
             <param name="pageLength">Number of rows to return.</param>
             <remarks></remarks>
-            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> class.</returns>
+            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> class.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.GetByCalenderAgeId(Ekip.Framework.Data.TransactionManager,System.Int32)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByCalendarAgeId(Ekip.Framework.Data.TransactionManager,System.Int32)">
             <summary>
-            	Gets rows from the datasource based on the PK_CalenderAge index.
+            	Gets rows from the datasource based on the PK_CalendarAge index.
             </summary>
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
-            <param name="_calenderAgeId"></param>
+            <param name="_calendarAgeId"></param>
             <remarks></remarks>
-            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> class.</returns>
+            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> class.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.GetByCalenderAgeId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByCalendarAgeId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32)">
             <summary>
-            	Gets rows from the datasource based on the PK_CalenderAge index.
+            	Gets rows from the datasource based on the PK_CalendarAge index.
             </summary>
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
-            <param name="_calenderAgeId"></param>
+            <param name="_calendarAgeId"></param>
             <param name="start">Row number at which to start reading, the first row is 0.</param>
             <param name="pageLength">Number of rows to return.</param>
             <remarks></remarks>
-            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> class.</returns>
+            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> class.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.GetByCalenderAgeId(System.Int32,System.Int32,System.Int32,System.Int32@)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByCalendarAgeId(System.Int32,System.Int32,System.Int32,System.Int32@)">
             <summary>
-            	Gets rows from the datasource based on the PK_CalenderAge index.
+            	Gets rows from the datasource based on the PK_CalendarAge index.
             </summary>
-            <param name="_calenderAgeId"></param>
+            <param name="_calendarAgeId"></param>
             <param name="start">Row number at which to start reading, the first row is 0.</param>
             <param name="pageLength">Number of rows to return.</param>
             <param name="count">out parameter to get total records for query</param>
             <remarks></remarks>
-            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> class.</returns>
+            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> class.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.GetByCalenderAgeId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32,System.Int32@)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByCalendarAgeId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32,System.Int32@)">
             <summary>
-            	Gets rows from the datasource based on the PK_CalenderAge index.
+            	Gets rows from the datasource based on the PK_CalendarAge index.
             </summary>
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
-            <param name="_calenderAgeId"></param>
+            <param name="_calendarAgeId"></param>
             <param name="start">Row number at which to start reading, the first row is 0.</param>
             <param name="pageLength">Number of rows to return.</param>
             <param name="count">The total number of records.</param>
-            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> class.</returns>
+            <returns>Returns an instance of the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> class.</returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.Fill(System.Data.IDataReader,Ekip.Framework.Entities.TList{Ekip.Framework.Entities.CalenderAge},System.Int32,System.Int32)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByYearAndMonth(System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
-            Fill a TList&lt;CalenderAge&gt; From a DataReader.
+            This method wrap the 'CalendarAge_GetByYearAndMonth' stored procedure. 
+            </summary>
+            <param name="year"> A <c>System.Int32?</c> instance.</param>
+            <param name="month"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.TList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByYearAndMonth(System.Int32,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'CalendarAge_GetByYearAndMonth' stored procedure. 
+            </summary>
+            <param name="year"> A <c>System.Int32?</c> instance.</param>
+            <param name="month"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading, the first row is 0.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.TList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByYearAndMonth(Ekip.Framework.Data.TransactionManager,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'CalendarAge_GetByYearAndMonth' stored procedure. 
+            </summary>
+            <param name="year"> A <c>System.Int32?</c> instance.</param>
+            <param name="month"> A <c>System.Int32?</c> instance.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.TList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.GetByYearAndMonth(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'CalendarAge_GetByYearAndMonth' stored procedure. 
+            </summary>
+            <param name="year"> A <c>System.Int32?</c> instance.</param>
+            <param name="month"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading, the first row is 0.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.TList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.Fill(System.Data.IDataReader,Ekip.Framework.Entities.TList{Ekip.Framework.Entities.CalendarAge},System.Int32,System.Int32)">
+            <summary>
+            Fill a TList&lt;CalendarAge&gt; From a DataReader.
             </summary>
             <param name="reader">Datareader</param>
             <param name="rows">The collection to fill</param>
@@ -5644,21 +5686,21 @@
             <param name="pageLength">number of rows.</param>
             <returns>a <see cref="T:Ekip.Framework.Entities.TList`1"/></returns>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.RefreshEntity(System.Data.IDataReader,Ekip.Framework.Entities.CalenderAge)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.RefreshEntity(System.Data.IDataReader,Ekip.Framework.Entities.CalendarAge)">
             <summary>
-            Refreshes the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object from the <see cref="T:System.Data.IDataReader"/>.
+            Refreshes the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object from the <see cref="T:System.Data.IDataReader"/>.
             </summary>
             <param name="reader">The <see cref="T:System.Data.IDataReader"/> to read from.</param>
-            <param name="entity">The <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object to refresh.</param>
+            <param name="entity">The <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object to refresh.</param>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.RefreshEntity(System.Data.DataSet,Ekip.Framework.Entities.CalenderAge)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.RefreshEntity(System.Data.DataSet,Ekip.Framework.Entities.CalendarAge)">
             <summary>
-            Refreshes the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object from the <see cref="T:System.Data.DataSet"/>.
+            Refreshes the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object from the <see cref="T:System.Data.DataSet"/>.
             </summary>
             <param name="dataSet">The <see cref="T:System.Data.DataSet"/> to read from.</param>
-            <param name="entity">The <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object.</param>
+            <param name="entity">The <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object.</param>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.DeepLoad(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalenderAge,System.Boolean,Ekip.Framework.Data.DeepLoadType,System.Type[],Ekip.Framework.Data.Bases.DeepSession)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.DeepLoad(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalendarAge,System.Boolean,Ekip.Framework.Data.DeepLoadType,System.Type[],Ekip.Framework.Data.Bases.DeepSession)">
             <summary>
             Deep Loads the <see cref="T:Ekip.Framework.Entities.IEntity"/> object with criteria based of the child 
             property collections only N Levels Deep based on the <see cref="T:Ekip.Framework.Data.DeepLoadType"/>.
@@ -5667,88 +5709,88 @@
             Use this method with caution as it is possible to DeepLoad with Recursion and traverse an entire object graph.
             </remarks>
             <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
-            <param name="entity">The <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object to load.</param>
+            <param name="entity">The <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object to load.</param>
             <param name="deep">Boolean. A flag that indicates whether to recursively save all Property Collection that are descendants of this instance. If True, saves the complete object graph below this object. If False, saves this object only. </param>
             <param name="deepLoadType">DeepLoadType Enumeration to Include/Exclude object property collections from Load.</param>
-            <param name="childTypes">Ekip.Framework.Entities.CalenderAge Property Collection Type Array To Include or Exclude from Load</param>
+            <param name="childTypes">Ekip.Framework.Entities.CalendarAge Property Collection Type Array To Include or Exclude from Load</param>
             <param name="innerList">A collection of child types for easy access.</param>
             <exception cref="T:System.ArgumentNullException">entity or childTypes is null.</exception>
             <exception cref="T:System.ArgumentException">deepLoadType has invalid value.</exception>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeProviderBaseCore.DeepSave(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalenderAge,Ekip.Framework.Data.DeepSaveType,System.Type[],Ekip.Framework.Data.Bases.DeepSession)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeProviderBaseCore.DeepSave(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Entities.CalendarAge,Ekip.Framework.Data.DeepSaveType,System.Type[],Ekip.Framework.Data.Bases.DeepSession)">
             <summary>
-            Deep Save the entire object graph of the Ekip.Framework.Entities.CalenderAge object with criteria based of the child 
+            Deep Save the entire object graph of the Ekip.Framework.Entities.CalendarAge object with criteria based of the child 
             Type property array and DeepSaveType.
             </summary>
             <param name="transactionManager">The transaction manager.</param>
-            <param name="entity">Ekip.Framework.Entities.CalenderAge instance</param>
+            <param name="entity">Ekip.Framework.Entities.CalendarAge instance</param>
             <param name="deepSaveType">DeepSaveType Enumeration to Include/Exclude object property collections from Save.</param>
-            <param name="childTypes">Ekip.Framework.Entities.CalenderAge Property Collection Type Array To Include or Exclude from Save</param>
+            <param name="childTypes">Ekip.Framework.Entities.CalendarAge Property Collection Type Array To Include or Exclude from Save</param>
             <param name="innerList">A Hashtable of child types for easy access.</param>
         </member>
-        <member name="T:Ekip.Framework.Data.Bases.CalenderAgeChildEntityTypes">
+        <member name="T:Ekip.Framework.Data.Bases.CalendarAgeChildEntityTypes">
             <summary>
              Enumeration used to expose the different child entity types 
-             for child properties in <c>Ekip.Framework.Entities.CalenderAge</c>
+             for child properties in <c>Ekip.Framework.Entities.CalendarAge</c>
             </summary>
         </member>
-        <member name="T:Ekip.Framework.Data.Bases.CalenderAgeFilterBuilder">
+        <member name="T:Ekip.Framework.Data.Bases.CalendarAgeFilterBuilder">
             <summary>
             A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlFilterBuilder`1"/> class
-            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object.
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeFilterBuilder.#ctor">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeFilterBuilder.#ctor">
             <summary>
-            Initializes a new instance of the CalenderAgeFilterBuilder class.
+            Initializes a new instance of the CalendarAgeFilterBuilder class.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeFilterBuilder.#ctor(System.Boolean)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeFilterBuilder.#ctor(System.Boolean)">
             <summary>
-            Initializes a new instance of the CalenderAgeFilterBuilder class.
+            Initializes a new instance of the CalendarAgeFilterBuilder class.
             </summary>
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeFilterBuilder.#ctor(System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeFilterBuilder.#ctor(System.Boolean,System.Boolean)">
             <summary>
-            Initializes a new instance of the CalenderAgeFilterBuilder class.
+            Initializes a new instance of the CalendarAgeFilterBuilder class.
             </summary>
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
             <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
         </member>
-        <member name="T:Ekip.Framework.Data.Bases.CalenderAgeParameterBuilder">
+        <member name="T:Ekip.Framework.Data.Bases.CalendarAgeParameterBuilder">
             <summary>
             A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.ParameterizedSqlFilterBuilder`1"/> class
-            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object.
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeParameterBuilder.#ctor">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeParameterBuilder.#ctor">
             <summary>
-            Initializes a new instance of the CalenderAgeParameterBuilder class.
+            Initializes a new instance of the CalendarAgeParameterBuilder class.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeParameterBuilder.#ctor(System.Boolean)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeParameterBuilder.#ctor(System.Boolean)">
             <summary>
-            Initializes a new instance of the CalenderAgeParameterBuilder class.
+            Initializes a new instance of the CalendarAgeParameterBuilder class.
             </summary>
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeParameterBuilder.#ctor(System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeParameterBuilder.#ctor(System.Boolean,System.Boolean)">
             <summary>
-            Initializes a new instance of the CalenderAgeParameterBuilder class.
+            Initializes a new instance of the CalendarAgeParameterBuilder class.
             </summary>
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
             <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
         </member>
-        <member name="T:Ekip.Framework.Data.Bases.CalenderAgeSortBuilder">
+        <member name="T:Ekip.Framework.Data.Bases.CalendarAgeSortBuilder">
             <summary>
             A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlSortBuilder`1"/> class
-            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object.
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.Bases.CalenderAgeSortBuilder.#ctor">
+        <member name="M:Ekip.Framework.Data.Bases.CalendarAgeSortBuilder.#ctor">
             <summary>
-            Initializes a new instance of the CalenderAgeSqlSortBuilder class.
+            Initializes a new instance of the CalendarAgeSqlSortBuilder class.
             </summary>
         </member>
         <member name="T:Ekip.Framework.Data.Bases.ClientProviderBase">
@@ -10299,9 +10341,9 @@
              Current ProvinceProviderBase instance.
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Data.Bases.NetTiersProvider.CalenderAgeProvider">
+        <member name="P:Ekip.Framework.Data.Bases.NetTiersProvider.CalendarAgeProvider">
             <summary>
-             Current CalenderAgeProviderBase instance.
+             Current CalendarAgeProviderBase instance.
             </summary>
         </member>
         <member name="P:Ekip.Framework.Data.Bases.NetTiersProvider.ClientProvider">
@@ -12342,9 +12384,9 @@
              It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
             </summary>
         </member>
-        <member name="P:Ekip.Framework.Data.DataRepository.CalenderAgeProvider">
+        <member name="P:Ekip.Framework.Data.DataRepository.CalendarAgeProvider">
             <summary>
-             Gets the current instance of the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.CalenderAge"/> business entity.
+             Gets the current instance of the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.CalendarAge"/> business entity.
              It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
             </summary>
         </member>
@@ -13338,50 +13380,50 @@
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
             <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
         </member>
-        <member name="T:Ekip.Framework.Data.CalenderAgeFilters">
+        <member name="T:Ekip.Framework.Data.CalendarAgeFilters">
             <summary>
             A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlFilterBuilder`1"/> class
-            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object.
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.CalenderAgeFilters.#ctor">
+        <member name="M:Ekip.Framework.Data.CalendarAgeFilters.#ctor">
             <summary>
-            Initializes a new instance of the CalenderAgeFilters class.
+            Initializes a new instance of the CalendarAgeFilters class.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.CalenderAgeFilters.#ctor(System.Boolean)">
+        <member name="M:Ekip.Framework.Data.CalendarAgeFilters.#ctor(System.Boolean)">
             <summary>
-            Initializes a new instance of the CalenderAgeFilters class.
+            Initializes a new instance of the CalendarAgeFilters class.
             </summary>
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
         </member>
-        <member name="M:Ekip.Framework.Data.CalenderAgeFilters.#ctor(System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Data.CalendarAgeFilters.#ctor(System.Boolean,System.Boolean)">
             <summary>
-            Initializes a new instance of the CalenderAgeFilters class.
+            Initializes a new instance of the CalendarAgeFilters class.
             </summary>
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
             <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
         </member>
-        <member name="T:Ekip.Framework.Data.CalenderAgeQuery">
+        <member name="T:Ekip.Framework.Data.CalendarAgeQuery">
             <summary>
-            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.Bases.CalenderAgeParameterBuilder"/> class
-            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalenderAge"/> object.
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.Bases.CalendarAgeParameterBuilder"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.CalendarAge"/> object.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.CalenderAgeQuery.#ctor">
+        <member name="M:Ekip.Framework.Data.CalendarAgeQuery.#ctor">
             <summary>
-            Initializes a new instance of the CalenderAgeQuery class.
+            Initializes a new instance of the CalendarAgeQuery class.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Data.CalenderAgeQuery.#ctor(System.Boolean)">
+        <member name="M:Ekip.Framework.Data.CalendarAgeQuery.#ctor(System.Boolean)">
             <summary>
-            Initializes a new instance of the CalenderAgeQuery class.
+            Initializes a new instance of the CalendarAgeQuery class.
             </summary>
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
         </member>
-        <member name="M:Ekip.Framework.Data.CalenderAgeQuery.#ctor(System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Data.CalendarAgeQuery.#ctor(System.Boolean,System.Boolean)">
             <summary>
-            Initializes a new instance of the CalenderAgeQuery class.
+            Initializes a new instance of the CalendarAgeQuery class.
             </summary>
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
             <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>

@@ -308,11 +308,11 @@
       <DependentUpon>ProvinceService.cs</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CalenderAgeService.cs">
+    <Compile Include="CalendarAgeService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CalenderAgeServiceBase.generated.cs">
-      <DependentUpon>CalenderAgeService.cs</DependentUpon>
+    <Compile Include="CalendarAgeServiceBase.generated.cs">
+      <DependentUpon>CalendarAgeService.cs</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ClientService.cs">
@@ -469,9 +469,6 @@
       <DependentUpon>ServiceViewBase.cs</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

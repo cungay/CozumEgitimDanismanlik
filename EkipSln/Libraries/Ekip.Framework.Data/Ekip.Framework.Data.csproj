@@ -308,12 +308,12 @@
 			  <DependentUpon>ProvinceProviderBase.cs</DependentUpon>
 			  <SubType>Code</SubType>
 			</Compile>
-			<Compile Include="Bases\CalenderAgeProviderBase.cs">
+			<Compile Include="Bases\CalendarAgeProviderBase.cs">
 			  <SubType>Code</SubType>
 			</Compile>
 			
-			<Compile Include="Bases\CalenderAgeProviderBase.generatedCore.cs">
-			  <DependentUpon>CalenderAgeProviderBase.cs</DependentUpon>
+			<Compile Include="Bases\CalendarAgeProviderBase.generatedCore.cs">
+			  <DependentUpon>CalendarAgeProviderBase.cs</DependentUpon>
 			  <SubType>Code</SubType>
 			</Compile>
 			<Compile Include="Bases\ClientProviderBase.cs">
