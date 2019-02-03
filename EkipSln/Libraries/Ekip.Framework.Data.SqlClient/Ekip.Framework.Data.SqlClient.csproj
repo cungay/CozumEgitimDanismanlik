@@ -154,11 +154,32 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+			<Compile Include="Views\SqlNeighborhoodViewProvider.cs">
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Views\SqlNeighborhoodViewProviderBase.generated.cs">
+			   <DependentUpon>SqlNeighborhoodViewProvider.cs</DependentUpon>
+			   <SubType>Code</SubType>
+			</Compile>
 			<Compile Include="Views\SqlProvinceViewProvider.cs">
 			  <SubType>Code</SubType>
 			</Compile>
 			<Compile Include="Views\SqlProvinceViewProviderBase.generated.cs">
 			   <DependentUpon>SqlProvinceViewProvider.cs</DependentUpon>
+			   <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Views\SqlStreetViewProvider.cs">
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Views\SqlStreetViewProviderBase.generated.cs">
+			   <DependentUpon>SqlStreetViewProvider.cs</DependentUpon>
+			   <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Views\SqlTownViewProvider.cs">
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Views\SqlTownViewProviderBase.generated.cs">
+			   <DependentUpon>SqlTownViewProvider.cs</DependentUpon>
 			   <SubType>Code</SubType>
 			</Compile>
 			<Compile Include="SqlAdvisorProvider.cs">

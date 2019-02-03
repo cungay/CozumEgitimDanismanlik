@@ -1,4 +1,4 @@
-﻿	
+﻿
 
 #region Using Directives
 using System;
@@ -16,25 +16,25 @@ using Microsoft.Practices.EnterpriseLibrary.Logging;
 #endregion
 
 namespace Ekip.Framework.Services
-{		
-	/// <summary>
-	/// An component type implementation of the 'ClientAddress' table.
-	/// </summary>
-	/// <remarks>
-	/// All custom implementations should be done here.
-	/// </remarks>
-	[CLSCompliant(true)]
-	public partial class ClientAddressService : Ekip.Framework.Services.ClientAddressServiceBase
-	{
-		#region Constructors
-		/// <summary>
-		/// Initializes a new instance of the ClientAddressService class.
-		/// </summary>
-		public ClientAddressService() : base()
-		{
-		}
-		#endregion Constructors
-		
-	}//End Class
+{
+    /// <summary>
+    /// An component type implementation of the 'ClientAddress' table.
+    /// </summary>
+    /// <remarks>
+    /// All custom implementations should be done here.
+    /// </remarks>
+    [CLSCompliant(true)]
+    public partial class ClientAddressService : Ekip.Framework.Services.ClientAddressServiceBase
+    {
+        #region Constructors
+        /// <summary>
+        /// Initializes a new instance of the ClientAddressService class.
+        /// </summary>
+        public ClientAddressService() : base()
+        {
+        }
+        #endregion Constructors
+        
+    }//End Class
 
 } // end namespace

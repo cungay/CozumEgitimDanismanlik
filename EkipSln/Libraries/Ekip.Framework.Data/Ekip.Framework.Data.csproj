@@ -149,11 +149,32 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+			<Compile Include="Bases\Views\NeighborhoodViewProviderBase.cs">
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Bases\Views\NeighborhoodViewProviderBase.generatedCore.cs">
+				<DependentUpon>NeighborhoodViewProviderBase.cs</DependentUpon>
+			  <SubType>Code</SubType>
+			</Compile>
 			<Compile Include="Bases\Views\ProvinceViewProviderBase.cs">
 			  <SubType>Code</SubType>
 			</Compile>
 			<Compile Include="Bases\Views\ProvinceViewProviderBase.generatedCore.cs">
 				<DependentUpon>ProvinceViewProviderBase.cs</DependentUpon>
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Bases\Views\StreetViewProviderBase.cs">
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Bases\Views\StreetViewProviderBase.generatedCore.cs">
+				<DependentUpon>StreetViewProviderBase.cs</DependentUpon>
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Bases\Views\TownViewProviderBase.cs">
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Bases\Views\TownViewProviderBase.generatedCore.cs">
+				<DependentUpon>TownViewProviderBase.cs</DependentUpon>
 			  <SubType>Code</SubType>
 			</Compile>
 			<Compile Include="Bases\AdvisorProviderBase.cs">

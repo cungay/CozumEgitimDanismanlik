@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
@@ -37,14 +37,15 @@
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientModule));
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
-            this.persistentRepository1 = new DevExpress.XtraEditors.Repository.PersistentRepository();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.persistentRepository1 = new DevExpress.XtraEditors.Repository.PersistentRepository(this.components);
             this.txtPhone = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.txtEmail = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.txtFamilyNotes = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.txtFamilyFullName = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.clientInfoToolTip = new DevExpress.Utils.ToolTipController();
+            this.clientInfoToolTip = new DevExpress.Utils.ToolTipController(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.vGridFather = new DevExpress.XtraVerticalGrid.VGridControl();
             this.catRowFather = new DevExpress.XtraVerticalGrid.Rows.CategoryRow();
@@ -95,13 +96,17 @@
             this.colAreaName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lkTown = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.lkTownView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colTownName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTownProvinceName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lkNeighborhood = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.lkNeighborhoodView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colNeighborhoodName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lkStreet = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.lkStreetView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.rgBlood = new DevExpress.XtraEditors.RadioGroup();
             this.lkFamilyStatus = new Ekip.Framework.UI.DevEx.Editors.DxLookUpEdit();
             this.lkCalendarAge = new DevExpress.XtraEditors.LookUpEdit();
+            this.liCalendarAge = new DevExpress.XtraLayout.LayoutControlItem();
             this.rootControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tpAddress = new DevExpress.XtraLayout.LayoutControlGroup();
             this.liProvince = new DevExpress.XtraLayout.LayoutControlItem();
@@ -129,7 +134,6 @@
             this.liFather = new DevExpress.XtraLayout.LayoutControlItem();
             this.liClientTabs = new DevExpress.XtraLayout.LayoutControlItem();
             this.tpClientInfo = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.liBirthDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.liGender = new DevExpress.XtraLayout.LayoutControlItem();
             this.liFullName = new DevExpress.XtraLayout.LayoutControlItem();
             this.liMiddleName = new DevExpress.XtraLayout.LayoutControlItem();
@@ -149,15 +153,15 @@
             this.lblIdCard = new DevExpress.XtraLayout.SimpleLabelItem();
             this.lblReferance = new DevExpress.XtraLayout.SimpleLabelItem();
             this.lblNotes = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.lblContactDate = new DevExpress.XtraLayout.SimpleLabelItem();
             this.lblBlood = new DevExpress.XtraLayout.SimpleLabelItem();
             this.liBlood = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lblFullName = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.liCalendarAge = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblBirthDate = new DevExpress.XtraLayout.SimpleLabelItem();
             this.liContactDate = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider();
+            this.liBirthDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lblContactDate = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).BeginInit();
@@ -196,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rgBlood.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkFamilyStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkCalendarAge.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liCalendarAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rootControlGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liProvince)).BeginInit();
@@ -223,7 +228,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.liFather)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liClientTabs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpClientInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.liBirthDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liFullName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liMiddleName)).BeginInit();
@@ -243,14 +247,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblIdCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblReferance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblNotes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblContactDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblBlood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liBlood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblFullName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.liCalendarAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblBirthDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liContactDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liBirthDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblContactDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -838,7 +842,7 @@
             this.lkGender.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
             this.lkGender.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkGender.Properties.NullText = "CİNSİYET";
             this.lkGender.Properties.NullValuePrompt = "CİNSİYET";
@@ -868,7 +872,7 @@
             this.txtCountOfChild.Properties.AllowMouseWheel = false;
             this.txtCountOfChild.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
             this.txtCountOfChild.Properties.IsFloatValue = false;
             this.txtCountOfChild.Properties.Mask.BeepOnError = true;
             this.txtCountOfChild.Properties.Mask.EditMask = "f0";
@@ -951,7 +955,7 @@
             this.deBirthDate.Name = "deBirthDate";
             this.deBirthDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
             this.deBirthDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.deBirthDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
@@ -985,7 +989,7 @@
             this.deFirstContact.Name = "deFirstContact";
             this.deFirstContact.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
             this.deFirstContact.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.deFirstContact.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
@@ -1043,7 +1047,7 @@
             this.lkAddressTitle.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkAddressTitle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
             this.lkAddressTitle.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkAddressTitle.Properties.ListDescription = "";
             this.lkAddressTitle.Properties.ListType = "";
@@ -1070,7 +1074,7 @@
             this.lkProvince.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkProvince.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
             this.lkProvince.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkProvince.Properties.NullText = "İL";
             this.lkProvince.Properties.NullValuePrompt = "İL";
@@ -1141,7 +1145,7 @@
             this.lkTown.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkTown.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
             this.lkTown.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkTown.Properties.NullText = "İLÇE";
             this.lkTown.Properties.NullValuePrompt = "İLÇE";
@@ -1161,10 +1165,29 @@
             // 
             // lkTownView
             // 
+            this.lkTownView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colTownName,
+            this.colTownProvinceName});
             this.lkTownView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.lkTownView.Name = "lkTownView";
             this.lkTownView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.lkTownView.OptionsView.ShowGroupPanel = false;
+            // 
+            // colTownName
+            // 
+            this.colTownName.Caption = "İlçe";
+            this.colTownName.FieldName = "TownName";
+            this.colTownName.Name = "colTownName";
+            this.colTownName.Visible = true;
+            this.colTownName.VisibleIndex = 0;
+            // 
+            // colTownProvinceName
+            // 
+            this.colTownProvinceName.Caption = "İl";
+            this.colTownProvinceName.FieldName = "ProvinceName";
+            this.colTownProvinceName.Name = "colTownProvinceName";
+            this.colTownProvinceName.Visible = true;
+            this.colTownProvinceName.VisibleIndex = 1;
             // 
             // lkNeighborhood
             // 
@@ -1175,7 +1198,7 @@
             this.lkNeighborhood.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkNeighborhood.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
             this.lkNeighborhood.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkNeighborhood.Properties.NullText = "SEMT";
             this.lkNeighborhood.Properties.NullValuePrompt = "SEMT";
@@ -1195,10 +1218,20 @@
             // 
             // lkNeighborhoodView
             // 
+            this.lkNeighborhoodView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colNeighborhoodName});
             this.lkNeighborhoodView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.lkNeighborhoodView.Name = "lkNeighborhoodView";
             this.lkNeighborhoodView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.lkNeighborhoodView.OptionsView.ShowGroupPanel = false;
+            // 
+            // colNeighborhoodName
+            // 
+            this.colNeighborhoodName.Caption = "Semt";
+            this.colNeighborhoodName.FieldName = "Neighborhood";
+            this.colNeighborhoodName.Name = "colNeighborhoodName";
+            this.colNeighborhoodName.Visible = true;
+            this.colNeighborhoodName.VisibleIndex = 0;
             // 
             // lkStreet
             // 
@@ -1208,8 +1241,8 @@
             this.lkStreet.Name = "lkStreet";
             this.lkStreet.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkStreet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Temizle"),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Temizle"),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete")});
             this.lkStreet.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkStreet.Properties.NullText = "SOKAK / MAHALLE";
             this.lkStreet.Properties.NullValuePrompt = "SOKAK / MAHALLE";
@@ -1262,7 +1295,7 @@
             this.lkFamilyStatus.Properties.AutoHeight = false;
             this.lkFamilyStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete))});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete))});
             this.lkFamilyStatus.Properties.ListDescription = "";
             this.lkFamilyStatus.Properties.ListType = "";
             this.lkFamilyStatus.Properties.NullText = "";
@@ -1282,7 +1315,7 @@
             this.lkCalendarAge.Name = "lkCalendarAge";
             this.lkCalendarAge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete))});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete))});
             this.lkCalendarAge.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkCalendarAge.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AgeDescription", "Takvim Yaşını Seçiniz", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.False)});
@@ -1301,6 +1334,18 @@
             this.lkCalendarAge.ToolTipController = this.clientInfoToolTip;
             this.lkCalendarAge.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.lkCalendarAge.ToolTipTitle = "(*) Takvim Yaşı";
+            // 
+            // liCalendarAge
+            // 
+            this.liCalendarAge.Control = this.lkCalendarAge;
+            this.liCalendarAge.Location = new System.Drawing.Point(134, 58);
+            this.liCalendarAge.MaxSize = new System.Drawing.Size(558, 28);
+            this.liCalendarAge.MinSize = new System.Drawing.Size(558, 28);
+            this.liCalendarAge.Name = "liCalendarAge";
+            this.liCalendarAge.Size = new System.Drawing.Size(682, 28);
+            this.liCalendarAge.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.liCalendarAge.TextSize = new System.Drawing.Size(0, 0);
+            this.liCalendarAge.TextVisible = false;
             // 
             // rootControlGroup
             // 
@@ -1740,23 +1785,6 @@
             this.tpClientInfo.Size = new System.Drawing.Size(840, 432);
             this.tpClientInfo.Text = "Danışan Bilgileri";
             // 
-            // liBirthDate
-            // 
-            this.liBirthDate.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.liBirthDate.AppearanceItemCaption.Options.UseFont = true;
-            this.liBirthDate.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.liBirthDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.liBirthDate.Control = this.deBirthDate;
-            this.liBirthDate.Location = new System.Drawing.Point(258, 0);
-            this.liBirthDate.MaxSize = new System.Drawing.Size(558, 30);
-            this.liBirthDate.MinSize = new System.Drawing.Size(558, 30);
-            this.liBirthDate.Name = "liBirthDate";
-            this.liBirthDate.Size = new System.Drawing.Size(558, 30);
-            this.liBirthDate.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.liBirthDate.Text = "Doğum Tarihi:";
-            this.liBirthDate.TextSize = new System.Drawing.Size(0, 0);
-            this.liBirthDate.TextVisible = false;
-            // 
             // liGender
             // 
             this.liGender.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -2068,22 +2096,6 @@
             this.lblNotes.Text = "Açıklamalar:";
             this.lblNotes.TextSize = new System.Drawing.Size(50, 20);
             // 
-            // lblContactDate
-            // 
-            this.lblContactDate.AllowHotTrack = false;
-            this.lblContactDate.AppearanceItemCaption.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblContactDate.AppearanceItemCaption.Options.UseFont = true;
-            this.lblContactDate.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.lblContactDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblContactDate.Location = new System.Drawing.Point(134, 30);
-            this.lblContactDate.MaxSize = new System.Drawing.Size(124, 28);
-            this.lblContactDate.MinSize = new System.Drawing.Size(124, 28);
-            this.lblContactDate.Name = "lblContactDate";
-            this.lblContactDate.Size = new System.Drawing.Size(124, 28);
-            this.lblContactDate.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lblContactDate.Text = "Başvuru Tarihi:";
-            this.lblContactDate.TextSize = new System.Drawing.Size(50, 20);
-            // 
             // lblBlood
             // 
             this.lblBlood.AllowHotTrack = false;
@@ -2137,18 +2149,6 @@
             this.lblFullName.Text = "Adı Soyadı:";
             this.lblFullName.TextSize = new System.Drawing.Size(50, 20);
             // 
-            // liCalendarAge
-            // 
-            this.liCalendarAge.Control = this.lkCalendarAge;
-            this.liCalendarAge.Location = new System.Drawing.Point(134, 58);
-            this.liCalendarAge.MaxSize = new System.Drawing.Size(558, 28);
-            this.liCalendarAge.MinSize = new System.Drawing.Size(558, 28);
-            this.liCalendarAge.Name = "liCalendarAge";
-            this.liCalendarAge.Size = new System.Drawing.Size(682, 28);
-            this.liCalendarAge.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.liCalendarAge.TextSize = new System.Drawing.Size(0, 0);
-            this.liCalendarAge.TextVisible = false;
-            // 
             // lblBirthDate
             // 
             this.lblBirthDate.AllowHotTrack = false;
@@ -2183,6 +2183,39 @@
             this.liContactDate.TextSize = new System.Drawing.Size(0, 0);
             this.liContactDate.TextToControlDistance = 0;
             this.liContactDate.TextVisible = false;
+            // 
+            // liBirthDate
+            // 
+            this.liBirthDate.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.liBirthDate.AppearanceItemCaption.Options.UseFont = true;
+            this.liBirthDate.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.liBirthDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.liBirthDate.Control = this.deBirthDate;
+            this.liBirthDate.Location = new System.Drawing.Point(258, 0);
+            this.liBirthDate.MaxSize = new System.Drawing.Size(558, 30);
+            this.liBirthDate.MinSize = new System.Drawing.Size(558, 30);
+            this.liBirthDate.Name = "liBirthDate";
+            this.liBirthDate.Size = new System.Drawing.Size(558, 30);
+            this.liBirthDate.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.liBirthDate.Text = "Doğum Tarihi:";
+            this.liBirthDate.TextSize = new System.Drawing.Size(0, 0);
+            this.liBirthDate.TextVisible = false;
+            // 
+            // lblContactDate
+            // 
+            this.lblContactDate.AllowHotTrack = false;
+            this.lblContactDate.AppearanceItemCaption.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblContactDate.AppearanceItemCaption.Options.UseFont = true;
+            this.lblContactDate.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.lblContactDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblContactDate.Location = new System.Drawing.Point(134, 30);
+            this.lblContactDate.MaxSize = new System.Drawing.Size(124, 28);
+            this.lblContactDate.MinSize = new System.Drawing.Size(124, 28);
+            this.lblContactDate.Name = "lblContactDate";
+            this.lblContactDate.Size = new System.Drawing.Size(124, 28);
+            this.lblContactDate.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lblContactDate.Text = "Başvuru Tarihi:";
+            this.lblContactDate.TextSize = new System.Drawing.Size(50, 20);
             // 
             // ClientModule
             // 
@@ -2230,6 +2263,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rgBlood.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkFamilyStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkCalendarAge.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liCalendarAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rootControlGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liProvince)).EndInit();
@@ -2257,7 +2291,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.liFather)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liClientTabs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpClientInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.liBirthDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liFullName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liMiddleName)).EndInit();
@@ -2277,14 +2310,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblIdCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblReferance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblNotes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblContactDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblBlood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liBlood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblFullName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.liCalendarAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblBirthDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liContactDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liBirthDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblContactDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -2411,5 +2444,8 @@
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
         private DevExpress.XtraEditors.LookUpEdit lkCalendarAge;
         private DevExpress.XtraLayout.LayoutControlItem liCalendarAge;
+        private DevExpress.XtraGrid.Columns.GridColumn colTownName;
+        private DevExpress.XtraGrid.Columns.GridColumn colTownProvinceName;
+        private DevExpress.XtraGrid.Columns.GridColumn colNeighborhoodName;
     }
 }

@@ -182,9 +182,24 @@ namespace Ekip.Framework.Data.Bases
 		
 		
 		///<summary>
+		/// Current NeighborhoodViewProviderBase instance.
+		///</summary>
+		public virtual NeighborhoodViewProviderBase NeighborhoodViewProvider{get {throw new NotImplementedException();}}
+		
+		///<summary>
 		/// Current ProvinceViewProviderBase instance.
 		///</summary>
 		public virtual ProvinceViewProviderBase ProvinceViewProvider{get {throw new NotImplementedException();}}
+		
+		///<summary>
+		/// Current StreetViewProviderBase instance.
+		///</summary>
+		public virtual StreetViewProviderBase StreetViewProvider{get {throw new NotImplementedException();}}
+		
+		///<summary>
+		/// Current TownViewProviderBase instance.
+		///</summary>
+		public virtual TownViewProviderBase TownViewProvider{get {throw new NotImplementedException();}}
 		
 	}
 }

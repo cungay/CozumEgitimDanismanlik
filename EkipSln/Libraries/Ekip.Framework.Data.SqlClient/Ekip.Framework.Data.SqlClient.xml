@@ -4,6 +4,116 @@
         <name>Ekip.Framework.Data.SqlClient</name>
     </assembly>
     <members>
+        <member name="T:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> entity.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase">
+            <summary>
+            This class is the base repository for the CRUD operations on the NeighborhoodView objects.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.GetAll(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">The total number of rows in the data source.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of NeighborhoodView objects.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.Get(Ekip.Framework.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">The total number of rows in the data source.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of NeighborhoodView objects.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.Find(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:Ekip.Framework.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of NeighborhoodView objects.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.GetByNeighborhoodId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wraps the 'NeighborhoodView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generated from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlNeighborhoodViewProviderBase.GetByTownId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wraps the 'NeighborhoodView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generated from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
         <member name="T:Ekip.Framework.Data.SqlClient.SqlProvinceViewProvider">
             <summary>
              This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:Ekip.Framework.Entities.ProvinceView"/> entity.
@@ -91,6 +201,226 @@
             <param name="pageLength">Number of rows to return.</param>
             <param name="count">out. The number of rows that match this query.</param>
             <returns>Returns a typed collection of ProvinceView objects.</returns>
+        </member>
+        <member name="T:Ekip.Framework.Data.SqlClient.SqlStreetViewProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:Ekip.Framework.Entities.StreetView"/> entity.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlStreetViewProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlStreetViewProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase">
+            <summary>
+            This class is the base repository for the CRUD operations on the StreetView objects.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.GetAll(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">The total number of rows in the data source.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of StreetView objects.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.Get(Ekip.Framework.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">The total number of rows in the data source.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of StreetView objects.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.Find(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:Ekip.Framework.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of StreetView objects.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.GetByNeighborhoodId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wraps the 'StreetView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generated from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlStreetViewProviderBase.GetByStreetId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wraps the 'StreetView_GetByStreetId' stored procedure. 
+            </summary>
+            <param name="streetId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generated from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="T:Ekip.Framework.Data.SqlClient.SqlTownViewProvider">
+            <summary>
+             This class is the SqlClient Data Access Logic Component implementation for the <see cref="T:Ekip.Framework.Entities.TownView"/> entity.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlTownViewProvider.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlTownViewProvider"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use the stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase">
+            <summary>
+            This class is the base repository for the CRUD operations on the TownView objects.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.#ctor">
+            <summary>
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.#ctor(System.String,System.Boolean,System.String)">
+            <summary>
+            Creates a new <see cref="T:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase"/> instance.
+            Uses connection string to connect to datasource.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <param name="useStoredProcedure">A boolean value that indicates if we use stored procedures or embedded queries.</param>
+            <param name="providerInvariantName">Name of the invariant provider use by the DbProviderFactory.</param>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>The connection string.</value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.UseStoredProcedure">
+            <summary>
+            Gets or sets a value indicating whether to use stored procedures.
+            </summary>
+            <value><c>true</c> if we choose to use stored procedures; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.ProviderInvariantName">
+            <summary>
+            Gets or sets the invariant provider name listed in the DbProviderFactories machine.config section.
+            </summary>
+            <value>The name of the provider invariant.</value>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.GetAll(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets All rows from the DataSource.
+            </summary>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">The total number of rows in the data source.</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of TownView objects.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.Get(Ekip.Framework.Data.TransactionManager,System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets a page of rows from the DataSource.
+            </summary>
+            <param name="whereClause">Specifies the condition for the rows returned by a query (Name='John Doe', Name='John Doe' AND Id='1', Name='John Doe' OR Id='1').</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">The total number of rows in the data source.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remarks></remarks>
+            <returns>Returns a typed collection of TownView objects.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.Find(Ekip.Framework.Data.TransactionManager,Ekip.Framework.Data.IFilterParameterCollection,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Returns rows from the DataSource that meet the parameter conditions.
+            </summary>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <param name="parameters">A collection of <see cref="T:Ekip.Framework.Data.SqlFilterParameter"/> objects.</param>
+            <param name="orderBy">Specifies the sort criteria for the rows in the DataSource (Name ASC; BirthDay DESC, Name ASC);</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="count">out. The number of rows that match this query.</param>
+            <returns>Returns a typed collection of TownView objects.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.GetByProvinceId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wraps the 'TownView_GetByProvinceId' stored procedure. 
+            </summary>
+            <param name="provinceId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generated from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.SqlClient.SqlTownViewProviderBase.GetByTownId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wraps the 'TownView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generated from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
         </member>
         <member name="T:Ekip.Framework.Data.SqlClient.SqlAdvisorProvider">
             <summary>
@@ -6635,6 +6965,19 @@
             </summary>
             <value></value>
         </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.NeighborhoodViewProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlNeighborhoodViewProvider">
+            <summary>
+            Gets the current <see cref="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlNeighborhoodViewProvider"/>.
+            </summary>
+            <value></value>
+        </member>
         <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.ProvinceViewProvider">
             <summary>
              This class is the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.ProvinceView"/> business entity.
@@ -6645,6 +6988,32 @@
         <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlProvinceViewProvider">
             <summary>
             Gets the current <see cref="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlProvinceViewProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.StreetViewProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.StreetView"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlStreetViewProvider">
+            <summary>
+            Gets the current <see cref="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlStreetViewProvider"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.TownViewProvider">
+            <summary>
+             This class is the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.TownView"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+             <value></value>
+        </member>
+        <member name="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlTownViewProvider">
+            <summary>
+            Gets the current <see cref="P:Ekip.Framework.Data.SqlClient.SqlNetTiersProvider.SqlTownViewProvider"/>.
             </summary>
             <value></value>
         </member>

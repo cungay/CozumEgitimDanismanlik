@@ -148,11 +148,35 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+			<Compile Include="Views\NeighborhoodView.cs">
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Views\NeighborhoodViewBase.generated.cs">
+			  <DependentUpon>NeighborhoodView.cs</DependentUpon>
+			  <SubType>Code</SubType>
+			</Compile>
+						
 			<Compile Include="Views\ProvinceView.cs">
 			  <SubType>Code</SubType>
 			</Compile>
 			<Compile Include="Views\ProvinceViewBase.generated.cs">
 			  <DependentUpon>ProvinceView.cs</DependentUpon>
+			  <SubType>Code</SubType>
+			</Compile>
+						
+			<Compile Include="Views\StreetView.cs">
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Views\StreetViewBase.generated.cs">
+			  <DependentUpon>StreetView.cs</DependentUpon>
+			  <SubType>Code</SubType>
+			</Compile>
+						
+			<Compile Include="Views\TownView.cs">
+			  <SubType>Code</SubType>
+			</Compile>
+			<Compile Include="Views\TownViewBase.generated.cs">
+			  <DependentUpon>TownView.cs</DependentUpon>
 			  <SubType>Code</SubType>
 			</Compile>
 						

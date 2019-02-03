@@ -210,7 +210,19 @@
         <viewList>
       <view>
         <owner>dbo</owner>
+        <name>NeighborhoodView</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
         <name>ProvinceView</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>StreetView</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>TownView</name>
       </view>
     </viewList>
       </property>

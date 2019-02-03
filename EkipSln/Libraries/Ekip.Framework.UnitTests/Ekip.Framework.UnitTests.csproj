@@ -163,12 +163,33 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+		<Compile Include="Views\NeighborhoodViewTest.cs">
+			<SubType>Code</SubType>
+		</Compile>					
+		<Compile Include="Views\NeighborhoodViewTest.generated.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>NeighborhoodViewTest.cs</DependentUpon>
+		</Compile>
 		<Compile Include="Views\ProvinceViewTest.cs">
 			<SubType>Code</SubType>
 		</Compile>					
 		<Compile Include="Views\ProvinceViewTest.generated.cs">
 			<SubType>Code</SubType>
 			<DependentUpon>ProvinceViewTest.cs</DependentUpon>
+		</Compile>
+		<Compile Include="Views\StreetViewTest.cs">
+			<SubType>Code</SubType>
+		</Compile>					
+		<Compile Include="Views\StreetViewTest.generated.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>StreetViewTest.cs</DependentUpon>
+		</Compile>
+		<Compile Include="Views\TownViewTest.cs">
+			<SubType>Code</SubType>
+		</Compile>					
+		<Compile Include="Views\TownViewTest.generated.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>TownViewTest.cs</DependentUpon>
 		</Compile>
 			<Compile Include="AdvisorTest.cs">
 			  	<SubType>Code</SubType>

@@ -4,6 +4,170 @@
         <name>Ekip.Framework.Data</name>
     </assembly>
     <members>
+        <member name="T:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBase">
+            <summary>
+             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBase"/> implementation.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore">
+            <summary>
+             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBase"/> implementation.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.GetByNeighborhoodId(System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'NeighborhoodView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.GetByNeighborhoodId(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'NeighborhoodView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.GetByNeighborhoodId(Ekip.Framework.Data.TransactionManager,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'NeighborhoodView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.GetByNeighborhoodId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'NeighborhoodView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.GetByTownId(System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'NeighborhoodView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.GetByTownId(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'NeighborhoodView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.GetByTownId(Ekip.Framework.Data.TransactionManager,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'NeighborhoodView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.GetByTownId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'NeighborhoodView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.Fill(System.Data.IDataReader,Ekip.Framework.Entities.VList{Ekip.Framework.Entities.NeighborhoodView},System.Int32,System.Int32)">
+            <summary>
+             Fill an <see cref="T:Ekip.Framework.Entities.VList`1"/> From a DataReader.
+            </summary>
+             <param name="reader">Datareader</param>
+             <param name="rows">The collection to fill</param>
+             <param name="start">Start row</param>
+             <param name="pageLength">number of row.</param>
+            <returns>a <see cref="T:Ekip.Framework.Entities.VList`1"/></returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewProviderBaseCore.RefreshEntity(System.Data.IDataReader,Ekip.Framework.Entities.NeighborhoodView)">
+            <summary>
+            Refreshes the <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> object from the <see cref="T:System.Data.IDataReader"/>.
+            </summary>
+            <param name="reader">The <see cref="T:System.Data.IDataReader"/> to read from.</param>
+            <param name="entity">The <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> object to refresh.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.NeighborhoodViewFilterBuilder">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlFilterBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewFilterBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewFilterBuilder class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewFilterBuilder.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewFilterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewFilterBuilder.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewFilterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.NeighborhoodViewParameterBuilder">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.ParameterizedSqlFilterBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewParameterBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewParameterBuilder class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewParameterBuilder.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewParameterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewParameterBuilder.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewParameterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.NeighborhoodViewSortBuilder">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlSortBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.NeighborhoodViewSortBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewSqlSortBuilder class.
+            </summary>
+        </member>
         <member name="T:Ekip.Framework.Data.Bases.ProvinceViewProviderBase">
             <summary>
              This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.ProvinceViewProviderBase"/> implementation.
@@ -90,6 +254,334 @@
         <member name="M:Ekip.Framework.Data.Bases.ProvinceViewSortBuilder.#ctor">
             <summary>
             Initializes a new instance of the ProvinceViewSqlSortBuilder class.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.StreetViewProviderBase">
+            <summary>
+             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.StreetViewProviderBase"/> implementation.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore">
+            <summary>
+             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.StreetViewProviderBase"/> implementation.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.GetByNeighborhoodId(System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'StreetView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.GetByNeighborhoodId(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'StreetView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.GetByNeighborhoodId(Ekip.Framework.Data.TransactionManager,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'StreetView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.GetByNeighborhoodId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'StreetView_GetByNeighborhoodId' stored procedure. 
+            </summary>
+            <param name="neighborhoodId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.GetByStreetId(System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'StreetView_GetByStreetId' stored procedure. 
+            </summary>
+            <param name="streetId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.GetByStreetId(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'StreetView_GetByStreetId' stored procedure. 
+            </summary>
+            <param name="streetId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.GetByStreetId(Ekip.Framework.Data.TransactionManager,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'StreetView_GetByStreetId' stored procedure. 
+            </summary>
+            <param name="streetId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.GetByStreetId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'StreetView_GetByStreetId' stored procedure. 
+            </summary>
+            <param name="streetId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.Fill(System.Data.IDataReader,Ekip.Framework.Entities.VList{Ekip.Framework.Entities.StreetView},System.Int32,System.Int32)">
+            <summary>
+             Fill an <see cref="T:Ekip.Framework.Entities.VList`1"/> From a DataReader.
+            </summary>
+             <param name="reader">Datareader</param>
+             <param name="rows">The collection to fill</param>
+             <param name="start">Start row</param>
+             <param name="pageLength">number of row.</param>
+            <returns>a <see cref="T:Ekip.Framework.Entities.VList`1"/></returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewProviderBaseCore.RefreshEntity(System.Data.IDataReader,Ekip.Framework.Entities.StreetView)">
+            <summary>
+            Refreshes the <see cref="T:Ekip.Framework.Entities.StreetView"/> object from the <see cref="T:System.Data.IDataReader"/>.
+            </summary>
+            <param name="reader">The <see cref="T:System.Data.IDataReader"/> to read from.</param>
+            <param name="entity">The <see cref="T:Ekip.Framework.Entities.StreetView"/> object to refresh.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.StreetViewFilterBuilder">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlFilterBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.StreetView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewFilterBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the StreetViewFilterBuilder class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewFilterBuilder.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the StreetViewFilterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewFilterBuilder.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the StreetViewFilterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.StreetViewParameterBuilder">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.ParameterizedSqlFilterBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.StreetView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewParameterBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the StreetViewParameterBuilder class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewParameterBuilder.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the StreetViewParameterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewParameterBuilder.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the StreetViewParameterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.StreetViewSortBuilder">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlSortBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.StreetView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.StreetViewSortBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the StreetViewSqlSortBuilder class.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.TownViewProviderBase">
+            <summary>
+             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.TownViewProviderBase"/> implementation.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.TownViewProviderBaseCore">
+            <summary>
+             This class is the base class for any <see cref="T:Ekip.Framework.Data.Bases.TownViewProviderBase"/> implementation.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.GetByProvinceId(System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'TownView_GetByProvinceId' stored procedure. 
+            </summary>
+            <param name="provinceId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.GetByProvinceId(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'TownView_GetByProvinceId' stored procedure. 
+            </summary>
+            <param name="provinceId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.GetByProvinceId(Ekip.Framework.Data.TransactionManager,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'TownView_GetByProvinceId' stored procedure. 
+            </summary>
+            <param name="provinceId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.GetByProvinceId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'TownView_GetByProvinceId' stored procedure. 
+            </summary>
+            <param name="provinceId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.GetByTownId(System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'TownView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.GetByTownId(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'TownView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.GetByTownId(Ekip.Framework.Data.TransactionManager,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'TownView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.GetByTownId(Ekip.Framework.Data.TransactionManager,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            This method wrap the 'TownView_GetByTownId' stored procedure. 
+            </summary>
+            <param name="townId"> A <c>System.Int32?</c> instance.</param>
+            <param name="start">Row number at which to start reading.</param>
+            <param name="pageLength">Number of rows to return.</param>
+            <param name="transactionManager"><see cref="T:Ekip.Framework.Data.TransactionManager"/> object</param>
+            <remark>This method is generate from a stored procedure.</remark>
+            <returns>A <see cref="T:Ekip.Framework.Entities.VList`1"/> instance.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.Fill(System.Data.IDataReader,Ekip.Framework.Entities.VList{Ekip.Framework.Entities.TownView},System.Int32,System.Int32)">
+            <summary>
+             Fill an <see cref="T:Ekip.Framework.Entities.VList`1"/> From a DataReader.
+            </summary>
+             <param name="reader">Datareader</param>
+             <param name="rows">The collection to fill</param>
+             <param name="start">Start row</param>
+             <param name="pageLength">number of row.</param>
+            <returns>a <see cref="T:Ekip.Framework.Entities.VList`1"/></returns>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewProviderBaseCore.RefreshEntity(System.Data.IDataReader,Ekip.Framework.Entities.TownView)">
+            <summary>
+            Refreshes the <see cref="T:Ekip.Framework.Entities.TownView"/> object from the <see cref="T:System.Data.IDataReader"/>.
+            </summary>
+            <param name="reader">The <see cref="T:System.Data.IDataReader"/> to read from.</param>
+            <param name="entity">The <see cref="T:Ekip.Framework.Entities.TownView"/> object to refresh.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.TownViewFilterBuilder">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlFilterBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.TownView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewFilterBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the TownViewFilterBuilder class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewFilterBuilder.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the TownViewFilterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewFilterBuilder.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the TownViewFilterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.TownViewParameterBuilder">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.ParameterizedSqlFilterBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.TownView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewParameterBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the TownViewParameterBuilder class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewParameterBuilder.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the TownViewParameterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewParameterBuilder.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the TownViewParameterBuilder class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.Bases.TownViewSortBuilder">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlSortBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.TownView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.Bases.TownViewSortBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the TownViewSqlSortBuilder class.
             </summary>
         </member>
         <member name="T:Ekip.Framework.Data.Bases.AdvisorProviderBase">
@@ -10406,9 +10898,24 @@
              Current WiscrProviderBase instance.
             </summary>
         </member>
+        <member name="P:Ekip.Framework.Data.Bases.NetTiersProvider.NeighborhoodViewProvider">
+            <summary>
+             Current NeighborhoodViewProviderBase instance.
+            </summary>
+        </member>
         <member name="P:Ekip.Framework.Data.Bases.NetTiersProvider.ProvinceViewProvider">
             <summary>
              Current ProvinceViewProviderBase instance.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Data.Bases.NetTiersProvider.StreetViewProvider">
+            <summary>
+             Current StreetViewProviderBase instance.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Data.Bases.NetTiersProvider.TownViewProvider">
+            <summary>
+             Current TownViewProviderBase instance.
             </summary>
         </member>
         <member name="T:Ekip.Framework.Data.Bases.NetTiersProviderBase">
@@ -12462,9 +12969,27 @@
              It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
             </summary>
         </member>
+        <member name="P:Ekip.Framework.Data.DataRepository.NeighborhoodViewProvider">
+            <summary>
+             Gets the current instance of the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+        </member>
         <member name="P:Ekip.Framework.Data.DataRepository.ProvinceViewProvider">
             <summary>
              Gets the current instance of the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.ProvinceView"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Data.DataRepository.StreetViewProvider">
+            <summary>
+             Gets the current instance of the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.StreetView"/> business entity.
+             It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Data.DataRepository.TownViewProvider">
+            <summary>
+             Gets the current instance of the Data Access Logic Component for the <see cref="T:Ekip.Framework.Entities.TownView"/> business entity.
              It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
             </summary>
         </member>
@@ -14004,6 +14529,54 @@
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
             <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
         </member>
+        <member name="T:Ekip.Framework.Data.NeighborhoodViewFilters">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlFilterBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.NeighborhoodViewFilters.#ctor">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewFilters class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.NeighborhoodViewFilters.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewFilters class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.NeighborhoodViewFilters.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewFilters class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.NeighborhoodViewQuery">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.Bases.NeighborhoodViewParameterBuilder"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.NeighborhoodViewQuery.#ctor">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewQuery class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.NeighborhoodViewQuery.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewQuery class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.NeighborhoodViewQuery.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the NeighborhoodViewQuery class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
         <member name="T:Ekip.Framework.Data.ProvinceViewFilters">
             <summary>
             A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlFilterBuilder`1"/> class
@@ -14048,6 +14621,102 @@
         <member name="M:Ekip.Framework.Data.ProvinceViewQuery.#ctor(System.Boolean,System.Boolean)">
             <summary>
             Initializes a new instance of the ProvinceViewQuery class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.StreetViewFilters">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlFilterBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.StreetView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.StreetViewFilters.#ctor">
+            <summary>
+            Initializes a new instance of the StreetViewFilters class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.StreetViewFilters.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the StreetViewFilters class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.StreetViewFilters.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the StreetViewFilters class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.StreetViewQuery">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.Bases.StreetViewParameterBuilder"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.StreetView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.StreetViewQuery.#ctor">
+            <summary>
+            Initializes a new instance of the StreetViewQuery class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.StreetViewQuery.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the StreetViewQuery class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.StreetViewQuery.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the StreetViewQuery class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.TownViewFilters">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.SqlFilterBuilder`1"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.TownView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.TownViewFilters.#ctor">
+            <summary>
+            Initializes a new instance of the TownViewFilters class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.TownViewFilters.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the TownViewFilters class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.TownViewFilters.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the TownViewFilters class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+            <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+        </member>
+        <member name="T:Ekip.Framework.Data.TownViewQuery">
+            <summary>
+            A strongly-typed instance of the <see cref="T:Ekip.Framework.Data.Bases.TownViewParameterBuilder"/> class
+            that is used exclusively with a <see cref="T:Ekip.Framework.Entities.TownView"/> object.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.TownViewQuery.#ctor">
+            <summary>
+            Initializes a new instance of the TownViewQuery class.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Data.TownViewQuery.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the TownViewQuery class.
+            </summary>
+            <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+        </member>
+        <member name="M:Ekip.Framework.Data.TownViewQuery.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the TownViewQuery class.
             </summary>
             <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
             <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>

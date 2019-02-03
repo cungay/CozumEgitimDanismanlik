@@ -42,6 +42,7 @@ namespace Ekip.Win.UI.Modules
 
             provinceService = new ProvinceService();
             addressService = new ClientAddressService();
+            
             motherService = new ClientMotherService();
             fatherService = new ClientFatherService();
 
@@ -49,12 +50,13 @@ namespace Ekip.Win.UI.Modules
             rgBlood.BindEnum(typeof(Blood));
             lkFamilyStatus.BindEnum(typeof(FamilyStatus));
             lkAddressTitle.BindEnum(typeof(AddressTitles));
-            
+
             var calendarAgeSource = DataRepository.CalendarAgeProvider.GetAll();
             lkCalendarAge.BindEnumarable<CalendarAge>(calendarAgeSource, "AgeDescription", "CalendarAgeId");
 
             VList<ProvinceView> provinces = DataRepository.ProvinceViewProvider.Get(whereClause: null, orderBy: "RowNumber ASC");
             lkProvince.Properties.DataSource = provinces;
+            lkProvince.Properties.ValueMember = "Id";
 
             lkProvince.EditValueChanged += ProvinceChanged;
             lkTown.EditValueChanged += TownChanged;
@@ -127,8 +129,9 @@ namespace Ekip.Win.UI.Modules
                 int provinceId = edit.EditValue.ToInt32();
                 if (provinceId > 0)
                 {
-                    TList<Town> towns = DataRepository.TownProvider.GetByProvinceId(provinceId);
+                    VList<TownView> towns = DataRepository.TownViewProvider.GetByProvinceId(provinceId);
                     lkTown.Properties.DataSource = towns;
+                    lkTown.Properties.ValueMember = "TownId";
                     lkTown.EditValue = null;
                     lkTown.Enabled = towns.Count > 0;
                 }
@@ -151,8 +154,9 @@ namespace Ekip.Win.UI.Modules
                 int townId = edit.EditValue.ToInt32();
                 if (townId > 0)
                 {
-                    TList<Neighborhood> neighborhoods = DataRepository.NeighborhoodProvider.GetByTownId(townId);
+                    VList<NeighborhoodView> neighborhoods = DataRepository.NeighborhoodViewProvider.GetByTownId(townId);
                     lkNeighborhood.Properties.DataSource = neighborhoods;
+                    lkNeighborhood.Properties.ValueMember = "NeighborhoodId";
                     lkNeighborhood.EditValue = null;
                     lkNeighborhood.Enabled = neighborhoods.Count > 0;
                 }
@@ -176,6 +180,7 @@ namespace Ekip.Win.UI.Modules
                 {
                     TList<Street> streets = DataRepository.StreetProvider.GetByNeighborhoodId(neighborhoodId);
                     lkStreet.Properties.DataSource = streets;
+                    lkStreet.Properties.ValueMember = "StreetId";
                     lkStreet.EditValue = null;
                     lkStreet.Enabled = streets.Count > 0;
                 }
@@ -399,7 +404,7 @@ namespace Ekip.Win.UI.Modules
             #endregion
 
             #region Address
-            
+
             if (client.AddressId.HasValue && client.AddressId.Value > 0)
                 client.AddressIdSource = addressService.GetByAddressId(client.AddressId.Value);
             else

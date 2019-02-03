@@ -402,11 +402,32 @@
     <Compile Include="..\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Views\NeighborhoodViewService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\NeighborhoodViewServiceBase.generated.cs">
+      <DependentUpon>NeighborhoodViewService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Views\ProvinceViewService.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Views\ProvinceViewServiceBase.generated.cs">
       <DependentUpon>ProvinceViewService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\StreetViewService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\StreetViewServiceBase.generated.cs">
+      <DependentUpon>StreetViewService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\TownViewService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\TownViewServiceBase.generated.cs">
+      <DependentUpon>TownViewService.cs</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <!-- 

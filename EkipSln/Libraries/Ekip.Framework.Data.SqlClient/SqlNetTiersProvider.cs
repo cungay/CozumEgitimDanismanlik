@@ -1441,6 +1441,45 @@ namespace Ekip.Framework.Data.SqlClient
 		
 		
 		
+		#region "NeighborhoodViewProvider"
+		
+		private SqlNeighborhoodViewProvider innerSqlNeighborhoodViewProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="NeighborhoodView"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override NeighborhoodViewProviderBase NeighborhoodViewProvider
+		{
+			get
+			{
+				if (innerSqlNeighborhoodViewProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlNeighborhoodViewProvider == null)
+						{
+							this.innerSqlNeighborhoodViewProvider = new SqlNeighborhoodViewProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlNeighborhoodViewProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlNeighborhoodViewProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlNeighborhoodViewProvider SqlNeighborhoodViewProvider
+		{
+			get {return NeighborhoodViewProvider as SqlNeighborhoodViewProvider;}
+		}
+		
+		#endregion
+		
+		
 		#region "ProvinceViewProvider"
 		
 		private SqlProvinceViewProvider innerSqlProvinceViewProvider;
@@ -1475,6 +1514,84 @@ namespace Ekip.Framework.Data.SqlClient
 		public SqlProvinceViewProvider SqlProvinceViewProvider
 		{
 			get {return ProvinceViewProvider as SqlProvinceViewProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "StreetViewProvider"
+		
+		private SqlStreetViewProvider innerSqlStreetViewProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="StreetView"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override StreetViewProviderBase StreetViewProvider
+		{
+			get
+			{
+				if (innerSqlStreetViewProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlStreetViewProvider == null)
+						{
+							this.innerSqlStreetViewProvider = new SqlStreetViewProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlStreetViewProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlStreetViewProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlStreetViewProvider SqlStreetViewProvider
+		{
+			get {return StreetViewProvider as SqlStreetViewProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "TownViewProvider"
+		
+		private SqlTownViewProvider innerSqlTownViewProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="TownView"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override TownViewProviderBase TownViewProvider
+		{
+			get
+			{
+				if (innerSqlTownViewProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlTownViewProvider == null)
+						{
+							this.innerSqlTownViewProvider = new SqlTownViewProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlTownViewProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlTownViewProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlTownViewProvider SqlTownViewProvider
+		{
+			get {return TownViewProvider as SqlTownViewProvider;}
 		}
 		
 		#endregion

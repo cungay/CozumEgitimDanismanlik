@@ -27,6 +27,12 @@ AND so.name <> 'Client_GetAllBirthDateYears'
 AND so.name <> 'Client_GetFirst'
 AND so.name <> 'Client_GetFileNumbers'
 AND so.name <> 'Client_GetLast'
+AND so.name <> 'NeighborhoodView_GetByNeighborhoodId'
+AND so.name <> 'NeighborhoodView_GetByTownId'
+AND so.name <> 'StreetView_GetByNeighborhoodId'
+AND so.name <> 'StreetView_GetByStreetId'
+AND so.name <> 'TownView_GetByProvinceId'
+AND so.name <> 'TownView_GetByTownId'
 OPEN c
 FETCH NEXT FROM c INTO @procedureName
 WHILE @@FETCH_STATUS = 0
@@ -47,7 +53,7 @@ GO
 		<procedure owner="dbo" name="sp_Advisor_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Advisor table
@@ -82,7 +88,7 @@ GO
 		<procedure owner="dbo" name="sp_Advisor_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Advisor table passing page index and page count parameters
@@ -177,7 +183,7 @@ GO
 		<procedure owner="dbo" name="sp_Advisor_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Advisor table
@@ -240,7 +246,7 @@ GO
 		<procedure owner="dbo" name="sp_Advisor_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Advisor table
@@ -289,7 +295,7 @@ GO
 		<procedure owner="dbo" name="sp_Advisor_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Advisor table
@@ -309,7 +315,7 @@ GO
 		<procedure owner="dbo" name="sp_Advisor_GetByAdvisorId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Advisor table through an index
@@ -346,7 +352,7 @@ GO
 		<procedure owner="dbo" name="sp_Advisor_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Advisor table passing nullable parameters
@@ -446,7 +452,7 @@ GO
 		<procedure owner="dbo" name="sp_Advisor_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Advisor table using a dynamically generated query.
@@ -506,7 +512,7 @@ GO
 		<procedure owner="dbo" name="sp_SeanceQuestion_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the SeanceQuestion table
@@ -533,7 +539,7 @@ GO
 		<procedure owner="dbo" name="sp_SeanceQuestion_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceQuestion table passing page index and page count parameters
@@ -612,7 +618,7 @@ GO
 		<procedure owner="dbo" name="sp_SeanceQuestion_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the SeanceQuestion table
@@ -651,7 +657,7 @@ GO
 		<procedure owner="dbo" name="sp_SeanceQuestion_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the SeanceQuestion table
@@ -684,7 +690,7 @@ GO
 		<procedure owner="dbo" name="sp_SeanceQuestion_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the SeanceQuestion table
@@ -704,7 +710,7 @@ GO
 		<procedure owner="dbo" name="sp_SeanceQuestion_GetByQuestionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestion table through an index
@@ -733,7 +739,7 @@ GO
 		<procedure owner="dbo" name="sp_SeanceQuestion_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the SeanceQuestion table passing nullable parameters
@@ -793,7 +799,7 @@ GO
 		<procedure owner="dbo" name="sp_SeanceQuestion_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceQuestion table using a dynamically generated query.
@@ -837,7 +843,7 @@ GO
 		<procedure owner="dbo" name="sp_Seance_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Seance table
@@ -872,7 +878,7 @@ GO
 		<procedure owner="dbo" name="sp_Seance_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Seance table passing page index and page count parameters
@@ -967,7 +973,7 @@ GO
 		<procedure owner="dbo" name="sp_Seance_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Seance table
@@ -1030,7 +1036,7 @@ GO
 		<procedure owner="dbo" name="sp_Seance_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Seance table
@@ -1079,7 +1085,7 @@ GO
 		<procedure owner="dbo" name="sp_Seance_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Seance table
@@ -1099,7 +1105,7 @@ GO
 		<procedure owner="dbo" name="sp_Seance_GetByClientId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Seance table through a foreign key
@@ -1138,7 +1144,7 @@ GO
 		<procedure owner="dbo" name="sp_Seance_GetBySeanceId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Seance table through an index
@@ -1175,7 +1181,7 @@ GO
 		<procedure owner="dbo" name="sp_Seance_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Seance table passing nullable parameters
@@ -1275,7 +1281,7 @@ GO
 		<procedure owner="dbo" name="sp_Seance_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Seance table using a dynamically generated query.
@@ -1378,7 +1384,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_School_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the School table
@@ -1417,7 +1423,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_School_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the School table passing page index and page count parameters
@@ -1520,7 +1526,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_School_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the School table
@@ -1595,7 +1601,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_School_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the School table
@@ -1652,7 +1658,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_School_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the School table
@@ -1672,7 +1678,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_School_GetBySchoolId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the School table through an index
@@ -1713,7 +1719,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_School_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the School table passing nullable parameters
@@ -1833,7 +1839,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_School_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the School table using a dynamically generated query.
@@ -1901,7 +1907,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Reason_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Reason table
@@ -1932,7 +1938,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Reason_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Reason table passing page index and page count parameters
@@ -2019,7 +2025,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Reason_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Reason table
@@ -2070,7 +2076,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Reason_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Reason table
@@ -2111,7 +2117,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Reason_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Reason table
@@ -2131,7 +2137,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Reason_GetByReasonKey" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Reason table through an index
@@ -2164,7 +2170,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Reason_GetByReasonId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Reason table through an index
@@ -2197,7 +2203,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Reason_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Reason table passing nullable parameters
@@ -2277,7 +2283,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Reason_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Reason table using a dynamically generated query.
@@ -2329,7 +2335,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_QuestionFormGroup_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the QuestionFormGroup table
@@ -2360,7 +2366,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_QuestionFormGroup_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionFormGroup table passing page index and page count parameters
@@ -2447,7 +2453,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_QuestionFormGroup_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the QuestionFormGroup table
@@ -2498,7 +2504,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_QuestionFormGroup_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the QuestionFormGroup table
@@ -2539,7 +2545,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_QuestionFormGroup_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the QuestionFormGroup table
@@ -2559,7 +2565,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_QuestionFormGroup_GetByGroupId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormGroup table through an index
@@ -2592,7 +2598,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_QuestionFormGroup_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the QuestionFormGroup table passing nullable parameters
@@ -2672,7 +2678,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_QuestionFormGroup_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionFormGroup table using a dynamically generated query.
@@ -2724,7 +2730,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_SeanceQuestionOption_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the SeanceQuestionOption table
@@ -2749,7 +2755,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_SeanceQuestionOption_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceQuestionOption table passing page index and page count parameters
@@ -2824,7 +2830,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_SeanceQuestionOption_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the SeanceQuestionOption table
@@ -2857,7 +2863,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_SeanceQuestionOption_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the SeanceQuestionOption table
@@ -2886,7 +2892,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_SeanceQuestionOption_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the SeanceQuestionOption table
@@ -2906,7 +2912,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_SeanceQuestionOption_GetByQuestionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionOption table through a foreign key
@@ -2935,7 +2941,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_SeanceQuestionOption_GetByOptionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionOption table through an index
@@ -2962,7 +2968,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_SeanceQuestionOption_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the SeanceQuestionOption table passing nullable parameters
@@ -3012,7 +3018,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_SeanceQuestionOption_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceQuestionOption table using a dynamically generated query.
@@ -3052,7 +3058,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Town_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Town table
@@ -3092,7 +3098,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Town_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Town table passing page index and page count parameters
@@ -3197,7 +3203,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Town_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Town table
@@ -3275,7 +3281,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Town_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Town table
@@ -3334,7 +3340,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Town_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Town table
@@ -3354,7 +3360,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Town_GetByProvinceId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Town table through an index
@@ -3396,7 +3402,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Town_GetByTownId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Town table through an index
@@ -3438,7 +3444,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Town_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Town table passing nullable parameters
@@ -3563,7 +3569,7 @@ END CATCH
 		<procedure owner="dbo" name="sp_Town_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Town table using a dynamically generated query.
@@ -3655,7 +3661,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the SeanceReason table
@@ -3680,7 +3686,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceReason table passing page index and page count parameters
@@ -3755,7 +3761,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the SeanceReason table
@@ -3788,7 +3794,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the SeanceReason table
@@ -3817,7 +3823,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the SeanceReason table
@@ -3837,7 +3843,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_GetByReasonId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceReason table through a foreign key
@@ -3866,7 +3872,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_GetBySeanceId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceReason table through a foreign key
@@ -3895,7 +3901,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_GetByRowId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceReason table through an index
@@ -3922,7 +3928,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the SeanceReason table passing nullable parameters
@@ -3972,7 +3978,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceReason_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceReason table using a dynamically generated query.
@@ -4012,7 +4018,7 @@ END
 		<procedure owner="dbo" name="sp_Teacher_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Teacher table
@@ -4047,7 +4053,7 @@ END
 		<procedure owner="dbo" name="sp_Teacher_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Teacher table passing page index and page count parameters
@@ -4142,7 +4148,7 @@ END
 		<procedure owner="dbo" name="sp_Teacher_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Teacher table
@@ -4205,7 +4211,7 @@ END
 		<procedure owner="dbo" name="sp_Teacher_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Teacher table
@@ -4254,7 +4260,7 @@ END
 		<procedure owner="dbo" name="sp_Teacher_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Teacher table
@@ -4274,7 +4280,7 @@ END
 		<procedure owner="dbo" name="sp_Teacher_GetBySchoolId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Teacher table through a foreign key
@@ -4313,7 +4319,7 @@ END
 		<procedure owner="dbo" name="sp_Teacher_GetByTeacherId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Teacher table through an index
@@ -4350,7 +4356,7 @@ END
 		<procedure owner="dbo" name="sp_Teacher_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Teacher table passing nullable parameters
@@ -4450,7 +4456,7 @@ END
 		<procedure owner="dbo" name="sp_Teacher_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Teacher table using a dynamically generated query.
@@ -4510,7 +4516,7 @@ END
 		<procedure owner="dbo" name="sp_Wippsi_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Wippsi table
@@ -4569,7 +4575,7 @@ END
 		<procedure owner="dbo" name="sp_Wippsi_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Wippsi table passing page index and page count parameters
@@ -4712,7 +4718,7 @@ END
 		<procedure owner="dbo" name="sp_Wippsi_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Wippsi table
@@ -4847,7 +4853,7 @@ END
 		<procedure owner="dbo" name="sp_Wippsi_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Wippsi table
@@ -4944,7 +4950,7 @@ END
 		<procedure owner="dbo" name="sp_Wippsi_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Wippsi table
@@ -4964,7 +4970,7 @@ END
 		<procedure owner="dbo" name="sp_Wippsi_GetByWippsiId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Wippsi table through an index
@@ -5025,7 +5031,7 @@ END
 		<procedure owner="dbo" name="sp_Wippsi_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Wippsi table passing nullable parameters
@@ -5245,7 +5251,7 @@ END
 		<procedure owner="dbo" name="sp_Wippsi_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Wippsi table using a dynamically generated query.
@@ -5353,7 +5359,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the SeanceQuestionAnswer table
@@ -5381,7 +5387,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceQuestionAnswer table passing page index and page count parameters
@@ -5462,7 +5468,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the SeanceQuestionAnswer table
@@ -5504,7 +5510,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the SeanceQuestionAnswer table
@@ -5539,7 +5545,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the SeanceQuestionAnswer table
@@ -5559,7 +5565,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_GetByClientId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionAnswer table through a foreign key
@@ -5591,7 +5597,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_GetByQuestionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionAnswer table through a foreign key
@@ -5623,7 +5629,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_GetByOptionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionAnswer table through a foreign key
@@ -5655,7 +5661,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_GetByRowId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionAnswer table through an index
@@ -5685,7 +5691,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the SeanceQuestionAnswer table passing nullable parameters
@@ -5750,7 +5756,7 @@ END
 		<procedure owner="dbo" name="sp_SeanceQuestionAnswer_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceQuestionAnswer table using a dynamically generated query.
@@ -5796,7 +5802,7 @@ END
 		<procedure owner="dbo" name="sp_Street_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Street table
@@ -5835,7 +5841,7 @@ END
 		<procedure owner="dbo" name="sp_Street_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Street table passing page index and page count parameters
@@ -5938,7 +5944,7 @@ END
 		<procedure owner="dbo" name="sp_Street_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Street table
@@ -6013,7 +6019,7 @@ END
 		<procedure owner="dbo" name="sp_Street_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Street table
@@ -6070,7 +6076,7 @@ END
 		<procedure owner="dbo" name="sp_Street_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Street table
@@ -6090,7 +6096,7 @@ END
 		<procedure owner="dbo" name="sp_Street_GetByNeighborhoodId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Street table through an index
@@ -6131,7 +6137,7 @@ END
 		<procedure owner="dbo" name="sp_Street_GetByStreetId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Street table through an index
@@ -6172,7 +6178,7 @@ END
 		<procedure owner="dbo" name="sp_Street_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Street table passing nullable parameters
@@ -6292,7 +6298,7 @@ END
 		<procedure owner="dbo" name="sp_Street_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Street table using a dynamically generated query.
@@ -6380,7 +6386,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionForm_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the QuestionForm table
@@ -6414,7 +6420,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionForm_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionForm table passing page index and page count parameters
@@ -6507,7 +6513,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionForm_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the QuestionForm table
@@ -6567,7 +6573,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionForm_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the QuestionForm table
@@ -6614,7 +6620,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionForm_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the QuestionForm table
@@ -6634,7 +6640,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionForm_GetByGroupId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionForm table through a foreign key
@@ -6672,7 +6678,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionForm_GetByQuestionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionForm table through an index
@@ -6708,7 +6714,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionForm_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the QuestionForm table passing nullable parameters
@@ -6803,7 +6809,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionForm_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionForm table using a dynamically generated query.
@@ -6861,7 +6867,7 @@ END
 		<procedure owner="dbo" name="sp_Sibling_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Sibling table
@@ -6895,7 +6901,7 @@ END
 		<procedure owner="dbo" name="sp_Sibling_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Sibling table passing page index and page count parameters
@@ -6988,7 +6994,7 @@ END
 		<procedure owner="dbo" name="sp_Sibling_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Sibling table
@@ -7048,7 +7054,7 @@ END
 		<procedure owner="dbo" name="sp_Sibling_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Sibling table
@@ -7095,7 +7101,7 @@ END
 		<procedure owner="dbo" name="sp_Sibling_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Sibling table
@@ -7115,7 +7121,7 @@ END
 		<procedure owner="dbo" name="sp_Sibling_GetByClientId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Sibling table through a foreign key
@@ -7153,7 +7159,7 @@ END
 		<procedure owner="dbo" name="sp_Sibling_GetBySiblingId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Sibling table through an index
@@ -7189,7 +7195,7 @@ END
 		<procedure owner="dbo" name="sp_Sibling_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Sibling table passing nullable parameters
@@ -7284,7 +7290,7 @@ END
 		<procedure owner="dbo" name="sp_Sibling_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Sibling table using a dynamically generated query.
@@ -7342,7 +7348,7 @@ END
 		<procedure owner="dbo" name="sp_ClientFather_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ClientFather table
@@ -7380,7 +7386,7 @@ END
 		<procedure owner="dbo" name="sp_ClientFather_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientFather table passing page index and page count parameters
@@ -7481,7 +7487,7 @@ END
 		<procedure owner="dbo" name="sp_ClientFather_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ClientFather table
@@ -7553,7 +7559,7 @@ END
 		<procedure owner="dbo" name="sp_ClientFather_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ClientFather table
@@ -7608,7 +7614,7 @@ END
 		<procedure owner="dbo" name="sp_ClientFather_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ClientFather table
@@ -7628,7 +7634,7 @@ END
 		<procedure owner="dbo" name="sp_ClientFather_GetByFatherId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientFather table through an index
@@ -7668,7 +7674,7 @@ END
 		<procedure owner="dbo" name="sp_ClientFather_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the ClientFather table passing nullable parameters
@@ -7783,7 +7789,7 @@ END
 		<procedure owner="dbo" name="sp_ClientFather_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientFather table using a dynamically generated query.
@@ -7849,7 +7855,7 @@ END
 		<procedure owner="dbo" name="sp_ClientMother_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ClientMother table
@@ -7887,7 +7893,7 @@ END
 		<procedure owner="dbo" name="sp_ClientMother_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientMother table passing page index and page count parameters
@@ -7988,7 +7994,7 @@ END
 		<procedure owner="dbo" name="sp_ClientMother_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ClientMother table
@@ -8060,7 +8066,7 @@ END
 		<procedure owner="dbo" name="sp_ClientMother_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ClientMother table
@@ -8115,7 +8121,7 @@ END
 		<procedure owner="dbo" name="sp_ClientMother_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ClientMother table
@@ -8135,7 +8141,7 @@ END
 		<procedure owner="dbo" name="sp_ClientMother_GetByMotherId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientMother table through an index
@@ -8175,7 +8181,7 @@ END
 		<procedure owner="dbo" name="sp_ClientMother_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the ClientMother table passing nullable parameters
@@ -8290,7 +8296,7 @@ END
 		<procedure owner="dbo" name="sp_ClientMother_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientMother table using a dynamically generated query.
@@ -8356,7 +8362,7 @@ END
 		<procedure owner="dbo" name="sp_ClientAddress_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ClientAddress table
@@ -8394,7 +8400,7 @@ END
 		<procedure owner="dbo" name="sp_ClientAddress_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientAddress table passing page index and page count parameters
@@ -8495,7 +8501,7 @@ END
 		<procedure owner="dbo" name="sp_ClientAddress_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ClientAddress table
@@ -8567,7 +8573,7 @@ END
 		<procedure owner="dbo" name="sp_ClientAddress_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ClientAddress table
@@ -8622,7 +8628,7 @@ END
 		<procedure owner="dbo" name="sp_ClientAddress_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ClientAddress table
@@ -8642,7 +8648,7 @@ END
 		<procedure owner="dbo" name="sp_ClientAddress_GetByAddressId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientAddress table through an index
@@ -8682,7 +8688,7 @@ END
 		<procedure owner="dbo" name="sp_ClientAddress_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the ClientAddress table passing nullable parameters
@@ -8797,7 +8803,7 @@ END
 		<procedure owner="dbo" name="sp_ClientAddress_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientAddress table using a dynamically generated query.
@@ -8878,7 +8884,7 @@ END
 		<procedure owner="dbo" name="sp_Province_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Province table
@@ -8920,7 +8926,7 @@ END
 		<procedure owner="dbo" name="sp_Province_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Province table passing page index and page count parameters
@@ -9029,7 +9035,7 @@ END
 		<procedure owner="dbo" name="sp_Province_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Province table
@@ -9113,7 +9119,7 @@ END
 		<procedure owner="dbo" name="sp_Province_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Province table
@@ -9176,7 +9182,7 @@ END
 		<procedure owner="dbo" name="sp_Province_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Province table
@@ -9196,7 +9202,7 @@ END
 		<procedure owner="dbo" name="sp_Province_GetByProvinceName" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Province table through an index
@@ -9240,7 +9246,7 @@ END
 		<procedure owner="dbo" name="sp_Province_GetByProvinceId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Province table through an index
@@ -9284,7 +9290,7 @@ END
 		<procedure owner="dbo" name="sp_Province_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Province table passing nullable parameters
@@ -9419,7 +9425,7 @@ END
 		<procedure owner="dbo" name="sp_Province_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Province table using a dynamically generated query.
@@ -9493,7 +9499,7 @@ END
 		<procedure owner="dbo" name="sp_CalendarAge_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the CalendarAge table
@@ -9519,7 +9525,7 @@ END
 		<procedure owner="dbo" name="sp_CalendarAge_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the CalendarAge table passing page index and page count parameters
@@ -9596,7 +9602,7 @@ END
 		<procedure owner="dbo" name="sp_CalendarAge_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the CalendarAge table
@@ -9632,7 +9638,7 @@ END
 		<procedure owner="dbo" name="sp_CalendarAge_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the CalendarAge table
@@ -9663,7 +9669,7 @@ END
 		<procedure owner="dbo" name="sp_CalendarAge_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the CalendarAge table
@@ -9683,7 +9689,7 @@ END
 		<procedure owner="dbo" name="sp_CalendarAge_GetByCalendarAgeId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the CalendarAge table through an index
@@ -9711,7 +9717,7 @@ END
 		<procedure owner="dbo" name="sp_CalendarAge_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the CalendarAge table passing nullable parameters
@@ -9766,7 +9772,7 @@ END
 		<procedure owner="dbo" name="sp_CalendarAge_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the CalendarAge table using a dynamically generated query.
@@ -9814,35 +9820,32 @@ END
 			<body><![CDATA[
 				
 BEGIN
-	IF(ISNULL(@Year,0) > 0)
+	DECLARE @CalendarAgeId INT = 0
+	SET @Year = (SELECT ISNULL(@Year,0))
+	SET @Month = (SELECT ISNULL(@Month,0))
+
+	SELECT 
+		@CalendarAgeId = a.CalendarAgeId
+	FROM
+		dbo.CalendarAge a (NOLOCK)
+	WHERE
+		@Year = a.MinValue
+	AND	a.MaxValue IS NULL
+
+	SET @CalendarAgeId = (SELECT ISNULL(@CalendarAgeId,0))
+
+	IF(@CalendarAgeId = 0)
 	BEGIN
 		SELECT 
-			a.*
+			@CalendarAgeId = a.CalendarAgeId
 		FROM
 			dbo.CalendarAge a (NOLOCK)
 		WHERE
-			@Year = a.MinValue
-		AND	a.MaxValue IS NULL
+			@Month BETWEEN a.MinValue AND a.MaxValue
 	END
-	ELSE IF(ISNULL(@Month,0) > 0)
-	BEGIN
-		SELECT 
-			a.*
-		FROM
-			dbo.CalendarAge a (NOLOCK)
-		WHERE
-			@Month BETWEEN a.MinValue AND a.MaxValue;
-	END
-	ELSE IF(ISNULL(@Year,0) > 0)
-	BEGIN
-		SELECT 
-			a.*
-		FROM
-			dbo.CalendarAge a (NOLOCK)
-		WHERE
-			@Year = a.MinValue
-		AND	a.MaxValue IS NULL
-	END
+
+	SELECT a.* FROM dbo.CalendarAge a (NOLOCK) WHERE a.CalendarAgeId = @CalendarAgeId
+
 END
 
 			]]></body>
@@ -9851,7 +9854,7 @@ END
 		<procedure owner="dbo" name="sp_Client_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Client table
@@ -9899,7 +9902,7 @@ END
 		<procedure owner="dbo" name="sp_Client_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Client table passing page index and page count parameters
@@ -10020,7 +10023,7 @@ END
 		<procedure owner="dbo" name="sp_Client_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Client table
@@ -10122,7 +10125,7 @@ END
 		<procedure owner="dbo" name="sp_Client_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Client table
@@ -10197,7 +10200,7 @@ END
 		<procedure owner="dbo" name="sp_Client_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Client table
@@ -10217,7 +10220,7 @@ END
 		<procedure owner="dbo" name="sp_Client_GetByAddressId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through a foreign key
@@ -10269,7 +10272,7 @@ END
 		<procedure owner="dbo" name="sp_Client_GetByFatherId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through a foreign key
@@ -10321,7 +10324,7 @@ END
 		<procedure owner="dbo" name="sp_Client_GetByMotherId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through a foreign key
@@ -10373,7 +10376,7 @@ END
 		<procedure owner="dbo" name="sp_Client_GetByFileNumber" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through an index
@@ -10423,7 +10426,7 @@ END
 		<procedure owner="dbo" name="sp_Client_GetByClientId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through an index
@@ -10473,7 +10476,7 @@ END
 		<procedure owner="dbo" name="sp_Client_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Client table passing nullable parameters
@@ -10638,7 +10641,7 @@ END
 		<procedure owner="dbo" name="sp_Client_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Client table using a dynamically generated query.
@@ -10889,7 +10892,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ClientEducation table
@@ -10923,7 +10926,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientEducation table passing page index and page count parameters
@@ -11016,7 +11019,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ClientEducation table
@@ -11076,7 +11079,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ClientEducation table
@@ -11123,7 +11126,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ClientEducation table
@@ -11143,7 +11146,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_GetByClientId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientEducation table through a foreign key
@@ -11181,7 +11184,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_GetBySchoolId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientEducation table through a foreign key
@@ -11219,7 +11222,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_GetByEducationId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientEducation table through an index
@@ -11255,7 +11258,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the ClientEducation table passing nullable parameters
@@ -11350,7 +11353,7 @@ END
 		<procedure owner="dbo" name="sp_ClientEducation_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientEducation table using a dynamically generated query.
@@ -11408,7 +11411,7 @@ END
 		<procedure owner="dbo" name="sp_Area_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Area table
@@ -11438,7 +11441,7 @@ END
 		<procedure owner="dbo" name="sp_Area_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Area table passing page index and page count parameters
@@ -11523,7 +11526,7 @@ END
 		<procedure owner="dbo" name="sp_Area_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Area table
@@ -11571,7 +11574,7 @@ END
 		<procedure owner="dbo" name="sp_Area_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Area table
@@ -11610,7 +11613,7 @@ END
 		<procedure owner="dbo" name="sp_Area_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Area table
@@ -11630,7 +11633,7 @@ END
 		<procedure owner="dbo" name="sp_Area_GetByAreaId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Area table through an index
@@ -11662,7 +11665,7 @@ END
 		<procedure owner="dbo" name="sp_Area_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Area table passing nullable parameters
@@ -11737,7 +11740,7 @@ END
 		<procedure owner="dbo" name="sp_Area_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Area table using a dynamically generated query.
@@ -11787,7 +11790,7 @@ END
 		<procedure owner="dbo" name="sp_Job_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Job table
@@ -11818,7 +11821,7 @@ END
 		<procedure owner="dbo" name="sp_Job_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Job table passing page index and page count parameters
@@ -11905,7 +11908,7 @@ END
 		<procedure owner="dbo" name="sp_Job_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Job table
@@ -11956,7 +11959,7 @@ END
 		<procedure owner="dbo" name="sp_Job_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Job table
@@ -11997,7 +12000,7 @@ END
 		<procedure owner="dbo" name="sp_Job_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Job table
@@ -12017,7 +12020,7 @@ END
 		<procedure owner="dbo" name="sp_Job_GetByJobName" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Job table through an index
@@ -12050,7 +12053,7 @@ END
 		<procedure owner="dbo" name="sp_Job_GetByJobId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Job table through an index
@@ -12083,7 +12086,7 @@ END
 		<procedure owner="dbo" name="sp_Job_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Job table passing nullable parameters
@@ -12163,7 +12166,7 @@ END
 		<procedure owner="dbo" name="sp_Job_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Job table using a dynamically generated query.
@@ -12215,7 +12218,7 @@ END
 		<procedure owner="dbo" name="sp_Neighborhood_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Neighborhood table
@@ -12255,7 +12258,7 @@ END
 		<procedure owner="dbo" name="sp_Neighborhood_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Neighborhood table passing page index and page count parameters
@@ -12360,7 +12363,7 @@ END
 		<procedure owner="dbo" name="sp_Neighborhood_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Neighborhood table
@@ -12438,7 +12441,7 @@ END
 		<procedure owner="dbo" name="sp_Neighborhood_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Neighborhood table
@@ -12497,7 +12500,7 @@ END
 		<procedure owner="dbo" name="sp_Neighborhood_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Neighborhood table
@@ -12517,7 +12520,7 @@ END
 		<procedure owner="dbo" name="sp_Neighborhood_GetByTownId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Neighborhood table through an index
@@ -12559,7 +12562,7 @@ END
 		<procedure owner="dbo" name="sp_Neighborhood_GetByNeighborhoodId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Neighborhood table through an index
@@ -12601,7 +12604,7 @@ END
 		<procedure owner="dbo" name="sp_Neighborhood_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Neighborhood table passing nullable parameters
@@ -12726,7 +12729,7 @@ END
 		<procedure owner="dbo" name="sp_Neighborhood_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Neighborhood table using a dynamically generated query.
@@ -12796,7 +12799,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormOption_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the QuestionFormOption table
@@ -12827,7 +12830,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormOption_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionFormOption table passing page index and page count parameters
@@ -12914,7 +12917,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormOption_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the QuestionFormOption table
@@ -12965,7 +12968,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormOption_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the QuestionFormOption table
@@ -13006,7 +13009,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormOption_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the QuestionFormOption table
@@ -13026,7 +13029,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormOption_GetByQuestionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormOption table through a foreign key
@@ -13061,7 +13064,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormOption_GetByOptionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormOption table through an index
@@ -13094,7 +13097,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormOption_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the QuestionFormOption table passing nullable parameters
@@ -13174,7 +13177,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormOption_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionFormOption table using a dynamically generated query.
@@ -13226,7 +13229,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the QuestionFormAnswer table
@@ -13259,7 +13262,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionFormAnswer table passing page index and page count parameters
@@ -13350,7 +13353,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the QuestionFormAnswer table
@@ -13407,7 +13410,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the QuestionFormAnswer table
@@ -13452,7 +13455,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the QuestionFormAnswer table
@@ -13472,7 +13475,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_GetByClientId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormAnswer table through a foreign key
@@ -13509,7 +13512,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_GetByQuestionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormAnswer table through a foreign key
@@ -13546,7 +13549,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_GetByOptionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormAnswer table through a foreign key
@@ -13583,7 +13586,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_GetByRowId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormAnswer table through an index
@@ -13618,7 +13621,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the QuestionFormAnswer table passing nullable parameters
@@ -13708,7 +13711,7 @@ END
 		<procedure owner="dbo" name="sp_QuestionFormAnswer_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionFormAnswer table using a dynamically generated query.
@@ -13764,7 +13767,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Group_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ObservationForm_Group table
@@ -13795,7 +13798,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Group_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm_Group table passing page index and page count parameters
@@ -13882,7 +13885,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Group_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ObservationForm_Group table
@@ -13933,7 +13936,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Group_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ObservationForm_Group table
@@ -13974,7 +13977,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Group_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ObservationForm_Group table
@@ -13994,7 +13997,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Group_GetByGroupId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Group table through an index
@@ -14027,7 +14030,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Group_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the ObservationForm_Group table passing nullable parameters
@@ -14107,7 +14110,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Group_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm_Group table using a dynamically generated query.
@@ -14159,7 +14162,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ObservationForm table
@@ -14191,7 +14194,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm table passing page index and page count parameters
@@ -14280,7 +14283,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ObservationForm table
@@ -14334,7 +14337,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ObservationForm table
@@ -14377,7 +14380,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ObservationForm table
@@ -14397,7 +14400,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_GetByGroupId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm table through a foreign key
@@ -14433,7 +14436,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_GetByQuestionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm table through an index
@@ -14467,7 +14470,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the ObservationForm table passing nullable parameters
@@ -14552,7 +14555,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm table using a dynamically generated query.
@@ -14606,7 +14609,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Option_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ObservationForm_Option table
@@ -14637,7 +14640,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Option_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm_Option table passing page index and page count parameters
@@ -14724,7 +14727,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Option_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ObservationForm_Option table
@@ -14775,7 +14778,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Option_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ObservationForm_Option table
@@ -14816,7 +14819,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Option_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ObservationForm_Option table
@@ -14836,7 +14839,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Option_GetByQuestionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Option table through a foreign key
@@ -14871,7 +14874,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Option_GetByOptionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Option table through an index
@@ -14904,7 +14907,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Option_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the ObservationForm_Option table passing nullable parameters
@@ -14984,7 +14987,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Option_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm_Option table using a dynamically generated query.
@@ -15036,7 +15039,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ObservationForm_Answer table
@@ -15069,7 +15072,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm_Answer table passing page index and page count parameters
@@ -15160,7 +15163,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ObservationForm_Answer table
@@ -15217,7 +15220,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ObservationForm_Answer table
@@ -15262,7 +15265,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ObservationForm_Answer table
@@ -15282,7 +15285,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_GetByClientId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Answer table through a foreign key
@@ -15319,7 +15322,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_GetByQuestionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Answer table through a foreign key
@@ -15356,7 +15359,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_GetByOptionId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Answer table through a foreign key
@@ -15393,7 +15396,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_GetByRowId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Answer table through an index
@@ -15428,7 +15431,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the ObservationForm_Answer table passing nullable parameters
@@ -15518,7 +15521,7 @@ END
 		<procedure owner="dbo" name="sp_ObservationForm_Answer_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm_Answer table using a dynamically generated query.
@@ -15574,7 +15577,7 @@ END
 		<procedure owner="dbo" name="sp_Wiscr_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Wiscr table
@@ -15633,7 +15636,7 @@ END
 		<procedure owner="dbo" name="sp_Wiscr_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Wiscr table passing page index and page count parameters
@@ -15776,7 +15779,7 @@ END
 		<procedure owner="dbo" name="sp_Wiscr_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Wiscr table
@@ -15911,7 +15914,7 @@ END
 		<procedure owner="dbo" name="sp_Wiscr_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Wiscr table
@@ -16008,7 +16011,7 @@ END
 		<procedure owner="dbo" name="sp_Wiscr_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Wiscr table
@@ -16028,7 +16031,7 @@ END
 		<procedure owner="dbo" name="sp_Wiscr_GetByWiscrId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Select records from the Wiscr table through an index
@@ -16089,7 +16092,7 @@ END
 		<procedure owner="dbo" name="sp_Wiscr_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Finds records in the Wiscr table passing nullable parameters
@@ -16309,7 +16312,7 @@ END
 		<procedure owner="dbo" name="sp_Wiscr_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the Wiscr table using a dynamically generated query.
@@ -16413,10 +16416,157 @@ END
 			]]></body>
 		</procedure>
 		
+            <procedure owner="dbo" name="sp_NeighborhoodView_Get_List" >
+                <comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+-- Date Created: 3 Şubat 2019 Pazar
+
+-- Created By:  ()
+-- Purpose: Gets all records from the NeighborhoodView view
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+                <parameters/>
+                <body><![CDATA[
+                    
+                    SELECT
+                        [TownId],
+                        [TownName],
+                        [NeighborhoodId],
+                        [NeighborhoodName]
+                    FROM
+                        [dbo].[NeighborhoodView]
+                        
+                    SELECT @@ROWCOUNT			
+                ]]></body>
+            </procedure>
+            
+            <procedure owner="dbo" name="sp_NeighborhoodView_Get" >
+                <comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+-- Date Created: 3 Şubat 2019 Pazar
+
+-- Created By:  ()
+-- Purpose: Gets records from the NeighborhoodView view passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+                <parameters>
+                    <parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+                    <parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>			
+                    <parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+                    <parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+                </parameters>
+                <body><![CDATA[
+                    
+                    BEGIN
+    
+                    DECLARE @PageLowerBound int
+                    DECLARE @PageUpperBound int
+                    
+                    -- Set the page bounds
+                    SET @PageLowerBound = @PageSize * @PageIndex
+                    SET @PageUpperBound = @PageLowerBound + @PageSize
+    
+                    IF (@OrderBy IS NULL OR LEN(@OrderBy) < 1)
+                    BEGIN
+                        -- default order by to first column
+                        SET @OrderBy = '[TownId]'
+                    END
+    
+                    -- SQL Server 2005 Paging
+                    DECLARE @SQL AS nvarchar(MAX)
+                    SET @SQL = 'WITH PageIndex AS ('
+                    SET @SQL = @SQL + ' SELECT'
+                    IF @PageSize > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' TOP ' + CONVERT(nvarchar, @PageUpperBound)
+                    END
+                    SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+                    SET @SQL = @SQL + ', [TownId]'
+                    SET @SQL = @SQL + ', [TownName]'
+                    SET @SQL = @SQL + ', [NeighborhoodId]'
+                    SET @SQL = @SQL + ', [NeighborhoodName]'
+                    SET @SQL = @SQL + ' FROM [dbo].[NeighborhoodView]'
+                    IF LEN(@WhereClause) > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' WHERE ' + @WhereClause
+                    END
+                    SET @SQL = @SQL + ' ) SELECT'
+                    SET @SQL = @SQL + ' [TownId],'
+                    SET @SQL = @SQL + ' [TownName],'
+                    SET @SQL = @SQL + ' [NeighborhoodId],'
+                    SET @SQL = @SQL + ' [NeighborhoodName]'
+                    SET @SQL = @SQL + ' FROM PageIndex'
+                    SET @SQL = @SQL + ' WHERE RowIndex > ' + CONVERT(nvarchar, @PageLowerBound)
+                    IF @PageSize > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' AND RowIndex <= ' + CONVERT(nvarchar, @PageUpperBound)
+                    END
+                    IF LEN(@OrderBy) > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+                    END
+                    EXEC sp_executesql @SQL
+    
+                    -- get row count
+                    SET @SQL = 'SELECT COUNT(*) AS TotalRowCount'
+                    SET @SQL = @SQL + ' FROM [dbo].[NeighborhoodView]'
+                    IF LEN(@WhereClause) > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' WHERE ' + @WhereClause
+                    END
+                    EXEC sp_executesql @SQL
+                    
+                    END
+                ]]></body>
+            </procedure>
+            
+            
+            <procedure owner="dbo" name="sp_NeighborhoodView_Find_Dynamic"  skip="true">
+                <comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+-- Date Created: 3 Şubat 2019 Pazar
+
+-- Created By:  ()
+-- Purpose: Gets records from the NeighborhoodView table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+                <parameters/>
+                <body><![CDATA[
+                    
+                    BEGIN
+                    
+                    WITH PageIndex AS (
+                        SELECT TOP {3} row_number() OVER (ORDER BY {1}) AS RowIndex
+                        , [TownId]
+                        , [TownName]
+                        , [NeighborhoodId]
+                        , [NeighborhoodName]
+                        FROM [dbo].[NeighborhoodView] {0}
+                    )
+                    SELECT
+                        [TownId],
+                        [TownName],
+                        [NeighborhoodId],
+                        [NeighborhoodName]
+                    FROM PageIndex
+                    WHERE RowIndex > {2}
+                    AND RowIndex <= {3}
+                    ORDER BY {1};
+                    
+                    -- get total count
+                    SELECT COUNT(*) AS TotalRowCount FROM [dbo].[NeighborhoodView] {0};
+                    
+                    END
+                ]]></body>
+            </procedure>
+            
             <procedure owner="dbo" name="sp_ProvinceView_Get_List" >
                 <comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ProvinceView view
@@ -16458,7 +16608,7 @@ END
             <procedure owner="dbo" name="sp_ProvinceView_Get" >
                 <comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ProvinceView view passing page index and page count parameters
@@ -16574,7 +16724,7 @@ END
             <procedure owner="dbo" name="sp_ProvinceView_Find_Dynamic"  skip="true">
                 <comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 1 Şubat 2019 Cuma
+-- Date Created: 3 Şubat 2019 Pazar
 
 -- Created By:  ()
 -- Purpose: Gets records from the ProvinceView table using a dynamically generated query.
@@ -16640,6 +16790,305 @@ END
                     
                     -- get total count
                     SELECT COUNT(*) AS TotalRowCount FROM [dbo].[ProvinceView] {0};
+                    
+                    END
+                ]]></body>
+            </procedure>
+            
+            <procedure owner="dbo" name="sp_StreetView_Get_List" >
+                <comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+-- Date Created: 3 Şubat 2019 Pazar
+
+-- Created By:  ()
+-- Purpose: Gets all records from the StreetView view
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+                <parameters/>
+                <body><![CDATA[
+                    
+                    SELECT
+                        [NeighborhoodId],
+                        [NeighborhoodName],
+                        [StreetId],
+                        [StreetName],
+                        [ZipCode]
+                    FROM
+                        [dbo].[StreetView]
+                        
+                    SELECT @@ROWCOUNT			
+                ]]></body>
+            </procedure>
+            
+            <procedure owner="dbo" name="sp_StreetView_Get" >
+                <comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+-- Date Created: 3 Şubat 2019 Pazar
+
+-- Created By:  ()
+-- Purpose: Gets records from the StreetView view passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+                <parameters>
+                    <parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+                    <parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>			
+                    <parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+                    <parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+                </parameters>
+                <body><![CDATA[
+                    
+                    BEGIN
+    
+                    DECLARE @PageLowerBound int
+                    DECLARE @PageUpperBound int
+                    
+                    -- Set the page bounds
+                    SET @PageLowerBound = @PageSize * @PageIndex
+                    SET @PageUpperBound = @PageLowerBound + @PageSize
+    
+                    IF (@OrderBy IS NULL OR LEN(@OrderBy) < 1)
+                    BEGIN
+                        -- default order by to first column
+                        SET @OrderBy = '[NeighborhoodId]'
+                    END
+    
+                    -- SQL Server 2005 Paging
+                    DECLARE @SQL AS nvarchar(MAX)
+                    SET @SQL = 'WITH PageIndex AS ('
+                    SET @SQL = @SQL + ' SELECT'
+                    IF @PageSize > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' TOP ' + CONVERT(nvarchar, @PageUpperBound)
+                    END
+                    SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+                    SET @SQL = @SQL + ', [NeighborhoodId]'
+                    SET @SQL = @SQL + ', [NeighborhoodName]'
+                    SET @SQL = @SQL + ', [StreetId]'
+                    SET @SQL = @SQL + ', [StreetName]'
+                    SET @SQL = @SQL + ', [ZipCode]'
+                    SET @SQL = @SQL + ' FROM [dbo].[StreetView]'
+                    IF LEN(@WhereClause) > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' WHERE ' + @WhereClause
+                    END
+                    SET @SQL = @SQL + ' ) SELECT'
+                    SET @SQL = @SQL + ' [NeighborhoodId],'
+                    SET @SQL = @SQL + ' [NeighborhoodName],'
+                    SET @SQL = @SQL + ' [StreetId],'
+                    SET @SQL = @SQL + ' [StreetName],'
+                    SET @SQL = @SQL + ' [ZipCode]'
+                    SET @SQL = @SQL + ' FROM PageIndex'
+                    SET @SQL = @SQL + ' WHERE RowIndex > ' + CONVERT(nvarchar, @PageLowerBound)
+                    IF @PageSize > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' AND RowIndex <= ' + CONVERT(nvarchar, @PageUpperBound)
+                    END
+                    IF LEN(@OrderBy) > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+                    END
+                    EXEC sp_executesql @SQL
+    
+                    -- get row count
+                    SET @SQL = 'SELECT COUNT(*) AS TotalRowCount'
+                    SET @SQL = @SQL + ' FROM [dbo].[StreetView]'
+                    IF LEN(@WhereClause) > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' WHERE ' + @WhereClause
+                    END
+                    EXEC sp_executesql @SQL
+                    
+                    END
+                ]]></body>
+            </procedure>
+            
+            
+            <procedure owner="dbo" name="sp_StreetView_Find_Dynamic"  skip="true">
+                <comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+-- Date Created: 3 Şubat 2019 Pazar
+
+-- Created By:  ()
+-- Purpose: Gets records from the StreetView table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+                <parameters/>
+                <body><![CDATA[
+                    
+                    BEGIN
+                    
+                    WITH PageIndex AS (
+                        SELECT TOP {3} row_number() OVER (ORDER BY {1}) AS RowIndex
+                        , [NeighborhoodId]
+                        , [NeighborhoodName]
+                        , [StreetId]
+                        , [StreetName]
+                        , [ZipCode]
+                        FROM [dbo].[StreetView] {0}
+                    )
+                    SELECT
+                        [NeighborhoodId],
+                        [NeighborhoodName],
+                        [StreetId],
+                        [StreetName],
+                        [ZipCode]
+                    FROM PageIndex
+                    WHERE RowIndex > {2}
+                    AND RowIndex <= {3}
+                    ORDER BY {1};
+                    
+                    -- get total count
+                    SELECT COUNT(*) AS TotalRowCount FROM [dbo].[StreetView] {0};
+                    
+                    END
+                ]]></body>
+            </procedure>
+            
+            <procedure owner="dbo" name="sp_TownView_Get_List" >
+                <comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+-- Date Created: 3 Şubat 2019 Pazar
+
+-- Created By:  ()
+-- Purpose: Gets all records from the TownView view
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+                <parameters/>
+                <body><![CDATA[
+                    
+                    SELECT
+                        [ProvinceId],
+                        [ProvinceName],
+                        [TownId],
+                        [TownName]
+                    FROM
+                        [dbo].[TownView]
+                        
+                    SELECT @@ROWCOUNT			
+                ]]></body>
+            </procedure>
+            
+            <procedure owner="dbo" name="sp_TownView_Get" >
+                <comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+-- Date Created: 3 Şubat 2019 Pazar
+
+-- Created By:  ()
+-- Purpose: Gets records from the TownView view passing page index and page count parameters
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+                <parameters>
+                    <parameter name="@WhereClause" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)" />
+                    <parameter name="@OrderBy" type="varchar" direction="Input" size="2000" precision="0" scale="0" param="(2000)"/>			
+                    <parameter name="@PageIndex" type="int" direction="Input" size="0" precision="10" scale="0" />
+                    <parameter name="@PageSize" type="int" direction="Input" size="0" precision="10" scale="0" /> 
+                </parameters>
+                <body><![CDATA[
+                    
+                    BEGIN
+    
+                    DECLARE @PageLowerBound int
+                    DECLARE @PageUpperBound int
+                    
+                    -- Set the page bounds
+                    SET @PageLowerBound = @PageSize * @PageIndex
+                    SET @PageUpperBound = @PageLowerBound + @PageSize
+    
+                    IF (@OrderBy IS NULL OR LEN(@OrderBy) < 1)
+                    BEGIN
+                        -- default order by to first column
+                        SET @OrderBy = '[ProvinceId]'
+                    END
+    
+                    -- SQL Server 2005 Paging
+                    DECLARE @SQL AS nvarchar(MAX)
+                    SET @SQL = 'WITH PageIndex AS ('
+                    SET @SQL = @SQL + ' SELECT'
+                    IF @PageSize > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' TOP ' + CONVERT(nvarchar, @PageUpperBound)
+                    END
+                    SET @SQL = @SQL + ' ROW_NUMBER() OVER (ORDER BY ' + @OrderBy + ') as RowIndex'
+                    SET @SQL = @SQL + ', [ProvinceId]'
+                    SET @SQL = @SQL + ', [ProvinceName]'
+                    SET @SQL = @SQL + ', [TownId]'
+                    SET @SQL = @SQL + ', [TownName]'
+                    SET @SQL = @SQL + ' FROM [dbo].[TownView]'
+                    IF LEN(@WhereClause) > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' WHERE ' + @WhereClause
+                    END
+                    SET @SQL = @SQL + ' ) SELECT'
+                    SET @SQL = @SQL + ' [ProvinceId],'
+                    SET @SQL = @SQL + ' [ProvinceName],'
+                    SET @SQL = @SQL + ' [TownId],'
+                    SET @SQL = @SQL + ' [TownName]'
+                    SET @SQL = @SQL + ' FROM PageIndex'
+                    SET @SQL = @SQL + ' WHERE RowIndex > ' + CONVERT(nvarchar, @PageLowerBound)
+                    IF @PageSize > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' AND RowIndex <= ' + CONVERT(nvarchar, @PageUpperBound)
+                    END
+                    IF LEN(@OrderBy) > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' ORDER BY ' + @OrderBy
+                    END
+                    EXEC sp_executesql @SQL
+    
+                    -- get row count
+                    SET @SQL = 'SELECT COUNT(*) AS TotalRowCount'
+                    SET @SQL = @SQL + ' FROM [dbo].[TownView]'
+                    IF LEN(@WhereClause) > 0
+                    BEGIN
+                        SET @SQL = @SQL + ' WHERE ' + @WhereClause
+                    END
+                    EXEC sp_executesql @SQL
+                    
+                    END
+                ]]></body>
+            </procedure>
+            
+            
+            <procedure owner="dbo" name="sp_TownView_Find_Dynamic"  skip="true">
+                <comment><![CDATA[/*
+----------------------------------------------------------------------------------------------------
+-- Date Created: 3 Şubat 2019 Pazar
+
+-- Created By:  ()
+-- Purpose: Gets records from the TownView table using a dynamically generated query.
+----------------------------------------------------------------------------------------------------
+*/
+]]></comment>
+                <parameters/>
+                <body><![CDATA[
+                    
+                    BEGIN
+                    
+                    WITH PageIndex AS (
+                        SELECT TOP {3} row_number() OVER (ORDER BY {1}) AS RowIndex
+                        , [ProvinceId]
+                        , [ProvinceName]
+                        , [TownId]
+                        , [TownName]
+                        FROM [dbo].[TownView] {0}
+                    )
+                    SELECT
+                        [ProvinceId],
+                        [ProvinceName],
+                        [TownId],
+                        [TownName]
+                    FROM PageIndex
+                    WHERE RowIndex > {2}
+                    AND RowIndex <= {3}
+                    ORDER BY {1};
+                    
+                    -- get total count
+                    SELECT COUNT(*) AS TotalRowCount FROM [dbo].[TownView] {0};
                     
                     END
                 ]]></body>

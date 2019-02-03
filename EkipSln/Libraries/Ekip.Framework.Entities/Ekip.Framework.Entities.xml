@@ -4,6 +4,269 @@
         <name>Ekip.Framework.Entities</name>
     </assembly>
     <members>
+        <member name="T:Ekip.Framework.Entities.NeighborhoodView">
+            <summary>
+             An object representation of the 'NeighborhoodView' view. [No description found in the database]	
+            </summary>
+             <remarks>
+             This file is generated once and will never be overwritten.
+             </remarks>	
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodView.#ctor">
+            <summary>
+             Creates a new <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> instance.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Entities.NeighborhoodViewBase">
+            <summary>
+             An object representation of the 'NeighborhoodView' view. [No description found in the database]	
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewBase._townId">
+            <summary>
+            TownId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewBase._townName">
+            <summary>
+            TownName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewBase._neighborhoodId">
+            <summary>
+            NeighborhoodId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewBase._neighborhoodName">
+            <summary>
+            NeighborhoodName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewBase._tag">
+            <summary>
+            Object that contains data to associate with this object
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewBase.suppressEntityEvents">
+            <summary>
+            Suppresses Entity Events from Firing, 
+            useful when loading the entities from the database.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.#ctor">
+            <summary>
+             Creates a new <see cref="T:Ekip.Framework.Entities.NeighborhoodViewBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.#ctor(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+             Creates a new <see cref="T:Ekip.Framework.Entities.NeighborhoodViewBase"/> instance.
+            </summary>
+            <param name="_townId"></param>
+            <param name="_townName"></param>
+            <param name="_neighborhoodId"></param>
+            <param name="_neighborhoodName"></param>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.CreateNeighborhoodView(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+             A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.NeighborhoodView"/> instance.
+            </summary>
+            <param name="_townId"></param>
+            <param name="_townName"></param>
+            <param name="_neighborhoodId"></param>
+            <param name="_neighborhoodName"></param>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.TownId">
+            <summary>
+            	Gets or Sets the TownId property. 
+            	
+            </summary>
+            <value>This type is int</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.TownName">
+            <summary>
+            	Gets or Sets the TownName property. 
+            	
+            </summary>
+            <value>This type is nvarchar</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">If you attempt to set to null.</exception>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.NeighborhoodId">
+            <summary>
+            	Gets or Sets the NeighborhoodId property. 
+            	
+            </summary>
+            <value>This type is int</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.NeighborhoodName">
+            <summary>
+            	Gets or Sets the NeighborhoodName property. 
+            	
+            </summary>
+            <value>This type is nvarchar</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">If you attempt to set to null.</exception>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.Tag">
+            <summary>
+                Gets or sets the object that contains supplemental data about this object.
+            </summary>
+            <value>Object</value>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.SuppressEntityEvents">
+            <summary>
+            Determines whether this entity is to suppress events while set to true.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.IsDeleted">
+            <summary>
+            Gets a value indicating if object has been <see cref="M:Ekip.Framework.Entities.NeighborhoodViewBase.MarkToDelete"/>. ReadOnly.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.IsDirty">
+             <summary>
+            	Gets a value indicating  if the object has been modified from its original state.
+             </summary>
+            <value>True if object has been modified from its original state; otherwise False;</value>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.IsNew">
+             <summary>
+            	Gets a value indicating if the object is new.
+             </summary>
+            <value>True if objectis new; otherwise False;</value>
+        </member>
+        <member name="P:Ekip.Framework.Entities.NeighborhoodViewBase.ViewName">
+            <summary>
+            	The name of the underlying database table.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.AcceptChanges">
+            <summary>
+            Accepts the changes made to this object by setting each flags to false.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.CancelChanges">
+            <summary>
+              Revert all changes and restore original values.
+              Currently not supported.
+            </summary>
+             <exception cref="T:System.NotSupportedException">This method is not currently supported and always throws this exception.</exception>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.MarkToDelete">
+            <summary>
+               Marks entity to be deleted.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.Copy">
+            <summary>
+              Returns a Typed NeighborhoodViewBase Entity 
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.Clone">
+            <summary>
+             ICloneable.Clone() Member, returns the Deep Copy of this entity.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.MakeCopyOf(System.Object)">
+            <summary>
+             Returns a deep copy of the child collection object passed in.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.Equals(Ekip.Framework.Entities.NeighborhoodViewBase)">
+            <summary>
+             Returns a value indicating whether this instance is equal to a specified object.
+            </summary>
+            <param name="toObject">An object to compare to this instance.</param>
+            <returns>true if toObject is a <see cref="T:Ekip.Framework.Entities.NeighborhoodViewBase"/> and has the same value as this instance; otherwise, false.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.Equals(Ekip.Framework.Entities.NeighborhoodViewBase,Ekip.Framework.Entities.NeighborhoodViewBase)">
+            <summary>
+             Determines whether the specified <see cref="T:Ekip.Framework.Entities.NeighborhoodViewBase"/> instances are considered equal.
+            </summary>
+            <param name="Object1">The first <see cref="T:Ekip.Framework.Entities.NeighborhoodViewBase"/> to compare.</param>
+            <param name="Object2">The second <see cref="T:Ekip.Framework.Entities.NeighborhoodViewBase"/> to compare. </param>
+            <returns>true if Object1 is the same instance as Object2 or if both are null references or if objA.Equals(objB) returns true; otherwise, false.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.CompareTo(System.Object)">
+            <summary>
+             Compares this instance to a specified object and returns an indication of their relative values.
+            <param name="obj">An object to compare to this instance, or a null reference (Nothing in Visual Basic).</param>
+            </summary>
+            <returns>A signed integer that indicates the relative order of this instance and obj.</returns>
+        </member>
+        <member name="E:Ekip.Framework.Entities.NeighborhoodViewBase.PropertyChanged">
+            <summary>
+            Event to indicate that a property has changed.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property is changed
+            </summary>
+            <param name="propertyName">The name of the property that has changed.</param>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when a property is changed
+            </summary>
+            <param name="e">PropertyChangedEventArgs</param>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.GetPropertyValueByName(Ekip.Framework.Entities.NeighborhoodView,System.String)">
+            <summary>
+            Gets the property value by name.
+            </summary>
+            <param name="entity">The entity.</param>
+            <param name="propertyName">Name of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.GetPropertyValueByName(System.String)">
+            <summary>
+            Gets the property value by name.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.NeighborhoodViewBase.ToString">
+            <summary>
+             Returns a String that represents the current object.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Entities.NeighborhoodViewColumn">
+            <summary>
+            Enumerate the NeighborhoodView columns.
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewColumn.TownId">
+            <summary>
+            TownId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewColumn.TownName">
+            <summary>
+            TownName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewColumn.NeighborhoodId">
+            <summary>
+            NeighborhoodId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.NeighborhoodViewColumn.NeighborhoodName">
+            <summary>
+            NeighborhoodName : 
+            </summary>
+        </member>
         <member name="T:Ekip.Framework.Entities.ProvinceView">
             <summary>
              An object representation of the 'ProvinceView' view. [No description found in the database]	
@@ -648,6 +911,555 @@
         <member name="F:Ekip.Framework.Entities.ProvinceViewColumn.AreaName">
             <summary>
             AreaName : 
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Entities.StreetView">
+            <summary>
+             An object representation of the 'StreetView' view. [No description found in the database]	
+            </summary>
+             <remarks>
+             This file is generated once and will never be overwritten.
+             </remarks>	
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetView.#ctor">
+            <summary>
+             Creates a new <see cref="T:Ekip.Framework.Entities.StreetView"/> instance.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Entities.StreetViewBase">
+            <summary>
+             An object representation of the 'StreetView' view. [No description found in the database]	
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewBase._neighborhoodId">
+            <summary>
+            NeighborhoodId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewBase._neighborhoodName">
+            <summary>
+            NeighborhoodName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewBase._streetId">
+            <summary>
+            StreetId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewBase._streetName">
+            <summary>
+            StreetName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewBase._zipCode">
+            <summary>
+            ZipCode : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewBase._tag">
+            <summary>
+            Object that contains data to associate with this object
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewBase.suppressEntityEvents">
+            <summary>
+            Suppresses Entity Events from Firing, 
+            useful when loading the entities from the database.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.#ctor">
+            <summary>
+             Creates a new <see cref="T:Ekip.Framework.Entities.StreetViewBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.#ctor(System.Int32,System.String,System.Int32,System.String,System.String)">
+            <summary>
+             Creates a new <see cref="T:Ekip.Framework.Entities.StreetViewBase"/> instance.
+            </summary>
+            <param name="_neighborhoodId"></param>
+            <param name="_neighborhoodName"></param>
+            <param name="_streetId"></param>
+            <param name="_streetName"></param>
+            <param name="_zipCode"></param>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.CreateStreetView(System.Int32,System.String,System.Int32,System.String,System.String)">
+            <summary>
+             A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.StreetView"/> instance.
+            </summary>
+            <param name="_neighborhoodId"></param>
+            <param name="_neighborhoodName"></param>
+            <param name="_streetId"></param>
+            <param name="_streetName"></param>
+            <param name="_zipCode"></param>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.NeighborhoodId">
+            <summary>
+            	Gets or Sets the NeighborhoodId property. 
+            	
+            </summary>
+            <value>This type is int</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.NeighborhoodName">
+            <summary>
+            	Gets or Sets the NeighborhoodName property. 
+            	
+            </summary>
+            <value>This type is nvarchar</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">If you attempt to set to null.</exception>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.StreetId">
+            <summary>
+            	Gets or Sets the StreetId property. 
+            	
+            </summary>
+            <value>This type is int</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.StreetName">
+            <summary>
+            	Gets or Sets the StreetName property. 
+            	
+            </summary>
+            <value>This type is nvarchar</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">If you attempt to set to null.</exception>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.ZipCode">
+            <summary>
+            	Gets or Sets the ZipCode property. 
+            	
+            </summary>
+            <value>This type is varchar</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">If you attempt to set to null.</exception>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.Tag">
+            <summary>
+                Gets or sets the object that contains supplemental data about this object.
+            </summary>
+            <value>Object</value>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.SuppressEntityEvents">
+            <summary>
+            Determines whether this entity is to suppress events while set to true.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.IsDeleted">
+            <summary>
+            Gets a value indicating if object has been <see cref="M:Ekip.Framework.Entities.StreetViewBase.MarkToDelete"/>. ReadOnly.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.IsDirty">
+             <summary>
+            	Gets a value indicating  if the object has been modified from its original state.
+             </summary>
+            <value>True if object has been modified from its original state; otherwise False;</value>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.IsNew">
+             <summary>
+            	Gets a value indicating if the object is new.
+             </summary>
+            <value>True if objectis new; otherwise False;</value>
+        </member>
+        <member name="P:Ekip.Framework.Entities.StreetViewBase.ViewName">
+            <summary>
+            	The name of the underlying database table.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.AcceptChanges">
+            <summary>
+            Accepts the changes made to this object by setting each flags to false.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.CancelChanges">
+            <summary>
+              Revert all changes and restore original values.
+              Currently not supported.
+            </summary>
+             <exception cref="T:System.NotSupportedException">This method is not currently supported and always throws this exception.</exception>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.MarkToDelete">
+            <summary>
+               Marks entity to be deleted.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.Copy">
+            <summary>
+              Returns a Typed StreetViewBase Entity 
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.Clone">
+            <summary>
+             ICloneable.Clone() Member, returns the Deep Copy of this entity.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.MakeCopyOf(System.Object)">
+            <summary>
+             Returns a deep copy of the child collection object passed in.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.Equals(Ekip.Framework.Entities.StreetViewBase)">
+            <summary>
+             Returns a value indicating whether this instance is equal to a specified object.
+            </summary>
+            <param name="toObject">An object to compare to this instance.</param>
+            <returns>true if toObject is a <see cref="T:Ekip.Framework.Entities.StreetViewBase"/> and has the same value as this instance; otherwise, false.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.Equals(Ekip.Framework.Entities.StreetViewBase,Ekip.Framework.Entities.StreetViewBase)">
+            <summary>
+             Determines whether the specified <see cref="T:Ekip.Framework.Entities.StreetViewBase"/> instances are considered equal.
+            </summary>
+            <param name="Object1">The first <see cref="T:Ekip.Framework.Entities.StreetViewBase"/> to compare.</param>
+            <param name="Object2">The second <see cref="T:Ekip.Framework.Entities.StreetViewBase"/> to compare. </param>
+            <returns>true if Object1 is the same instance as Object2 or if both are null references or if objA.Equals(objB) returns true; otherwise, false.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.CompareTo(System.Object)">
+            <summary>
+             Compares this instance to a specified object and returns an indication of their relative values.
+            <param name="obj">An object to compare to this instance, or a null reference (Nothing in Visual Basic).</param>
+            </summary>
+            <returns>A signed integer that indicates the relative order of this instance and obj.</returns>
+        </member>
+        <member name="E:Ekip.Framework.Entities.StreetViewBase.PropertyChanged">
+            <summary>
+            Event to indicate that a property has changed.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property is changed
+            </summary>
+            <param name="propertyName">The name of the property that has changed.</param>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when a property is changed
+            </summary>
+            <param name="e">PropertyChangedEventArgs</param>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.GetPropertyValueByName(Ekip.Framework.Entities.StreetView,System.String)">
+            <summary>
+            Gets the property value by name.
+            </summary>
+            <param name="entity">The entity.</param>
+            <param name="propertyName">Name of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.GetPropertyValueByName(System.String)">
+            <summary>
+            Gets the property value by name.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.StreetViewBase.ToString">
+            <summary>
+             Returns a String that represents the current object.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Entities.StreetViewColumn">
+            <summary>
+            Enumerate the StreetView columns.
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewColumn.NeighborhoodId">
+            <summary>
+            NeighborhoodId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewColumn.NeighborhoodName">
+            <summary>
+            NeighborhoodName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewColumn.StreetId">
+            <summary>
+            StreetId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewColumn.StreetName">
+            <summary>
+            StreetName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.StreetViewColumn.ZipCode">
+            <summary>
+            ZipCode : 
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Entities.TownView">
+            <summary>
+             An object representation of the 'TownView' view. [No description found in the database]	
+            </summary>
+             <remarks>
+             This file is generated once and will never be overwritten.
+             </remarks>	
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownView.#ctor">
+            <summary>
+             Creates a new <see cref="T:Ekip.Framework.Entities.TownView"/> instance.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Entities.TownViewBase">
+            <summary>
+             An object representation of the 'TownView' view. [No description found in the database]	
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewBase._provinceId">
+            <summary>
+            ProvinceId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewBase._provinceName">
+            <summary>
+            ProvinceName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewBase._townId">
+            <summary>
+            TownId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewBase._townName">
+            <summary>
+            TownName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewBase._tag">
+            <summary>
+            Object that contains data to associate with this object
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewBase.suppressEntityEvents">
+            <summary>
+            Suppresses Entity Events from Firing, 
+            useful when loading the entities from the database.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.#ctor">
+            <summary>
+             Creates a new <see cref="T:Ekip.Framework.Entities.TownViewBase"/> instance.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.#ctor(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+             Creates a new <see cref="T:Ekip.Framework.Entities.TownViewBase"/> instance.
+            </summary>
+            <param name="_provinceId"></param>
+            <param name="_provinceName"></param>
+            <param name="_townId"></param>
+            <param name="_townName"></param>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.CreateTownView(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+             A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.TownView"/> instance.
+            </summary>
+            <param name="_provinceId"></param>
+            <param name="_provinceName"></param>
+            <param name="_townId"></param>
+            <param name="_townName"></param>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.ProvinceId">
+            <summary>
+            	Gets or Sets the ProvinceId property. 
+            	
+            </summary>
+            <value>This type is int</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.ProvinceName">
+            <summary>
+            	Gets or Sets the ProvinceName property. 
+            	
+            </summary>
+            <value>This type is nvarchar</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">If you attempt to set to null.</exception>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.TownId">
+            <summary>
+            	Gets or Sets the TownId property. 
+            	
+            </summary>
+            <value>This type is int</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.TownName">
+            <summary>
+            	Gets or Sets the TownName property. 
+            	
+            </summary>
+            <value>This type is nvarchar</value>
+            <remarks>
+            This property can not be set to null. 
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">If you attempt to set to null.</exception>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.Tag">
+            <summary>
+                Gets or sets the object that contains supplemental data about this object.
+            </summary>
+            <value>Object</value>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.SuppressEntityEvents">
+            <summary>
+            Determines whether this entity is to suppress events while set to true.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.IsDeleted">
+            <summary>
+            Gets a value indicating if object has been <see cref="M:Ekip.Framework.Entities.TownViewBase.MarkToDelete"/>. ReadOnly.
+            </summary>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.IsDirty">
+             <summary>
+            	Gets a value indicating  if the object has been modified from its original state.
+             </summary>
+            <value>True if object has been modified from its original state; otherwise False;</value>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.IsNew">
+             <summary>
+            	Gets a value indicating if the object is new.
+             </summary>
+            <value>True if objectis new; otherwise False;</value>
+        </member>
+        <member name="P:Ekip.Framework.Entities.TownViewBase.ViewName">
+            <summary>
+            	The name of the underlying database table.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.AcceptChanges">
+            <summary>
+            Accepts the changes made to this object by setting each flags to false.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.CancelChanges">
+            <summary>
+              Revert all changes and restore original values.
+              Currently not supported.
+            </summary>
+             <exception cref="T:System.NotSupportedException">This method is not currently supported and always throws this exception.</exception>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.MarkToDelete">
+            <summary>
+               Marks entity to be deleted.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.Copy">
+            <summary>
+              Returns a Typed TownViewBase Entity 
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.Clone">
+            <summary>
+             ICloneable.Clone() Member, returns the Deep Copy of this entity.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.MakeCopyOf(System.Object)">
+            <summary>
+             Returns a deep copy of the child collection object passed in.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.Equals(Ekip.Framework.Entities.TownViewBase)">
+            <summary>
+             Returns a value indicating whether this instance is equal to a specified object.
+            </summary>
+            <param name="toObject">An object to compare to this instance.</param>
+            <returns>true if toObject is a <see cref="T:Ekip.Framework.Entities.TownViewBase"/> and has the same value as this instance; otherwise, false.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.Equals(Ekip.Framework.Entities.TownViewBase,Ekip.Framework.Entities.TownViewBase)">
+            <summary>
+             Determines whether the specified <see cref="T:Ekip.Framework.Entities.TownViewBase"/> instances are considered equal.
+            </summary>
+            <param name="Object1">The first <see cref="T:Ekip.Framework.Entities.TownViewBase"/> to compare.</param>
+            <param name="Object2">The second <see cref="T:Ekip.Framework.Entities.TownViewBase"/> to compare. </param>
+            <returns>true if Object1 is the same instance as Object2 or if both are null references or if objA.Equals(objB) returns true; otherwise, false.</returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.CompareTo(System.Object)">
+            <summary>
+             Compares this instance to a specified object and returns an indication of their relative values.
+            <param name="obj">An object to compare to this instance, or a null reference (Nothing in Visual Basic).</param>
+            </summary>
+            <returns>A signed integer that indicates the relative order of this instance and obj.</returns>
+        </member>
+        <member name="E:Ekip.Framework.Entities.TownViewBase.PropertyChanged">
+            <summary>
+            Event to indicate that a property has changed.
+            </summary>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property is changed
+            </summary>
+            <param name="propertyName">The name of the property that has changed.</param>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when a property is changed
+            </summary>
+            <param name="e">PropertyChangedEventArgs</param>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.GetPropertyValueByName(Ekip.Framework.Entities.TownView,System.String)">
+            <summary>
+            Gets the property value by name.
+            </summary>
+            <param name="entity">The entity.</param>
+            <param name="propertyName">Name of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.GetPropertyValueByName(System.String)">
+            <summary>
+            Gets the property value by name.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ekip.Framework.Entities.TownViewBase.ToString">
+            <summary>
+             Returns a String that represents the current object.
+            </summary>
+        </member>
+        <member name="T:Ekip.Framework.Entities.TownViewColumn">
+            <summary>
+            Enumerate the TownView columns.
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewColumn.ProvinceId">
+            <summary>
+            ProvinceId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewColumn.ProvinceName">
+            <summary>
+            ProvinceName : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewColumn.TownId">
+            <summary>
+            TownId : 
+            </summary>
+        </member>
+        <member name="F:Ekip.Framework.Entities.TownViewColumn.TownName">
+            <summary>
+            TownName : 
             </summary>
         </member>
         <member name="T:Ekip.Framework.Entities.Advisor">
@@ -18242,7 +19054,7 @@
              Creates a new <see cref="T:Ekip.Framework.Entities.ClientBase"/> instance.
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Entities.ClientBase.#ctor(System.Int32,System.DateTime,System.Int32,System.Int32,System.DateTime,System.Nullable{System.Int32},System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Byte,System.Byte,System.String,System.Int32,System.Byte,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Entities.ClientBase.#ctor(System.Int32,System.DateTime,System.Int32,System.Int32,System.DateTime,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Byte,System.Byte,System.String,System.Int32,System.Byte,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
             <summary>
              Creates a new <see cref="T:Ekip.Framework.Entities.ClientBase"/> instance.
             </summary>
@@ -18272,7 +19084,7 @@
             <param name="_active"></param>
             <param name="_deleted"></param>
         </member>
-        <member name="M:Ekip.Framework.Entities.ClientBase.CreateClient(System.Int32,System.DateTime,System.Int32,System.Int32,System.DateTime,System.Nullable{System.Int32},System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Byte,System.Byte,System.String,System.Int32,System.Byte,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Entities.ClientBase.CreateClient(System.Int32,System.DateTime,System.Int32,System.Int32,System.DateTime,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Byte,System.Byte,System.String,System.Int32,System.Byte,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
             <summary>
              A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.Client"/> instance.
             </summary>
@@ -18369,9 +19181,7 @@
             </summary>
             <value>This type is int.</value>
             <remarks>
-            This property can be set to null. 
-            If this column is null it is up to the developer to check using the HasValue property
-            and perform business logic appropriately.
+            This property can not be set to null. 
             </remarks>
         </member>
         <member name="P:Ekip.Framework.Entities.ClientBase.FullName">

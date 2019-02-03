@@ -849,6 +849,23 @@ namespace Ekip.Framework.Data
 		#endregion
 		
 		
+		#region NeighborhoodViewProvider
+		
+		///<summary>
+		/// Gets the current instance of the Data Access Logic Component for the <see cref="NeighborhoodView"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		public static NeighborhoodViewProviderBase NeighborhoodViewProvider
+		{
+			get 
+			{
+				LoadProviders();
+				return _provider.NeighborhoodViewProvider;
+			}
+		}
+		
+		#endregion
+		
 		#region ProvinceViewProvider
 		
 		///<summary>
@@ -861,6 +878,40 @@ namespace Ekip.Framework.Data
 			{
 				LoadProviders();
 				return _provider.ProvinceViewProvider;
+			}
+		}
+		
+		#endregion
+		
+		#region StreetViewProvider
+		
+		///<summary>
+		/// Gets the current instance of the Data Access Logic Component for the <see cref="StreetView"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		public static StreetViewProviderBase StreetViewProvider
+		{
+			get 
+			{
+				LoadProviders();
+				return _provider.StreetViewProvider;
+			}
+		}
+		
+		#endregion
+		
+		#region TownViewProvider
+		
+		///<summary>
+		/// Gets the current instance of the Data Access Logic Component for the <see cref="TownView"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		public static TownViewProviderBase TownViewProvider
+		{
+			get 
+			{
+				LoadProviders();
+				return _provider.TownViewProvider;
 			}
 		}
 		
@@ -3047,6 +3098,74 @@ namespace Ekip.Framework.Data
 
 	#endregion WiscrQuery
 		
+	#region NeighborhoodViewFilters
+	
+	/// <summary>
+	/// A strongly-typed instance of the <see cref="SqlFilterBuilder&lt;EntityColumn&gt;"/> class
+	/// that is used exclusively with a <see cref="NeighborhoodView"/> object.
+	/// </summary>
+	[CLSCompliant(true)]
+	public class NeighborhoodViewFilters : NeighborhoodViewFilterBuilder
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Initializes a new instance of the NeighborhoodViewFilters class.
+		/// </summary>
+		public NeighborhoodViewFilters() : base() { }
+
+		/// <summary>
+		/// Initializes a new instance of the NeighborhoodViewFilters class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		public NeighborhoodViewFilters(bool ignoreCase) : base(ignoreCase) { }
+
+		/// <summary>
+		/// Initializes a new instance of the NeighborhoodViewFilters class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		/// <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+		public NeighborhoodViewFilters(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
+
+		#endregion Constructors
+	}
+
+	#endregion NeighborhoodViewFilters
+	
+	#region NeighborhoodViewQuery
+	
+	/// <summary>
+	/// A strongly-typed instance of the <see cref="NeighborhoodViewParameterBuilder"/> class
+	/// that is used exclusively with a <see cref="NeighborhoodView"/> object.
+	/// </summary>
+	[CLSCompliant(true)]
+	public class NeighborhoodViewQuery : NeighborhoodViewParameterBuilder
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Initializes a new instance of the NeighborhoodViewQuery class.
+		/// </summary>
+		public NeighborhoodViewQuery() : base() { }
+
+		/// <summary>
+		/// Initializes a new instance of the NeighborhoodViewQuery class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		public NeighborhoodViewQuery(bool ignoreCase) : base(ignoreCase) { }
+
+		/// <summary>
+		/// Initializes a new instance of the NeighborhoodViewQuery class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		/// <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+		public NeighborhoodViewQuery(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
+
+		#endregion Constructors
+	}
+
+	#endregion NeighborhoodViewQuery
+		
 	#region ProvinceViewFilters
 	
 	/// <summary>
@@ -3114,6 +3233,142 @@ namespace Ekip.Framework.Data
 	}
 
 	#endregion ProvinceViewQuery
+		
+	#region StreetViewFilters
+	
+	/// <summary>
+	/// A strongly-typed instance of the <see cref="SqlFilterBuilder&lt;EntityColumn&gt;"/> class
+	/// that is used exclusively with a <see cref="StreetView"/> object.
+	/// </summary>
+	[CLSCompliant(true)]
+	public class StreetViewFilters : StreetViewFilterBuilder
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Initializes a new instance of the StreetViewFilters class.
+		/// </summary>
+		public StreetViewFilters() : base() { }
+
+		/// <summary>
+		/// Initializes a new instance of the StreetViewFilters class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		public StreetViewFilters(bool ignoreCase) : base(ignoreCase) { }
+
+		/// <summary>
+		/// Initializes a new instance of the StreetViewFilters class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		/// <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+		public StreetViewFilters(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
+
+		#endregion Constructors
+	}
+
+	#endregion StreetViewFilters
+	
+	#region StreetViewQuery
+	
+	/// <summary>
+	/// A strongly-typed instance of the <see cref="StreetViewParameterBuilder"/> class
+	/// that is used exclusively with a <see cref="StreetView"/> object.
+	/// </summary>
+	[CLSCompliant(true)]
+	public class StreetViewQuery : StreetViewParameterBuilder
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Initializes a new instance of the StreetViewQuery class.
+		/// </summary>
+		public StreetViewQuery() : base() { }
+
+		/// <summary>
+		/// Initializes a new instance of the StreetViewQuery class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		public StreetViewQuery(bool ignoreCase) : base(ignoreCase) { }
+
+		/// <summary>
+		/// Initializes a new instance of the StreetViewQuery class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		/// <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+		public StreetViewQuery(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
+
+		#endregion Constructors
+	}
+
+	#endregion StreetViewQuery
+		
+	#region TownViewFilters
+	
+	/// <summary>
+	/// A strongly-typed instance of the <see cref="SqlFilterBuilder&lt;EntityColumn&gt;"/> class
+	/// that is used exclusively with a <see cref="TownView"/> object.
+	/// </summary>
+	[CLSCompliant(true)]
+	public class TownViewFilters : TownViewFilterBuilder
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Initializes a new instance of the TownViewFilters class.
+		/// </summary>
+		public TownViewFilters() : base() { }
+
+		/// <summary>
+		/// Initializes a new instance of the TownViewFilters class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		public TownViewFilters(bool ignoreCase) : base(ignoreCase) { }
+
+		/// <summary>
+		/// Initializes a new instance of the TownViewFilters class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		/// <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+		public TownViewFilters(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
+
+		#endregion Constructors
+	}
+
+	#endregion TownViewFilters
+	
+	#region TownViewQuery
+	
+	/// <summary>
+	/// A strongly-typed instance of the <see cref="TownViewParameterBuilder"/> class
+	/// that is used exclusively with a <see cref="TownView"/> object.
+	/// </summary>
+	[CLSCompliant(true)]
+	public class TownViewQuery : TownViewParameterBuilder
+	{
+		#region Constructors
+
+		/// <summary>
+		/// Initializes a new instance of the TownViewQuery class.
+		/// </summary>
+		public TownViewQuery() : base() { }
+
+		/// <summary>
+		/// Initializes a new instance of the TownViewQuery class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		public TownViewQuery(bool ignoreCase) : base(ignoreCase) { }
+
+		/// <summary>
+		/// Initializes a new instance of the TownViewQuery class.
+		/// </summary>
+		/// <param name="ignoreCase">Specifies whether to create case-insensitive statements.</param>
+		/// <param name="useAnd">Specifies whether to combine statements using AND or OR.</param>
+		public TownViewQuery(bool ignoreCase, bool useAnd) : base(ignoreCase, useAnd) { }
+
+		#endregion Constructors
+	}
+
+	#endregion TownViewQuery
 	#endregion
 
 	

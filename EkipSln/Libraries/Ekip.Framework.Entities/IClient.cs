@@ -47,7 +47,7 @@ namespace Ekip.Framework.Entities
 		/// <summary>
 		/// CalendarAgeId : 
 		/// </summary>
-		System.Int32?  CalendarAgeId  { get; set; }
+		System.Int32  CalendarAgeId  { get; set; }
 		
 		/// <summary>
 		/// FullName : 
