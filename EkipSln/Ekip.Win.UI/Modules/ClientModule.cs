@@ -51,8 +51,8 @@ namespace Ekip.Win.UI.Modules
             lkFamilyStatus.BindEnum(typeof(FamilyStatus));
             lkAddressTitle.BindEnum(typeof(AddressTitles));
 
-            var calendarAgeSource = DataRepository.CalendarAgeProvider.GetAll();
-            lkCalendarAge.BindEnumarable<CalendarAge>(calendarAgeSource, "AgeDescription", "CalendarAgeId");
+            //var calendarAgeSource = DataRepository.CalendarAgeProvider.GetAll();
+            //lkCalendarAge.BindEnumarable<CalendarAge>(calendarAgeSource, "AgeDescription", "CalendarAgeId");
 
             VList<ProvinceView> provinces = DataRepository.ProvinceViewProvider.Get(whereClause: null, orderBy: "RowNumber ASC");
             lkProvince.Properties.DataSource = provinces;
