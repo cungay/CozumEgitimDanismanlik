@@ -78,7 +78,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Advisor table
@@ -129,7 +129,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Advisor table passing page index and page count parameters
@@ -245,7 +245,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Advisor table
@@ -339,7 +339,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Advisor table
@@ -419,7 +419,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Advisor table
@@ -458,7 +458,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Advisor table through an index
@@ -513,7 +513,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Advisor table passing nullable parameters
@@ -643,7 +643,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the SeanceQuestion table
@@ -686,7 +686,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceQuestion table passing page index and page count parameters
@@ -786,7 +786,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the SeanceQuestion table
@@ -848,7 +848,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the SeanceQuestion table
@@ -904,7 +904,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the SeanceQuestion table
@@ -943,7 +943,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestion table through an index
@@ -990,7 +990,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the SeanceQuestion table passing nullable parameters
@@ -1072,7 +1072,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Seance table
@@ -1123,7 +1123,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Seance table passing page index and page count parameters
@@ -1239,7 +1239,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Seance table
@@ -1333,7 +1333,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Seance table
@@ -1413,7 +1413,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Seance table
@@ -1452,7 +1452,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Seance table through a foreign key
@@ -1510,7 +1510,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Seance table through an index
@@ -1565,7 +1565,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Seance table passing nullable parameters
@@ -1695,7 +1695,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the School table
@@ -1750,7 +1750,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the School table passing page index and page count parameters
@@ -1874,7 +1874,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the School table
@@ -1984,7 +1984,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the School table
@@ -2076,7 +2076,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the School table
@@ -2115,7 +2115,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the School table through an index
@@ -2174,7 +2174,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the School table passing nullable parameters
@@ -2328,7 +2328,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Reason table
@@ -2375,7 +2375,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Reason table passing page index and page count parameters
@@ -2483,7 +2483,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Reason table
@@ -2561,7 +2561,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Reason table
@@ -2629,7 +2629,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Reason table
@@ -2668,7 +2668,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Reason table through an index
@@ -2719,7 +2719,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Reason table through an index
@@ -2770,7 +2770,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Reason table passing nullable parameters
@@ -2876,7 +2876,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the QuestionFormGroup table
@@ -2923,7 +2923,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionFormGroup table passing page index and page count parameters
@@ -3031,7 +3031,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the QuestionFormGroup table
@@ -3109,7 +3109,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the QuestionFormGroup table
@@ -3177,7 +3177,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the QuestionFormGroup table
@@ -3216,7 +3216,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormGroup table through an index
@@ -3267,7 +3267,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the QuestionFormGroup table passing nullable parameters
@@ -3373,7 +3373,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the SeanceQuestionOption table
@@ -3414,7 +3414,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceQuestionOption table passing page index and page count parameters
@@ -3510,7 +3510,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the SeanceQuestionOption table
@@ -3564,7 +3564,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the SeanceQuestionOption table
@@ -3614,7 +3614,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the SeanceQuestionOption table
@@ -3653,7 +3653,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionOption table through a foreign key
@@ -3701,7 +3701,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionOption table through an index
@@ -3746,7 +3746,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the SeanceQuestionOption table passing nullable parameters
@@ -3816,7 +3816,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Town table
@@ -3872,7 +3872,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Town table passing page index and page count parameters
@@ -3998,7 +3998,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Town table
@@ -4112,7 +4112,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Town table
@@ -4207,7 +4207,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Town table
@@ -4246,7 +4246,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Town table through an index
@@ -4306,7 +4306,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Town table through an index
@@ -4366,7 +4366,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Town table passing nullable parameters
@@ -4526,7 +4526,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the SeanceReason table
@@ -4567,7 +4567,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceReason table passing page index and page count parameters
@@ -4663,7 +4663,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the SeanceReason table
@@ -4717,7 +4717,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the SeanceReason table
@@ -4767,7 +4767,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the SeanceReason table
@@ -4806,7 +4806,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceReason table through a foreign key
@@ -4854,7 +4854,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceReason table through a foreign key
@@ -4902,7 +4902,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceReason table through an index
@@ -4947,7 +4947,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the SeanceReason table passing nullable parameters
@@ -5017,7 +5017,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Teacher table
@@ -5068,7 +5068,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Teacher table passing page index and page count parameters
@@ -5184,7 +5184,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Teacher table
@@ -5278,7 +5278,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Teacher table
@@ -5358,7 +5358,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Teacher table
@@ -5397,7 +5397,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Teacher table through a foreign key
@@ -5455,7 +5455,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Teacher table through an index
@@ -5510,7 +5510,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Teacher table passing nullable parameters
@@ -5640,7 +5640,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Wippsi table
@@ -5715,7 +5715,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Wippsi table passing page index and page count parameters
@@ -5879,7 +5879,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Wippsi table
@@ -6069,7 +6069,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Wippsi table
@@ -6221,7 +6221,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Wippsi table
@@ -6260,7 +6260,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Wippsi table through an index
@@ -6339,7 +6339,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Wippsi table passing nullable parameters
@@ -6613,7 +6613,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the SeanceQuestionAnswer table
@@ -6657,7 +6657,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the SeanceQuestionAnswer table passing page index and page count parameters
@@ -6759,7 +6759,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the SeanceQuestionAnswer table
@@ -6825,7 +6825,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the SeanceQuestionAnswer table
@@ -6884,7 +6884,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the SeanceQuestionAnswer table
@@ -6923,7 +6923,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionAnswer table through a foreign key
@@ -6974,7 +6974,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionAnswer table through a foreign key
@@ -7025,7 +7025,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionAnswer table through a foreign key
@@ -7076,7 +7076,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the SeanceQuestionAnswer table through an index
@@ -7124,7 +7124,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the SeanceQuestionAnswer table passing nullable parameters
@@ -7212,7 +7212,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Street table
@@ -7267,7 +7267,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Street table passing page index and page count parameters
@@ -7391,7 +7391,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Street table
@@ -7501,7 +7501,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Street table
@@ -7593,7 +7593,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Street table
@@ -7632,7 +7632,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Street table through an index
@@ -7691,7 +7691,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Street table through an index
@@ -7750,7 +7750,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Street table passing nullable parameters
@@ -7904,7 +7904,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the QuestionForm table
@@ -7954,7 +7954,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionForm table passing page index and page count parameters
@@ -8068,7 +8068,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the QuestionForm table
@@ -8158,7 +8158,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the QuestionForm table
@@ -8235,7 +8235,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the QuestionForm table
@@ -8274,7 +8274,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionForm table through a foreign key
@@ -8331,7 +8331,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionForm table through an index
@@ -8385,7 +8385,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the QuestionForm table passing nullable parameters
@@ -8509,7 +8509,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Sibling table
@@ -8559,7 +8559,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Sibling table passing page index and page count parameters
@@ -8673,7 +8673,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Sibling table
@@ -8763,7 +8763,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Sibling table
@@ -8840,7 +8840,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Sibling table
@@ -8879,7 +8879,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Sibling table through a foreign key
@@ -8936,7 +8936,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Sibling table through an index
@@ -8990,7 +8990,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Sibling table passing nullable parameters
@@ -9114,7 +9114,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ClientFather table
@@ -9168,7 +9168,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientFather table passing page index and page count parameters
@@ -9290,7 +9290,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ClientFather table
@@ -9396,7 +9396,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ClientFather table
@@ -9485,7 +9485,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ClientFather table
@@ -9524,7 +9524,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientFather table through an index
@@ -9582,7 +9582,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the ClientFather table passing nullable parameters
@@ -9730,7 +9730,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ClientMother table
@@ -9784,7 +9784,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientMother table passing page index and page count parameters
@@ -9906,7 +9906,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ClientMother table
@@ -10012,7 +10012,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ClientMother table
@@ -10101,7 +10101,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ClientMother table
@@ -10140,7 +10140,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientMother table through an index
@@ -10198,7 +10198,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the ClientMother table passing nullable parameters
@@ -10346,7 +10346,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ClientAddress table
@@ -10400,7 +10400,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientAddress table passing page index and page count parameters
@@ -10522,7 +10522,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ClientAddress table
@@ -10628,7 +10628,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ClientAddress table
@@ -10717,7 +10717,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ClientAddress table
@@ -10756,7 +10756,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientAddress table through an index
@@ -10814,7 +10814,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the ClientAddress table passing nullable parameters
@@ -10962,7 +10962,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Province table
@@ -11020,7 +11020,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Province table passing page index and page count parameters
@@ -11150,7 +11150,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Province table
@@ -11272,7 +11272,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Province table
@@ -11373,7 +11373,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Province table
@@ -11412,7 +11412,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Province table through an index
@@ -11474,7 +11474,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Province table through an index
@@ -11536,7 +11536,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Province table passing nullable parameters
@@ -11708,7 +11708,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the CalendarAge table
@@ -11750,7 +11750,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the CalendarAge table passing page index and page count parameters
@@ -11848,7 +11848,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the CalendarAge table
@@ -11906,7 +11906,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the CalendarAge table
@@ -11959,7 +11959,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the CalendarAge table
@@ -11998,7 +11998,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the CalendarAge table through an index
@@ -12044,7 +12044,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the CalendarAge table passing nullable parameters
@@ -12120,7 +12120,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Client table
@@ -12184,7 +12184,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Client table passing page index and page count parameters
@@ -12326,7 +12326,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Client table
@@ -12472,7 +12472,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Client table
@@ -12591,7 +12591,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Client table
@@ -12630,7 +12630,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through a foreign key
@@ -12701,7 +12701,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through a foreign key
@@ -12772,7 +12772,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through a foreign key
@@ -12843,7 +12843,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through an index
@@ -12911,7 +12911,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Client table through an index
@@ -12979,7 +12979,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Client table passing nullable parameters
@@ -13187,7 +13187,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ClientEducation table
@@ -13237,7 +13237,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the ClientEducation table passing page index and page count parameters
@@ -13351,7 +13351,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ClientEducation table
@@ -13441,7 +13441,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ClientEducation table
@@ -13518,7 +13518,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ClientEducation table
@@ -13557,7 +13557,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientEducation table through a foreign key
@@ -13614,7 +13614,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientEducation table through a foreign key
@@ -13671,7 +13671,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ClientEducation table through an index
@@ -13725,7 +13725,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the ClientEducation table passing nullable parameters
@@ -13849,7 +13849,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Area table
@@ -13895,7 +13895,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Area table passing page index and page count parameters
@@ -14001,7 +14001,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Area table
@@ -14075,7 +14075,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Area table
@@ -14140,7 +14140,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Area table
@@ -14179,7 +14179,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Area table through an index
@@ -14229,7 +14229,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Area table passing nullable parameters
@@ -14329,7 +14329,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Job table
@@ -14376,7 +14376,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Job table passing page index and page count parameters
@@ -14484,7 +14484,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Job table
@@ -14562,7 +14562,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Job table
@@ -14630,7 +14630,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Job table
@@ -14669,7 +14669,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Job table through an index
@@ -14720,7 +14720,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Job table through an index
@@ -14771,7 +14771,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Job table passing nullable parameters
@@ -14877,7 +14877,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Neighborhood table
@@ -14933,7 +14933,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Neighborhood table passing page index and page count parameters
@@ -15059,7 +15059,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Neighborhood table
@@ -15173,7 +15173,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Neighborhood table
@@ -15268,7 +15268,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Neighborhood table
@@ -15307,7 +15307,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Neighborhood table through an index
@@ -15367,7 +15367,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Neighborhood table through an index
@@ -15427,7 +15427,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Neighborhood table passing nullable parameters
@@ -15587,7 +15587,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the QuestionFormOption table
@@ -15634,7 +15634,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionFormOption table passing page index and page count parameters
@@ -15742,7 +15742,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the QuestionFormOption table
@@ -15820,7 +15820,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the QuestionFormOption table
@@ -15888,7 +15888,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the QuestionFormOption table
@@ -15927,7 +15927,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormOption table through a foreign key
@@ -15981,7 +15981,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormOption table through an index
@@ -16032,7 +16032,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the QuestionFormOption table passing nullable parameters
@@ -16138,7 +16138,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the QuestionFormAnswer table
@@ -16187,7 +16187,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the QuestionFormAnswer table passing page index and page count parameters
@@ -16299,7 +16299,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the QuestionFormAnswer table
@@ -16385,7 +16385,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the QuestionFormAnswer table
@@ -16459,7 +16459,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the QuestionFormAnswer table
@@ -16498,7 +16498,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormAnswer table through a foreign key
@@ -16554,7 +16554,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormAnswer table through a foreign key
@@ -16610,7 +16610,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormAnswer table through a foreign key
@@ -16666,7 +16666,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the QuestionFormAnswer table through an index
@@ -16719,7 +16719,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the QuestionFormAnswer table passing nullable parameters
@@ -16837,7 +16837,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ObservationForm_Group table
@@ -16884,7 +16884,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm_Group table passing page index and page count parameters
@@ -16992,7 +16992,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ObservationForm_Group table
@@ -17070,7 +17070,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ObservationForm_Group table
@@ -17138,7 +17138,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ObservationForm_Group table
@@ -17177,7 +17177,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Group table through an index
@@ -17228,7 +17228,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the ObservationForm_Group table passing nullable parameters
@@ -17334,7 +17334,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ObservationForm table
@@ -17382,7 +17382,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm table passing page index and page count parameters
@@ -17492,7 +17492,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ObservationForm table
@@ -17574,7 +17574,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ObservationForm table
@@ -17645,7 +17645,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ObservationForm table
@@ -17684,7 +17684,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm table through a foreign key
@@ -17739,7 +17739,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm table through an index
@@ -17791,7 +17791,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the ObservationForm table passing nullable parameters
@@ -17903,7 +17903,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ObservationForm_Option table
@@ -17950,7 +17950,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm_Option table passing page index and page count parameters
@@ -18058,7 +18058,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ObservationForm_Option table
@@ -18136,7 +18136,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ObservationForm_Option table
@@ -18204,7 +18204,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ObservationForm_Option table
@@ -18243,7 +18243,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Option table through a foreign key
@@ -18297,7 +18297,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Option table through an index
@@ -18348,7 +18348,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the ObservationForm_Option table passing nullable parameters
@@ -18454,7 +18454,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ObservationForm_Answer table
@@ -18503,7 +18503,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the ObservationForm_Answer table passing page index and page count parameters
@@ -18615,7 +18615,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the ObservationForm_Answer table
@@ -18701,7 +18701,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the ObservationForm_Answer table
@@ -18775,7 +18775,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the ObservationForm_Answer table
@@ -18814,7 +18814,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Answer table through a foreign key
@@ -18870,7 +18870,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Answer table through a foreign key
@@ -18926,7 +18926,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Answer table through a foreign key
@@ -18982,7 +18982,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the ObservationForm_Answer table through an index
@@ -19035,7 +19035,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the ObservationForm_Answer table passing nullable parameters
@@ -19153,7 +19153,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the Wiscr table
@@ -19228,7 +19228,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the Wiscr table passing page index and page count parameters
@@ -19392,7 +19392,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Inserts a record into the Wiscr table
@@ -19582,7 +19582,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Updates a record in the Wiscr table
@@ -19734,7 +19734,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Deletes a record in the Wiscr table
@@ -19773,7 +19773,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Select records from the Wiscr table through an index
@@ -19852,7 +19852,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Finds records in the Wiscr table passing nullable parameters
@@ -20126,7 +20126,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the NeighborhoodView view
@@ -20168,7 +20168,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the NeighborhoodView view passing page index and page count parameters
@@ -20270,7 +20270,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the ProvinceView view
@@ -20329,7 +20329,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the ProvinceView view passing page index and page count parameters
@@ -20465,7 +20465,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the StreetView view
@@ -20508,7 +20508,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the StreetView view passing page index and page count parameters
@@ -20612,7 +20612,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets all records from the TownView view
@@ -20654,7 +20654,7 @@ GO
 
 /*
 ----------------------------------------------------------------------------------------------------
--- Date Created: 3 Şubat 2019 Pazar
+-- Date Created: 5 Şubat 2019 Salı
 
 -- Created By:  ()
 -- Purpose: Gets records from the TownView view passing page index and page count parameters

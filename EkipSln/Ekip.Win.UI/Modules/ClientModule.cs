@@ -14,6 +14,7 @@ using Ekip.Framework.UI.XAF;
 using Ekip.Framework.Core.ErrorHandling;
 using DevExpress.XtraEditors.DXErrorProvider;
 using Ekip.Win.Framework.Forms;
+using Ekip.Framework.UI.DevEx.Editors;
 
 namespace Ekip.Win.UI.Modules
 {
@@ -42,12 +43,12 @@ namespace Ekip.Win.UI.Modules
 
             provinceService = new ProvinceService();
             addressService = new ClientAddressService();
-            
+
             motherService = new ClientMotherService();
             fatherService = new ClientFatherService();
 
             lkGender.BindEnum(typeof(Gender));
-            rgBlood.BindEnum(typeof(Blood));
+            lkBlood.BindEnum(typeof(Blood));
             lkFamilyStatus.BindEnum(typeof(FamilyStatus));
             lkAddressTitle.BindEnum(typeof(AddressTitles));
 
@@ -61,14 +62,16 @@ namespace Ekip.Win.UI.Modules
             lkProvince.EditValueChanged += ProvinceChanged;
             lkTown.EditValueChanged += TownChanged;
             lkNeighborhood.EditValueChanged += NeighborhoodChanged;
+            lkStreet.EditValueChanged += StreetChanged;
 
-            //lkProvince.ButtonClick += Province_ButtonClick;
-            //lkTown.ButtonClick += Town_ButtonClick;
-            //lkNeighborhood.ButtonClick += Neighborhood_ButtonClick;
-            //lkStreet.ButtonClick += Street_ButtonClick;
-            //lkAddressTitle.ButtonClick += AddressTitle_ButtonClick;
-
-            Navigate(NavigateAction.Last);
+            lkProvince.ButtonClick += LookUpOnSelectionDelete;
+            lkTown.ButtonClick += LookUpOnSelectionDelete;
+            lkNeighborhood.ButtonClick += LookUpOnSelectionDelete;
+            lkStreet.ButtonClick += LookUpOnSelectionDelete;
+            lkAddressTitle.ButtonClick += LookUpOnSelectionDelete;
+            lkGender.ButtonClick += LookUpOnSelectionDelete;
+            lkBlood.ButtonClick += LookUpOnSelectionDelete;
+            lkFamilyStatus.ButtonClick += LookUpOnSelectionDelete;
 
             //var startTimeSpan = TimeSpan.Zero;
             //var periodTimeSpan = TimeSpan.FromMinutes(5);
@@ -101,6 +104,8 @@ namespace Ekip.Win.UI.Modules
             //deBirthDate.EditValueChanged += BirthDateOnChanged;
             deBirthDate.Validating += BirthDateOnValidating;
             deBirthDate.InvalidValue += BirthDateOnInvalidValue;
+
+            Navigate(NavigateAction.Last);
         }
 
         #endregion
@@ -118,7 +123,7 @@ namespace Ekip.Win.UI.Modules
 
         #endregion
 
-        #region Address Cascade
+        #region Address
 
         private void ProvinceChanged(object sender, EventArgs e)
         {
@@ -141,6 +146,7 @@ namespace Ekip.Win.UI.Modules
                     lkTown.EditValue = null;
                     lkNeighborhood.EditValue = null;
                     edit.EditValue = null;
+                    txtAddressLine.Clear();
                 }
             }
         }
@@ -165,6 +171,7 @@ namespace Ekip.Win.UI.Modules
                     lkNeighborhood.Properties.DataSource = null;
                     edit.EditValue = null;
                     lkNeighborhood.EditValue = null;
+                    txtAddressLine.Clear();
                 }
             }
         }
@@ -178,7 +185,7 @@ namespace Ekip.Win.UI.Modules
                 int neighborhoodId = edit.EditValue.ToInt32();
                 if (neighborhoodId > 0)
                 {
-                    TList<Street> streets = DataRepository.StreetProvider.GetByNeighborhoodId(neighborhoodId);
+                    VList<StreetView> streets = DataRepository.StreetViewProvider.GetByNeighborhoodId(neighborhoodId);
                     lkStreet.Properties.DataSource = streets;
                     lkStreet.Properties.ValueMember = "StreetId";
                     lkStreet.EditValue = null;
@@ -189,49 +196,43 @@ namespace Ekip.Win.UI.Modules
                     lkStreet.Properties.DataSource = null;
                     edit.EditValue = null;
                     lkNeighborhood.EditValue = null;
+                    txtAddressLine.Clear();
+                }
+            }
+        }
+
+        private void StreetChanged(object sender, EventArgs e)
+        {
+            using (new WaitCursor())
+            {
+                var selectedStreet = lkStreet.GetSelectedDataRow();
+                txtAddressLine.Clear();
+                if (selectedStreet != null)
+                {
+                    var street = (StreetView)selectedStreet;
+                    var town = (TownView)lkTown.GetSelectedDataRow();
+                    string address = string.Format("{0} - {1} ", street.StreetName, street.NeighborhoodName);
+                    address += System.Environment.NewLine;
+                    address += string.Format("{0} / {1}", town.ProvinceName, town.TownName);
+                    if (!string.IsNullOrWhiteSpace(street.ZipCode))
+                    {
+                        address += System.Environment.NewLine;
+                        address += string.Format("PK: {0}", street.ZipCode);
+                    }
+                    Program.CurrentClient.AddressIdSource.AddressLine = address;
+                    txtAddressLine.DataBind(Program.CurrentClient.AddressIdSource);
                 }
             }
         }
 
         #region Button Click
 
-        private void AddressTitle_ButtonClick(object sender, ButtonPressedEventArgs e)
+        private void LookUpOnSelectionDelete(object sender, ButtonPressedEventArgs e)
         {
             if (e.Button.Tag != null && e.Button.Tag.ToString() == "Delete")
             {
-                //lkAddressTitle.EditValue = 0;
-            }
-        }
-
-        protected void Province_ButtonClick(object sender, ButtonPressedEventArgs e)
-        {
-            if (e.Button.Tag != null && e.Button.Tag.ToString() == "Delete")
-            {
-                //lkProvince.EditValue = null;
-            }
-        }
-
-        protected void Town_ButtonClick(object sender, ButtonPressedEventArgs e)
-        {
-            if (e.Button.Tag != null && e.Button.Tag.ToString() == "Delete")
-            {
-                //lkTown.EditValue = null;
-            }
-        }
-
-        protected void Neighborhood_ButtonClick(object sender, ButtonPressedEventArgs e)
-        {
-            if (e.Button.Tag != null && e.Button.Tag.ToString() == "Delete")
-            {
-                //lkNeighborhood.EditValue = null;
-            }
-        }
-
-        protected void Street_ButtonClick(object sender, ButtonPressedEventArgs e)
-        {
-            if (e.Button.Tag != null && e.Button.Tag.ToString() == "Delete")
-            {
-                //lkStreet.EditValue = null;
+                var editor = (sender as LookUpEditBase);
+                editor.EditValue = null;
             }
         }
 
@@ -244,12 +245,16 @@ namespace Ekip.Win.UI.Modules
         private void Editor_ToUpper(object sender, EventArgs e)
         {
             var editor = (TextEdit)sender;
+            if (!this.IsHandleCreated)
+                this.CreateControl();
+
             editor.BeginInvoke(new System.Action(() =>
             {
                 var culture = System.Globalization.CultureInfo.CreateSpecificCulture("tr-TR");
                 editor.EditValue = Convert.ToString(editor.EditValue).ToUpper(culture);
                 editor.Select(editor.Text.Length + 1, 0);
             }));
+
         }
 
         #endregion
@@ -387,20 +392,23 @@ namespace Ekip.Win.UI.Modules
             Actions[ActionKeys.Search].EditValue = client.FileNumber;
 
             #region Client
+
             txtFileNumber.DataBind(client);
             deFirstContact.DataBind(client);
             deBirthDate.DataBind(client);
             lkCalendarAge.DataBind(client);
             lkGender.DataBind(client);
-            rgBlood.DataBind(client);
+            lkBlood.DataBind(client);
             txtFullName.DataBind(client);
             txtMiddleName.DataBind(client);
             txtPediatrician.DataBind(client);
             txtIdCard.DataBind(client);
             txtReference.DataBind(client);
             txtNotes.DataBind(client);
+            lkFamilyStatus.DataBind(client);
             client.AcceptChanges();
             client.PropertyChanged += Client_PropertyChanged;
+            
             #endregion
 
             #region Address
@@ -433,7 +441,7 @@ namespace Ekip.Win.UI.Modules
 
             TList<ClientMother> clientMothers = new TList<ClientMother>();
             clientMothers.Add(client.MotherIdSource);
-            //vgMother.DataSource = clientMothers;
+            vGridMother.DataSource = clientMothers;
             //vgMother.ClearRowErrors();
             client.MotherIdSource.AcceptChanges();
             client.MotherIdSource.PropertyChanged += Mother_PropertyChanged;
@@ -449,27 +457,17 @@ namespace Ekip.Win.UI.Modules
 
             TList<ClientFather> clientFathers = new TList<ClientFather>();
             clientFathers.Add(client.FatherIdSource);
-            //vgFather.DataSource = clientFathers;
-            //vgFather.ClearRowErrors();
+            vGridFather.DataSource = clientFathers;
+            //vGridFather.ClearRowErrors();
             client.FatherIdSource.AcceptChanges();
             client.FatherIdSource.PropertyChanged += Father_PropertyChanged;
 
             #endregion
 
-            #region Seance
-
-            //ucClientTab1.DataBind(client);
-
-            #endregion
-
             Program.CurrentClient = client;
-
-            //Application.DoEvents();
-            deFirstContact.Focus();
+            //deFirstContact.Focus();
             Application.DoEvents();
-            //txtFullName.Select();
-            //txtFullName.Focus();
-            txtFileNumber.Select();
+            txtFullName.Select();
         }
 
         #endregion
@@ -500,9 +498,6 @@ namespace Ekip.Win.UI.Modules
                     var value = obj.ToString().RemoveMultipleSpaces();
                     string target = string.IsNullOrWhiteSpace(value) ? null : value;
                     entity.GetType().GetProperty(e.PropertyName).SetValue(entity, target);
-                }
-                if (e.PropertyName == ClientColumn.FirstContactDate.ToString())
-                {
                 }
             }
         }

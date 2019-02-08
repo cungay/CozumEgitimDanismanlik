@@ -21,8 +21,13 @@ namespace Ekip.Framework.Entities
 		///<summary>
 		/// Creates a new <see cref="StreetView"/> instance.
 		///</summary>
-		public StreetView():base(){}	
-		
-		#endregion
-	}
+		public StreetView():base(){}
+
+        #endregion
+
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}", StreetName, ZipCode);
+        }
+    }
 }

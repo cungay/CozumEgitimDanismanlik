@@ -42,8 +42,8 @@ namespace Ekip.Framework.Entities
     [Description("Cinsiyet")]
     public enum Gender
     {
-        [Description("Belirtilmedi")]
-        None = 0,
+        //[Description("Belirtilmedi")]
+        //None = 0,
         [Description("Erkek")]
         Male = 1,
         [Description("Kız")]
@@ -51,10 +51,11 @@ namespace Ekip.Framework.Entities
     }
 
     [DefaultValue(0)]
+    [Description("Özlük Durumu")]
     public enum Blood
     {
-        [Description("Belirtilmedi")]
-        None = 0,
+        //[Description("Belirtilmedi")]
+        //None = 0,
         [Description("Öz")]
         Self = 1,
         [Description("Evlatlık")]
@@ -67,8 +68,8 @@ namespace Ekip.Framework.Entities
     [Description("Anne - Baba Durumu")]
     public enum FamilyStatus
     {
-        [Description("Belirtilmedi")]
-        None = 0,
+        //[Description("Belirtilmedi")]
+        //None = 0,
         [Description("Evli")]
         Married = 1,
         [Description("Ayrı")]

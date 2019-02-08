@@ -21,8 +21,13 @@ namespace Ekip.Framework.Entities
 		///<summary>
 		/// Creates a new <see cref="NeighborhoodView"/> instance.
 		///</summary>
-		public NeighborhoodView():base(){}	
-		
-		#endregion
-	}
+		public NeighborhoodView():base(){}
+
+        #endregion
+
+        public override string ToString()
+        {
+            return NeighborhoodName;
+        }
+    }
 }

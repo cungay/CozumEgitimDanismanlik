@@ -22,7 +22,7 @@ namespace Ekip.Framework.Entities
 		/// <summary>
 		/// TitleId : 
 		/// </summary>
-		System.Byte  TitleId  { get; set; }
+		System.Byte?  TitleId  { get; set; }
 		
 		/// <summary>
 		/// AddressLine : 

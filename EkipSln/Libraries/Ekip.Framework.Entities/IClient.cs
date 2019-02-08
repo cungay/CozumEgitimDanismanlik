@@ -87,12 +87,12 @@ namespace Ekip.Framework.Entities
 		/// <summary>
 		/// Gender : 
 		/// </summary>
-		System.Byte  Gender  { get; set; }
+		System.Byte?  Gender  { get; set; }
 		
 		/// <summary>
 		/// Blood : 
 		/// </summary>
-		System.Byte  Blood  { get; set; }
+		System.Byte?  Blood  { get; set; }
 		
 		/// <summary>
 		/// Pediatrician : 
@@ -107,7 +107,7 @@ namespace Ekip.Framework.Entities
 		/// <summary>
 		/// FamilyStatus : 
 		/// </summary>
-		System.Byte  FamilyStatus  { get; set; }
+		System.Byte?  FamilyStatus  { get; set; }
 		
 		/// <summary>
 		/// Notes : 

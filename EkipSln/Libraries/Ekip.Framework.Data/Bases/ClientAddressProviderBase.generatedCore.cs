@@ -267,7 +267,7 @@ namespace Ekip.Framework.Data.Bases
 				{
 					c.SuppressEntityEvents = true;
 					c.AddressId = (System.Int32)reader[((int)ClientAddressColumn.AddressId - 1)];
-					c.TitleId = (System.Byte)reader[((int)ClientAddressColumn.TitleId - 1)];
+					c.TitleId = (reader.IsDBNull(((int)ClientAddressColumn.TitleId - 1)))?null:(System.Byte?)reader[((int)ClientAddressColumn.TitleId - 1)];
 					c.AddressLine = (reader.IsDBNull(((int)ClientAddressColumn.AddressLine - 1)))?null:(System.String)reader[((int)ClientAddressColumn.AddressLine - 1)];
 					c.ProvinceId = (reader.IsDBNull(((int)ClientAddressColumn.ProvinceId - 1)))?null:(System.Int32?)reader[((int)ClientAddressColumn.ProvinceId - 1)];
 					c.TownId = (reader.IsDBNull(((int)ClientAddressColumn.TownId - 1)))?null:(System.Int32?)reader[((int)ClientAddressColumn.TownId - 1)];
@@ -300,7 +300,7 @@ namespace Ekip.Framework.Data.Bases
 			if (!reader.Read()) return;
 			
 			entity.AddressId = (System.Int32)reader[((int)ClientAddressColumn.AddressId - 1)];
-			entity.TitleId = (System.Byte)reader[((int)ClientAddressColumn.TitleId - 1)];
+			entity.TitleId = (reader.IsDBNull(((int)ClientAddressColumn.TitleId - 1)))?null:(System.Byte?)reader[((int)ClientAddressColumn.TitleId - 1)];
 			entity.AddressLine = (reader.IsDBNull(((int)ClientAddressColumn.AddressLine - 1)))?null:(System.String)reader[((int)ClientAddressColumn.AddressLine - 1)];
 			entity.ProvinceId = (reader.IsDBNull(((int)ClientAddressColumn.ProvinceId - 1)))?null:(System.Int32?)reader[((int)ClientAddressColumn.ProvinceId - 1)];
 			entity.TownId = (reader.IsDBNull(((int)ClientAddressColumn.TownId - 1)))?null:(System.Int32?)reader[((int)ClientAddressColumn.TownId - 1)];
@@ -328,7 +328,7 @@ namespace Ekip.Framework.Data.Bases
 			DataRow dataRow = dataSet.Tables[0].Rows[0];
 			
 			entity.AddressId = (System.Int32)dataRow["AddressId"];
-			entity.TitleId = (System.Byte)dataRow["TitleId"];
+			entity.TitleId = Convert.IsDBNull(dataRow["TitleId"]) ? null : (System.Byte?)dataRow["TitleId"];
 			entity.AddressLine = Convert.IsDBNull(dataRow["AddressLine"]) ? null : (System.String)dataRow["AddressLine"];
 			entity.ProvinceId = Convert.IsDBNull(dataRow["ProvinceId"]) ? null : (System.Int32?)dataRow["ProvinceId"];
 			entity.TownId = Convert.IsDBNull(dataRow["TownId"]) ? null : (System.Int32?)dataRow["TownId"];

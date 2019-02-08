@@ -10282,7 +10282,7 @@
              Creates a new <see cref="T:Ekip.Framework.Entities.ClientAddress"/> instance .
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Services.ClientAddressServiceBase.CreateClientAddress(System.Byte,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Services.ClientAddressServiceBase.CreateClientAddress(System.Nullable{System.Byte},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
             <summary>
              A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.ClientAddress"/> instance.
             </summary>
@@ -12096,7 +12096,7 @@
              Creates a new <see cref="T:Ekip.Framework.Entities.Client"/> instance .
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Services.ClientServiceBase.CreateClient(System.Int32,System.DateTime,System.Int32,System.Int32,System.DateTime,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Byte,System.Byte,System.String,System.Int32,System.Byte,System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Services.ClientServiceBase.CreateClient(System.Int32,System.DateTime,System.Int32,System.Int32,System.DateTime,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32},System.String,System.Nullable{System.Byte},System.Nullable{System.Byte},System.String,System.Int32,System.Nullable{System.Byte},System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
             <summary>
              A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.Client"/> instance.
             </summary>
