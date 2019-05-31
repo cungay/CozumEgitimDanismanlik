@@ -70,6 +70,7 @@ namespace Ekip.Framework.Core
         #endregion
 
         #region Regex
+
         public static bool IsRegexMatch(this string input, string pattern)
         {
             return Regex.IsMatch(input, pattern);
@@ -303,16 +304,41 @@ namespace Ekip.Framework.Core
 
         }
 
-        public static bool IsValidPhone(this string value)
+        public static string MaskPhoneNumber(this string phoneString, string phoneFormat = "(0###) ###-####")
         {
-            return value.IsRegexMatch(@"(\(\d\d\d\))?\d{1,3}-\d\d-\d\d (\(\d\HAT\))?");
+            if (string.IsNullOrEmpty(phoneString)) return phoneString;
+            phoneString = phoneString.RemoveSpaceAreas().Trim().Replace(" ", "");
+            if (!phoneString.IsDigitsOnly()) return null;
+            if (phoneString.Length < 11)
+            {
+                if (!phoneString.StartsWith("0"))
+                {
+                    phoneString = string.Format("0{0}", phoneString);
+                    phoneString = Convert.ToInt64(phoneString).ToString(phoneFormat);
+                }
+            }
+            return phoneString;
+        }
+
+        public static bool IsValidPhone(this string phoneString, string phoneFormat = "(0###) ###-####")
+        {
+            if (phoneString == null) return false;
+            phoneString = phoneString.RemoveSpaceAreas().Trim().Replace(" ", "");
+            if (string.IsNullOrWhiteSpace(phoneString)) return false;
+            else if (phoneString.Length < 11)
+            {
+                if (!phoneString.StartsWith("0"))
+                    return false;
+            }
+            var phone = Convert.ToInt64(phoneString).ToString(phoneFormat);
+            return phone.IsRegexMatch(@"(\d?\d?\d?\d?)\d\d\d-\d\d\d\d");
         }
 
         #endregion
 
         #region Beetween
 
-        public static string[] InBetween(this  string strSource, string strBegin, string strEnd,
+        public static string[] InBetween(this string strSource, string strBegin, string strEnd,
                       bool includeBegin, bool includeEnd)
         {
 
@@ -608,7 +634,7 @@ namespace Ekip.Framework.Core
         }
 
 
-        static string validationKey="A06BDCF2F6CF.A.VERY.LONG.44F13E76184945A7C477601";
+        static string validationKey = "A06BDCF2F6CF.A.VERY.LONG.44F13E76184945A7C477601";
         static string decryptionKey = "99079B21C2F3644.A.BIT.SHORTER.BB81C7E9D58378";
 
         public static void Encrypt(this string fileName)
@@ -624,13 +650,13 @@ namespace Ekip.Framework.Core
                 alg.Key = passwordKey.GetBytes(alg.KeySize / 8);
                 alg.IV = passwordKey.GetBytes(alg.BlockSize / 8);
 
-                System.IO.FileStream inFile = new System.IO.FileStream(fileName, 
+                System.IO.FileStream inFile = new System.IO.FileStream(fileName,
                     System.IO.FileMode.Open, System.IO.FileAccess.Read);
                 byte[] fileData = new byte[inFile.Length];
                 inFile.Read(fileData, 0, (int)inFile.Length);
 
                 ICryptoTransform encryptor = alg.CreateEncryptor();
-                System.IO.FileStream outFile = 
+                System.IO.FileStream outFile =
                     new System.IO.FileStream(outFileName, System.IO.FileMode.OpenOrCreate, System.IO.FileAccess.Write);
                 CryptoStream encryptStream = new CryptoStream(outFile, encryptor, CryptoStreamMode.Write);
                 encryptStream.Write(fileData, 0, fileData.Length);
@@ -659,14 +685,14 @@ namespace Ekip.Framework.Core
                 alg.IV = passwordKey.GetBytes(alg.BlockSize / 8);
 
                 ICryptoTransform decryptor = alg.CreateDecryptor();
-                System.IO.FileStream inFile = new System.IO.FileStream(fileName, 
-                    System.IO.FileMode.Open, 
+                System.IO.FileStream inFile = new System.IO.FileStream(fileName,
+                    System.IO.FileMode.Open,
                     System.IO.FileAccess.Read);
                 CryptoStream decryptStream = new CryptoStream(inFile, decryptor, CryptoStreamMode.Read);
                 byte[] fileData = new byte[inFile.Length];
                 decryptStream.Read(fileData, 0, (int)inFile.Length);
 
-                System.IO.FileStream outFile = new System.IO.FileStream(outFileName, System.IO.FileMode.OpenOrCreate, 
+                System.IO.FileStream outFile = new System.IO.FileStream(outFileName, System.IO.FileMode.OpenOrCreate,
                     System.IO.FileAccess.Write);
                 outFile.Write(fileData, 0, fileData.Length);
 
@@ -719,6 +745,14 @@ namespace Ekip.Framework.Core
                 result = defaultValue;
             }
             return result;
+        }
+
+        public static bool IsDigitsOnly(this string value)
+        {
+            foreach (char c in value)
+                if (c < '0' || c > '9')
+                    return false;
+            return true;
         }
     }
 }

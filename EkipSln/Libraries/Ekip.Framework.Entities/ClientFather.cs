@@ -1,6 +1,7 @@
 ﻿#region Using directives
 
 using System;
+using System.ComponentModel;
 
 #endregion
 
@@ -25,4 +26,14 @@ namespace Ekip.Framework.Entities
 		
 		#endregion
 	}
+
+    [DefaultValue(0)]
+    [Description("Durum")]
+    public enum ParentStatus
+    {
+        [Description("Yaşıyor")]
+        Alive = 1,
+        [Description("Vefat")]
+        Died = 2
+    }
 }

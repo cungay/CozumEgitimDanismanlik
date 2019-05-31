@@ -79,7 +79,7 @@ namespace Ekip.Framework.UI.Forms
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(328, 0);
             this.Name = "WaitForm";
-            this.ShowOnTopMode = DevExpress.XtraWaitForm.ShowFormOnTopMode.ObsoleteAboveParent;
+            this.ShowOnTopMode = DevExpress.XtraWaitForm.ShowFormOnTopMode.AboveParent;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";

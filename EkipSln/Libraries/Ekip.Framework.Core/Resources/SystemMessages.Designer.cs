@@ -61,164 +61,65 @@ namespace Ekip.Framework.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Onay.
-        /// </summary>
-        public static string Confirm_DetaultTitle {
-            get {
-                return ResourceManager.GetString("Confirm_DetaultTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Yapılan değişiklikler kaydedilecek.\nEmin misiniz ?.
-        /// </summary>
-        public static string Confirm_Save {
-            get {
-                return ResourceManager.GetString("Confirm_Save", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Ekip Norma Razon Aile Danışmanlık Merkezi.
         /// </summary>
-        public static string Default_Title {
+        public static string Default_Caption {
             get {
-                return ResourceManager.GetString("Default_Title", resourceCulture);
+                return ResourceManager.GetString("Default_Caption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hayır.
+        ///   Looks up a localized string similar to Dosya bulunamadı..
         /// </summary>
-        public static string DialogResult_No {
+        public static string File_NotFound_Caption {
             get {
-                return ResourceManager.GetString("DialogResult_No", resourceCulture);
+                return ResourceManager.GetString("File_NotFound_Caption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Evet.
+        ///   Looks up a localized string similar to {0} numaralı dosya sistemde bulunamadı. Aradığınız dosyanın sistemde olduğunu düşünüyorsanız, sistem yöneticisi ile irtibata geçebilirsiniz..
         /// </summary>
-        public static string DialogResult_Yes {
+        public static string File_NotFound_Content {
             get {
-                return ResourceManager.GetString("DialogResult_Yes", resourceCulture);
+                return ResourceManager.GetString("File_NotFound_Content", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} numaralı dosyada bir ya da birden fazla değişiklik yaptınız ve kaydetmediniz.\nDevam etmek istiyor musunuz ?.
+        ///   Looks up a localized string similar to {0} numaralı dosya değiştirildi..
         /// </summary>
-        public static string File_Changed_Confirm {
+        public static string FileChanged_Caption {
             get {
-                return ResourceManager.GetString("File_Changed_Confirm", resourceCulture);
+                return ResourceManager.GetString("FileChanged_Caption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dikkat! Devam ederseniz yapılan değişiklikler kaybolacak..
+        ///   Looks up a localized string similar to &lt;b&gt;{0}&lt;/b&gt; numaralı dosyada bir yada birden fazla değişiklik yapıldığı tespit edildi.&lt;br&gt;&lt;br&gt;Değişiklikleri kaydetmek istiyor musunuz ?.
         /// </summary>
-        public static string File_Changed_Confirm_Info {
+        public static string FileChanged_Content {
             get {
-                return ResourceManager.GetString("File_Changed_Confirm_Info", resourceCulture);
+                return ResourceManager.GetString("FileChanged_Content", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} numaralı dosya sistemde bulunamadı..
+        ///   Looks up a localized string similar to Sistem Hatası.
         /// </summary>
-        public static string File_NotFound {
+        public static string System_Error_Caption {
             get {
-                return ResourceManager.GetString("File_NotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Aradığınız dosyanın sistemde olduğunu düşünüyorsanız, sistem yöneticisi ile irtibata geçebilirsiniz..
-        /// </summary>
-        public static string File_NotFound_Details {
-            get {
-                return ResourceManager.GetString("File_NotFound_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Giriş başarısız. Kullanıcı bilgilerini kontrol ediniz..
-        /// </summary>
-        public static string Login_Failed {
-            get {
-                return ResourceManager.GetString("Login_Failed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Seçiniz.
-        /// </summary>
-        public static string Lookup_No_Choice {
-            get {
-                return ResourceManager.GetString("Lookup_No_Choice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Belirtilmedi.
-        /// </summary>
-        public static string Lookup_Not_Specified {
-            get {
-                return ResourceManager.GetString("Lookup_Not_Specified", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to İşlem kullanıcı tarafından iptal edildi..
-        /// </summary>
-        public static string Operation_Canceled {
-            get {
-                return ResourceManager.GetString("Operation_Canceled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to İşlem iptal edildi..
-        /// </summary>
-        public static string Opreration_Failed {
-            get {
-                return ResourceManager.GetString("Opreration_Failed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Kayıt bulunamadı..
-        /// </summary>
-        public static string Record_NotFound {
-            get {
-                return ResourceManager.GetString("Record_NotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} numaralı dosya başarıyla yenilendi..
-        /// </summary>
-        public static string Refresh_File {
-            get {
-                return ResourceManager.GetString("Refresh_File", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Kaydetme işlemi başarısız..
-        /// </summary>
-        public static string Save_Failure {
-            get {
-                return ResourceManager.GetString("Save_Failure", resourceCulture);
+                return ResourceManager.GetString("System_Error_Caption", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Sistem bir ya da birden fazla hata ile karşılaştı..
         /// </summary>
-        public static string System_Error {
+        public static string System_Error_Content {
             get {
-                return ResourceManager.GetString("System_Error", resourceCulture);
+                return ResourceManager.GetString("System_Error_Content", resourceCulture);
             }
         }
         

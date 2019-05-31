@@ -41,10 +41,10 @@ namespace Ekip.Win.UI.UserControls
         {
             if (!DesignMode)
             {
-                rlkClassRoom.BindEnum(typeof(ClassRoom), string.Empty);
+                //rlkClassRoom.BindEnum(typeof(ClassRoom), string.Empty);
                 //lkClassRoom.BindEnum(typeof(ClassRoom), string.Empty);
                 //rlkBranch.BindEnum(typeof(TeacherBranch), string.Empty);
-                rlkGender.BindEnum(typeof(Gender), string.Empty);
+                //rlkGender.BindEnum(typeof(Gender), string.Empty);
 
                 //TList<City> cityList = DataRepository.CityProvider.GetAll();
                 //lkSchoolCity.Bind(cityList, "CityName", "CityId", "Şehir Listesi");

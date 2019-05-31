@@ -227,8 +227,10 @@ namespace Ekip.Framework.Data.Bases
 					c.HomePhone = (reader.IsDBNull(((int)ClientFatherColumn.HomePhone - 1)))?null:(System.String)reader[((int)ClientFatherColumn.HomePhone - 1)];
 					c.BusinessPhone = (reader.IsDBNull(((int)ClientFatherColumn.BusinessPhone - 1)))?null:(System.String)reader[((int)ClientFatherColumn.BusinessPhone - 1)];
 					c.MobilePhone = (reader.IsDBNull(((int)ClientFatherColumn.MobilePhone - 1)))?null:(System.String)reader[((int)ClientFatherColumn.MobilePhone - 1)];
+					c.OtherPhone = (reader.IsDBNull(((int)ClientFatherColumn.OtherPhone - 1)))?null:(System.String)reader[((int)ClientFatherColumn.OtherPhone - 1)];
 					c.JobId = (reader.IsDBNull(((int)ClientFatherColumn.JobId - 1)))?null:(System.Int32?)reader[((int)ClientFatherColumn.JobId - 1)];
 					c.Notes = (reader.IsDBNull(((int)ClientFatherColumn.Notes - 1)))?null:(System.String)reader[((int)ClientFatherColumn.Notes - 1)];
+					c.FatherStatusId = (System.Byte)reader[((int)ClientFatherColumn.FatherStatusId - 1)];
 					c.CreateDate = (System.DateTime)reader[((int)ClientFatherColumn.CreateDate - 1)];
 					c.UpdateDate = (reader.IsDBNull(((int)ClientFatherColumn.UpdateDate - 1)))?null:(System.DateTime?)reader[((int)ClientFatherColumn.UpdateDate - 1)];
 					c.CreateUserId = (System.Int32)reader[((int)ClientFatherColumn.CreateUserId - 1)];
@@ -260,8 +262,10 @@ namespace Ekip.Framework.Data.Bases
 			entity.HomePhone = (reader.IsDBNull(((int)ClientFatherColumn.HomePhone - 1)))?null:(System.String)reader[((int)ClientFatherColumn.HomePhone - 1)];
 			entity.BusinessPhone = (reader.IsDBNull(((int)ClientFatherColumn.BusinessPhone - 1)))?null:(System.String)reader[((int)ClientFatherColumn.BusinessPhone - 1)];
 			entity.MobilePhone = (reader.IsDBNull(((int)ClientFatherColumn.MobilePhone - 1)))?null:(System.String)reader[((int)ClientFatherColumn.MobilePhone - 1)];
+			entity.OtherPhone = (reader.IsDBNull(((int)ClientFatherColumn.OtherPhone - 1)))?null:(System.String)reader[((int)ClientFatherColumn.OtherPhone - 1)];
 			entity.JobId = (reader.IsDBNull(((int)ClientFatherColumn.JobId - 1)))?null:(System.Int32?)reader[((int)ClientFatherColumn.JobId - 1)];
 			entity.Notes = (reader.IsDBNull(((int)ClientFatherColumn.Notes - 1)))?null:(System.String)reader[((int)ClientFatherColumn.Notes - 1)];
+			entity.FatherStatusId = (System.Byte)reader[((int)ClientFatherColumn.FatherStatusId - 1)];
 			entity.CreateDate = (System.DateTime)reader[((int)ClientFatherColumn.CreateDate - 1)];
 			entity.UpdateDate = (reader.IsDBNull(((int)ClientFatherColumn.UpdateDate - 1)))?null:(System.DateTime?)reader[((int)ClientFatherColumn.UpdateDate - 1)];
 			entity.CreateUserId = (System.Int32)reader[((int)ClientFatherColumn.CreateUserId - 1)];
@@ -288,8 +292,10 @@ namespace Ekip.Framework.Data.Bases
 			entity.HomePhone = Convert.IsDBNull(dataRow["HomePhone"]) ? null : (System.String)dataRow["HomePhone"];
 			entity.BusinessPhone = Convert.IsDBNull(dataRow["BusinessPhone"]) ? null : (System.String)dataRow["BusinessPhone"];
 			entity.MobilePhone = Convert.IsDBNull(dataRow["MobilePhone"]) ? null : (System.String)dataRow["MobilePhone"];
+			entity.OtherPhone = Convert.IsDBNull(dataRow["OtherPhone"]) ? null : (System.String)dataRow["OtherPhone"];
 			entity.JobId = Convert.IsDBNull(dataRow["JobId"]) ? null : (System.Int32?)dataRow["JobId"];
 			entity.Notes = Convert.IsDBNull(dataRow["Notes"]) ? null : (System.String)dataRow["Notes"];
+			entity.FatherStatusId = (System.Byte)dataRow["FatherStatusId"];
 			entity.CreateDate = (System.DateTime)dataRow["CreateDate"];
 			entity.UpdateDate = Convert.IsDBNull(dataRow["UpdateDate"]) ? null : (System.DateTime?)dataRow["UpdateDate"];
 			entity.CreateUserId = (System.Int32)dataRow["CreateUserId"];

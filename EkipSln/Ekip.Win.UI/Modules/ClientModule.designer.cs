@@ -42,6 +42,7 @@
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions13 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions14 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientModule));
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.persistentRepository1 = new DevExpress.XtraEditors.Repository.PersistentRepository(this.components);
@@ -50,29 +51,34 @@
             this.txtFamilyNotes = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.txtFamilyFullName = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.lkJob = new Ekip.Framework.UI.DevEx.Editors.RepositoryItemDxLookUpEdit();
+            this.lkParentStatus = new Ekip.Framework.UI.DevEx.Editors.RepositoryItemDxLookUpEdit();
             this.clientInfoToolTip = new DevExpress.Utils.ToolTipController(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.ucClientTab1 = new Ekip.Win.UI.UserControls.ucClientTab();
             this.vGridFather = new DevExpress.XtraVerticalGrid.VGridControl();
             this.catRowFather = new DevExpress.XtraVerticalGrid.Rows.CategoryRow();
             this.editorRowFather = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.editorRowFatherStatus = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowFatherJob = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.catRowFatherContact = new DevExpress.XtraVerticalGrid.Rows.CategoryRow();
             this.editorRowFatherEmail = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowFatherGsm = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowFatherHomePhone = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowFatherJobPhone = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.editorRowFatherPhone = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowFatherFax = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.catRowFatherNotes = new DevExpress.XtraVerticalGrid.Rows.CategoryRow();
             this.editorRowFatherNotes = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.vGridMother = new DevExpress.XtraVerticalGrid.VGridControl();
             this.catRowMother = new DevExpress.XtraVerticalGrid.Rows.CategoryRow();
             this.editorRowMother = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.editorRowMotherStatus = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowMotherJob = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.catRowMotherContact = new DevExpress.XtraVerticalGrid.Rows.CategoryRow();
             this.editorRowMotherEmail = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowMotherGsm = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowMotherHomePhone = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowMotherJobPhone = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.editorRowMotherPhone = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.editorRowMotherFax = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.catRowMotherNotes = new DevExpress.XtraVerticalGrid.Rows.CategoryRow();
             this.editorRowMotherNotes = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
@@ -137,10 +143,14 @@
             this.lblAddressTitle = new DevExpress.XtraLayout.SimpleLabelItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.tpFamily = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.liMother = new DevExpress.XtraLayout.LayoutControlItem();
             this.liFamilyStatus = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.liFather = new DevExpress.XtraLayout.LayoutControlItem();
+            this.tabbedControlGroup2 = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.liMother = new DevExpress.XtraLayout.LayoutControlItem();
             this.tpClientInfo = new DevExpress.XtraLayout.LayoutControlGroup();
             this.liGender = new DevExpress.XtraLayout.LayoutControlItem();
             this.liFullName = new DevExpress.XtraLayout.LayoutControlItem();
@@ -170,14 +180,16 @@
             this.liBirthDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblContactDate = new DevExpress.XtraLayout.SimpleLabelItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFamilyNotes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFamilyFullName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkJob)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkParentStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vGridFather)).BeginInit();
@@ -234,10 +246,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblAddressTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpFamily)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.liMother)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liFamilyStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liFather)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liMother)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpClientInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liFullName)).BeginInit();
@@ -267,8 +283,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.liBirthDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblContactDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -297,23 +314,24 @@
             this.txtEmail,
             this.txtFamilyNotes,
             this.txtFamilyFullName,
-            this.lkJob});
+            this.lkJob,
+            this.lkParentStatus});
             // 
             // txtPhone
             // 
             this.txtPhone.AutoHeight = false;
             this.txtPhone.Mask.BeepOnError = true;
-            this.txtPhone.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
+            this.txtPhone.Mask.EditMask = "(\\d?\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
             this.txtPhone.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtPhone.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.NullText = "(___) ___-____";
+            this.txtPhone.NullText = "(____) ___-____";
             this.txtPhone.ValidateOnEnterKey = true;
             // 
             // txtEmail
             // 
             this.txtEmail.AutoHeight = false;
-            this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtEmail.Mask.BeepOnError = true;
             this.txtEmail.Mask.EditMask = "((([0-9a-zA-Z_%-])+[.])+|([0-9a-zA-Z_%-])+)+@((([0-9a-zA-Z_-])+[.])+|([0-9a-zA-Z_" +
     "-])+)+";
@@ -359,14 +377,41 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete"),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, false, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "", "Add")});
             this.lkJob.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.lkJob.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("JobCode", "Kod", 10, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("JobName", "Meslek")});
+            this.lkJob.HeaderClickMode = DevExpress.XtraEditors.Controls.HeaderClickMode.AutoSearch;
             this.lkJob.ListDescription = "";
             this.lkJob.ListType = "";
+            this.lkJob.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.lkJob.LookAndFeel.UseDefaultLookAndFeel = false;
             this.lkJob.Name = "lkJob";
             this.lkJob.NullText = "MESLEK";
             this.lkJob.NullValuePrompt = "MESLEK";
             this.lkJob.NullValuePromptShowForEmptyValue = true;
+            this.lkJob.PopupWidth = 350;
             this.lkJob.ShowNullValuePromptWhenFocused = true;
+            this.lkJob.ShowPopupShadow = false;
             this.lkJob.ValidateOnEnterKey = true;
+            // 
+            // lkParentStatus
+            // 
+            this.lkParentStatus.AutoHeight = false;
+            this.lkParentStatus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete")});
+            this.lkParentStatus.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.lkParentStatus.ListDescription = "";
+            this.lkParentStatus.ListType = "";
+            this.lkParentStatus.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.lkParentStatus.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.lkParentStatus.Name = "lkParentStatus";
+            this.lkParentStatus.NullText = "DURUM";
+            this.lkParentStatus.NullValuePrompt = "DURUM";
+            this.lkParentStatus.NullValuePromptShowForEmptyValue = true;
+            this.lkParentStatus.PopupWidth = 150;
+            this.lkParentStatus.ShowNullValuePromptWhenFocused = true;
+            this.lkParentStatus.ShowPopupShadow = false;
             // 
             // clientInfoToolTip
             // 
@@ -389,6 +434,7 @@
             this.layoutControl1.Appearance.ControlReadOnly.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.layoutControl1.Appearance.ControlReadOnly.Options.UseBackColor = true;
             this.layoutControl1.Appearance.ControlReadOnly.Options.UseFont = true;
+            this.layoutControl1.Controls.Add(this.ucClientTab1);
             this.layoutControl1.Controls.Add(this.vGridFather);
             this.layoutControl1.Controls.Add(this.vGridMother);
             this.layoutControl1.Controls.Add(this.txtFileNumber);
@@ -428,9 +474,18 @@
             this.layoutControl1.OptionsView.HighlightFocusedItem = true;
             this.layoutControl1.OptionsView.UseParentAutoScaleFactor = true;
             this.layoutControl1.Root = this.rootControlGroup;
-            this.layoutControl1.Size = new System.Drawing.Size(1623, 681);
+            this.layoutControl1.Size = new System.Drawing.Size(1623, 760);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // ucClientTab1
+            // 
+            this.ucClientTab1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ucClientTab1.Location = new System.Drawing.Point(2, 476);
+            this.ucClientTab1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucClientTab1.Name = "ucClientTab1";
+            this.ucClientTab1.Size = new System.Drawing.Size(1260, 388);
+            this.ucClientTab1.TabIndex = 26;
             // 
             // vGridFather
             // 
@@ -486,7 +541,7 @@
             this.vGridFather.Cursor = System.Windows.Forms.Cursors.Default;
             this.vGridFather.ExternalRepository = this.persistentRepository1;
             this.vGridFather.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView;
-            this.vGridFather.Location = new System.Drawing.Point(1278, 81);
+            this.vGridFather.Location = new System.Drawing.Point(1290, 120);
             this.vGridFather.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.vGridFather.Name = "vGridFather";
             this.vGridFather.OptionsBehavior.AutoFocusNewRecord = true;
@@ -503,10 +558,9 @@
             this.vGridFather.RowHeaderWidth = 75;
             this.vGridFather.Rows.AddRange(new DevExpress.XtraVerticalGrid.Rows.BaseRow[] {
             this.catRowFather,
-            this.catRowFatherNotes,
             this.editorRowFatherNotes});
             this.vGridFather.ShowButtonMode = DevExpress.XtraVerticalGrid.ShowButtonModeEnum.ShowAlways;
-            this.vGridFather.Size = new System.Drawing.Size(331, 295);
+            this.vGridFather.Size = new System.Drawing.Size(305, 335);
             this.vGridFather.TabIndex = 25;
             this.vGridFather.ToolTipController = this.clientInfoToolTip;
             // 
@@ -523,17 +577,26 @@
             // 
             // editorRowFather
             // 
+            this.editorRowFather.ChildRows.AddRange(new DevExpress.XtraVerticalGrid.Rows.BaseRow[] {
+            this.editorRowFatherStatus});
             this.editorRowFather.Name = "editorRowFather";
-            this.editorRowFather.Properties.Caption = "BABA";
+            this.editorRowFather.Properties.Caption = "Baba";
             this.editorRowFather.Properties.FieldName = "FullName";
             this.editorRowFather.Properties.RowEdit = this.txtFamilyFullName;
             this.editorRowFather.Properties.ToolTip = "(*) Babanın adı ve soyadı";
             // 
+            // editorRowFatherStatus
+            // 
+            this.editorRowFatherStatus.Name = "editorRowFatherStatus";
+            this.editorRowFatherStatus.Properties.Caption = "Durum";
+            this.editorRowFatherStatus.Properties.FieldName = "FatherStatusId";
+            this.editorRowFatherStatus.Properties.RowEdit = this.lkParentStatus;
+            // 
             // editorRowFatherJob
             // 
             this.editorRowFatherJob.Name = "editorRowFatherJob";
-            this.editorRowFatherJob.Properties.Caption = "MESLEK";
-            this.editorRowFatherJob.Properties.FieldName = "Title";
+            this.editorRowFatherJob.Properties.Caption = "Meslek";
+            this.editorRowFatherJob.Properties.FieldName = "JobId";
             this.editorRowFatherJob.Properties.RowEdit = this.lkJob;
             this.editorRowFatherJob.Properties.ToolTip = "Babanın mesleği (opsiyonel)";
             // 
@@ -560,7 +623,7 @@
             // editorRowFatherEmail
             // 
             this.editorRowFatherEmail.Name = "editorRowFatherEmail";
-            this.editorRowFatherEmail.Properties.Caption = "E-POSTA";
+            this.editorRowFatherEmail.Properties.Caption = "E-Posta";
             this.editorRowFatherEmail.Properties.FieldName = "Email";
             this.editorRowFatherEmail.Properties.RowEdit = this.txtEmail;
             this.editorRowFatherEmail.Properties.ToolTip = "Babanın e-posta adresi (opsiyonel)";
@@ -568,7 +631,7 @@
             // editorRowFatherGsm
             // 
             this.editorRowFatherGsm.Name = "editorRowFatherGsm";
-            this.editorRowFatherGsm.Properties.Caption = "CEP";
+            this.editorRowFatherGsm.Properties.Caption = "Cep Telefonu";
             this.editorRowFatherGsm.Properties.FieldName = "MobilePhone";
             this.editorRowFatherGsm.Properties.RowEdit = this.txtPhone;
             this.editorRowFatherGsm.Properties.ToolTip = "Babanın cep telefonu (opsiyonel)";
@@ -576,38 +639,41 @@
             // editorRowFatherHomePhone
             // 
             this.editorRowFatherHomePhone.Name = "editorRowFatherHomePhone";
-            this.editorRowFatherHomePhone.Properties.Caption = "EV";
+            this.editorRowFatherHomePhone.Properties.Caption = "Ev Telefonu";
             this.editorRowFatherHomePhone.Properties.FieldName = "HomePhone";
             this.editorRowFatherHomePhone.Properties.RowEdit = this.txtPhone;
             this.editorRowFatherHomePhone.Properties.ToolTip = "Babanın ev telefonu (opsiyonel)";
             // 
             // editorRowFatherJobPhone
             // 
+            this.editorRowFatherJobPhone.ChildRows.AddRange(new DevExpress.XtraVerticalGrid.Rows.BaseRow[] {
+            this.editorRowFatherPhone});
             this.editorRowFatherJobPhone.Name = "editorRowFatherJobPhone";
-            this.editorRowFatherJobPhone.Properties.Caption = "İŞ";
+            this.editorRowFatherJobPhone.Properties.Caption = "İş Telefonu";
             this.editorRowFatherJobPhone.Properties.FieldName = "BusinessPhone";
             this.editorRowFatherJobPhone.Properties.RowEdit = this.txtPhone;
             this.editorRowFatherJobPhone.Properties.ToolTip = "Babanın iş telefonu (opsiyonel)";
             // 
+            // editorRowFatherPhone
+            // 
+            this.editorRowFatherPhone.Name = "editorRowFatherPhone";
+            this.editorRowFatherPhone.Properties.Caption = "Diğer Telefon";
+            this.editorRowFatherPhone.Properties.FieldName = "OtherPhone";
+            this.editorRowFatherPhone.Properties.RowEdit = this.txtPhone;
+            // 
             // editorRowFatherFax
             // 
             this.editorRowFatherFax.Name = "editorRowFatherFax";
-            this.editorRowFatherFax.Properties.Caption = "FAKS";
+            this.editorRowFatherFax.Properties.Caption = "Faks";
             this.editorRowFatherFax.Properties.FieldName = "Fax";
             this.editorRowFatherFax.Properties.RowEdit = this.txtPhone;
             this.editorRowFatherFax.Properties.ToolTip = "Babanın faks numarası (opsiyonel)";
-            // 
-            // catRowFatherNotes
-            // 
-            this.catRowFatherNotes.Name = "catRowFatherNotes";
-            this.catRowFatherNotes.OptionsRow.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            this.catRowFatherNotes.Properties.Caption = "AÇIKLAMA";
             // 
             // editorRowFatherNotes
             // 
             this.editorRowFatherNotes.Name = "editorRowFatherNotes";
             this.editorRowFatherNotes.OptionsRow.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            this.editorRowFatherNotes.Properties.Caption = "AÇIKLAMA";
+            this.editorRowFatherNotes.Properties.Caption = "Açıklama";
             this.editorRowFatherNotes.Properties.FieldName = "Notes";
             this.editorRowFatherNotes.Properties.RowEdit = this.txtFamilyNotes;
             this.editorRowFatherNotes.Properties.ToolTip = "Baba ile ilgili açıklamalar";
@@ -663,7 +729,7 @@
             this.vGridMother.Cursor = System.Windows.Forms.Cursors.Default;
             this.vGridMother.ExternalRepository = this.persistentRepository1;
             this.vGridMother.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView;
-            this.vGridMother.Location = new System.Drawing.Point(1278, 380);
+            this.vGridMother.Location = new System.Drawing.Point(1290, 512);
             this.vGridMother.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.vGridMother.Name = "vGridMother";
             this.vGridMother.OptionsBehavior.AutoFocusNewRecord = true;
@@ -683,7 +749,7 @@
             this.catRowMotherNotes,
             this.editorRowMotherNotes});
             this.vGridMother.ShowButtonMode = DevExpress.XtraVerticalGrid.ShowButtonModeEnum.ShowAlways;
-            this.vGridMother.Size = new System.Drawing.Size(331, 161);
+            this.vGridMother.Size = new System.Drawing.Size(305, 326);
             this.vGridMother.TabIndex = 24;
             this.vGridMother.ToolTipController = this.clientInfoToolTip;
             // 
@@ -698,16 +764,25 @@
             // 
             // editorRowMother
             // 
+            this.editorRowMother.ChildRows.AddRange(new DevExpress.XtraVerticalGrid.Rows.BaseRow[] {
+            this.editorRowMotherStatus});
             this.editorRowMother.Name = "editorRowMother";
             this.editorRowMother.Properties.Caption = "Anne";
             this.editorRowMother.Properties.FieldName = "FullName";
             this.editorRowMother.Properties.RowEdit = this.txtFamilyFullName;
             // 
+            // editorRowMotherStatus
+            // 
+            this.editorRowMotherStatus.Name = "editorRowMotherStatus";
+            this.editorRowMotherStatus.Properties.Caption = "Durum";
+            this.editorRowMotherStatus.Properties.FieldName = "MotherStatusId";
+            this.editorRowMotherStatus.Properties.RowEdit = this.lkParentStatus;
+            // 
             // editorRowMotherJob
             // 
             this.editorRowMotherJob.Name = "editorRowMotherJob";
             this.editorRowMotherJob.Properties.Caption = "Meslek";
-            this.editorRowMotherJob.Properties.FieldName = "Title";
+            this.editorRowMotherJob.Properties.FieldName = "JobId";
             this.editorRowMotherJob.Properties.RowEdit = this.lkJob;
             // 
             // catRowMotherContact
@@ -751,10 +826,19 @@
             // 
             // editorRowMotherJobPhone
             // 
+            this.editorRowMotherJobPhone.ChildRows.AddRange(new DevExpress.XtraVerticalGrid.Rows.BaseRow[] {
+            this.editorRowMotherPhone});
             this.editorRowMotherJobPhone.Name = "editorRowMotherJobPhone";
             this.editorRowMotherJobPhone.Properties.Caption = "İş Telefonu";
             this.editorRowMotherJobPhone.Properties.FieldName = "BusinessPhone";
             this.editorRowMotherJobPhone.Properties.RowEdit = this.txtPhone;
+            // 
+            // editorRowMotherPhone
+            // 
+            this.editorRowMotherPhone.Name = "editorRowMotherPhone";
+            this.editorRowMotherPhone.Properties.Caption = "Diğer Telefon";
+            this.editorRowMotherPhone.Properties.FieldName = "OtherPhone";
+            this.editorRowMotherPhone.Properties.RowEdit = this.txtPhone;
             // 
             // editorRowMotherFax
             // 
@@ -910,7 +994,7 @@
             this.txtPhone1.Name = "txtPhone1";
             this.txtPhone1.Properties.AllowMouseWheel = false;
             this.txtPhone1.Properties.Mask.BeepOnError = true;
-            this.txtPhone1.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
+            this.txtPhone1.Properties.Mask.EditMask = "(\\d?\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
             this.txtPhone1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtPhone1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone1.Properties.NullText = "(___) ___-____";
@@ -933,7 +1017,7 @@
             this.txtPhone2.Name = "txtPhone2";
             this.txtPhone2.Properties.AllowMouseWheel = false;
             this.txtPhone2.Properties.Mask.BeepOnError = true;
-            this.txtPhone2.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
+            this.txtPhone2.Properties.Mask.EditMask = "(\\d?\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
             this.txtPhone2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtPhone2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone2.Properties.NullText = "(___) ___-____";
@@ -962,7 +1046,7 @@
             this.txtCountOfChild.Properties.AllowMouseWheel = false;
             this.txtCountOfChild.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
             this.txtCountOfChild.Properties.IsFloatValue = false;
             this.txtCountOfChild.Properties.Mask.BeepOnError = true;
             this.txtCountOfChild.Properties.Mask.EditMask = "f0";
@@ -1002,7 +1086,7 @@
             this.txtNotes.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtNotes.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtNotes.Properties.ValidateOnEnterKey = true;
-            this.txtNotes.Size = new System.Drawing.Size(554, 88);
+            this.txtNotes.Size = new System.Drawing.Size(554, 106);
             this.txtNotes.StyleController = this.layoutControl1;
             this.txtNotes.TabIndex = 13;
             this.txtNotes.Tag = "Notes";
@@ -1045,7 +1129,7 @@
             this.deBirthDate.Name = "deBirthDate";
             this.deBirthDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
             this.deBirthDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.deBirthDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
@@ -1079,7 +1163,7 @@
             this.deFirstContact.Name = "deFirstContact";
             this.deFirstContact.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle")});
             this.deFirstContact.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.deFirstContact.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
@@ -1114,7 +1198,7 @@
             this.txtGsm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGsm.Name = "txtGsm";
             this.txtGsm.Properties.Mask.BeepOnError = true;
-            this.txtGsm.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
+            this.txtGsm.Properties.Mask.EditMask = "(\\d?\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
             this.txtGsm.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtGsm.Properties.NullText = "(___) ___-____";
             this.txtGsm.Properties.NullValuePrompt = "(___) ___-____";
@@ -1137,7 +1221,7 @@
             this.lkAddressTitle.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkAddressTitle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
             this.lkAddressTitle.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkAddressTitle.Properties.ListDescription = "";
             this.lkAddressTitle.Properties.ListType = "";
@@ -1164,7 +1248,7 @@
             this.lkProvince.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkProvince.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
             this.lkProvince.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkProvince.Properties.NullText = "İL";
             this.lkProvince.Properties.NullValuePrompt = "İL";
@@ -1235,7 +1319,7 @@
             this.lkTown.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkTown.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
             this.lkTown.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkTown.Properties.NullText = "İLÇE";
             this.lkTown.Properties.NullValuePrompt = "İLÇE";
@@ -1288,7 +1372,7 @@
             this.lkNeighborhood.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkNeighborhood.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
             this.lkNeighborhood.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkNeighborhood.Properties.NullText = "SEMT";
             this.lkNeighborhood.Properties.NullValuePrompt = "SEMT";
@@ -1340,8 +1424,8 @@
             this.lkStreet.Name = "lkStreet";
             this.lkStreet.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkStreet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Temizle"),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Temizle"),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete")});
             this.lkStreet.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkStreet.Properties.NullText = "SOKAK / MAHALLE";
             this.lkStreet.Properties.NullValuePrompt = "SOKAK / MAHALLE";
@@ -1401,7 +1485,7 @@
             this.lkCalendarAge.Name = "lkCalendarAge";
             this.lkCalendarAge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete))});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete))});
             this.lkCalendarAge.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkCalendarAge.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AgeDescription", "Takvim Yaşını Seçiniz", 20, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.False)});
@@ -1423,13 +1507,14 @@
             // 
             // lkGender
             // 
+            this.lkGender.EnterMoveNextControl = true;
             this.lkGender.Location = new System.Drawing.Point(272, 98);
             this.lkGender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lkGender.Name = "lkGender";
             this.lkGender.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "Temizle", "Delete")});
             this.lkGender.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkGender.Properties.ListDescription = "";
             this.lkGender.Properties.ListType = "";
@@ -1456,7 +1541,7 @@
             this.lkFamilyStatus.Properties.AutoHeight = false;
             this.lkFamilyStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions13, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete")});
             this.lkFamilyStatus.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkFamilyStatus.Properties.ListDescription = "";
             this.lkFamilyStatus.Properties.ListType = "";
@@ -1474,6 +1559,7 @@
             // 
             // lkBlood
             // 
+            this.lkBlood.EnterMoveNextControl = true;
             this.lkBlood.Location = new System.Drawing.Point(272, 129);
             this.lkBlood.Name = "lkBlood";
             this.lkBlood.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1481,7 +1567,7 @@
             this.lkBlood.Properties.AutoHeight = false;
             this.lkBlood.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions13, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Temizle", -1, true, true, false, editorButtonImageOptions14, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), "", "Delete")});
             this.lkBlood.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lkBlood.Properties.ListDescription = "";
             this.lkBlood.Properties.ListType = "";
@@ -1517,11 +1603,11 @@
             this.tpAddress,
             this.tpFamily,
             this.tpClientInfo,
-            this.emptySpaceItem5});
+            this.layoutControlItem1});
             this.rootControlGroup.Location = new System.Drawing.Point(0, 0);
             this.rootControlGroup.Name = "Root";
             this.rootControlGroup.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.rootControlGroup.Size = new System.Drawing.Size(1623, 681);
+            this.rootControlGroup.Size = new System.Drawing.Size(1623, 866);
             this.rootControlGroup.TextVisible = false;
             // 
             // tpAddress
@@ -1550,7 +1636,7 @@
             this.tpAddress.Location = new System.Drawing.Point(840, 0);
             this.tpAddress.Name = "tpAddress";
             this.tpAddress.OptionsItemText.TextToControlDistance = 4;
-            this.tpAddress.Size = new System.Drawing.Size(424, 555);
+            this.tpAddress.Size = new System.Drawing.Size(424, 474);
             this.tpAddress.Text = "Adres ve Telefon Bilgileri";
             // 
             // liProvince
@@ -1718,7 +1804,7 @@
             this.lblNeighborhood.Name = "lblNeighborhood";
             this.lblNeighborhood.Size = new System.Drawing.Size(132, 28);
             this.lblNeighborhood.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lblNeighborhood.Text = "Semt:";
+            this.lblNeighborhood.Text = "Semt/Köy:";
             this.lblNeighborhood.TextSize = new System.Drawing.Size(96, 18);
             // 
             // lblStreet
@@ -1848,7 +1934,7 @@
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 382);
             this.emptySpaceItem4.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(400, 123);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(400, 42);
             this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -1856,31 +1942,21 @@
             // 
             this.tpFamily.CaptionImage = ((System.Drawing.Image)(resources.GetObject("tpFamily.CaptionImage")));
             this.tpFamily.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.liMother,
             this.liFamilyStatus,
             this.emptySpaceItem2,
-            this.liFather});
+            this.tabbedControlGroup1,
+            this.tabbedControlGroup2});
             this.tpFamily.Location = new System.Drawing.Point(1264, 0);
             this.tpFamily.Name = "tpFamily";
-            this.tpFamily.Size = new System.Drawing.Size(359, 555);
+            this.tpFamily.Size = new System.Drawing.Size(359, 866);
             this.tpFamily.Text = "Anne ve Baba Bilgileri";
-            // 
-            // liMother
-            // 
-            this.liMother.Control = this.vGridMother;
-            this.liMother.Location = new System.Drawing.Point(0, 340);
-            this.liMother.MinSize = new System.Drawing.Size(104, 24);
-            this.liMother.Name = "liMother";
-            this.liMother.Size = new System.Drawing.Size(335, 165);
-            this.liMother.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.liMother.TextSize = new System.Drawing.Size(0, 0);
-            this.liMother.TextVisible = false;
             // 
             // liFamilyStatus
             // 
             this.liFamilyStatus.Control = this.lkFamilyStatus;
             this.liFamilyStatus.Location = new System.Drawing.Point(0, 0);
-            this.liFamilyStatus.MinSize = new System.Drawing.Size(54, 28);
+            this.liFamilyStatus.MaxSize = new System.Drawing.Size(0, 31);
+            this.liFamilyStatus.MinSize = new System.Drawing.Size(54, 31);
             this.liFamilyStatus.Name = "liFamilyStatus";
             this.liFamilyStatus.Size = new System.Drawing.Size(335, 31);
             this.liFamilyStatus.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -1898,16 +1974,70 @@
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // tabbedControlGroup1
+            // 
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 41);
+            this.tabbedControlGroup1.Name = "tabbedControlGroup1";
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup1;
+            this.tabbedControlGroup1.SelectedTabPageIndex = 0;
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(335, 392);
+            this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup1});
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("layoutControlGroup1.CaptionImage")));
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.liFather});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(309, 339);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
             // liFather
             // 
             this.liFather.Control = this.vGridFather;
-            this.liFather.Location = new System.Drawing.Point(0, 41);
-            this.liFather.MinSize = new System.Drawing.Size(104, 24);
+            this.liFather.Location = new System.Drawing.Point(0, 0);
+            this.liFather.MaxSize = new System.Drawing.Size(0, 339);
+            this.liFather.MinSize = new System.Drawing.Size(104, 339);
             this.liFather.Name = "liFather";
-            this.liFather.Size = new System.Drawing.Size(335, 299);
+            this.liFather.Size = new System.Drawing.Size(309, 339);
             this.liFather.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liFather.TextSize = new System.Drawing.Size(0, 0);
             this.liFather.TextVisible = false;
+            // 
+            // tabbedControlGroup2
+            // 
+            this.tabbedControlGroup2.Location = new System.Drawing.Point(0, 433);
+            this.tabbedControlGroup2.Name = "tabbedControlGroup2";
+            this.tabbedControlGroup2.SelectedTabPage = this.layoutControlGroup2;
+            this.tabbedControlGroup2.SelectedTabPageIndex = 0;
+            this.tabbedControlGroup2.Size = new System.Drawing.Size(335, 383);
+            this.tabbedControlGroup2.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup2});
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("layoutControlGroup2.CaptionImage")));
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.liMother});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(309, 330);
+            this.layoutControlGroup2.Text = "Danışanın Annesi";
+            this.layoutControlGroup2.TextVisible = false;
+            // 
+            // liMother
+            // 
+            this.liMother.Control = this.vGridMother;
+            this.liMother.Location = new System.Drawing.Point(0, 0);
+            this.liMother.MaxSize = new System.Drawing.Size(0, 330);
+            this.liMother.MinSize = new System.Drawing.Size(104, 330);
+            this.liMother.Name = "liMother";
+            this.liMother.Size = new System.Drawing.Size(309, 330);
+            this.liMother.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.liMother.TextSize = new System.Drawing.Size(0, 0);
+            this.liMother.TextVisible = false;
             // 
             // tpClientInfo
             // 
@@ -1946,7 +2076,7 @@
             this.tpClientInfo.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.CustomSize;
             this.tpClientInfo.OptionsItemText.TextToControlDistance = 4;
             this.tpClientInfo.ShowInCustomizationForm = false;
-            this.tpClientInfo.Size = new System.Drawing.Size(840, 555);
+            this.tpClientInfo.Size = new System.Drawing.Size(840, 474);
             this.tpClientInfo.Text = "Danışan Bilgileri";
             // 
             // liGender
@@ -2068,9 +2198,10 @@
             this.liNotes.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.liNotes.Control = this.txtNotes;
             this.liNotes.Location = new System.Drawing.Point(258, 290);
-            this.liNotes.MinSize = new System.Drawing.Size(14, 26);
+            this.liNotes.MaxSize = new System.Drawing.Size(558, 110);
+            this.liNotes.MinSize = new System.Drawing.Size(558, 110);
             this.liNotes.Name = "liNotes";
-            this.liNotes.Size = new System.Drawing.Size(558, 92);
+            this.liNotes.Size = new System.Drawing.Size(558, 110);
             this.liNotes.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liNotes.Text = "Notlar:";
             this.liNotes.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -2144,7 +2275,7 @@
             this.spaceItem2.Location = new System.Drawing.Point(0, 181);
             this.spaceItem2.MinSize = new System.Drawing.Size(104, 24);
             this.spaceItem2.Name = "spaceItem2";
-            this.spaceItem2.Size = new System.Drawing.Size(134, 201);
+            this.spaceItem2.Size = new System.Drawing.Size(134, 219);
             this.spaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.spaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -2171,7 +2302,8 @@
             this.lblCountOfChild.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblCountOfChild.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblCountOfChild.Location = new System.Drawing.Point(612, 58);
-            this.lblCountOfChild.MinSize = new System.Drawing.Size(54, 24);
+            this.lblCountOfChild.MaxSize = new System.Drawing.Size(71, 31);
+            this.lblCountOfChild.MinSize = new System.Drawing.Size(71, 31);
             this.lblCountOfChild.Name = "lblCountOfChild";
             this.lblCountOfChild.Size = new System.Drawing.Size(71, 31);
             this.lblCountOfChild.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -2253,10 +2385,10 @@
             this.lblNotes.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblNotes.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.lblNotes.Location = new System.Drawing.Point(134, 290);
-            this.lblNotes.MaxSize = new System.Drawing.Size(124, 92);
-            this.lblNotes.MinSize = new System.Drawing.Size(124, 92);
+            this.lblNotes.MaxSize = new System.Drawing.Size(124, 110);
+            this.lblNotes.MinSize = new System.Drawing.Size(124, 110);
             this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(124, 92);
+            this.lblNotes.Size = new System.Drawing.Size(124, 110);
             this.lblNotes.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblNotes.Text = "Açıklamalar:";
             this.lblNotes.TextSize = new System.Drawing.Size(50, 20);
@@ -2384,20 +2516,33 @@
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 382);
-            this.emptySpaceItem3.MinSize = new System.Drawing.Size(104, 24);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 400);
+            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(816, 24);
+            this.emptySpaceItem3.MinSize = new System.Drawing.Size(816, 24);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(816, 123);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(816, 24);
             this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem5
+            // layoutControlItem1
             // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 555);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(1623, 126);
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.Control = this.ucClientTab1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 474);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1264, 392);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // styleController1
+            // 
+            this.styleController1.Appearance.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.styleController1.Appearance.Options.UseFont = true;
+            this.styleController1.AppearanceFocused.BackColor = System.Drawing.Color.LemonChiffon;
+            this.styleController1.AppearanceFocused.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.styleController1.AppearanceFocused.Options.UseBackColor = true;
+            this.styleController1.AppearanceFocused.Options.UseFont = true;
+            this.styleController1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.styleController1.LookAndFeel.UseDefaultLookAndFeel = false;
             // 
             // ClientModule
             // 
@@ -2406,13 +2551,14 @@
             this.Controls.Add(this.layoutControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "ClientModule";
-            this.Size = new System.Drawing.Size(1623, 681);
+            this.Size = new System.Drawing.Size(1623, 760);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFamilyNotes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFamilyFullName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkJob)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkParentStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.vGridFather)).EndInit();
@@ -2469,10 +2615,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblAddressTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpFamily)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.liMother)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liFamilyStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liFather)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liMother)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpClientInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liFullName)).EndInit();
@@ -2502,8 +2652,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.liBirthDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblContactDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.styleController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2518,17 +2669,6 @@
         private DevExpress.Utils.ToolTipController clientInfoToolTip;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraVerticalGrid.VGridControl vGridFather;
-        private DevExpress.XtraVerticalGrid.Rows.CategoryRow catRowFather;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFather;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherJob;
-        private DevExpress.XtraVerticalGrid.Rows.CategoryRow catRowFatherContact;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherEmail;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherGsm;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherHomePhone;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherJobPhone;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherFax;
-        private DevExpress.XtraVerticalGrid.Rows.CategoryRow catRowFatherNotes;
-        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherNotes;
         private DevExpress.XtraVerticalGrid.VGridControl vGridMother;
         private DevExpress.XtraVerticalGrid.Rows.CategoryRow catRowMother;
         private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowMother;
@@ -2617,10 +2757,8 @@
         private DevExpress.XtraLayout.LayoutControlItem liAddressTitle;
         private DevExpress.XtraLayout.SimpleLabelItem lblAddressTitle;
         private DevExpress.XtraLayout.LayoutControlGroup tpFamily;
-        private DevExpress.XtraLayout.LayoutControlItem liMother;
         private DevExpress.XtraLayout.LayoutControlItem liFamilyStatus;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraLayout.LayoutControlItem liFather;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
         private DevExpress.XtraEditors.LookUpEdit lkCalendarAge;
         private DevExpress.XtraLayout.LayoutControlItem liCalendarAge;
@@ -2637,6 +2775,29 @@
         private Ekip.Framework.UI.DevEx.Editors.RepositoryItemDxLookUpEdit lkJob;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private UserControls.ucClientTab ucClientTab1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem liFather;
+        private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlItem liMother;
+        private DevExpress.XtraEditors.StyleController styleController1;
+        private DevExpress.XtraVerticalGrid.Rows.CategoryRow catRowFather;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFather;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherJob;
+        private DevExpress.XtraVerticalGrid.Rows.CategoryRow catRowFatherContact;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherEmail;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherGsm;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherHomePhone;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherJobPhone;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherFax;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherPhone;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherNotes;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowFatherStatus;
+        private Ekip.Framework.UI.DevEx.Editors.RepositoryItemDxLookUpEdit lkParentStatus;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowMotherStatus;
+        private DevExpress.XtraVerticalGrid.Rows.EditorRow editorRowMotherPhone;
     }
 }

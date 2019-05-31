@@ -55,6 +55,11 @@ namespace Ekip.Framework.Entities
 		System.String  MobilePhone  { get; set; }
 		
 		/// <summary>
+		/// OtherPhone : 
+		/// </summary>
+		System.String  OtherPhone  { get; set; }
+		
+		/// <summary>
 		/// JobId : 
 		/// </summary>
 		System.Int32?  JobId  { get; set; }
@@ -63,6 +68,11 @@ namespace Ekip.Framework.Entities
 		/// Notes : 
 		/// </summary>
 		System.String  Notes  { get; set; }
+		
+		/// <summary>
+		/// MotherStatusId : 
+		/// </summary>
+		System.Byte  MotherStatusId  { get; set; }
 		
 		/// <summary>
 		/// CreateDate : 

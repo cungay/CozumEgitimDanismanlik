@@ -1,35 +1,35 @@
-﻿using Ekip.Framework.Core.Resources;
-using System;
-
+﻿using System;
+using System.Runtime.Serialization;
+using Ekip.Framework.Core.Resources;
 
 namespace Ekip.Framework.Core.ErrorHandling
 {
-    public class SystemError : Exception
+    [Serializable()]
+    public class SystemError : Exception, ISerializable
     {
-        /// <summary>
-        /// Just create the exception
-        /// </summary>
-        public SystemError()
-          : base(SystemMessages.System_Error)
+        #region Fields
+
+        private string caption = null;
+
+        #endregion
+
+        #region Properties
+
+        public string Caption
+        {
+            get { return SystemMessages.System_Error_Caption; }
+            set { caption = value; }
+        }
+
+        #endregion
+
+        public SystemError(string message = null)
+             : base(SystemMessages.System_Error_Content)
         {
         }
 
-        /// <summary>
-        /// Create the exception with description
-        /// </summary>
-        /// <param name="entityKey">object name</param>
-        public SystemError(String message)
-          : base(string.Format("<u>{0}</u>", message))
-        {
-        }
-
-        /// <summary>
-        /// Create the exception with description and inner cause
-        /// </summary>
-        /// <param name="entityKey">object name</param>
-        /// <param name="innerException">Exception inner cause</param>
-        public SystemError(String message, Exception innerException)
-          : base(string.Format("<u>{0}</u><br />{1}", message, innerException.Message))
+        public SystemError(string message, Exception innerException)
+            : base(SystemMessages.System_Error_Content, innerException)
         {
         }
     }

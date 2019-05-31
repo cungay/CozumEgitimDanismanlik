@@ -13,23 +13,17 @@ namespace Ekip.Framework.UI.Extensions
 {
     public static class LookUpExtension
     {
-        public static void BindEnumarable<T>(this LookUpEdit lk, IEnumerable<T> source, string display, string value)
-        {
-            DataTable dt = source.ToDataTable();
-            DataRow eRow = dt.NewRow();
-            eRow[display] = SystemMessages.Lookup_Not_Specified;
-            eRow[value] = 0;
-            dt.Rows.InsertAt(eRow, 0);
-            lk.Properties.BeginUpdate();
-            lk.Properties.DisplayMember = display;
-            lk.Properties.ValueMember = value;
-            lk.Properties.DataSource = dt;
-            lk.Properties.EndUpdate();
-        }
-        
         #region Enum Bind
 
         public static void BindEnum(this LookUpEdit lk, Type enumType)
+        {
+            var source = enumType.ToValueList();
+            DescriptionAttribute[] attributes = (DescriptionAttribute[])enumType.GetCustomAttributes(typeof(DescriptionAttribute), false);
+            string header = (attributes.Length > 0) ? attributes[0].Description : enumType.ToString();
+            lk.BindTable(source.ToDataTable(), "Value", "Key", header);
+        }
+
+        public static void BindEnum(this RepositoryItemLookUpEdit lk, Type enumType)
         {
             var source = enumType.ToValueList();
             DescriptionAttribute[] attributes = (DescriptionAttribute[])enumType.GetCustomAttributes(typeof(DescriptionAttribute), false);
@@ -45,10 +39,6 @@ namespace Ekip.Framework.UI.Extensions
             lk.Properties.Columns[0].AllowSort = DevExpress.Utils.DefaultBoolean.False;
             lk.Properties.ShowHeader = true;
             lk.Properties.EndInit();
-            //DataRow row = table.NewRow();
-            //row[display] = "Belirtilmedi";
-            //row[value] = 0;
-            //table.Rows.InsertAt(row, 0);
             lk.Properties.NullText = header;
             lk.Properties.BeginUpdate();
             lk.Properties.DisplayMember = display;
@@ -57,206 +47,21 @@ namespace Ekip.Framework.UI.Extensions
             lk.Properties.EndUpdate();
         }
 
-        #endregion
-
-        #region RepositoryItemLookUpEdit
-
-        private static void BindEnumarable<T>(this RepositoryItemLookUpEdit rlk, IEnumerable<T> source, string
-               display, string value, LookUpColumnInfo[] columns, bool emptyRow, string emptyRowString)
+        private static void BindTable(this RepositoryItemLookUpEdit lk, DataTable table, string display, string value, string header)
         {
-            rlk.BeginInit();
-            rlk.Columns.Clear();
-            if (columns != null && columns.Count() > 0)
-                rlk.Columns.AddRange(columns);
-            else
-            {
-                rlk.ShowHeader = false;
-                rlk.Columns.Add(new LookUpColumnInfo() { FieldName = display });
-            }
-            rlk.EndInit();
-
-            DataTable dt = null;
-            if (emptyRow)
-            {
-                dt = source.ToDataTable();
-                DataRow eRow = dt.NewRow();
-                eRow[display] = emptyRowString;
-                if (value == null) value = "Id";
-                eRow[value] = DBNull.Value;// 0;
-                dt.Rows.InsertAt(eRow, 0);
-            }
-            rlk.NullText = emptyRowString;
-            rlk.BeginUpdate();
-            rlk.DisplayMember = display;
-            if (value.Trim().Length > 0)
-                rlk.ValueMember = value;
-            if (dt != null) rlk.DataSource = dt;
-            else rlk.DataSource = source;
-            rlk.EndUpdate();
+            lk.BeginInit();
+            lk.Columns.Clear();
+            lk.Columns.Add(new LookUpColumnInfo() { FieldName = "Value", Caption = string.Format("{0} Seçiniz", header) });
+            lk.Columns[0].AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            lk.ShowHeader = true;
+            lk.EndInit();
+            lk.NullText = header;
+            lk.BeginUpdate();
+            lk.DisplayMember = display;
+            lk.ValueMember = value;
+            lk.DataSource = table;
+            lk.EndUpdate();
         }
-
-        private static void BindEnumarable(this RepositoryItemLookUpEdit rlk, DataTable source, string
-          display, string value, LookUpColumnInfo[] columns, bool emptyRow, string emptyRowString)
-        {
-            rlk.BeginInit();
-            rlk.Columns.Clear();
-            if (columns != null && columns.Count() > 0)
-                rlk.Columns.AddRange(columns);
-            else
-            {
-                rlk.ShowHeader = false;
-                rlk.Columns.Add(new LookUpColumnInfo() { FieldName = display });
-            }
-            rlk.EndInit();
-
-            DataTable dt = null;
-            if (emptyRow)
-            {
-                dt = source.AsEnumerable().CopyToDataTable();
-                DataRow eRow = dt.NewRow();
-                eRow[display] = emptyRowString;
-                if (value == null) value = "Id";
-                eRow[value] = DBNull.Value;// 0;
-                dt.Rows.InsertAt(eRow, 0);
-            }
-            rlk.NullText = emptyRowString;
-            rlk.BeginUpdate();
-            rlk.DisplayMember = display;
-            if (value.Trim().Length > 0)
-                rlk.ValueMember = value;
-            if (dt != null) rlk.DataSource = dt;
-            else rlk.DataSource = source;
-            rlk.EndUpdate();
-        }
-
-        #region IEnumerable Bind
-
-        public static void Bind(this RepositoryItemLookUpEdit rlk, DataTable dataTable, string display, string value)
-        {
-            BindEnumarable(rlk, dataTable, display, value, null, false, "Belirtilmedi");
-        }
-
-        public static void Bind(this RepositoryItemLookUpEdit rlk, DataTable dataTable, string display,
-            string value, bool emptyRow, string emptyRowString)
-        {
-            BindEnumarable(rlk, dataTable, display, value, null, emptyRow, emptyRowString);
-        }
-
-        public static void Bind<T>(this RepositoryItemLookUpEdit rlk, IEnumerable<T> source,
-           string display, string value)
-        {
-            BindEnumarable(rlk, source, display, value, null, false, "Belirtilmedi");
-        }
-
-        public static void Bind<T>(this RepositoryItemLookUpEdit rlk, IEnumerable<T> source,
-         string display, string value, string header)
-        {
-            LookUpColumnInfo[] columns = new LookUpColumnInfo[]
-            {
-                new LookUpColumnInfo()
-                {
-                    FieldName=display,Caption=header
-                }
-            };
-            BindEnumarable(rlk, source, display, value, columns, false, "Belirtilmedi");
-        }
-
-        public static void Bind<T>(this RepositoryItemLookUpEdit rlk, IEnumerable<T> source, string display,
-            string value, LookUpColumnInfo[] columns)
-        {
-            BindEnumarable(rlk, source, display, value, columns, false, "Belirtilmedi");
-        }
-
-        public static void Bind<T>(this RepositoryItemLookUpEdit rlk, IEnumerable<T> source, string display,
-         string value, LookUpColumnInfo[] columns, bool emptyItem)
-        {
-            BindEnumarable(rlk, source, display, value, columns, emptyItem, "Belirtilmedi");
-        }
-
-        public static void Bind<T>(this RepositoryItemLookUpEdit rlk, IEnumerable<T> source, string display,
-            string value, LookUpColumnInfo[] columns, bool emptyItem, string emptyItemString)
-        {
-            BindEnumarable(rlk, source, display, value, columns, emptyItem, emptyItemString);
-        }
-
-        public static void Bind<T>(this RepositoryItemLookUpEdit rlk, IEnumerable<T> source, string display,
-            string value, string header, bool emptyItem, string emptyItemString)
-        {
-            LookUpColumnInfo[] columns = new LookUpColumnInfo[]
-            {
-                new LookUpColumnInfo()
-                {
-                    FieldName=display,Caption=header
-                }
-            };
-            BindEnumarable(rlk, source, display, value, columns, emptyItem, emptyItemString);
-        }
-
-        public static void Bind<T>(this RepositoryItemLookUpEdit rlk, IEnumerable<T> source, string display,
-            string value, string header, bool emptyItem)
-        {
-            LookUpColumnInfo[] columns = new LookUpColumnInfo[]
-            {
-                new LookUpColumnInfo()
-                {
-                    FieldName=display,Caption=header
-                }
-            };
-            BindEnumarable(rlk, source, display, value, columns, emptyItem, "Belirtilmedi");
-        }
-
-        #endregion
-
-        #region Enum Bind
-
-        public static void BindEnum(this RepositoryItemLookUpEdit rlk, Type enumType, string header,
-            bool emptyItem, string emptyItemString)
-        {
-            BindIList(rlk, enumType.ToValueList(), header, emptyItem, emptyItemString);
-        }
-
-        public static void BindEnum(this RepositoryItemLookUpEdit rlk, Type enumType,
-            string header, bool emptyItem)
-        {
-            BindIList(rlk, enumType.ToValueList(), header, emptyItem, "Belirtilmedi");
-        }
-
-        public static void BindEnum(this RepositoryItemLookUpEdit rlk, Type enumType, string header)
-        {
-            BindIList(rlk, enumType.ToValueList(), header, false, "Belirtilmedi");
-        }
-
-        private static void BindIList(this RepositoryItemLookUpEdit rlk, Dictionary<int, string> list,
-            string header, bool emptyItem, string emptyItemString)
-        {
-            rlk.BindTable(list.ToDataTable(), "Value", "Key", header, emptyItem, emptyItemString);
-        }
-
-        private static void BindTable(this RepositoryItemLookUpEdit rlk, DataTable table, string display,
-            string value, string header, bool emptyItem, string emptyItemString)
-        {
-            rlk.BeginInit();
-            rlk.Columns.Clear();
-            rlk.Columns.Add(new LookUpColumnInfo() { FieldName = "Value", Caption = header });
-
-            rlk.EndInit();
-
-            if (emptyItem)
-            {
-                DataRow row = table.NewRow();
-                row[display] = emptyItemString;
-                row[value] = 0;//DBNull.Value;
-                table.Rows.InsertAt(row, 0);
-            }
-            rlk.NullText = emptyItemString;
-            //rlk.BeginUpdate();
-            rlk.DisplayMember = display;
-            rlk.ValueMember = value;
-            rlk.DataSource = table;
-            //rlk.EndUpdate();
-        }
-
-        #endregion
 
         #endregion
 

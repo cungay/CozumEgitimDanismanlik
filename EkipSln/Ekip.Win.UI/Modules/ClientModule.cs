@@ -6,15 +6,13 @@ using Ekip.Framework.Entities;
 using Ekip.Framework.Services;
 using Ekip.Framework.Core;
 using Ekip.Framework.Data;
-using DevExpress.XtraEditors.Controls;
-using DevExpress.XtraEditors;
 using Ekip.Framework.UI.Forms;
 using Ekip.Framework.UI.Extensions;
 using Ekip.Framework.UI.XAF;
 using Ekip.Framework.Core.ErrorHandling;
-using DevExpress.XtraEditors.DXErrorProvider;
 using Ekip.Win.Framework.Forms;
-using Ekip.Framework.UI.DevEx.Editors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraEditors;
 
 namespace Ekip.Win.UI.Modules
 {
@@ -51,6 +49,12 @@ namespace Ekip.Win.UI.Modules
             lkBlood.BindEnum(typeof(Blood));
             lkFamilyStatus.BindEnum(typeof(FamilyStatus));
             lkAddressTitle.BindEnum(typeof(AddressTitles));
+            lkParentStatus.BindEnum(typeof(ParentStatus));
+
+            var jobs = DataRepository.JobProvider.GetAll();
+            lkJob.DataSource = jobs;
+            lkJob.DisplayMember = "JobName";
+            lkJob.ValueMember = "JobId";
 
             //var calendarAgeSource = DataRepository.CalendarAgeProvider.GetAll();
             //lkCalendarAge.BindEnumarable<CalendarAge>(calendarAgeSource, "AgeDescription", "CalendarAgeId");
@@ -72,6 +76,7 @@ namespace Ekip.Win.UI.Modules
             lkGender.ButtonClick += LookUpOnSelectionDelete;
             lkBlood.ButtonClick += LookUpOnSelectionDelete;
             lkFamilyStatus.ButtonClick += LookUpOnSelectionDelete;
+            lkJob.ButtonClick += LookUpOnSelectionDelete;
 
             //var startTimeSpan = TimeSpan.Zero;
             //var periodTimeSpan = TimeSpan.FromMinutes(5);
@@ -408,7 +413,7 @@ namespace Ekip.Win.UI.Modules
             lkFamilyStatus.DataBind(client);
             client.AcceptChanges();
             client.PropertyChanged += Client_PropertyChanged;
-            
+
             #endregion
 
             #region Address
@@ -438,11 +443,12 @@ namespace Ekip.Win.UI.Modules
                 client.MotherIdSource = motherService.GetByMotherId(client.MotherId);
             else
                 client.MotherIdSource = new ClientMother();
-
             TList<ClientMother> clientMothers = new TList<ClientMother>();
+            client.MotherIdSource.HomePhone = client.MotherIdSource.HomePhone.MaskPhoneNumber();
+            client.MotherIdSource.BusinessPhone = client.MotherIdSource.BusinessPhone.MaskPhoneNumber();
+            client.MotherIdSource.MobilePhone = client.MotherIdSource.MobilePhone.MaskPhoneNumber();
             clientMothers.Add(client.MotherIdSource);
             vGridMother.DataSource = clientMothers;
-            //vgMother.ClearRowErrors();
             client.MotherIdSource.AcceptChanges();
             client.MotherIdSource.PropertyChanged += Mother_PropertyChanged;
 
@@ -454,18 +460,18 @@ namespace Ekip.Win.UI.Modules
                 client.FatherIdSource = fatherService.GetByFatherId(client.FatherId);
             else
                 client.FatherIdSource = new ClientFather();
-
             TList<ClientFather> clientFathers = new TList<ClientFather>();
+            client.FatherIdSource.HomePhone = client.FatherIdSource.HomePhone.MaskPhoneNumber();
+            client.FatherIdSource.BusinessPhone = client.FatherIdSource.BusinessPhone.MaskPhoneNumber();
+            client.FatherIdSource.MobilePhone = client.FatherIdSource.MobilePhone.MaskPhoneNumber();
             clientFathers.Add(client.FatherIdSource);
             vGridFather.DataSource = clientFathers;
-            //vGridFather.ClearRowErrors();
             client.FatherIdSource.AcceptChanges();
             client.FatherIdSource.PropertyChanged += Father_PropertyChanged;
 
             #endregion
 
             Program.CurrentClient = client;
-            //deFirstContact.Focus();
             Application.DoEvents();
             txtFullName.Select();
         }
@@ -476,15 +482,19 @@ namespace Ekip.Win.UI.Modules
 
         private DialogResult HasDataChanged()
         {
+            DialogResult result = DialogResult.None;
+
             if (Program.CurrentClient == null)
                 return DialogResult.None;
 
             bool hasDataChanged = Program.CurrentClient.HasChanged();
 
-            //if (hasDataChanged)
-            //    return UserDialog.FileChanged(this, Program.CurrentClient.FileNumber);
+            if (hasDataChanged)
+            {
+                result = TaskDialog.FileChangeDetection(Program.CurrentClient.FileNumber);
+            }
 
-            return DialogResult.None;
+            return result;
         }
 
         private void OnPropertyChanged<T>(T entity, PropertyChangedEventArgs e) where T : EntityBase
@@ -560,7 +570,7 @@ namespace Ekip.Win.UI.Modules
 
             DialogResult confirm = HasDataChanged();
 
-            if (confirm != DialogResult.No)
+            if (confirm == DialogResult.None || confirm == DialogResult.No)
             {
                 var fileNumber = fileNumbers.ElementAt(pageIndex);
                 var client = clientService.GetByFileNumber(fileNumber);
@@ -568,6 +578,10 @@ namespace Ekip.Win.UI.Modules
                 {
                     DataBind(client);
                 }
+            }
+            else if (confirm == DialogResult.Yes)
+            {
+                //Degisiklikleri kaydet
             }
         }
 
@@ -627,14 +641,13 @@ namespace Ekip.Win.UI.Modules
         {
             DialogResult confirm = HasDataChanged();
 
-            if (confirm != DialogResult.No)
+            if (confirm == DialogResult.None || confirm == DialogResult.No)
             {
                 var fileNumber = Program.CurrentClient.FileNumber;
                 var client = clientService.GetByFileNumber(fileNumber);
                 if (client != null)
                 {
                     DataBind(client);
-                    //UserDialog.RefreshFile(this, fileNumber);
                 }
             }
         }

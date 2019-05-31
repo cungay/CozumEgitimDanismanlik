@@ -31,8 +31,8 @@ namespace Ekip.Framework.Entities
     [Description("Adres Başlığı")]
     public enum AddressTitles
     {
-        [Description("Belirtilmedi")]
-        None = 0,
+        //[Description("Belirtilmedi")]
+        //None = 0,
 
         [Description("Ev Adresi")]
         Home = 1,
@@ -42,12 +42,5 @@ namespace Ekip.Framework.Entities
 
         [Description("Diğer")]
         Other = 3
-    }
-
-    public class AddressComplexType
-    {
-        public int FileNumber { get; set; }
-
-        public int AddressId { get; set; }
     }
 }

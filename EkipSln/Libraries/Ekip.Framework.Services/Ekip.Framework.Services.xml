@@ -9110,7 +9110,7 @@
              Creates a new <see cref="T:Ekip.Framework.Entities.ClientFather"/> instance .
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Services.ClientFatherServiceBase.CreateClientFather(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Services.ClientFatherServiceBase.CreateClientFather(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.Byte,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
             <summary>
              A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.ClientFather"/> instance.
             </summary>
@@ -9121,8 +9121,10 @@
             <param name="_homePhone"></param>
             <param name="_businessPhone"></param>
             <param name="_mobilePhone"></param>
+            <param name="_otherPhone"></param>
             <param name="_jobId"></param>
             <param name="_notes"></param>
+            <param name="_fatherStatusId"></param>
             <param name="_createDate"></param>
             <param name="_updateDate"></param>
             <param name="_createUserId"></param>
@@ -9696,7 +9698,7 @@
              Creates a new <see cref="T:Ekip.Framework.Entities.ClientMother"/> instance .
             </summary>
         </member>
-        <member name="M:Ekip.Framework.Services.ClientMotherServiceBase.CreateClientMother(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
+        <member name="M:Ekip.Framework.Services.ClientMotherServiceBase.CreateClientMother(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.Byte,System.DateTime,System.Nullable{System.DateTime},System.Int32,System.Nullable{System.Int32},System.Boolean,System.Boolean)">
             <summary>
              A simple factory method to create a new <see cref="T:Ekip.Framework.Entities.ClientMother"/> instance.
             </summary>
@@ -9707,8 +9709,10 @@
             <param name="_homePhone"></param>
             <param name="_businessPhone"></param>
             <param name="_mobilePhone"></param>
+            <param name="_otherPhone"></param>
             <param name="_jobId"></param>
             <param name="_notes"></param>
+            <param name="_motherStatusId"></param>
             <param name="_createDate"></param>
             <param name="_updateDate"></param>
             <param name="_createUserId"></param>

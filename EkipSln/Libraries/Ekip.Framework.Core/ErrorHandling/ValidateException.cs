@@ -65,8 +65,6 @@ namespace Ekip.Framework.Core.ErrorHandling
         }
 
         [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
-        // Constructor should be protected for unsealed classes, private for sealed classes.
-        // (The Serializer invokes this constructor through reflection, so it can be private)
         protected ValidateException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
@@ -83,12 +81,7 @@ namespace Ekip.Framework.Core.ErrorHandling
             }
 
             info.AddValue("Caption", this.Caption);
-
-            // Note: if "List<T>" isn't serializable you may need to work out another
-            //       method of adding your list, this is just for show...
             info.AddValue("ValidationErrors", this.ValidationErrors, typeof(List<ValidationError>));
-
-            // MUST call through to the base class to let it save its own state
             base.GetObjectData(info, context);
         }
     }
