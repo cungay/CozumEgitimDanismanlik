@@ -147,7 +147,7 @@
 		</None>
 	</ItemGroup>
 		
-	<!-- Custom code folder: E:\GitHub\CozumEgitimDanismanlik\EkipSln\Libraries\Ekip.Framework.UnitTests\App_Code -->
+	<!-- Custom code folder: D:\GitHub\CozumEgitimDanismanlik\EkipSln\Libraries\Ekip.Framework.UnitTests\App_Code -->
 	<ItemGroup>	
 		<Folder Include="App_Code\" />
         <Compile Include="App_Code\**\*.cs">

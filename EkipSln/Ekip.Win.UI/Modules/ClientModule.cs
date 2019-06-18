@@ -237,7 +237,7 @@ namespace Ekip.Win.UI.Modules
             if (e.Button.Tag != null && e.Button.Tag.ToString() == "Delete")
             {
                 var editor = (sender as LookUpEditBase);
-                editor.EditValue = null;
+                editor.EditValue = 0;
             }
         }
 
@@ -541,6 +541,7 @@ namespace Ekip.Win.UI.Modules
         #region Data Navigator
 
         protected int pageIndex = 0;
+        protected int oldPageIndex = 0;
         protected int rowCount = 0;
 
         protected void Navigate(NavigateAction action)
@@ -550,15 +551,19 @@ namespace Ekip.Win.UI.Modules
             switch (action)
             {
                 case NavigateAction.Next:
+                    oldPageIndex = pageIndex;
                     pageIndex += 1;
                     break;
                 case NavigateAction.Last:
+                    oldPageIndex = pageIndex;
                     pageIndex = rowCount - 1;
                     break;
                 case NavigateAction.Prev:
+                    oldPageIndex = pageIndex;
                     pageIndex -= 1;
                     break;
                 case NavigateAction.First:
+                    oldPageIndex = pageIndex;
                     pageIndex = 0;
                     break;
             }
@@ -572,7 +577,7 @@ namespace Ekip.Win.UI.Modules
 
             if (confirm == DialogResult.None || confirm == DialogResult.No)
             {
-                var fileNumber = fileNumbers.ElementAt(pageIndex);
+                var fileNumber = fileNumbers.ElementAt(oldPageIndex);
                 var client = clientService.GetByFileNumber(fileNumber);
                 if (client != null)
                 {
@@ -582,6 +587,10 @@ namespace Ekip.Win.UI.Modules
             else if (confirm == DialogResult.Yes)
             {
                 //Degisiklikleri kaydet
+            }
+            else
+            {
+                pageIndex = oldPageIndex;
             }
         }
 

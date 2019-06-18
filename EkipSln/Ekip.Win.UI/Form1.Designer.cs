@@ -1459,7 +1459,8 @@
             this.spreadsheetCommandBarButtonItem201});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 425;
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ribbonControl.MaxItemId = 426;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.pivotTableToolsRibbonPageCategory1,
@@ -1486,7 +1487,7 @@
             this.repositoryItemSpreadsheetFontSizeEdit1,
             this.repositoryItemPopupGalleryEdit1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl.Size = new System.Drawing.Size(1599, 179);
+            this.ribbonControl.Size = new System.Drawing.Size(1179, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             // 
             // appMenu
@@ -1504,22 +1505,24 @@
             this.popupControlContainer2.Appearance.Options.UseBackColor = true;
             this.popupControlContainer2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.popupControlContainer2.Controls.Add(this.buttonEdit);
-            this.popupControlContainer2.Location = new System.Drawing.Point(238, 289);
+            this.popupControlContainer2.Location = new System.Drawing.Point(204, 235);
+            this.popupControlContainer2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.popupControlContainer2.Name = "popupControlContainer2";
             this.popupControlContainer2.Ribbon = this.ribbonControl;
-            this.popupControlContainer2.Size = new System.Drawing.Size(118, 28);
+            this.popupControlContainer2.Size = new System.Drawing.Size(101, 23);
             this.popupControlContainer2.TabIndex = 3;
             this.popupControlContainer2.Visible = false;
             // 
             // buttonEdit
             // 
             this.buttonEdit.EditValue = "Some Text";
-            this.buttonEdit.Location = new System.Drawing.Point(3, 5);
+            this.buttonEdit.Location = new System.Drawing.Point(3, 4);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit.MenuManager = this.ribbonControl;
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.buttonEdit.Size = new System.Drawing.Size(100, 22);
+            this.buttonEdit.Size = new System.Drawing.Size(86, 20);
             this.buttonEdit.TabIndex = 0;
             // 
             // iExit
@@ -1539,26 +1542,29 @@
             this.popupControlContainer1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.popupControlContainer1.Controls.Add(this.someLabelControl2);
             this.popupControlContainer1.Controls.Add(this.someLabelControl1);
-            this.popupControlContainer1.Location = new System.Drawing.Point(111, 197);
+            this.popupControlContainer1.Location = new System.Drawing.Point(95, 160);
+            this.popupControlContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.popupControlContainer1.Name = "popupControlContainer1";
             this.popupControlContainer1.Ribbon = this.ribbonControl;
-            this.popupControlContainer1.Size = new System.Drawing.Size(76, 70);
+            this.popupControlContainer1.Size = new System.Drawing.Size(65, 57);
             this.popupControlContainer1.TabIndex = 2;
             this.popupControlContainer1.Visible = false;
             // 
             // someLabelControl2
             // 
-            this.someLabelControl2.Location = new System.Drawing.Point(3, 57);
+            this.someLabelControl2.Location = new System.Drawing.Point(3, 46);
+            this.someLabelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.someLabelControl2.Name = "someLabelControl2";
-            this.someLabelControl2.Size = new System.Drawing.Size(59, 16);
+            this.someLabelControl2.Size = new System.Drawing.Size(49, 13);
             this.someLabelControl2.TabIndex = 0;
             this.someLabelControl2.Text = "Some Info";
             // 
             // someLabelControl1
             // 
-            this.someLabelControl1.Location = new System.Drawing.Point(3, 3);
+            this.someLabelControl1.Location = new System.Drawing.Point(3, 2);
+            this.someLabelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.someLabelControl1.Name = "someLabelControl1";
-            this.someLabelControl1.Size = new System.Drawing.Size(59, 16);
+            this.someLabelControl1.Size = new System.Drawing.Size(49, 13);
             this.someLabelControl1.TabIndex = 0;
             this.someLabelControl1.Text = "Some Info";
             // 
@@ -3571,12 +3577,13 @@
             // 
             // spreadsheetControl
             // 
-            this.spreadsheetControl.Location = new System.Drawing.Point(0, 26);
+            this.spreadsheetControl.Location = new System.Drawing.Point(0, 21);
+            this.spreadsheetControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.spreadsheetControl.MenuManager = this.ribbonControl;
             this.spreadsheetControl.Name = "spreadsheetControl";
             this.spreadsheetControl.Options.Import.Csv.Encoding = ((System.Text.Encoding)(resources.GetObject("spreadsheetControl.Options.Import.Csv.Encoding")));
             this.spreadsheetControl.Options.Import.Txt.Encoding = ((System.Text.Encoding)(resources.GetObject("spreadsheetControl.Options.Import.Txt.Encoding")));
-            this.spreadsheetControl.Size = new System.Drawing.Size(184, 140);
+            this.spreadsheetControl.Size = new System.Drawing.Size(158, 114);
             this.spreadsheetControl.TabIndex = 1;
             this.spreadsheetControl.Text = "spreadsheetControl1";
             // 
@@ -5326,10 +5333,11 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.siStatus);
             this.ribbonStatusBar.ItemLinks.Add(this.siInfo);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 731);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 595);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1599, 40);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1179, 31);
             // 
             // spreadsheetFormulaBarPanel
             // 
@@ -5341,9 +5349,10 @@
             this.spreadsheetFormulaBarPanel.Controls.Add(this.splitterControl);
             this.spreadsheetFormulaBarPanel.Controls.Add(this.formulaBarNameBoxSplitContainerControl);
             this.spreadsheetFormulaBarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spreadsheetFormulaBarPanel.Location = new System.Drawing.Point(0, 179);
+            this.spreadsheetFormulaBarPanel.Location = new System.Drawing.Point(0, 143);
+            this.spreadsheetFormulaBarPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.spreadsheetFormulaBarPanel.Name = "spreadsheetFormulaBarPanel";
-            this.spreadsheetFormulaBarPanel.Size = new System.Drawing.Size(1599, 552);
+            this.spreadsheetFormulaBarPanel.Size = new System.Drawing.Size(1179, 452);
             this.spreadsheetFormulaBarPanel.TabIndex = 3;
             // 
             // grpFamily
@@ -5353,9 +5362,10 @@
             this.grpFamily.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("grpFamily.CaptionImageOptions.Image")));
             this.grpFamily.Controls.Add(this.splitContainerFamily);
             this.grpFamily.Controls.Add(this.rgFamilyStatus);
-            this.grpFamily.Location = new System.Drawing.Point(204, 75);
+            this.grpFamily.Location = new System.Drawing.Point(175, 61);
+            this.grpFamily.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpFamily.Name = "grpFamily";
-            this.grpFamily.Size = new System.Drawing.Size(267, 433);
+            this.grpFamily.Size = new System.Drawing.Size(229, 352);
             this.grpFamily.TabIndex = 50;
             this.grpFamily.Text = "Aile Bilgileri";
             // 
@@ -5363,14 +5373,15 @@
             // 
             this.splitContainerFamily.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerFamily.Horizontal = false;
-            this.splitContainerFamily.Location = new System.Drawing.Point(2, 85);
+            this.splitContainerFamily.Location = new System.Drawing.Point(2, 75);
+            this.splitContainerFamily.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainerFamily.Name = "splitContainerFamily";
             this.splitContainerFamily.Panel1.Controls.Add(this.vGridControl2);
             this.splitContainerFamily.Panel1.Text = "Panel1";
             this.splitContainerFamily.Panel2.Controls.Add(this.vGridControl1);
             this.splitContainerFamily.Panel2.Text = "Panel2";
-            this.splitContainerFamily.Size = new System.Drawing.Size(263, 346);
-            this.splitContainerFamily.SplitterPosition = 227;
+            this.splitContainerFamily.Size = new System.Drawing.Size(225, 275);
+            this.splitContainerFamily.SplitterPosition = 195;
             this.splitContainerFamily.TabIndex = 45;
             this.splitContainerFamily.Text = "splitContainerControl1";
             // 
@@ -5387,8 +5398,7 @@
             this.vGridControl2.Cursor = System.Windows.Forms.Cursors.Default;
             this.vGridControl2.FilterString = "";
             this.vGridControl2.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView;
-            this.vGridControl2.Location = new System.Drawing.Point(9, 8);
-            this.vGridControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.vGridControl2.Location = new System.Drawing.Point(8, 6);
             this.vGridControl2.Name = "vGridControl2";
             this.vGridControl2.OptionsBehavior.AutoFocusNewRecord = true;
             this.vGridControl2.OptionsBehavior.ResizeHeaderPanel = false;
@@ -5406,7 +5416,7 @@
             this.categoryRow4,
             this.categoryRow6,
             this.editorRow16});
-            this.vGridControl2.Size = new System.Drawing.Size(263, 198);
+            this.vGridControl2.Size = new System.Drawing.Size(225, 161);
             this.vGridControl2.TabIndex = 46;
             // 
             // categoryRow4
@@ -5503,7 +5513,6 @@
             this.vGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vGridControl1.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView;
             this.vGridControl1.Location = new System.Drawing.Point(0, 0);
-            this.vGridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.vGridControl1.Name = "vGridControl1";
             this.vGridControl1.OptionsBehavior.AutoFocusNewRecord = true;
             this.vGridControl1.OptionsBehavior.ResizeHeaderPanel = false;
@@ -5521,7 +5530,7 @@
             this.categoryRow1,
             this.categoryRow3,
             this.editorRow8});
-            this.vGridControl1.Size = new System.Drawing.Size(263, 113);
+            this.vGridControl1.Size = new System.Drawing.Size(225, 75);
             this.vGridControl1.TabIndex = 47;
             // 
             // categoryRow1
@@ -5608,8 +5617,7 @@
             // 
             this.rgFamilyStatus.Dock = System.Windows.Forms.DockStyle.Top;
             this.rgFamilyStatus.EnterMoveNextControl = true;
-            this.rgFamilyStatus.Location = new System.Drawing.Point(2, 41);
-            this.rgFamilyStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rgFamilyStatus.Location = new System.Drawing.Point(2, 39);
             this.rgFamilyStatus.Name = "rgFamilyStatus";
             this.rgFamilyStatus.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rgFamilyStatus.Properties.Appearance.Options.UseBackColor = true;
@@ -5621,7 +5629,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(),
             new DevExpress.XtraEditors.Controls.RadioGroupItem()});
-            this.rgFamilyStatus.Size = new System.Drawing.Size(263, 44);
+            this.rgFamilyStatus.Size = new System.Drawing.Size(225, 36);
             this.rgFamilyStatus.TabIndex = 44;
             this.rgFamilyStatus.Tag = "FamilyStatus";
             // 
@@ -5631,10 +5639,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ucClientTab1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ucClientTab1.Location = new System.Drawing.Point(575, 34);
-            this.ucClientTab1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ucClientTab1.Location = new System.Drawing.Point(493, 28);
+            this.ucClientTab1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ucClientTab1.Name = "ucClientTab1";
-            this.ucClientTab1.Size = new System.Drawing.Size(901, 35);
+            this.ucClientTab1.Size = new System.Drawing.Size(580, 32);
             this.ucClientTab1.TabIndex = 49;
             // 
             // grpAddress
@@ -5647,10 +5655,9 @@
             this.grpAddress.CaptionImageOptions.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.grpAddress.CaptionLocation = DevExpress.Utils.Locations.Top;
             this.grpAddress.Controls.Add(this.xtraScrollableAddress);
-            this.grpAddress.Location = new System.Drawing.Point(1127, 79);
-            this.grpAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpAddress.Location = new System.Drawing.Point(966, 64);
             this.grpAddress.Name = "grpAddress";
-            this.grpAddress.Size = new System.Drawing.Size(349, 396);
+            this.grpAddress.Size = new System.Drawing.Size(107, 322);
             this.grpAddress.TabIndex = 48;
             this.grpAddress.TabStop = true;
             this.grpAddress.Text = "Adres ve İletişim Bilgileri";
@@ -5677,40 +5684,38 @@
             this.xtraScrollableAddress.Controls.Add(this.lkTown);
             this.xtraScrollableAddress.Controls.Add(this.lkNeighborhood);
             this.xtraScrollableAddress.Controls.Add(this.lkAddressTitle);
-            this.xtraScrollableAddress.Location = new System.Drawing.Point(2, 26);
+            this.xtraScrollableAddress.Location = new System.Drawing.Point(2, 21);
+            this.xtraScrollableAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraScrollableAddress.Name = "xtraScrollableAddress";
-            this.xtraScrollableAddress.Size = new System.Drawing.Size(343, 368);
+            this.xtraScrollableAddress.Size = new System.Drawing.Size(102, 299);
             this.xtraScrollableAddress.TabIndex = 0;
             // 
             // lblAddressLine
             // 
-            this.lblAddressLine.Location = new System.Drawing.Point(14, 173);
-            this.lblAddressLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblAddressLine.Location = new System.Drawing.Point(12, 141);
             this.lblAddressLine.Name = "lblAddressLine";
-            this.lblAddressLine.Size = new System.Drawing.Size(38, 16);
+            this.lblAddressLine.Size = new System.Drawing.Size(32, 13);
             this.lblAddressLine.TabIndex = 48;
             this.lblAddressLine.Text = "Adres:";
             // 
             // txtAddressLine
             // 
             this.txtAddressLine.EnterMoveNextControl = true;
-            this.txtAddressLine.Location = new System.Drawing.Point(62, 171);
-            this.txtAddressLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddressLine.Location = new System.Drawing.Point(53, 139);
             this.txtAddressLine.Name = "txtAddressLine";
             this.txtAddressLine.Properties.NullText = "ADRES TARİFİ";
             this.txtAddressLine.Properties.NullValuePrompt = "ADRES TARİFİ";
             this.txtAddressLine.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtAddressLine.Properties.ValidateOnEnterKey = true;
-            this.txtAddressLine.Size = new System.Drawing.Size(277, 90);
+            this.txtAddressLine.Size = new System.Drawing.Size(237, 73);
             this.txtAddressLine.TabIndex = 57;
             this.txtAddressLine.Tag = "AddressLine";
             // 
             // lblStreet
             // 
-            this.lblStreet.Location = new System.Drawing.Point(3, 143);
-            this.lblStreet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblStreet.Location = new System.Drawing.Point(3, 116);
             this.lblStreet.Name = "lblStreet";
-            this.lblStreet.Size = new System.Drawing.Size(49, 16);
+            this.lblStreet.Size = new System.Drawing.Size(40, 13);
             this.lblStreet.TabIndex = 47;
             this.lblStreet.Text = "Mahalle:";
             // 
@@ -5718,8 +5723,7 @@
             // 
             this.lkStreet.Enabled = false;
             this.lkStreet.EnterMoveNextControl = true;
-            this.lkStreet.Location = new System.Drawing.Point(62, 140);
-            this.lkStreet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lkStreet.Location = new System.Drawing.Point(53, 114);
             this.lkStreet.Name = "lkStreet";
             this.lkStreet.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkStreet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -5733,7 +5737,7 @@
             this.lkStreet.Properties.ValidateOnEnterKey = true;
             this.lkStreet.Properties.ValueMember = "Id";
             this.lkStreet.Properties.View = this.gridView3;
-            this.lkStreet.Size = new System.Drawing.Size(277, 22);
+            this.lkStreet.Size = new System.Drawing.Size(237, 20);
             this.lkStreet.TabIndex = 56;
             this.lkStreet.Tag = "StreetId";
             // 
@@ -5771,8 +5775,7 @@
             // textEdit4
             // 
             this.textEdit4.EnterMoveNextControl = true;
-            this.textEdit4.Location = new System.Drawing.Point(61, 327);
-            this.textEdit4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit4.Location = new System.Drawing.Point(52, 266);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Mask.BeepOnError = true;
             this.textEdit4.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
@@ -5781,33 +5784,30 @@
             this.textEdit4.Properties.NullValuePrompt = "(___) ___-____";
             this.textEdit4.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit4.Properties.ValidateOnEnterKey = true;
-            this.textEdit4.Size = new System.Drawing.Size(278, 22);
+            this.textEdit4.Size = new System.Drawing.Size(238, 20);
             this.textEdit4.TabIndex = 60;
             this.textEdit4.Tag = "Mobile";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(22, 330);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl3.Location = new System.Drawing.Point(19, 268);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(30, 16);
+            this.labelControl3.Size = new System.Drawing.Size(24, 13);
             this.labelControl3.TabIndex = 51;
             this.labelControl3.Text = "Gsm:";
             // 
             // lblAddressName
             // 
-            this.lblAddressName.Location = new System.Drawing.Point(17, 17);
-            this.lblAddressName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblAddressName.Location = new System.Drawing.Point(15, 14);
             this.lblAddressName.Name = "lblAddressName";
-            this.lblAddressName.Size = new System.Drawing.Size(37, 16);
+            this.lblAddressName.Size = new System.Drawing.Size(30, 13);
             this.lblAddressName.TabIndex = 43;
             this.lblAddressName.Text = "Başlık:";
             // 
             // textEdit3
             // 
             this.textEdit3.EnterMoveNextControl = true;
-            this.textEdit3.Location = new System.Drawing.Point(62, 298);
-            this.textEdit3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit3.Location = new System.Drawing.Point(53, 242);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.Mask.BeepOnError = true;
             this.textEdit3.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
@@ -5816,15 +5816,14 @@
             this.textEdit3.Properties.NullValuePrompt = "(___) ___-____";
             this.textEdit3.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit3.Properties.ValidateOnEnterKey = true;
-            this.textEdit3.Size = new System.Drawing.Size(277, 22);
+            this.textEdit3.Size = new System.Drawing.Size(237, 20);
             this.textEdit3.TabIndex = 59;
             this.textEdit3.Tag = "Phone2";
             // 
             // textEdit2
             // 
             this.textEdit2.EnterMoveNextControl = true;
-            this.textEdit2.Location = new System.Drawing.Point(62, 268);
-            this.textEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit2.Location = new System.Drawing.Point(53, 218);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.AllowMouseWheel = false;
             this.textEdit2.Properties.Mask.BeepOnError = true;
@@ -5835,60 +5834,54 @@
             this.textEdit2.Properties.NullValuePrompt = "(___) ___-____";
             this.textEdit2.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit2.Properties.ValidateOnEnterKey = true;
-            this.textEdit2.Size = new System.Drawing.Size(277, 22);
+            this.textEdit2.Size = new System.Drawing.Size(237, 20);
             this.textEdit2.TabIndex = 58;
             this.textEdit2.Tag = "Phone1";
             // 
             // lblPhone2
             // 
-            this.lblPhone2.Location = new System.Drawing.Point(7, 300);
-            this.lblPhone2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblPhone2.Location = new System.Drawing.Point(6, 244);
             this.lblPhone2.Name = "lblPhone2";
-            this.lblPhone2.Size = new System.Drawing.Size(44, 16);
+            this.lblPhone2.Size = new System.Drawing.Size(35, 13);
             this.lblPhone2.TabIndex = 50;
             this.lblPhone2.Text = "Tel (2):";
             // 
             // lblPhone1
             // 
-            this.lblPhone1.Location = new System.Drawing.Point(6, 270);
-            this.lblPhone1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblPhone1.Location = new System.Drawing.Point(5, 219);
             this.lblPhone1.Name = "lblPhone1";
-            this.lblPhone1.Size = new System.Drawing.Size(44, 16);
+            this.lblPhone1.Size = new System.Drawing.Size(35, 13);
             this.lblPhone1.TabIndex = 49;
             this.lblPhone1.Text = "Tel (1):";
             // 
             // lblCity
             // 
-            this.lblCity.Location = new System.Drawing.Point(44, 50);
-            this.lblCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblCity.Location = new System.Drawing.Point(38, 41);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(12, 16);
+            this.lblCity.Size = new System.Drawing.Size(10, 13);
             this.lblCity.TabIndex = 44;
             this.lblCity.Text = "İl:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(18, 112);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Location = new System.Drawing.Point(15, 91);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(35, 16);
+            this.labelControl1.Size = new System.Drawing.Size(28, 13);
             this.labelControl1.TabIndex = 46;
             this.labelControl1.Text = "Semt:";
             // 
             // lblDistrict
             // 
-            this.lblDistrict.Location = new System.Drawing.Point(29, 82);
-            this.lblDistrict.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblDistrict.Location = new System.Drawing.Point(25, 67);
             this.lblDistrict.Name = "lblDistrict";
-            this.lblDistrict.Size = new System.Drawing.Size(25, 16);
+            this.lblDistrict.Size = new System.Drawing.Size(21, 13);
             this.lblDistrict.TabIndex = 45;
             this.lblDistrict.Text = "İlçe:";
             // 
             // lkProvince
             // 
             this.lkProvince.EnterMoveNextControl = true;
-            this.lkProvince.Location = new System.Drawing.Point(62, 47);
-            this.lkProvince.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lkProvince.Location = new System.Drawing.Point(53, 38);
             this.lkProvince.Name = "lkProvince";
             this.lkProvince.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkProvince.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -5901,7 +5894,7 @@
             this.lkProvince.Properties.ValidateOnEnterKey = true;
             this.lkProvince.Properties.ValueMember = "Id";
             this.lkProvince.Properties.View = this.searchLookUpEdit1View;
-            this.lkProvince.Size = new System.Drawing.Size(277, 22);
+            this.lkProvince.Size = new System.Drawing.Size(237, 20);
             this.lkProvince.TabIndex = 53;
             this.lkProvince.Tag = "ProvinceId";
             // 
@@ -5970,8 +5963,7 @@
             this.lkTown.EditValue = "İLÇE";
             this.lkTown.Enabled = false;
             this.lkTown.EnterMoveNextControl = true;
-            this.lkTown.Location = new System.Drawing.Point(62, 79);
-            this.lkTown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lkTown.Location = new System.Drawing.Point(53, 64);
             this.lkTown.Name = "lkTown";
             this.lkTown.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkTown.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -5985,7 +5977,7 @@
             this.lkTown.Properties.ValidateOnEnterKey = true;
             this.lkTown.Properties.ValueMember = "Id";
             this.lkTown.Properties.View = this.gridView1;
-            this.lkTown.Size = new System.Drawing.Size(277, 22);
+            this.lkTown.Size = new System.Drawing.Size(237, 20);
             this.lkTown.TabIndex = 54;
             this.lkTown.Tag = "TownId";
             // 
@@ -6012,8 +6004,7 @@
             // 
             this.lkNeighborhood.Enabled = false;
             this.lkNeighborhood.EnterMoveNextControl = true;
-            this.lkNeighborhood.Location = new System.Drawing.Point(62, 109);
-            this.lkNeighborhood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lkNeighborhood.Location = new System.Drawing.Point(53, 89);
             this.lkNeighborhood.Name = "lkNeighborhood";
             this.lkNeighborhood.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkNeighborhood.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -6027,7 +6018,7 @@
             this.lkNeighborhood.Properties.ValidateOnEnterKey = true;
             this.lkNeighborhood.Properties.ValueMember = "Id";
             this.lkNeighborhood.Properties.View = this.gridView2;
-            this.lkNeighborhood.Size = new System.Drawing.Size(277, 22);
+            this.lkNeighborhood.Size = new System.Drawing.Size(237, 20);
             this.lkNeighborhood.TabIndex = 55;
             this.lkNeighborhood.Tag = "NeighborhoodId";
             // 
@@ -6054,8 +6045,7 @@
             // lkAddressTitle
             // 
             this.lkAddressTitle.EnterMoveNextControl = true;
-            this.lkAddressTitle.Location = new System.Drawing.Point(62, 16);
-            this.lkAddressTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lkAddressTitle.Location = new System.Drawing.Point(53, 13);
             this.lkAddressTitle.Name = "lkAddressTitle";
             this.lkAddressTitle.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkAddressTitle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -6068,7 +6058,7 @@
             this.lkAddressTitle.Properties.PopupSizeable = false;
             this.lkAddressTitle.Properties.ShowHeader = false;
             this.lkAddressTitle.Properties.ValidateOnEnterKey = true;
-            this.lkAddressTitle.Size = new System.Drawing.Size(277, 22);
+            this.lkAddressTitle.Size = new System.Drawing.Size(237, 20);
             this.lkAddressTitle.TabIndex = 52;
             this.lkAddressTitle.Tag = "TitleId";
             // 
@@ -6081,10 +6071,9 @@
             this.grpClient.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("grpClient.CaptionImageOptions.Image")));
             this.grpClient.CaptionImageOptions.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.grpClient.Controls.Add(this.xtraScrollableClient);
-            this.grpClient.Location = new System.Drawing.Point(477, 79);
-            this.grpClient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpClient.Location = new System.Drawing.Point(409, 64);
             this.grpClient.Name = "grpClient";
-            this.grpClient.Size = new System.Drawing.Size(632, 396);
+            this.grpClient.Size = new System.Drawing.Size(350, 322);
             this.grpClient.TabIndex = 47;
             this.grpClient.TabStop = true;
             this.grpClient.Text = "Danışan Bilgileri";
@@ -6118,9 +6107,10 @@
             this.xtraScrollableClient.Controls.Add(this.lblFileNumber);
             this.xtraScrollableClient.Controls.Add(this.picClientImage);
             this.xtraScrollableClient.Controls.Add(this.txtFileNumber);
-            this.xtraScrollableClient.Location = new System.Drawing.Point(2, 26);
+            this.xtraScrollableClient.Location = new System.Drawing.Point(2, 21);
+            this.xtraScrollableClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraScrollableClient.Name = "xtraScrollableClient";
-            this.xtraScrollableClient.Size = new System.Drawing.Size(620, 369);
+            this.xtraScrollableClient.Size = new System.Drawing.Size(339, 300);
             this.xtraScrollableClient.TabIndex = 0;
             // 
             // vGridControl3
@@ -6136,8 +6126,7 @@
             this.vGridControl3.Cursor = System.Windows.Forms.Cursors.Default;
             this.vGridControl3.FilterString = "";
             this.vGridControl3.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView;
-            this.vGridControl3.Location = new System.Drawing.Point(18, 199);
-            this.vGridControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.vGridControl3.Location = new System.Drawing.Point(15, 162);
             this.vGridControl3.Name = "vGridControl3";
             this.vGridControl3.OptionsBehavior.AutoFocusNewRecord = true;
             this.vGridControl3.OptionsBehavior.ResizeHeaderPanel = false;
@@ -6155,7 +6144,7 @@
             this.categoryRow7,
             this.categoryRow9,
             this.editorRow24});
-            this.vGridControl3.Size = new System.Drawing.Size(412, 234);
+            this.vGridControl3.Size = new System.Drawing.Size(353, 190);
             this.vGridControl3.TabIndex = 51;
             // 
             // categoryRow7
@@ -6244,8 +6233,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRef.EditValue = "REFERANS BİLGİSİ";
             this.txtRef.EnterMoveNextControl = true;
-            this.txtRef.Location = new System.Drawing.Point(263, 234);
-            this.txtRef.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRef.Location = new System.Drawing.Point(225, 190);
             this.txtRef.Name = "txtRef";
             this.txtRef.Properties.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtRef.Properties.Appearance.Options.UseBackColor = true;
@@ -6254,7 +6242,7 @@
             this.txtRef.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtRef.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtRef.Properties.ValidateOnEnterKey = true;
-            this.txtRef.Size = new System.Drawing.Size(637, 50);
+            this.txtRef.Size = new System.Drawing.Size(451, 41);
             this.txtRef.TabIndex = 99;
             this.txtRef.Tag = "Reference";
             this.txtRef.ToolTip = "Danışanın kimin referansı/tavsiyesi ile Ekip Norma Razon\'a geldiğini buraya yazab" +
@@ -6267,8 +6255,7 @@
             this.rgBlood.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rgBlood.EnterMoveNextControl = true;
-            this.rgBlood.Location = new System.Drawing.Point(491, 69);
-            this.rgBlood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rgBlood.Location = new System.Drawing.Point(421, 56);
             this.rgBlood.Name = "rgBlood";
             this.rgBlood.Properties.AllowMouseWheel = false;
             this.rgBlood.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -6281,7 +6268,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Öz"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "Evlatlık"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "Üvey")});
-            this.rgBlood.Size = new System.Drawing.Size(421, 30);
+            this.rgBlood.Size = new System.Drawing.Size(266, 24);
             this.rgBlood.TabIndex = 94;
             this.rgBlood.Tag = "Blood";
             this.rgBlood.ToolTip = "Danışanın özlük durumunu Öz, Evlatlık yada Üvey değerlerinden birini seçerek beli" +
@@ -6295,8 +6282,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.deBirthDate.EditValue = null;
             this.deBirthDate.EnterMoveNextControl = true;
-            this.deBirthDate.Location = new System.Drawing.Point(263, 39);
-            this.deBirthDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deBirthDate.Location = new System.Drawing.Point(225, 32);
             this.deBirthDate.Name = "deBirthDate";
             this.deBirthDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
@@ -6316,7 +6302,7 @@
             this.deBirthDate.Properties.ShowYearNavigationButtons = DevExpress.Utils.DefaultBoolean.True;
             this.deBirthDate.Properties.SuppressMouseEventOnOuterMouseClick = true;
             this.deBirthDate.Properties.ValidateOnEnterKey = true;
-            this.deBirthDate.Size = new System.Drawing.Size(637, 22);
+            this.deBirthDate.Size = new System.Drawing.Size(451, 20);
             this.deBirthDate.TabIndex = 91;
             this.deBirthDate.Tag = "BirthDate";
             this.deBirthDate.ToolTip = "Danışanın doğum tarihini gün/ay/yıl şeklinde belirtiniz.";
@@ -6327,8 +6313,7 @@
             // lkGender
             // 
             this.lkGender.EnterMoveNextControl = true;
-            this.lkGender.Location = new System.Drawing.Point(263, 71);
-            this.lkGender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lkGender.Location = new System.Drawing.Point(225, 58);
             this.lkGender.Name = "lkGender";
             this.lkGender.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -6341,7 +6326,7 @@
             this.lkGender.Properties.PopupSizeable = false;
             this.lkGender.Properties.ShowHeader = false;
             this.lkGender.Properties.ValidateOnEnterKey = true;
-            this.lkGender.Size = new System.Drawing.Size(116, 22);
+            this.lkGender.Size = new System.Drawing.Size(99, 20);
             this.lkGender.TabIndex = 92;
             this.lkGender.Tag = "Gender";
             this.lkGender.ToolTip = "Danışanın cinsiyet seçimini (Kız/Erkek) yapınız.";
@@ -6353,8 +6338,7 @@
             this.txtPediatrician.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPediatrician.EnterMoveNextControl = true;
-            this.txtPediatrician.Location = new System.Drawing.Point(263, 169);
-            this.txtPediatrician.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPediatrician.Location = new System.Drawing.Point(225, 137);
             this.txtPediatrician.Name = "txtPediatrician";
             this.txtPediatrician.Properties.Mask.BeepOnError = true;
             this.txtPediatrician.Properties.Mask.EditMask = "[a-zA-Z şŞıİçÇöÖüÜĞğ]*";
@@ -6364,7 +6348,7 @@
             this.txtPediatrician.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPediatrician.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtPediatrician.Properties.ValidateOnEnterKey = true;
-            this.txtPediatrician.Size = new System.Drawing.Size(637, 22);
+            this.txtPediatrician.Size = new System.Drawing.Size(451, 20);
             this.txtPediatrician.TabIndex = 97;
             this.txtPediatrician.Tag = "Pediatrician";
             this.txtPediatrician.ToolTip = "Danışanın çocuk doktoru var ise buraya girebilirsiniz.";
@@ -6375,8 +6359,7 @@
             this.txtMiddleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMiddleName.EnterMoveNextControl = true;
-            this.txtMiddleName.Location = new System.Drawing.Point(263, 137);
-            this.txtMiddleName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMiddleName.Location = new System.Drawing.Point(225, 111);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Properties.Mask.BeepOnError = true;
             this.txtMiddleName.Properties.Mask.EditMask = "[a-zA-Z şŞıİçÇöÖüÜĞğ]*";
@@ -6386,7 +6369,7 @@
             this.txtMiddleName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtMiddleName.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtMiddleName.Properties.ValidateOnEnterKey = true;
-            this.txtMiddleName.Size = new System.Drawing.Size(637, 22);
+            this.txtMiddleName.Size = new System.Drawing.Size(451, 20);
             this.txtMiddleName.TabIndex = 96;
             this.txtMiddleName.Tag = "MiddleName";
             this.txtMiddleName.ToolTip = "Danışanın ikinci adı, göbek adı vb. bilgileri buraya girebilirsiniz.";
@@ -6395,10 +6378,9 @@
             // 
             // lblGender
             // 
-            this.lblGender.Location = new System.Drawing.Point(200, 73);
-            this.lblGender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblGender.Location = new System.Drawing.Point(171, 59);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(52, 16);
+            this.lblGender.Size = new System.Drawing.Size(44, 13);
             this.lblGender.TabIndex = 81;
             this.lblGender.Text = "Cinsiyeti:";
             // 
@@ -6408,8 +6390,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFullName.EditValue = "";
             this.txtFullName.EnterMoveNextControl = true;
-            this.txtFullName.Location = new System.Drawing.Point(263, 104);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFullName.Location = new System.Drawing.Point(225, 84);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFullName.Properties.Mask.BeepOnError = true;
@@ -6419,7 +6400,7 @@
             this.txtFullName.Properties.NullValuePrompt = "Adı Soyadı";
             this.txtFullName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtFullName.Properties.ValidateOnEnterKey = true;
-            this.txtFullName.Size = new System.Drawing.Size(637, 22);
+            this.txtFullName.Size = new System.Drawing.Size(451, 20);
             this.txtFullName.TabIndex = 95;
             this.txtFullName.Tag = "FullName";
             this.txtFullName.ToolTip = "Danışanın adını ve soyadını giriniz.";
@@ -6428,10 +6409,9 @@
             // 
             // lblNote
             // 
-            this.lblNote.Location = new System.Drawing.Point(213, 291);
-            this.lblNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblNote.Location = new System.Drawing.Point(183, 236);
             this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(39, 16);
+            this.lblNote.Size = new System.Drawing.Size(33, 13);
             this.lblNote.TabIndex = 88;
             this.lblNote.Text = "Notlar:";
             // 
@@ -6440,8 +6420,7 @@
             this.txtClientNotes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtClientNotes.EnterMoveNextControl = true;
-            this.txtClientNotes.Location = new System.Drawing.Point(263, 289);
-            this.txtClientNotes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtClientNotes.Location = new System.Drawing.Point(225, 235);
             this.txtClientNotes.Name = "txtClientNotes";
             this.txtClientNotes.Properties.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtClientNotes.Properties.Appearance.Options.UseBackColor = true;
@@ -6450,7 +6429,7 @@
             this.txtClientNotes.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtClientNotes.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtClientNotes.Properties.ValidateOnEnterKey = true;
-            this.txtClientNotes.Size = new System.Drawing.Size(637, 73);
+            this.txtClientNotes.Size = new System.Drawing.Size(451, 59);
             this.txtClientNotes.TabIndex = 100;
             this.txtClientNotes.Tag = "Notes";
             this.txtClientNotes.ToolTip = "Danışan ile ilgili diğer bilgi ve notları buraya yazabilirsiniz.\r\nÖnemli Uyarı: B" +
@@ -6461,28 +6440,25 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(201, 171);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl2.Location = new System.Drawing.Point(172, 139);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(49, 16);
+            this.labelControl2.Size = new System.Drawing.Size(42, 13);
             this.labelControl2.TabIndex = 85;
             this.labelControl2.Text = "Doktoru:";
             // 
             // lblWhich
             // 
-            this.lblWhich.Location = new System.Drawing.Point(390, 73);
-            this.lblWhich.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblWhich.Location = new System.Drawing.Point(334, 59);
             this.lblWhich.Name = "lblWhich";
-            this.lblWhich.Size = new System.Drawing.Size(28, 16);
+            this.lblWhich.Size = new System.Drawing.Size(22, 13);
             this.lblWhich.TabIndex = 82;
             this.lblWhich.Text = "Sıra:";
             // 
             // lblFirstContact
             // 
-            this.lblFirstContact.Location = new System.Drawing.Point(154, 10);
-            this.lblFirstContact.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblFirstContact.Location = new System.Drawing.Point(132, 8);
             this.lblFirstContact.Name = "lblFirstContact";
-            this.lblFirstContact.Size = new System.Drawing.Size(89, 16);
+            this.lblFirstContact.Size = new System.Drawing.Size(74, 13);
             this.lblFirstContact.TabIndex = 80;
             this.lblFirstContact.Text = "İlk Başv. Tarihi:";
             // 
@@ -6492,8 +6468,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.deFirstContact.EditValue = null;
             this.deFirstContact.EnterMoveNextControl = true;
-            this.deFirstContact.Location = new System.Drawing.Point(263, 7);
-            this.deFirstContact.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deFirstContact.Location = new System.Drawing.Point(225, 6);
             this.deFirstContact.Name = "deFirstContact";
             this.deFirstContact.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
@@ -6512,7 +6487,7 @@
             this.deFirstContact.Properties.ShowOk = DevExpress.Utils.DefaultBoolean.True;
             this.deFirstContact.Properties.ShowWeekNumbers = true;
             this.deFirstContact.Properties.ValidateOnEnterKey = true;
-            this.deFirstContact.Size = new System.Drawing.Size(638, 22);
+            this.deFirstContact.Size = new System.Drawing.Size(452, 20);
             this.deFirstContact.TabIndex = 90;
             this.deFirstContact.Tag = "FirstContactDate";
             this.deFirstContact.ToolTip = "Danışanın ilk başvuru tarihini gün/ay/yıl şeklinde belirtiniz.";
@@ -6523,46 +6498,41 @@
             // 
             // lblFullName
             // 
-            this.lblFullName.Location = new System.Drawing.Point(187, 107);
-            this.lblFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblFullName.Location = new System.Drawing.Point(160, 87);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(65, 16);
+            this.lblFullName.Size = new System.Drawing.Size(54, 13);
             this.lblFullName.TabIndex = 83;
             this.lblFullName.Text = "Adı Soyadı:";
             // 
             // lblRef
             // 
-            this.lblRef.Location = new System.Drawing.Point(193, 236);
-            this.lblRef.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblRef.Location = new System.Drawing.Point(165, 192);
             this.lblRef.Name = "lblRef";
-            this.lblRef.Size = new System.Drawing.Size(56, 16);
+            this.lblRef.Size = new System.Drawing.Size(48, 13);
             this.lblRef.TabIndex = 87;
             this.lblRef.Text = "Referans:";
             // 
             // lblMiddleName
             // 
-            this.lblMiddleName.Location = new System.Drawing.Point(195, 141);
-            this.lblMiddleName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblMiddleName.Location = new System.Drawing.Point(167, 115);
             this.lblMiddleName.Name = "lblMiddleName";
-            this.lblMiddleName.Size = new System.Drawing.Size(56, 16);
+            this.lblMiddleName.Size = new System.Drawing.Size(46, 13);
             this.lblMiddleName.TabIndex = 84;
             this.lblMiddleName.Text = "İkinci Adı:";
             // 
             // lblIdCard
             // 
-            this.lblIdCard.Location = new System.Drawing.Point(187, 204);
-            this.lblIdCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblIdCard.Location = new System.Drawing.Point(160, 166);
             this.lblIdCard.Name = "lblIdCard";
-            this.lblIdCard.Size = new System.Drawing.Size(62, 16);
+            this.lblIdCard.Size = new System.Drawing.Size(49, 13);
             this.lblIdCard.TabIndex = 86;
             this.lblIdCard.Text = "T.C Kimlik:";
             // 
             // lblBirthDate
             // 
-            this.lblBirthDate.Location = new System.Drawing.Point(164, 40);
-            this.lblBirthDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblBirthDate.Location = new System.Drawing.Point(141, 32);
             this.lblBirthDate.Name = "lblBirthDate";
-            this.lblBirthDate.Size = new System.Drawing.Size(82, 16);
+            this.lblBirthDate.Size = new System.Drawing.Size(66, 13);
             this.lblBirthDate.TabIndex = 89;
             this.lblBirthDate.Text = "Doğum Tarihi:";
             // 
@@ -6571,8 +6541,7 @@
             this.txtIdCard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIdCard.EnterMoveNextControl = true;
-            this.txtIdCard.Location = new System.Drawing.Point(263, 201);
-            this.txtIdCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdCard.Location = new System.Drawing.Point(225, 163);
             this.txtIdCard.Name = "txtIdCard";
             this.txtIdCard.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txtIdCard.Properties.AppearanceFocused.Options.UseFont = true;
@@ -6585,7 +6554,7 @@
             this.txtIdCard.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtIdCard.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtIdCard.Properties.ValidateOnEnterKey = true;
-            this.txtIdCard.Size = new System.Drawing.Size(637, 22);
+            this.txtIdCard.Size = new System.Drawing.Size(451, 20);
             this.txtIdCard.TabIndex = 98;
             this.txtIdCard.Tag = "IdCard";
             // 
@@ -6597,8 +6566,7 @@
             0,
             0});
             this.txtWhich.EnterMoveNextControl = true;
-            this.txtWhich.Location = new System.Drawing.Point(422, 71);
-            this.txtWhich.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtWhich.Location = new System.Drawing.Point(362, 58);
             this.txtWhich.Name = "txtWhich";
             this.txtWhich.Properties.AllowMouseWheel = false;
             this.txtWhich.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -6619,7 +6587,7 @@
             this.txtWhich.Properties.NullValuePrompt = "Sıra";
             this.txtWhich.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtWhich.Properties.ValidateOnEnterKey = true;
-            this.txtWhich.Size = new System.Drawing.Size(66, 22);
+            this.txtWhich.Size = new System.Drawing.Size(57, 20);
             this.txtWhich.TabIndex = 93;
             this.txtWhich.Tag = "CountOfChild";
             this.txtWhich.ToolTip = "Danışanın ailenin kaçıncı çocuğu olduğunu sayısal olarak belirtiniz.\r\nHerhangi bi" +
@@ -6629,18 +6597,16 @@
             // 
             // lblFileNumber
             // 
-            this.lblFileNumber.Location = new System.Drawing.Point(7, 13);
-            this.lblFileNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblFileNumber.Location = new System.Drawing.Point(6, 11);
             this.lblFileNumber.Name = "lblFileNumber";
-            this.lblFileNumber.Size = new System.Drawing.Size(58, 16);
+            this.lblFileNumber.Size = new System.Drawing.Size(50, 13);
             this.lblFileNumber.TabIndex = 77;
             this.lblFileNumber.Text = "Dosya No:";
             // 
             // picClientImage
             // 
             this.picClientImage.Cursor = System.Windows.Forms.Cursors.Default;
-            this.picClientImage.Location = new System.Drawing.Point(5, 40);
-            this.picClientImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picClientImage.Location = new System.Drawing.Point(4, 32);
             this.picClientImage.Name = "picClientImage";
             this.picClientImage.Properties.AllowFocused = false;
             this.picClientImage.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
@@ -6652,15 +6618,14 @@
             this.picClientImage.Properties.ShowZoomSubMenu = DevExpress.Utils.DefaultBoolean.False;
             this.picClientImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picClientImage.Properties.ZoomAccelerationFactor = 1D;
-            this.picClientImage.Size = new System.Drawing.Size(145, 159);
+            this.picClientImage.Size = new System.Drawing.Size(124, 129);
             this.picClientImage.TabIndex = 79;
             this.picClientImage.Tag = "";
             // 
             // txtFileNumber
             // 
             this.txtFileNumber.EnterMoveNextControl = true;
-            this.txtFileNumber.Location = new System.Drawing.Point(73, 8);
-            this.txtFileNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFileNumber.Location = new System.Drawing.Point(63, 6);
             this.txtFileNumber.Name = "txtFileNumber";
             this.txtFileNumber.Properties.AllowFocused = false;
             this.txtFileNumber.Properties.AllowMouseWheel = false;
@@ -6671,17 +6636,18 @@
             this.txtFileNumber.Properties.NullText = "Dosya No";
             this.txtFileNumber.Properties.ReadOnly = true;
             this.txtFileNumber.Properties.ValidateOnEnterKey = true;
-            this.txtFileNumber.Size = new System.Drawing.Size(77, 30);
+            this.txtFileNumber.Size = new System.Drawing.Size(66, 24);
             this.txtFileNumber.TabIndex = 78;
             this.txtFileNumber.Tag = "FileNumber";
             // 
             // splitterControl
             // 
             this.splitterControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitterControl.Location = new System.Drawing.Point(0, 20);
+            this.splitterControl.Location = new System.Drawing.Point(0, 16);
+            this.splitterControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitterControl.MinSize = 20;
             this.splitterControl.Name = "splitterControl";
-            this.splitterControl.Size = new System.Drawing.Size(1599, 6);
+            this.splitterControl.Size = new System.Drawing.Size(1179, 5);
             this.splitterControl.TabIndex = 2;
             this.splitterControl.TabStop = false;
             // 
@@ -6689,12 +6655,13 @@
             // 
             this.formulaBarNameBoxSplitContainerControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.formulaBarNameBoxSplitContainerControl.Location = new System.Drawing.Point(0, 0);
-            this.formulaBarNameBoxSplitContainerControl.MinimumSize = new System.Drawing.Size(0, 20);
+            this.formulaBarNameBoxSplitContainerControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.formulaBarNameBoxSplitContainerControl.MinimumSize = new System.Drawing.Size(0, 16);
             this.formulaBarNameBoxSplitContainerControl.Name = "formulaBarNameBoxSplitContainerControl";
             this.formulaBarNameBoxSplitContainerControl.Panel1.Controls.Add(this.spreadsheetNameBoxControl);
             this.formulaBarNameBoxSplitContainerControl.Panel2.Controls.Add(this.spreadsheetFormulaBarControl1);
-            this.formulaBarNameBoxSplitContainerControl.Size = new System.Drawing.Size(1599, 20);
-            this.formulaBarNameBoxSplitContainerControl.SplitterPosition = 145;
+            this.formulaBarNameBoxSplitContainerControl.Size = new System.Drawing.Size(1179, 16);
+            this.formulaBarNameBoxSplitContainerControl.SplitterPosition = 124;
             this.formulaBarNameBoxSplitContainerControl.TabIndex = 3;
             // 
             // spreadsheetNameBoxControl
@@ -6702,20 +6669,23 @@
             this.spreadsheetNameBoxControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spreadsheetNameBoxControl.EditValue = "A1";
             this.spreadsheetNameBoxControl.Location = new System.Drawing.Point(0, 0);
+            this.spreadsheetNameBoxControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.spreadsheetNameBoxControl.Name = "spreadsheetNameBoxControl";
             this.spreadsheetNameBoxControl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spreadsheetNameBoxControl.Size = new System.Drawing.Size(145, 22);
+            this.spreadsheetNameBoxControl.Size = new System.Drawing.Size(124, 20);
             this.spreadsheetNameBoxControl.SpreadsheetControl = this.spreadsheetControl;
             this.spreadsheetNameBoxControl.TabIndex = 0;
             // 
             // spreadsheetFormulaBarControl1
             // 
             this.spreadsheetFormulaBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spreadsheetFormulaBarControl1.Expanded = true;
             this.spreadsheetFormulaBarControl1.Location = new System.Drawing.Point(0, 0);
-            this.spreadsheetFormulaBarControl1.MinimumSize = new System.Drawing.Size(0, 20);
+            this.spreadsheetFormulaBarControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.spreadsheetFormulaBarControl1.MinimumSize = new System.Drawing.Size(0, 16);
             this.spreadsheetFormulaBarControl1.Name = "spreadsheetFormulaBarControl1";
-            this.spreadsheetFormulaBarControl1.Size = new System.Drawing.Size(1448, 20);
+            this.spreadsheetFormulaBarControl1.Size = new System.Drawing.Size(1050, 16);
             this.spreadsheetFormulaBarControl1.SpreadsheetControl = this.spreadsheetControl;
             this.spreadsheetFormulaBarControl1.TabIndex = 0;
             // 
@@ -7124,14 +7094,15 @@
             // Form1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1599, 771);
+            this.ClientSize = new System.Drawing.Size(1179, 626);
             this.Controls.Add(this.spreadsheetFormulaBarPanel);
             this.Controls.Add(this.popupControlContainer1);
             this.Controls.Add(this.popupControlContainer2);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Ribbon = this.ribbonControl;
             this.StatusBar = this.ribbonStatusBar;

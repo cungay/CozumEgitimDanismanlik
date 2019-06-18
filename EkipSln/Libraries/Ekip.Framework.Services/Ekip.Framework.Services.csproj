@@ -162,7 +162,7 @@
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
     </ProjectReference>
   </ItemGroup>
-  <!-- Custom code folder: E:\GitHub\CozumEgitimDanismanlik\EkipSln\Libraries\Ekip.Framework.Services\App_Code -->
+  <!-- Custom code folder: D:\GitHub\CozumEgitimDanismanlik\EkipSln\Libraries\Ekip.Framework.Services\App_Code -->
   <ItemGroup>
     <Compile Include="App_Code\**\*.cs">
       <SubType>Code</SubType>

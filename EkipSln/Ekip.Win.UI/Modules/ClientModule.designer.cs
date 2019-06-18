@@ -182,7 +182,6 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
-            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).BeginInit();
@@ -285,7 +284,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -464,6 +462,7 @@
             this.layoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.liCalendarAge});
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(565, 324, 562, 500);
             this.layoutControl1.OptionsFocus.AllowFocusControlOnActivatedTabPage = true;
@@ -474,17 +473,16 @@
             this.layoutControl1.OptionsView.HighlightFocusedItem = true;
             this.layoutControl1.OptionsView.UseParentAutoScaleFactor = true;
             this.layoutControl1.Root = this.rootControlGroup;
-            this.layoutControl1.Size = new System.Drawing.Size(1623, 760);
+            this.layoutControl1.Size = new System.Drawing.Size(1391, 618);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // ucClientTab1
             // 
             this.ucClientTab1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ucClientTab1.Location = new System.Drawing.Point(2, 476);
-            this.ucClientTab1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucClientTab1.Location = new System.Drawing.Point(2, 393);
             this.ucClientTab1.Name = "ucClientTab1";
-            this.ucClientTab1.Size = new System.Drawing.Size(1260, 388);
+            this.ucClientTab1.Size = new System.Drawing.Size(1086, 329);
             this.ucClientTab1.TabIndex = 26;
             // 
             // vGridFather
@@ -541,8 +539,7 @@
             this.vGridFather.Cursor = System.Windows.Forms.Cursors.Default;
             this.vGridFather.ExternalRepository = this.persistentRepository1;
             this.vGridFather.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView;
-            this.vGridFather.Location = new System.Drawing.Point(1290, 120);
-            this.vGridFather.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.vGridFather.Location = new System.Drawing.Point(1116, 108);
             this.vGridFather.Name = "vGridFather";
             this.vGridFather.OptionsBehavior.AutoFocusNewRecord = true;
             this.vGridFather.OptionsBehavior.ResizeHeaderPanel = false;
@@ -560,7 +557,7 @@
             this.catRowFather,
             this.editorRowFatherNotes});
             this.vGridFather.ShowButtonMode = DevExpress.XtraVerticalGrid.ShowButtonModeEnum.ShowAlways;
-            this.vGridFather.Size = new System.Drawing.Size(305, 335);
+            this.vGridFather.Size = new System.Drawing.Size(258, 271);
             this.vGridFather.TabIndex = 25;
             this.vGridFather.ToolTipController = this.clientInfoToolTip;
             // 
@@ -729,8 +726,7 @@
             this.vGridMother.Cursor = System.Windows.Forms.Cursors.Default;
             this.vGridMother.ExternalRepository = this.persistentRepository1;
             this.vGridMother.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView;
-            this.vGridMother.Location = new System.Drawing.Point(1290, 512);
-            this.vGridMother.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.vGridMother.Location = new System.Drawing.Point(1116, 433);
             this.vGridMother.Name = "vGridMother";
             this.vGridMother.OptionsBehavior.AutoFocusNewRecord = true;
             this.vGridMother.OptionsBehavior.ResizeHeaderPanel = false;
@@ -749,7 +745,7 @@
             this.catRowMotherNotes,
             this.editorRowMotherNotes});
             this.vGridMother.ShowButtonMode = DevExpress.XtraVerticalGrid.ShowButtonModeEnum.ShowAlways;
-            this.vGridMother.Size = new System.Drawing.Size(305, 326);
+            this.vGridMother.Size = new System.Drawing.Size(258, 264);
             this.vGridMother.TabIndex = 24;
             this.vGridMother.ToolTipController = this.clientInfoToolTip;
             // 
@@ -864,14 +860,15 @@
             // txtFileNumber
             // 
             this.txtFileNumber.EnterMoveNextControl = true;
-            this.txtFileNumber.Location = new System.Drawing.Point(15, 66);
+            this.txtFileNumber.Location = new System.Drawing.Point(15, 58);
+            this.txtFileNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFileNumber.Name = "txtFileNumber";
             this.txtFileNumber.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
             this.txtFileNumber.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFileNumber.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtFileNumber.Properties.AppearanceReadOnly.Options.UseFont = true;
             this.txtFileNumber.Properties.ReadOnly = true;
-            this.txtFileNumber.Size = new System.Drawing.Size(128, 28);
+            this.txtFileNumber.Size = new System.Drawing.Size(109, 24);
             this.txtFileNumber.StyleController = this.layoutControl1;
             this.txtFileNumber.TabIndex = 0;
             this.txtFileNumber.Tag = "FileNumber";
@@ -880,7 +877,8 @@
             // 
             this.txtFullName.EditValue = "";
             this.txtFullName.EnterMoveNextControl = true;
-            this.txtFullName.Location = new System.Drawing.Point(272, 160);
+            this.txtFullName.Location = new System.Drawing.Point(235, 135);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Properties.Mask.BeepOnError = true;
             this.txtFullName.Properties.Mask.EditMask = "[a-zA-Z şŞıİçÇöÖüÜĞğ]*";
@@ -890,7 +888,7 @@
             this.txtFullName.Properties.NullValuePrompt = "ADI SOYADI";
             this.txtFullName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtFullName.Properties.ValidateOnEnterKey = true;
-            this.txtFullName.Size = new System.Drawing.Size(554, 24);
+            this.txtFullName.Size = new System.Drawing.Size(474, 20);
             this.txtFullName.StyleController = this.layoutControl1;
             this.txtFullName.TabIndex = 8;
             this.txtFullName.Tag = "FullName";
@@ -902,7 +900,8 @@
             // txtMiddleName
             // 
             this.txtMiddleName.EnterMoveNextControl = true;
-            this.txtMiddleName.Location = new System.Drawing.Point(272, 191);
+            this.txtMiddleName.Location = new System.Drawing.Point(235, 160);
+            this.txtMiddleName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Properties.Mask.BeepOnError = true;
             this.txtMiddleName.Properties.Mask.EditMask = "[a-zA-Z şŞıİçÇöÖüÜĞğ]*";
@@ -912,7 +911,7 @@
             this.txtMiddleName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtMiddleName.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtMiddleName.Properties.ValidateOnEnterKey = true;
-            this.txtMiddleName.Size = new System.Drawing.Size(554, 24);
+            this.txtMiddleName.Size = new System.Drawing.Size(474, 20);
             this.txtMiddleName.StyleController = this.layoutControl1;
             this.txtMiddleName.TabIndex = 9;
             this.txtMiddleName.Tag = "MiddleName";
@@ -924,7 +923,8 @@
             // txtPediatrician
             // 
             this.txtPediatrician.EnterMoveNextControl = true;
-            this.txtPediatrician.Location = new System.Drawing.Point(272, 221);
+            this.txtPediatrician.Location = new System.Drawing.Point(235, 184);
+            this.txtPediatrician.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPediatrician.Name = "txtPediatrician";
             this.txtPediatrician.Properties.Mask.BeepOnError = true;
             this.txtPediatrician.Properties.Mask.EditMask = "[a-zA-Z şŞıİçÇöÖüÜĞğ]*";
@@ -934,7 +934,7 @@
             this.txtPediatrician.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPediatrician.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtPediatrician.Properties.ValidateOnEnterKey = true;
-            this.txtPediatrician.Size = new System.Drawing.Size(554, 24);
+            this.txtPediatrician.Size = new System.Drawing.Size(474, 20);
             this.txtPediatrician.StyleController = this.layoutControl1;
             this.txtPediatrician.TabIndex = 10;
             this.txtPediatrician.Tag = "Pediatrician";
@@ -947,7 +947,8 @@
             // 
             this.txtIdCard.EditValue = "";
             this.txtIdCard.EnterMoveNextControl = true;
-            this.txtIdCard.Location = new System.Drawing.Point(272, 251);
+            this.txtIdCard.Location = new System.Drawing.Point(235, 208);
+            this.txtIdCard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdCard.Name = "txtIdCard";
             this.txtIdCard.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txtIdCard.Properties.AppearanceFocused.Options.UseFont = true;
@@ -960,7 +961,7 @@
             this.txtIdCard.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtIdCard.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtIdCard.Properties.ValidateOnEnterKey = true;
-            this.txtIdCard.Size = new System.Drawing.Size(554, 24);
+            this.txtIdCard.Size = new System.Drawing.Size(474, 20);
             this.txtIdCard.StyleController = this.layoutControl1;
             this.txtIdCard.TabIndex = 11;
             this.txtIdCard.Tag = "IdCard";
@@ -972,13 +973,14 @@
             // txtAddressLine
             // 
             this.txtAddressLine.EnterMoveNextControl = true;
-            this.txtAddressLine.Location = new System.Drawing.Point(986, 180);
+            this.txtAddressLine.Location = new System.Drawing.Point(850, 153);
+            this.txtAddressLine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddressLine.Name = "txtAddressLine";
             this.txtAddressLine.Properties.NullText = "ADRES TARİFİ";
             this.txtAddressLine.Properties.NullValuePrompt = "ADRES TARİFİ";
             this.txtAddressLine.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtAddressLine.Properties.ValidateOnEnterKey = true;
-            this.txtAddressLine.Size = new System.Drawing.Size(264, 154);
+            this.txtAddressLine.Size = new System.Drawing.Size(226, 124);
             this.txtAddressLine.StyleController = this.layoutControl1;
             this.txtAddressLine.TabIndex = 18;
             this.txtAddressLine.Tag = "AddressLine";
@@ -990,7 +992,8 @@
             // txtPhone1
             // 
             this.txtPhone1.EnterMoveNextControl = true;
-            this.txtPhone1.Location = new System.Drawing.Point(986, 338);
+            this.txtPhone1.Location = new System.Drawing.Point(850, 281);
+            this.txtPhone1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone1.Name = "txtPhone1";
             this.txtPhone1.Properties.AllowMouseWheel = false;
             this.txtPhone1.Properties.Mask.BeepOnError = true;
@@ -1001,7 +1004,7 @@
             this.txtPhone1.Properties.NullValuePrompt = "(___) ___-____";
             this.txtPhone1.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPhone1.Properties.ValidateOnEnterKey = true;
-            this.txtPhone1.Size = new System.Drawing.Size(264, 24);
+            this.txtPhone1.Size = new System.Drawing.Size(226, 20);
             this.txtPhone1.StyleController = this.layoutControl1;
             this.txtPhone1.TabIndex = 19;
             this.txtPhone1.Tag = "Phone1";
@@ -1013,7 +1016,8 @@
             // txtPhone2
             // 
             this.txtPhone2.EnterMoveNextControl = true;
-            this.txtPhone2.Location = new System.Drawing.Point(986, 366);
+            this.txtPhone2.Location = new System.Drawing.Point(850, 304);
+            this.txtPhone2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone2.Name = "txtPhone2";
             this.txtPhone2.Properties.AllowMouseWheel = false;
             this.txtPhone2.Properties.Mask.BeepOnError = true;
@@ -1024,7 +1028,7 @@
             this.txtPhone2.Properties.NullValuePrompt = "(___) ___-____";
             this.txtPhone2.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPhone2.Properties.ValidateOnEnterKey = true;
-            this.txtPhone2.Size = new System.Drawing.Size(264, 24);
+            this.txtPhone2.Size = new System.Drawing.Size(226, 20);
             this.txtPhone2.StyleController = this.layoutControl1;
             this.txtPhone2.TabIndex = 20;
             this.txtPhone2.Tag = "Phone2";
@@ -1041,7 +1045,8 @@
             0,
             0});
             this.txtCountOfChild.EnterMoveNextControl = true;
-            this.txtCountOfChild.Location = new System.Drawing.Point(697, 98);
+            this.txtCountOfChild.Location = new System.Drawing.Point(599, 85);
+            this.txtCountOfChild.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCountOfChild.Name = "txtCountOfChild";
             this.txtCountOfChild.Properties.AllowMouseWheel = false;
             this.txtCountOfChild.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1063,7 +1068,7 @@
             this.txtCountOfChild.Properties.NullValuePrompt = "Sıra";
             this.txtCountOfChild.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtCountOfChild.Properties.ValidateOnEnterKey = true;
-            this.txtCountOfChild.Size = new System.Drawing.Size(129, 24);
+            this.txtCountOfChild.Size = new System.Drawing.Size(110, 20);
             this.txtCountOfChild.StyleController = this.layoutControl1;
             this.txtCountOfChild.TabIndex = 6;
             this.txtCountOfChild.Tag = "CountOfChild";
@@ -1077,7 +1082,8 @@
             // 
             this.txtNotes.EditValue = "";
             this.txtNotes.EnterMoveNextControl = true;
-            this.txtNotes.Location = new System.Drawing.Point(272, 330);
+            this.txtNotes.Location = new System.Drawing.Point(235, 272);
+            this.txtNotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Properties.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtNotes.Properties.Appearance.Options.UseBackColor = true;
@@ -1086,7 +1092,7 @@
             this.txtNotes.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtNotes.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtNotes.Properties.ValidateOnEnterKey = true;
-            this.txtNotes.Size = new System.Drawing.Size(554, 106);
+            this.txtNotes.Size = new System.Drawing.Size(474, 85);
             this.txtNotes.StyleController = this.layoutControl1;
             this.txtNotes.TabIndex = 13;
             this.txtNotes.Tag = "Notes";
@@ -1101,7 +1107,8 @@
             // 
             this.txtReference.EditValue = "";
             this.txtReference.EnterMoveNextControl = true;
-            this.txtReference.Location = new System.Drawing.Point(272, 279);
+            this.txtReference.Location = new System.Drawing.Point(235, 231);
+            this.txtReference.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtReference.Name = "txtReference";
             this.txtReference.Properties.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtReference.Properties.Appearance.Options.UseBackColor = true;
@@ -1110,7 +1117,7 @@
             this.txtReference.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtReference.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtReference.Properties.ValidateOnEnterKey = true;
-            this.txtReference.Size = new System.Drawing.Size(554, 47);
+            this.txtReference.Size = new System.Drawing.Size(474, 37);
             this.txtReference.StyleController = this.layoutControl1;
             this.txtReference.TabIndex = 12;
             this.txtReference.Tag = "Reference";
@@ -1124,8 +1131,7 @@
             // 
             this.deBirthDate.EditValue = null;
             this.deBirthDate.EnterMoveNextControl = true;
-            this.deBirthDate.Location = new System.Drawing.Point(272, 40);
-            this.deBirthDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deBirthDate.Location = new System.Drawing.Point(235, 38);
             this.deBirthDate.Name = "deBirthDate";
             this.deBirthDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
@@ -1145,7 +1151,7 @@
             this.deBirthDate.Properties.SuppressMouseEventOnOuterMouseClick = true;
             this.deBirthDate.Properties.ValidateOnEnterKey = true;
             this.deBirthDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.deBirthDate.Size = new System.Drawing.Size(554, 24);
+            this.deBirthDate.Size = new System.Drawing.Size(474, 20);
             this.deBirthDate.StyleController = this.layoutControl1;
             this.deBirthDate.TabIndex = 3;
             this.deBirthDate.Tag = "BirthDate";
@@ -1159,7 +1165,8 @@
             // 
             this.deFirstContact.EditValue = null;
             this.deFirstContact.EnterMoveNextControl = true;
-            this.deFirstContact.Location = new System.Drawing.Point(272, 70);
+            this.deFirstContact.Location = new System.Drawing.Point(235, 62);
+            this.deFirstContact.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deFirstContact.Name = "deFirstContact";
             this.deFirstContact.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
@@ -1180,7 +1187,7 @@
             this.deFirstContact.Properties.SuppressMouseEventOnOuterMouseClick = true;
             this.deFirstContact.Properties.ValidateOnEnterKey = true;
             this.deFirstContact.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.deFirstContact.Size = new System.Drawing.Size(554, 24);
+            this.deFirstContact.Size = new System.Drawing.Size(474, 20);
             this.deFirstContact.StyleController = this.layoutControl1;
             this.deFirstContact.TabIndex = 2;
             this.deFirstContact.Tag = "FirstContactDate";
@@ -1194,8 +1201,7 @@
             // txtGsm
             // 
             this.txtGsm.EnterMoveNextControl = true;
-            this.txtGsm.Location = new System.Drawing.Point(986, 394);
-            this.txtGsm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtGsm.Location = new System.Drawing.Point(850, 327);
             this.txtGsm.Name = "txtGsm";
             this.txtGsm.Properties.Mask.BeepOnError = true;
             this.txtGsm.Properties.Mask.EditMask = "(\\d?\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
@@ -1204,7 +1210,7 @@
             this.txtGsm.Properties.NullValuePrompt = "(___) ___-____";
             this.txtGsm.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtGsm.Properties.ValidateOnEnterKey = true;
-            this.txtGsm.Size = new System.Drawing.Size(264, 24);
+            this.txtGsm.Size = new System.Drawing.Size(226, 20);
             this.txtGsm.StyleController = this.layoutControl1;
             this.txtGsm.TabIndex = 21;
             this.txtGsm.Tag = "Mobile";
@@ -1216,7 +1222,8 @@
             // lkAddressTitle
             // 
             this.lkAddressTitle.EnterMoveNextControl = true;
-            this.lkAddressTitle.Location = new System.Drawing.Point(986, 40);
+            this.lkAddressTitle.Location = new System.Drawing.Point(850, 38);
+            this.lkAddressTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lkAddressTitle.Name = "lkAddressTitle";
             this.lkAddressTitle.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkAddressTitle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1231,7 +1238,7 @@
             this.lkAddressTitle.Properties.PopupSizeable = false;
             this.lkAddressTitle.Properties.ShowHeader = false;
             this.lkAddressTitle.Properties.ValidateOnEnterKey = true;
-            this.lkAddressTitle.Size = new System.Drawing.Size(264, 24);
+            this.lkAddressTitle.Size = new System.Drawing.Size(226, 20);
             this.lkAddressTitle.StyleController = this.layoutControl1;
             this.lkAddressTitle.TabIndex = 13;
             this.lkAddressTitle.Tag = "TitleId";
@@ -1243,7 +1250,8 @@
             // lkProvince
             // 
             this.lkProvince.EnterMoveNextControl = true;
-            this.lkProvince.Location = new System.Drawing.Point(986, 68);
+            this.lkProvince.Location = new System.Drawing.Point(850, 61);
+            this.lkProvince.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lkProvince.Name = "lkProvince";
             this.lkProvince.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkProvince.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1256,7 +1264,7 @@
             this.lkProvince.Properties.ValidateOnEnterKey = true;
             this.lkProvince.Properties.ValueMember = "Id";
             this.lkProvince.Properties.View = this.lkProvinceView;
-            this.lkProvince.Size = new System.Drawing.Size(264, 24);
+            this.lkProvince.Size = new System.Drawing.Size(226, 20);
             this.lkProvince.StyleController = this.layoutControl1;
             this.lkProvince.TabIndex = 14;
             this.lkProvince.Tag = "ProvinceId";
@@ -1314,7 +1322,8 @@
             this.lkTown.EditValue = "İLÇE";
             this.lkTown.Enabled = false;
             this.lkTown.EnterMoveNextControl = true;
-            this.lkTown.Location = new System.Drawing.Point(986, 96);
+            this.lkTown.Location = new System.Drawing.Point(850, 84);
+            this.lkTown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lkTown.Name = "lkTown";
             this.lkTown.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkTown.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1328,7 +1337,7 @@
             this.lkTown.Properties.ValidateOnEnterKey = true;
             this.lkTown.Properties.ValueMember = "Id";
             this.lkTown.Properties.View = this.lkTownView;
-            this.lkTown.Size = new System.Drawing.Size(264, 24);
+            this.lkTown.Size = new System.Drawing.Size(226, 20);
             this.lkTown.StyleController = this.layoutControl1;
             this.lkTown.TabIndex = 15;
             this.lkTown.Tag = "TownId";
@@ -1367,7 +1376,8 @@
             // 
             this.lkNeighborhood.Enabled = false;
             this.lkNeighborhood.EnterMoveNextControl = true;
-            this.lkNeighborhood.Location = new System.Drawing.Point(986, 124);
+            this.lkNeighborhood.Location = new System.Drawing.Point(850, 107);
+            this.lkNeighborhood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lkNeighborhood.Name = "lkNeighborhood";
             this.lkNeighborhood.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkNeighborhood.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1381,7 +1391,7 @@
             this.lkNeighborhood.Properties.ValidateOnEnterKey = true;
             this.lkNeighborhood.Properties.ValueMember = "Id";
             this.lkNeighborhood.Properties.View = this.lkNeighborhoodView;
-            this.lkNeighborhood.Size = new System.Drawing.Size(264, 24);
+            this.lkNeighborhood.Size = new System.Drawing.Size(226, 20);
             this.lkNeighborhood.StyleController = this.layoutControl1;
             this.lkNeighborhood.TabIndex = 16;
             this.lkNeighborhood.Tag = "NeighborhoodId";
@@ -1420,7 +1430,8 @@
             // 
             this.lkStreet.Enabled = false;
             this.lkStreet.EnterMoveNextControl = true;
-            this.lkStreet.Location = new System.Drawing.Point(986, 152);
+            this.lkStreet.Location = new System.Drawing.Point(850, 130);
+            this.lkStreet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lkStreet.Name = "lkStreet";
             this.lkStreet.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkStreet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1434,7 +1445,7 @@
             this.lkStreet.Properties.ValidateOnEnterKey = true;
             this.lkStreet.Properties.ValueMember = "Id";
             this.lkStreet.Properties.View = this.lkStreetView;
-            this.lkStreet.Size = new System.Drawing.Size(264, 24);
+            this.lkStreet.Size = new System.Drawing.Size(226, 20);
             this.lkStreet.StyleController = this.layoutControl1;
             this.lkStreet.TabIndex = 17;
             this.lkStreet.Tag = "StreetId";
@@ -1481,7 +1492,8 @@
             // lkCalendarAge
             // 
             this.lkCalendarAge.EnterMoveNextControl = true;
-            this.lkCalendarAge.Location = new System.Drawing.Point(148, 98);
+            this.lkCalendarAge.Location = new System.Drawing.Point(127, 80);
+            this.lkCalendarAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lkCalendarAge.Name = "lkCalendarAge";
             this.lkCalendarAge.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
@@ -1496,7 +1508,7 @@
             this.lkCalendarAge.Properties.PopupSizeable = false;
             this.lkCalendarAge.Properties.ValidateOnEnterKey = true;
             this.lkCalendarAge.Properties.ValueMember = "CalendarAgeId";
-            this.lkCalendarAge.Size = new System.Drawing.Size(554, 24);
+            this.lkCalendarAge.Size = new System.Drawing.Size(475, 20);
             this.lkCalendarAge.StyleController = this.layoutControl1;
             this.lkCalendarAge.TabIndex = 4;
             this.lkCalendarAge.Tag = "CalendarAgeId";
@@ -1508,8 +1520,7 @@
             // lkGender
             // 
             this.lkGender.EnterMoveNextControl = true;
-            this.lkGender.Location = new System.Drawing.Point(272, 98);
-            this.lkGender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lkGender.Location = new System.Drawing.Point(235, 85);
             this.lkGender.Name = "lkGender";
             this.lkGender.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lkGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1524,7 +1535,7 @@
             this.lkGender.Properties.PopupSizeable = false;
             this.lkGender.Properties.ShowHeader = false;
             this.lkGender.Properties.ValidateOnEnterKey = true;
-            this.lkGender.Size = new System.Drawing.Size(350, 24);
+            this.lkGender.Size = new System.Drawing.Size(299, 20);
             this.lkGender.StyleController = this.layoutControl1;
             this.lkGender.TabIndex = 5;
             this.lkGender.Tag = "Gender";
@@ -1536,7 +1547,8 @@
             // lkFamilyStatus
             // 
             this.lkFamilyStatus.EnterMoveNextControl = true;
-            this.lkFamilyStatus.Location = new System.Drawing.Point(1278, 40);
+            this.lkFamilyStatus.Location = new System.Drawing.Point(1104, 38);
+            this.lkFamilyStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lkFamilyStatus.Name = "lkFamilyStatus";
             this.lkFamilyStatus.Properties.AutoHeight = false;
             this.lkFamilyStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1548,7 +1560,7 @@
             this.lkFamilyStatus.Properties.NullText = "ANNE - BABA DURUMU";
             this.lkFamilyStatus.Properties.NullValuePrompt = "ANNE - BABA DURUMU";
             this.lkFamilyStatus.Properties.NullValuePromptShowForEmptyValue = true;
-            this.lkFamilyStatus.Size = new System.Drawing.Size(331, 27);
+            this.lkFamilyStatus.Size = new System.Drawing.Size(283, 21);
             this.lkFamilyStatus.StyleController = this.layoutControl1;
             this.lkFamilyStatus.TabIndex = 22;
             this.lkFamilyStatus.Tag = "FamilyStatus";
@@ -1560,7 +1572,8 @@
             // lkBlood
             // 
             this.lkBlood.EnterMoveNextControl = true;
-            this.lkBlood.Location = new System.Drawing.Point(272, 129);
+            this.lkBlood.Location = new System.Drawing.Point(235, 110);
+            this.lkBlood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lkBlood.Name = "lkBlood";
             this.lkBlood.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.lkBlood.Properties.Appearance.Options.UseBackColor = true;
@@ -1574,7 +1587,7 @@
             this.lkBlood.Properties.NullText = "ÖZLÜK DURUMU";
             this.lkBlood.Properties.NullValuePrompt = "ÖZLÜK DURUMU";
             this.lkBlood.Properties.NullValuePromptShowForEmptyValue = true;
-            this.lkBlood.Size = new System.Drawing.Size(554, 27);
+            this.lkBlood.Size = new System.Drawing.Size(474, 21);
             this.lkBlood.StyleController = this.layoutControl1;
             this.lkBlood.TabIndex = 7;
             this.lkBlood.Tag = "Blood";
@@ -1587,8 +1600,8 @@
             // 
             this.liCalendarAge.Control = this.lkCalendarAge;
             this.liCalendarAge.Location = new System.Drawing.Point(134, 58);
-            this.liCalendarAge.MaxSize = new System.Drawing.Size(558, 28);
-            this.liCalendarAge.MinSize = new System.Drawing.Size(558, 28);
+            this.liCalendarAge.MaxSize = new System.Drawing.Size(478, 23);
+            this.liCalendarAge.MinSize = new System.Drawing.Size(478, 23);
             this.liCalendarAge.Name = "liCalendarAge";
             this.liCalendarAge.Size = new System.Drawing.Size(682, 28);
             this.liCalendarAge.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -1607,7 +1620,7 @@
             this.rootControlGroup.Location = new System.Drawing.Point(0, 0);
             this.rootControlGroup.Name = "Root";
             this.rootControlGroup.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.rootControlGroup.Size = new System.Drawing.Size(1623, 866);
+            this.rootControlGroup.Size = new System.Drawing.Size(1401, 724);
             this.rootControlGroup.TextVisible = false;
             // 
             // tpAddress
@@ -1633,10 +1646,10 @@
             this.liAddressTitle,
             this.lblAddressTitle,
             this.emptySpaceItem4});
-            this.tpAddress.Location = new System.Drawing.Point(840, 0);
+            this.tpAddress.Location = new System.Drawing.Point(723, 0);
             this.tpAddress.Name = "tpAddress";
             this.tpAddress.OptionsItemText.TextToControlDistance = 4;
-            this.tpAddress.Size = new System.Drawing.Size(424, 474);
+            this.tpAddress.Size = new System.Drawing.Size(367, 391);
             this.tpAddress.Text = "Adres ve Telefon Bilgileri";
             // 
             // liProvince
@@ -1646,11 +1659,11 @@
             this.liProvince.AppearanceItemCaption.Options.UseTextOptions = true;
             this.liProvince.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liProvince.Control = this.lkProvince;
-            this.liProvince.Location = new System.Drawing.Point(132, 28);
-            this.liProvince.MaxSize = new System.Drawing.Size(268, 28);
-            this.liProvince.MinSize = new System.Drawing.Size(268, 28);
+            this.liProvince.Location = new System.Drawing.Point(113, 23);
+            this.liProvince.MaxSize = new System.Drawing.Size(230, 23);
+            this.liProvince.MinSize = new System.Drawing.Size(230, 23);
             this.liProvince.Name = "liProvince";
-            this.liProvince.Size = new System.Drawing.Size(268, 28);
+            this.liProvince.Size = new System.Drawing.Size(230, 23);
             this.liProvince.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liProvince.Text = "Şehir:";
             this.liProvince.TextSize = new System.Drawing.Size(0, 0);
@@ -1663,11 +1676,11 @@
             this.liTown.AppearanceItemCaption.Options.UseTextOptions = true;
             this.liTown.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liTown.Control = this.lkTown;
-            this.liTown.Location = new System.Drawing.Point(132, 56);
-            this.liTown.MaxSize = new System.Drawing.Size(268, 28);
-            this.liTown.MinSize = new System.Drawing.Size(268, 28);
+            this.liTown.Location = new System.Drawing.Point(113, 46);
+            this.liTown.MaxSize = new System.Drawing.Size(230, 23);
+            this.liTown.MinSize = new System.Drawing.Size(230, 23);
             this.liTown.Name = "liTown";
-            this.liTown.Size = new System.Drawing.Size(268, 28);
+            this.liTown.Size = new System.Drawing.Size(230, 23);
             this.liTown.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liTown.Text = "İlçe:";
             this.liTown.TextSize = new System.Drawing.Size(0, 0);
@@ -1680,11 +1693,11 @@
             this.liNeighborhood.AppearanceItemCaption.Options.UseTextOptions = true;
             this.liNeighborhood.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liNeighborhood.Control = this.lkNeighborhood;
-            this.liNeighborhood.Location = new System.Drawing.Point(132, 84);
-            this.liNeighborhood.MaxSize = new System.Drawing.Size(268, 28);
-            this.liNeighborhood.MinSize = new System.Drawing.Size(268, 28);
+            this.liNeighborhood.Location = new System.Drawing.Point(113, 69);
+            this.liNeighborhood.MaxSize = new System.Drawing.Size(230, 23);
+            this.liNeighborhood.MinSize = new System.Drawing.Size(230, 23);
             this.liNeighborhood.Name = "liNeighborhood";
-            this.liNeighborhood.Size = new System.Drawing.Size(268, 28);
+            this.liNeighborhood.Size = new System.Drawing.Size(230, 23);
             this.liNeighborhood.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liNeighborhood.Text = "Semt:";
             this.liNeighborhood.TextSize = new System.Drawing.Size(0, 0);
@@ -1697,11 +1710,11 @@
             this.liStreet.AppearanceItemCaption.Options.UseTextOptions = true;
             this.liStreet.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liStreet.Control = this.lkStreet;
-            this.liStreet.Location = new System.Drawing.Point(132, 112);
-            this.liStreet.MaxSize = new System.Drawing.Size(268, 28);
-            this.liStreet.MinSize = new System.Drawing.Size(268, 28);
+            this.liStreet.Location = new System.Drawing.Point(113, 92);
+            this.liStreet.MaxSize = new System.Drawing.Size(230, 23);
+            this.liStreet.MinSize = new System.Drawing.Size(230, 23);
             this.liStreet.Name = "liStreet";
-            this.liStreet.Size = new System.Drawing.Size(268, 28);
+            this.liStreet.Size = new System.Drawing.Size(230, 23);
             this.liStreet.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liStreet.Text = "Mahalle:";
             this.liStreet.TextSize = new System.Drawing.Size(0, 0);
@@ -1715,11 +1728,11 @@
             this.liAddressLine.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liAddressLine.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.liAddressLine.Control = this.txtAddressLine;
-            this.liAddressLine.Location = new System.Drawing.Point(132, 140);
-            this.liAddressLine.MaxSize = new System.Drawing.Size(268, 158);
-            this.liAddressLine.MinSize = new System.Drawing.Size(268, 158);
+            this.liAddressLine.Location = new System.Drawing.Point(113, 115);
+            this.liAddressLine.MaxSize = new System.Drawing.Size(230, 128);
+            this.liAddressLine.MinSize = new System.Drawing.Size(230, 128);
             this.liAddressLine.Name = "liAddressLine";
-            this.liAddressLine.Size = new System.Drawing.Size(268, 158);
+            this.liAddressLine.Size = new System.Drawing.Size(230, 128);
             this.liAddressLine.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liAddressLine.Text = "Adres:";
             this.liAddressLine.TextSize = new System.Drawing.Size(0, 0);
@@ -1732,11 +1745,11 @@
             this.liPhone1.AppearanceItemCaption.Options.UseTextOptions = true;
             this.liPhone1.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liPhone1.Control = this.txtPhone1;
-            this.liPhone1.Location = new System.Drawing.Point(132, 298);
-            this.liPhone1.MaxSize = new System.Drawing.Size(268, 28);
-            this.liPhone1.MinSize = new System.Drawing.Size(268, 28);
+            this.liPhone1.Location = new System.Drawing.Point(113, 243);
+            this.liPhone1.MaxSize = new System.Drawing.Size(230, 23);
+            this.liPhone1.MinSize = new System.Drawing.Size(230, 23);
             this.liPhone1.Name = "liPhone1";
-            this.liPhone1.Size = new System.Drawing.Size(268, 28);
+            this.liPhone1.Size = new System.Drawing.Size(230, 23);
             this.liPhone1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liPhone1.Text = "Tel (1):";
             this.liPhone1.TextSize = new System.Drawing.Size(0, 0);
@@ -1749,11 +1762,11 @@
             this.liPhone2.AppearanceItemCaption.Options.UseTextOptions = true;
             this.liPhone2.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liPhone2.Control = this.txtPhone2;
-            this.liPhone2.Location = new System.Drawing.Point(132, 326);
-            this.liPhone2.MaxSize = new System.Drawing.Size(268, 28);
-            this.liPhone2.MinSize = new System.Drawing.Size(268, 28);
+            this.liPhone2.Location = new System.Drawing.Point(113, 266);
+            this.liPhone2.MaxSize = new System.Drawing.Size(230, 23);
+            this.liPhone2.MinSize = new System.Drawing.Size(230, 23);
             this.liPhone2.Name = "liPhone2";
-            this.liPhone2.Size = new System.Drawing.Size(268, 28);
+            this.liPhone2.Size = new System.Drawing.Size(230, 23);
             this.liPhone2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liPhone2.Text = "Tel (2):";
             this.liPhone2.TextSize = new System.Drawing.Size(0, 0);
@@ -1766,14 +1779,14 @@
             this.lblProvince.AppearanceItemCaption.Options.UseFont = true;
             this.lblProvince.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblProvince.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblProvince.Location = new System.Drawing.Point(0, 28);
-            this.lblProvince.MaxSize = new System.Drawing.Size(132, 28);
-            this.lblProvince.MinSize = new System.Drawing.Size(132, 28);
+            this.lblProvince.Location = new System.Drawing.Point(0, 23);
+            this.lblProvince.MaxSize = new System.Drawing.Size(113, 23);
+            this.lblProvince.MinSize = new System.Drawing.Size(113, 23);
             this.lblProvince.Name = "lblProvince";
-            this.lblProvince.Size = new System.Drawing.Size(132, 28);
+            this.lblProvince.Size = new System.Drawing.Size(113, 23);
             this.lblProvince.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblProvince.Text = "İl:";
-            this.lblProvince.TextSize = new System.Drawing.Size(96, 18);
+            this.lblProvince.TextSize = new System.Drawing.Size(82, 14);
             // 
             // lblTown
             // 
@@ -1782,14 +1795,14 @@
             this.lblTown.AppearanceItemCaption.Options.UseFont = true;
             this.lblTown.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblTown.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTown.Location = new System.Drawing.Point(0, 56);
-            this.lblTown.MaxSize = new System.Drawing.Size(132, 28);
-            this.lblTown.MinSize = new System.Drawing.Size(132, 28);
+            this.lblTown.Location = new System.Drawing.Point(0, 46);
+            this.lblTown.MaxSize = new System.Drawing.Size(113, 23);
+            this.lblTown.MinSize = new System.Drawing.Size(113, 23);
             this.lblTown.Name = "lblTown";
-            this.lblTown.Size = new System.Drawing.Size(132, 28);
+            this.lblTown.Size = new System.Drawing.Size(113, 23);
             this.lblTown.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblTown.Text = "İlçe:";
-            this.lblTown.TextSize = new System.Drawing.Size(96, 18);
+            this.lblTown.TextSize = new System.Drawing.Size(82, 14);
             // 
             // lblNeighborhood
             // 
@@ -1798,14 +1811,14 @@
             this.lblNeighborhood.AppearanceItemCaption.Options.UseFont = true;
             this.lblNeighborhood.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblNeighborhood.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblNeighborhood.Location = new System.Drawing.Point(0, 84);
-            this.lblNeighborhood.MaxSize = new System.Drawing.Size(132, 28);
-            this.lblNeighborhood.MinSize = new System.Drawing.Size(132, 28);
+            this.lblNeighborhood.Location = new System.Drawing.Point(0, 69);
+            this.lblNeighborhood.MaxSize = new System.Drawing.Size(113, 23);
+            this.lblNeighborhood.MinSize = new System.Drawing.Size(113, 23);
             this.lblNeighborhood.Name = "lblNeighborhood";
-            this.lblNeighborhood.Size = new System.Drawing.Size(132, 28);
+            this.lblNeighborhood.Size = new System.Drawing.Size(113, 23);
             this.lblNeighborhood.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblNeighborhood.Text = "Semt/Köy:";
-            this.lblNeighborhood.TextSize = new System.Drawing.Size(96, 18);
+            this.lblNeighborhood.TextSize = new System.Drawing.Size(82, 14);
             // 
             // lblStreet
             // 
@@ -1814,14 +1827,14 @@
             this.lblStreet.AppearanceItemCaption.Options.UseFont = true;
             this.lblStreet.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblStreet.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblStreet.Location = new System.Drawing.Point(0, 112);
-            this.lblStreet.MaxSize = new System.Drawing.Size(132, 28);
-            this.lblStreet.MinSize = new System.Drawing.Size(132, 28);
+            this.lblStreet.Location = new System.Drawing.Point(0, 92);
+            this.lblStreet.MaxSize = new System.Drawing.Size(113, 23);
+            this.lblStreet.MinSize = new System.Drawing.Size(113, 23);
             this.lblStreet.Name = "lblStreet";
-            this.lblStreet.Size = new System.Drawing.Size(132, 28);
+            this.lblStreet.Size = new System.Drawing.Size(113, 23);
             this.lblStreet.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblStreet.Text = "Mahalle:";
-            this.lblStreet.TextSize = new System.Drawing.Size(96, 18);
+            this.lblStreet.TextSize = new System.Drawing.Size(82, 14);
             // 
             // lblPhone1
             // 
@@ -1830,14 +1843,14 @@
             this.lblPhone1.AppearanceItemCaption.Options.UseFont = true;
             this.lblPhone1.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblPhone1.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblPhone1.Location = new System.Drawing.Point(0, 298);
-            this.lblPhone1.MaxSize = new System.Drawing.Size(132, 28);
-            this.lblPhone1.MinSize = new System.Drawing.Size(132, 28);
+            this.lblPhone1.Location = new System.Drawing.Point(0, 243);
+            this.lblPhone1.MaxSize = new System.Drawing.Size(113, 23);
+            this.lblPhone1.MinSize = new System.Drawing.Size(113, 23);
             this.lblPhone1.Name = "lblPhone1";
-            this.lblPhone1.Size = new System.Drawing.Size(132, 28);
+            this.lblPhone1.Size = new System.Drawing.Size(113, 23);
             this.lblPhone1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblPhone1.Text = "Tel (1):";
-            this.lblPhone1.TextSize = new System.Drawing.Size(96, 18);
+            this.lblPhone1.TextSize = new System.Drawing.Size(82, 14);
             // 
             // lblPhone2
             // 
@@ -1846,14 +1859,14 @@
             this.lblPhone2.AppearanceItemCaption.Options.UseFont = true;
             this.lblPhone2.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblPhone2.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblPhone2.Location = new System.Drawing.Point(0, 326);
-            this.lblPhone2.MaxSize = new System.Drawing.Size(132, 28);
-            this.lblPhone2.MinSize = new System.Drawing.Size(132, 28);
+            this.lblPhone2.Location = new System.Drawing.Point(0, 266);
+            this.lblPhone2.MaxSize = new System.Drawing.Size(113, 23);
+            this.lblPhone2.MinSize = new System.Drawing.Size(113, 23);
             this.lblPhone2.Name = "lblPhone2";
-            this.lblPhone2.Size = new System.Drawing.Size(132, 28);
+            this.lblPhone2.Size = new System.Drawing.Size(113, 23);
             this.lblPhone2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblPhone2.Text = "Tel (2):";
-            this.lblPhone2.TextSize = new System.Drawing.Size(96, 18);
+            this.lblPhone2.TextSize = new System.Drawing.Size(82, 14);
             // 
             // lblAddressLine
             // 
@@ -1863,23 +1876,23 @@
             this.lblAddressLine.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblAddressLine.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblAddressLine.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
-            this.lblAddressLine.Location = new System.Drawing.Point(0, 140);
-            this.lblAddressLine.MaxSize = new System.Drawing.Size(132, 158);
-            this.lblAddressLine.MinSize = new System.Drawing.Size(132, 158);
+            this.lblAddressLine.Location = new System.Drawing.Point(0, 115);
+            this.lblAddressLine.MaxSize = new System.Drawing.Size(113, 128);
+            this.lblAddressLine.MinSize = new System.Drawing.Size(113, 128);
             this.lblAddressLine.Name = "lblAddressLine";
-            this.lblAddressLine.Size = new System.Drawing.Size(132, 158);
+            this.lblAddressLine.Size = new System.Drawing.Size(113, 128);
             this.lblAddressLine.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblAddressLine.Text = "Adres Tarifi:";
-            this.lblAddressLine.TextSize = new System.Drawing.Size(96, 18);
+            this.lblAddressLine.TextSize = new System.Drawing.Size(82, 14);
             // 
             // liGsm
             // 
             this.liGsm.Control = this.txtGsm;
-            this.liGsm.Location = new System.Drawing.Point(132, 354);
-            this.liGsm.MaxSize = new System.Drawing.Size(268, 28);
-            this.liGsm.MinSize = new System.Drawing.Size(268, 28);
+            this.liGsm.Location = new System.Drawing.Point(113, 289);
+            this.liGsm.MaxSize = new System.Drawing.Size(230, 23);
+            this.liGsm.MinSize = new System.Drawing.Size(230, 23);
             this.liGsm.Name = "liGsm";
-            this.liGsm.Size = new System.Drawing.Size(268, 28);
+            this.liGsm.Size = new System.Drawing.Size(230, 23);
             this.liGsm.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liGsm.TextSize = new System.Drawing.Size(0, 0);
             this.liGsm.TextVisible = false;
@@ -1891,23 +1904,23 @@
             this.lblGsm.AppearanceItemCaption.Options.UseFont = true;
             this.lblGsm.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblGsm.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblGsm.Location = new System.Drawing.Point(0, 354);
-            this.lblGsm.MaxSize = new System.Drawing.Size(132, 28);
-            this.lblGsm.MinSize = new System.Drawing.Size(132, 28);
+            this.lblGsm.Location = new System.Drawing.Point(0, 289);
+            this.lblGsm.MaxSize = new System.Drawing.Size(113, 23);
+            this.lblGsm.MinSize = new System.Drawing.Size(113, 23);
             this.lblGsm.Name = "lblGsm";
-            this.lblGsm.Size = new System.Drawing.Size(132, 28);
+            this.lblGsm.Size = new System.Drawing.Size(113, 23);
             this.lblGsm.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblGsm.Text = "Gsm:";
-            this.lblGsm.TextSize = new System.Drawing.Size(96, 18);
+            this.lblGsm.TextSize = new System.Drawing.Size(82, 14);
             // 
             // liAddressTitle
             // 
             this.liAddressTitle.Control = this.lkAddressTitle;
-            this.liAddressTitle.Location = new System.Drawing.Point(132, 0);
-            this.liAddressTitle.MaxSize = new System.Drawing.Size(268, 28);
-            this.liAddressTitle.MinSize = new System.Drawing.Size(268, 28);
+            this.liAddressTitle.Location = new System.Drawing.Point(113, 0);
+            this.liAddressTitle.MaxSize = new System.Drawing.Size(230, 23);
+            this.liAddressTitle.MinSize = new System.Drawing.Size(230, 23);
             this.liAddressTitle.Name = "liAddressTitle";
-            this.liAddressTitle.Size = new System.Drawing.Size(268, 28);
+            this.liAddressTitle.Size = new System.Drawing.Size(230, 23);
             this.liAddressTitle.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liAddressTitle.TextSize = new System.Drawing.Size(0, 0);
             this.liAddressTitle.TextVisible = false;
@@ -1920,21 +1933,21 @@
             this.lblAddressTitle.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblAddressTitle.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblAddressTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblAddressTitle.MaxSize = new System.Drawing.Size(132, 28);
-            this.lblAddressTitle.MinSize = new System.Drawing.Size(132, 28);
+            this.lblAddressTitle.MaxSize = new System.Drawing.Size(113, 23);
+            this.lblAddressTitle.MinSize = new System.Drawing.Size(113, 23);
             this.lblAddressTitle.Name = "lblAddressTitle";
-            this.lblAddressTitle.Size = new System.Drawing.Size(132, 28);
+            this.lblAddressTitle.Size = new System.Drawing.Size(113, 23);
             this.lblAddressTitle.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblAddressTitle.Text = "Adres Başığı:";
-            this.lblAddressTitle.TextSize = new System.Drawing.Size(96, 18);
+            this.lblAddressTitle.TextSize = new System.Drawing.Size(82, 14);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 382);
-            this.emptySpaceItem4.MinSize = new System.Drawing.Size(104, 24);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 312);
+            this.emptySpaceItem4.MinSize = new System.Drawing.Size(89, 20);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(400, 42);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(343, 31);
             this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -1946,19 +1959,19 @@
             this.emptySpaceItem2,
             this.tabbedControlGroup1,
             this.tabbedControlGroup2});
-            this.tpFamily.Location = new System.Drawing.Point(1264, 0);
+            this.tpFamily.Location = new System.Drawing.Point(1090, 0);
             this.tpFamily.Name = "tpFamily";
-            this.tpFamily.Size = new System.Drawing.Size(359, 866);
+            this.tpFamily.Size = new System.Drawing.Size(311, 724);
             this.tpFamily.Text = "Anne ve Baba Bilgileri";
             // 
             // liFamilyStatus
             // 
             this.liFamilyStatus.Control = this.lkFamilyStatus;
             this.liFamilyStatus.Location = new System.Drawing.Point(0, 0);
-            this.liFamilyStatus.MaxSize = new System.Drawing.Size(0, 31);
-            this.liFamilyStatus.MinSize = new System.Drawing.Size(54, 31);
+            this.liFamilyStatus.MaxSize = new System.Drawing.Size(0, 25);
+            this.liFamilyStatus.MinSize = new System.Drawing.Size(46, 25);
             this.liFamilyStatus.Name = "liFamilyStatus";
-            this.liFamilyStatus.Size = new System.Drawing.Size(335, 31);
+            this.liFamilyStatus.Size = new System.Drawing.Size(287, 25);
             this.liFamilyStatus.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liFamilyStatus.TextSize = new System.Drawing.Size(0, 0);
             this.liFamilyStatus.TextVisible = false;
@@ -1966,21 +1979,21 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 31);
-            this.emptySpaceItem2.MaxSize = new System.Drawing.Size(335, 10);
-            this.emptySpaceItem2.MinSize = new System.Drawing.Size(335, 10);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 25);
+            this.emptySpaceItem2.MaxSize = new System.Drawing.Size(287, 8);
+            this.emptySpaceItem2.MinSize = new System.Drawing.Size(287, 8);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(335, 10);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(287, 8);
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 41);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 33);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup1;
             this.tabbedControlGroup1.SelectedTabPageIndex = 0;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(335, 392);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(287, 325);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1});
             // 
@@ -1991,28 +2004,28 @@
             this.liFather});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(309, 339);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(262, 275);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // liFather
             // 
             this.liFather.Control = this.vGridFather;
             this.liFather.Location = new System.Drawing.Point(0, 0);
-            this.liFather.MaxSize = new System.Drawing.Size(0, 339);
-            this.liFather.MinSize = new System.Drawing.Size(104, 339);
+            this.liFather.MaxSize = new System.Drawing.Size(0, 275);
+            this.liFather.MinSize = new System.Drawing.Size(89, 275);
             this.liFather.Name = "liFather";
-            this.liFather.Size = new System.Drawing.Size(309, 339);
+            this.liFather.Size = new System.Drawing.Size(262, 275);
             this.liFather.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liFather.TextSize = new System.Drawing.Size(0, 0);
             this.liFather.TextVisible = false;
             // 
             // tabbedControlGroup2
             // 
-            this.tabbedControlGroup2.Location = new System.Drawing.Point(0, 433);
+            this.tabbedControlGroup2.Location = new System.Drawing.Point(0, 358);
             this.tabbedControlGroup2.Name = "tabbedControlGroup2";
             this.tabbedControlGroup2.SelectedTabPage = this.layoutControlGroup2;
             this.tabbedControlGroup2.SelectedTabPageIndex = 0;
-            this.tabbedControlGroup2.Size = new System.Drawing.Size(335, 383);
+            this.tabbedControlGroup2.Size = new System.Drawing.Size(287, 318);
             this.tabbedControlGroup2.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             // 
@@ -2023,7 +2036,7 @@
             this.liMother});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(309, 330);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(262, 268);
             this.layoutControlGroup2.Text = "Danışanın Annesi";
             this.layoutControlGroup2.TextVisible = false;
             // 
@@ -2031,10 +2044,10 @@
             // 
             this.liMother.Control = this.vGridMother;
             this.liMother.Location = new System.Drawing.Point(0, 0);
-            this.liMother.MaxSize = new System.Drawing.Size(0, 330);
-            this.liMother.MinSize = new System.Drawing.Size(104, 330);
+            this.liMother.MaxSize = new System.Drawing.Size(0, 268);
+            this.liMother.MinSize = new System.Drawing.Size(89, 268);
             this.liMother.Name = "liMother";
-            this.liMother.Size = new System.Drawing.Size(309, 330);
+            this.liMother.Size = new System.Drawing.Size(262, 268);
             this.liMother.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liMother.TextSize = new System.Drawing.Size(0, 0);
             this.liMother.TextVisible = false;
@@ -2076,7 +2089,7 @@
             this.tpClientInfo.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.CustomSize;
             this.tpClientInfo.OptionsItemText.TextToControlDistance = 4;
             this.tpClientInfo.ShowInCustomizationForm = false;
-            this.tpClientInfo.Size = new System.Drawing.Size(840, 474);
+            this.tpClientInfo.Size = new System.Drawing.Size(723, 391);
             this.tpClientInfo.Text = "Danışan Bilgileri";
             // 
             // liGender
@@ -2087,10 +2100,10 @@
             this.liGender.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liGender.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.liGender.Control = this.lkGender;
-            this.liGender.Location = new System.Drawing.Point(258, 58);
-            this.liGender.MinSize = new System.Drawing.Size(50, 25);
+            this.liGender.Location = new System.Drawing.Point(221, 47);
+            this.liGender.MinSize = new System.Drawing.Size(43, 20);
             this.liGender.Name = "liGender";
-            this.liGender.Size = new System.Drawing.Size(354, 31);
+            this.liGender.Size = new System.Drawing.Size(303, 25);
             this.liGender.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liGender.Text = "Cinsiyet:";
             this.liGender.TextSize = new System.Drawing.Size(0, 0);
@@ -2104,11 +2117,11 @@
             this.liFullName.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liFullName.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.liFullName.Control = this.txtFullName;
-            this.liFullName.Location = new System.Drawing.Point(258, 120);
-            this.liFullName.MaxSize = new System.Drawing.Size(558, 31);
-            this.liFullName.MinSize = new System.Drawing.Size(558, 31);
+            this.liFullName.Location = new System.Drawing.Point(221, 97);
+            this.liFullName.MaxSize = new System.Drawing.Size(478, 25);
+            this.liFullName.MinSize = new System.Drawing.Size(478, 25);
             this.liFullName.Name = "liFullName";
-            this.liFullName.Size = new System.Drawing.Size(558, 31);
+            this.liFullName.Size = new System.Drawing.Size(478, 25);
             this.liFullName.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liFullName.Tag = "FullName";
             this.liFullName.Text = "Adı Soyad:";
@@ -2123,11 +2136,11 @@
             this.liMiddleName.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liMiddleName.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.liMiddleName.Control = this.txtMiddleName;
-            this.liMiddleName.Location = new System.Drawing.Point(258, 151);
-            this.liMiddleName.MaxSize = new System.Drawing.Size(558, 30);
-            this.liMiddleName.MinSize = new System.Drawing.Size(558, 30);
+            this.liMiddleName.Location = new System.Drawing.Point(221, 122);
+            this.liMiddleName.MaxSize = new System.Drawing.Size(478, 24);
+            this.liMiddleName.MinSize = new System.Drawing.Size(478, 24);
             this.liMiddleName.Name = "liMiddleName";
-            this.liMiddleName.Size = new System.Drawing.Size(558, 30);
+            this.liMiddleName.Size = new System.Drawing.Size(478, 24);
             this.liMiddleName.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liMiddleName.Text = "İkinci Ad:";
             this.liMiddleName.TextSize = new System.Drawing.Size(0, 0);
@@ -2141,11 +2154,11 @@
             this.liPediatrician.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liPediatrician.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.liPediatrician.Control = this.txtPediatrician;
-            this.liPediatrician.Location = new System.Drawing.Point(258, 181);
-            this.liPediatrician.MaxSize = new System.Drawing.Size(558, 30);
-            this.liPediatrician.MinSize = new System.Drawing.Size(558, 30);
+            this.liPediatrician.Location = new System.Drawing.Point(221, 146);
+            this.liPediatrician.MaxSize = new System.Drawing.Size(478, 24);
+            this.liPediatrician.MinSize = new System.Drawing.Size(478, 24);
             this.liPediatrician.Name = "liPediatrician";
-            this.liPediatrician.Size = new System.Drawing.Size(558, 30);
+            this.liPediatrician.Size = new System.Drawing.Size(478, 24);
             this.liPediatrician.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liPediatrician.Tag = "Pediatrician";
             this.liPediatrician.Text = "Çocuk Doktoru:";
@@ -2160,11 +2173,11 @@
             this.liIdCard.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liIdCard.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.liIdCard.Control = this.txtIdCard;
-            this.liIdCard.Location = new System.Drawing.Point(258, 211);
-            this.liIdCard.MaxSize = new System.Drawing.Size(558, 28);
-            this.liIdCard.MinSize = new System.Drawing.Size(558, 28);
+            this.liIdCard.Location = new System.Drawing.Point(221, 170);
+            this.liIdCard.MaxSize = new System.Drawing.Size(478, 23);
+            this.liIdCard.MinSize = new System.Drawing.Size(478, 23);
             this.liIdCard.Name = "liIdCard";
-            this.liIdCard.Size = new System.Drawing.Size(558, 28);
+            this.liIdCard.Size = new System.Drawing.Size(478, 23);
             this.liIdCard.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liIdCard.Text = "T.C Kimlik No:";
             this.liIdCard.TextSize = new System.Drawing.Size(0, 0);
@@ -2178,11 +2191,11 @@
             this.liReference.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liReference.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.liReference.Control = this.txtReference;
-            this.liReference.Location = new System.Drawing.Point(258, 239);
-            this.liReference.MaxSize = new System.Drawing.Size(558, 51);
-            this.liReference.MinSize = new System.Drawing.Size(558, 51);
+            this.liReference.Location = new System.Drawing.Point(221, 193);
+            this.liReference.MaxSize = new System.Drawing.Size(478, 41);
+            this.liReference.MinSize = new System.Drawing.Size(478, 41);
             this.liReference.Name = "liReference";
-            this.liReference.Size = new System.Drawing.Size(558, 51);
+            this.liReference.Size = new System.Drawing.Size(478, 41);
             this.liReference.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liReference.Tag = "Reference";
             this.liReference.Text = "Referans:";
@@ -2197,11 +2210,11 @@
             this.liNotes.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liNotes.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.liNotes.Control = this.txtNotes;
-            this.liNotes.Location = new System.Drawing.Point(258, 290);
-            this.liNotes.MaxSize = new System.Drawing.Size(558, 110);
-            this.liNotes.MinSize = new System.Drawing.Size(558, 110);
+            this.liNotes.Location = new System.Drawing.Point(221, 234);
+            this.liNotes.MaxSize = new System.Drawing.Size(478, 89);
+            this.liNotes.MinSize = new System.Drawing.Size(478, 89);
             this.liNotes.Name = "liNotes";
-            this.liNotes.Size = new System.Drawing.Size(558, 110);
+            this.liNotes.Size = new System.Drawing.Size(478, 89);
             this.liNotes.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liNotes.Text = "Notlar:";
             this.liNotes.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -2217,11 +2230,11 @@
             this.liCountOfChild.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liCountOfChild.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.liCountOfChild.Control = this.txtCountOfChild;
-            this.liCountOfChild.Location = new System.Drawing.Point(683, 58);
-            this.liCountOfChild.MaxSize = new System.Drawing.Size(133, 31);
-            this.liCountOfChild.MinSize = new System.Drawing.Size(133, 31);
+            this.liCountOfChild.Location = new System.Drawing.Point(585, 47);
+            this.liCountOfChild.MaxSize = new System.Drawing.Size(114, 25);
+            this.liCountOfChild.MinSize = new System.Drawing.Size(114, 25);
             this.liCountOfChild.Name = "liCountOfChild";
-            this.liCountOfChild.Size = new System.Drawing.Size(133, 31);
+            this.liCountOfChild.Size = new System.Drawing.Size(114, 25);
             this.liCountOfChild.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liCountOfChild.Text = "Sıra:";
             this.liCountOfChild.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -2233,11 +2246,11 @@
             // 
             this.grpImage.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpImage.AppearanceGroup.Options.UseFont = true;
-            this.grpImage.Location = new System.Drawing.Point(0, 93);
+            this.grpImage.Location = new System.Drawing.Point(0, 55);
             this.grpImage.Name = "grpImage";
             this.grpImage.OptionsItemText.TextToControlDistance = 4;
             this.grpImage.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.grpImage.Size = new System.Drawing.Size(134, 88);
+            this.grpImage.Size = new System.Drawing.Size(115, 91);
             this.grpImage.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.grpImage.Text = "Fotoğraf";
             // 
@@ -2251,7 +2264,7 @@
             this.grpFileNumber.Name = "grpFileNumber";
             this.grpFileNumber.OptionsItemText.TextToControlDistance = 4;
             this.grpFileNumber.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.grpFileNumber.Size = new System.Drawing.Size(134, 57);
+            this.grpFileNumber.Size = new System.Drawing.Size(115, 45);
             this.grpFileNumber.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.grpFileNumber.Text = "Dosya No";
             // 
@@ -2259,10 +2272,10 @@
             // 
             this.liFileNumber.Control = this.txtFileNumber;
             this.liFileNumber.Location = new System.Drawing.Point(0, 0);
-            this.liFileNumber.MaxSize = new System.Drawing.Size(132, 30);
-            this.liFileNumber.MinSize = new System.Drawing.Size(132, 30);
+            this.liFileNumber.MaxSize = new System.Drawing.Size(113, 24);
+            this.liFileNumber.MinSize = new System.Drawing.Size(113, 24);
             this.liFileNumber.Name = "liFileNumber";
-            this.liFileNumber.Size = new System.Drawing.Size(132, 30);
+            this.liFileNumber.Size = new System.Drawing.Size(113, 24);
             this.liFileNumber.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liFileNumber.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.liFileNumber.TextSize = new System.Drawing.Size(0, 0);
@@ -2272,10 +2285,10 @@
             // spaceItem2
             // 
             this.spaceItem2.AllowHotTrack = false;
-            this.spaceItem2.Location = new System.Drawing.Point(0, 181);
-            this.spaceItem2.MinSize = new System.Drawing.Size(104, 24);
+            this.spaceItem2.Location = new System.Drawing.Point(0, 146);
+            this.spaceItem2.MinSize = new System.Drawing.Size(89, 20);
             this.spaceItem2.Name = "spaceItem2";
-            this.spaceItem2.Size = new System.Drawing.Size(134, 219);
+            this.spaceItem2.Size = new System.Drawing.Size(115, 177);
             this.spaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.spaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -2286,13 +2299,13 @@
             this.lblGender.AppearanceItemCaption.Options.UseFont = true;
             this.lblGender.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblGender.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblGender.Location = new System.Drawing.Point(134, 58);
-            this.lblGender.MinSize = new System.Drawing.Size(54, 24);
+            this.lblGender.Location = new System.Drawing.Point(115, 47);
+            this.lblGender.MinSize = new System.Drawing.Size(46, 20);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(124, 31);
+            this.lblGender.Size = new System.Drawing.Size(106, 25);
             this.lblGender.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblGender.Text = "Cinsiyet:";
-            this.lblGender.TextSize = new System.Drawing.Size(50, 20);
+            this.lblGender.TextSize = new System.Drawing.Size(43, 16);
             // 
             // lblCountOfChild
             // 
@@ -2301,14 +2314,14 @@
             this.lblCountOfChild.AppearanceItemCaption.Options.UseFont = true;
             this.lblCountOfChild.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblCountOfChild.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblCountOfChild.Location = new System.Drawing.Point(612, 58);
-            this.lblCountOfChild.MaxSize = new System.Drawing.Size(71, 31);
-            this.lblCountOfChild.MinSize = new System.Drawing.Size(71, 31);
+            this.lblCountOfChild.Location = new System.Drawing.Point(524, 47);
+            this.lblCountOfChild.MaxSize = new System.Drawing.Size(61, 25);
+            this.lblCountOfChild.MinSize = new System.Drawing.Size(61, 25);
             this.lblCountOfChild.Name = "lblCountOfChild";
-            this.lblCountOfChild.Size = new System.Drawing.Size(71, 31);
+            this.lblCountOfChild.Size = new System.Drawing.Size(61, 25);
             this.lblCountOfChild.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblCountOfChild.Text = "Sıra:";
-            this.lblCountOfChild.TextSize = new System.Drawing.Size(50, 20);
+            this.lblCountOfChild.TextSize = new System.Drawing.Size(43, 16);
             // 
             // lblMiddleName
             // 
@@ -2318,14 +2331,14 @@
             this.lblMiddleName.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblMiddleName.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblMiddleName.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblMiddleName.Location = new System.Drawing.Point(134, 146);
-            this.lblMiddleName.MaxSize = new System.Drawing.Size(124, 35);
-            this.lblMiddleName.MinSize = new System.Drawing.Size(124, 35);
+            this.lblMiddleName.Location = new System.Drawing.Point(115, 118);
+            this.lblMiddleName.MaxSize = new System.Drawing.Size(106, 28);
+            this.lblMiddleName.MinSize = new System.Drawing.Size(106, 28);
             this.lblMiddleName.Name = "lblMiddleName";
-            this.lblMiddleName.Size = new System.Drawing.Size(124, 35);
+            this.lblMiddleName.Size = new System.Drawing.Size(106, 28);
             this.lblMiddleName.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblMiddleName.Text = "İkinci Ad:";
-            this.lblMiddleName.TextSize = new System.Drawing.Size(50, 20);
+            this.lblMiddleName.TextSize = new System.Drawing.Size(43, 16);
             // 
             // lblPediatrician
             // 
@@ -2334,14 +2347,14 @@
             this.lblPediatrician.AppearanceItemCaption.Options.UseFont = true;
             this.lblPediatrician.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblPediatrician.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblPediatrician.Location = new System.Drawing.Point(134, 181);
-            this.lblPediatrician.MaxSize = new System.Drawing.Size(124, 30);
-            this.lblPediatrician.MinSize = new System.Drawing.Size(124, 30);
+            this.lblPediatrician.Location = new System.Drawing.Point(115, 146);
+            this.lblPediatrician.MaxSize = new System.Drawing.Size(106, 24);
+            this.lblPediatrician.MinSize = new System.Drawing.Size(106, 24);
             this.lblPediatrician.Name = "lblPediatrician";
-            this.lblPediatrician.Size = new System.Drawing.Size(124, 30);
+            this.lblPediatrician.Size = new System.Drawing.Size(106, 24);
             this.lblPediatrician.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblPediatrician.Text = "Çocuk Doktoru:";
-            this.lblPediatrician.TextSize = new System.Drawing.Size(50, 20);
+            this.lblPediatrician.TextSize = new System.Drawing.Size(43, 16);
             // 
             // lblIdCard
             // 
@@ -2350,14 +2363,14 @@
             this.lblIdCard.AppearanceItemCaption.Options.UseFont = true;
             this.lblIdCard.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblIdCard.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblIdCard.Location = new System.Drawing.Point(134, 211);
-            this.lblIdCard.MaxSize = new System.Drawing.Size(124, 28);
-            this.lblIdCard.MinSize = new System.Drawing.Size(124, 28);
+            this.lblIdCard.Location = new System.Drawing.Point(115, 170);
+            this.lblIdCard.MaxSize = new System.Drawing.Size(106, 23);
+            this.lblIdCard.MinSize = new System.Drawing.Size(106, 23);
             this.lblIdCard.Name = "lblIdCard";
-            this.lblIdCard.Size = new System.Drawing.Size(124, 28);
+            this.lblIdCard.Size = new System.Drawing.Size(106, 23);
             this.lblIdCard.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblIdCard.Text = "T.C Kimlik No:";
-            this.lblIdCard.TextSize = new System.Drawing.Size(50, 20);
+            this.lblIdCard.TextSize = new System.Drawing.Size(43, 16);
             // 
             // lblReferance
             // 
@@ -2367,14 +2380,14 @@
             this.lblReferance.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblReferance.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblReferance.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
-            this.lblReferance.Location = new System.Drawing.Point(134, 239);
-            this.lblReferance.MaxSize = new System.Drawing.Size(124, 51);
-            this.lblReferance.MinSize = new System.Drawing.Size(124, 51);
+            this.lblReferance.Location = new System.Drawing.Point(115, 193);
+            this.lblReferance.MaxSize = new System.Drawing.Size(106, 41);
+            this.lblReferance.MinSize = new System.Drawing.Size(106, 41);
             this.lblReferance.Name = "lblReferance";
-            this.lblReferance.Size = new System.Drawing.Size(124, 51);
+            this.lblReferance.Size = new System.Drawing.Size(106, 41);
             this.lblReferance.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblReferance.Text = "Referans:";
-            this.lblReferance.TextSize = new System.Drawing.Size(50, 20);
+            this.lblReferance.TextSize = new System.Drawing.Size(43, 16);
             // 
             // lblNotes
             // 
@@ -2384,14 +2397,14 @@
             this.lblNotes.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblNotes.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblNotes.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
-            this.lblNotes.Location = new System.Drawing.Point(134, 290);
-            this.lblNotes.MaxSize = new System.Drawing.Size(124, 110);
-            this.lblNotes.MinSize = new System.Drawing.Size(124, 110);
+            this.lblNotes.Location = new System.Drawing.Point(115, 234);
+            this.lblNotes.MaxSize = new System.Drawing.Size(106, 89);
+            this.lblNotes.MinSize = new System.Drawing.Size(106, 89);
             this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(124, 110);
+            this.lblNotes.Size = new System.Drawing.Size(106, 89);
             this.lblNotes.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblNotes.Text = "Açıklamalar:";
-            this.lblNotes.TextSize = new System.Drawing.Size(50, 20);
+            this.lblNotes.TextSize = new System.Drawing.Size(43, 16);
             // 
             // lblBlood
             // 
@@ -2400,22 +2413,22 @@
             this.lblBlood.AppearanceItemCaption.Options.UseFont = true;
             this.lblBlood.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblBlood.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblBlood.Location = new System.Drawing.Point(134, 89);
-            this.lblBlood.MinSize = new System.Drawing.Size(54, 24);
+            this.lblBlood.Location = new System.Drawing.Point(115, 72);
+            this.lblBlood.MinSize = new System.Drawing.Size(46, 20);
             this.lblBlood.Name = "lblBlood";
-            this.lblBlood.Size = new System.Drawing.Size(124, 31);
+            this.lblBlood.Size = new System.Drawing.Size(106, 25);
             this.lblBlood.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblBlood.Text = "Özlük Durumu:";
-            this.lblBlood.TextSize = new System.Drawing.Size(50, 20);
+            this.lblBlood.TextSize = new System.Drawing.Size(43, 16);
             // 
             // liBlood
             // 
             this.liBlood.Control = this.lkBlood;
-            this.liBlood.Location = new System.Drawing.Point(258, 89);
-            this.liBlood.MaxSize = new System.Drawing.Size(558, 31);
-            this.liBlood.MinSize = new System.Drawing.Size(558, 31);
+            this.liBlood.Location = new System.Drawing.Point(221, 72);
+            this.liBlood.MaxSize = new System.Drawing.Size(478, 25);
+            this.liBlood.MinSize = new System.Drawing.Size(478, 25);
             this.liBlood.Name = "liBlood";
-            this.liBlood.Size = new System.Drawing.Size(558, 31);
+            this.liBlood.Size = new System.Drawing.Size(478, 25);
             this.liBlood.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liBlood.TextSize = new System.Drawing.Size(0, 0);
             this.liBlood.TextVisible = false;
@@ -2423,9 +2436,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 57);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 45);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(134, 36);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(115, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lblFullName
@@ -2436,14 +2449,14 @@
             this.lblFullName.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblFullName.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblFullName.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblFullName.Location = new System.Drawing.Point(134, 120);
-            this.lblFullName.MaxSize = new System.Drawing.Size(124, 26);
-            this.lblFullName.MinSize = new System.Drawing.Size(124, 26);
+            this.lblFullName.Location = new System.Drawing.Point(115, 97);
+            this.lblFullName.MaxSize = new System.Drawing.Size(106, 21);
+            this.lblFullName.MinSize = new System.Drawing.Size(106, 21);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(124, 26);
+            this.lblFullName.Size = new System.Drawing.Size(106, 21);
             this.lblFullName.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblFullName.Text = "Adı Soyadı:";
-            this.lblFullName.TextSize = new System.Drawing.Size(50, 20);
+            this.lblFullName.TextSize = new System.Drawing.Size(43, 16);
             // 
             // lblBirthDate
             // 
@@ -2452,14 +2465,14 @@
             this.lblBirthDate.AppearanceItemCaption.Options.UseFont = true;
             this.lblBirthDate.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblBirthDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblBirthDate.Location = new System.Drawing.Point(134, 0);
-            this.lblBirthDate.MaxSize = new System.Drawing.Size(124, 30);
-            this.lblBirthDate.MinSize = new System.Drawing.Size(124, 30);
+            this.lblBirthDate.Location = new System.Drawing.Point(115, 0);
+            this.lblBirthDate.MaxSize = new System.Drawing.Size(106, 24);
+            this.lblBirthDate.MinSize = new System.Drawing.Size(106, 24);
             this.lblBirthDate.Name = "lblBirthDate";
-            this.lblBirthDate.Size = new System.Drawing.Size(124, 30);
+            this.lblBirthDate.Size = new System.Drawing.Size(106, 24);
             this.lblBirthDate.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblBirthDate.Text = "Doğum Tarihi:";
-            this.lblBirthDate.TextSize = new System.Drawing.Size(50, 20);
+            this.lblBirthDate.TextSize = new System.Drawing.Size(43, 16);
             // 
             // liContactDate
             // 
@@ -2468,11 +2481,11 @@
             this.liContactDate.AppearanceItemCaption.Options.UseTextOptions = true;
             this.liContactDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liContactDate.Control = this.deFirstContact;
-            this.liContactDate.Location = new System.Drawing.Point(258, 30);
-            this.liContactDate.MaxSize = new System.Drawing.Size(558, 28);
-            this.liContactDate.MinSize = new System.Drawing.Size(558, 28);
+            this.liContactDate.Location = new System.Drawing.Point(221, 24);
+            this.liContactDate.MaxSize = new System.Drawing.Size(478, 23);
+            this.liContactDate.MinSize = new System.Drawing.Size(478, 23);
             this.liContactDate.Name = "liContactDate";
-            this.liContactDate.Size = new System.Drawing.Size(558, 28);
+            this.liContactDate.Size = new System.Drawing.Size(478, 23);
             this.liContactDate.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liContactDate.Text = "Başvuru Tarihi:";
             this.liContactDate.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -2487,11 +2500,11 @@
             this.liBirthDate.AppearanceItemCaption.Options.UseTextOptions = true;
             this.liBirthDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.liBirthDate.Control = this.deBirthDate;
-            this.liBirthDate.Location = new System.Drawing.Point(258, 0);
-            this.liBirthDate.MaxSize = new System.Drawing.Size(558, 30);
-            this.liBirthDate.MinSize = new System.Drawing.Size(558, 30);
+            this.liBirthDate.Location = new System.Drawing.Point(221, 0);
+            this.liBirthDate.MaxSize = new System.Drawing.Size(478, 24);
+            this.liBirthDate.MinSize = new System.Drawing.Size(478, 24);
             this.liBirthDate.Name = "liBirthDate";
-            this.liBirthDate.Size = new System.Drawing.Size(558, 30);
+            this.liBirthDate.Size = new System.Drawing.Size(478, 24);
             this.liBirthDate.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.liBirthDate.Text = "Doğum Tarihi:";
             this.liBirthDate.TextSize = new System.Drawing.Size(0, 0);
@@ -2504,32 +2517,32 @@
             this.lblContactDate.AppearanceItemCaption.Options.UseFont = true;
             this.lblContactDate.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblContactDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblContactDate.Location = new System.Drawing.Point(134, 30);
-            this.lblContactDate.MaxSize = new System.Drawing.Size(124, 28);
-            this.lblContactDate.MinSize = new System.Drawing.Size(124, 28);
+            this.lblContactDate.Location = new System.Drawing.Point(115, 24);
+            this.lblContactDate.MaxSize = new System.Drawing.Size(106, 23);
+            this.lblContactDate.MinSize = new System.Drawing.Size(106, 23);
             this.lblContactDate.Name = "lblContactDate";
-            this.lblContactDate.Size = new System.Drawing.Size(124, 28);
+            this.lblContactDate.Size = new System.Drawing.Size(106, 23);
             this.lblContactDate.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblContactDate.Text = "Başvuru Tarihi:";
-            this.lblContactDate.TextSize = new System.Drawing.Size(50, 20);
+            this.lblContactDate.TextSize = new System.Drawing.Size(43, 16);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 400);
-            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(816, 24);
-            this.emptySpaceItem3.MinSize = new System.Drawing.Size(816, 24);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 323);
+            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(699, 20);
+            this.emptySpaceItem3.MinSize = new System.Drawing.Size(699, 20);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(816, 24);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(699, 20);
             this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.ucClientTab1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 474);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 391);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1264, 392);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1090, 333);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -2546,12 +2559,12 @@
             // 
             // ClientModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ClientModule";
-            this.Size = new System.Drawing.Size(1623, 760);
+            this.Size = new System.Drawing.Size(1391, 618);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).EndInit();
@@ -2654,7 +2667,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.styleController1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2759,7 +2771,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup tpFamily;
         private DevExpress.XtraLayout.LayoutControlItem liFamilyStatus;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
         private DevExpress.XtraEditors.LookUpEdit lkCalendarAge;
         private DevExpress.XtraLayout.LayoutControlItem liCalendarAge;
         private DevExpress.XtraGrid.Columns.GridColumn colTownName;

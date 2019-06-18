@@ -1,4 +1,4 @@
-﻿Generation complete. Execution time: 00:00:15.5559587
+﻿Generation complete. Execution time: 00:00:13.9610302
 You can view current documentation @ http://nettiers.net
 Generated solution can be found here: 
-file:\\\E:\GitHub\CozumEgitimDanismanlik\EkipSln\Libraries\Ekip.Framework.sln
+file:\\\D:\GitHub\CozumEgitimDanismanlik\EkipSln\Libraries\Ekip.Framework.sln

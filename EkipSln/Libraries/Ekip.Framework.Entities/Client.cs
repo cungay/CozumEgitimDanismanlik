@@ -54,8 +54,8 @@ namespace Ekip.Framework.Entities
     [Description("Özlük Durumu")]
     public enum Blood
     {
-        //[Description("Belirtilmedi")]
-        //None = 0,
+        [Description("Belirtilmedi")]
+        None = 0,
         [Description("Öz")]
         Self = 1,
         [Description("Evlatlık")]

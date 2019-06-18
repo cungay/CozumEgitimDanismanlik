@@ -19301,9 +19301,8 @@
             </summary>
             <value>This type is varchar.</value>
             <remarks>
-            This property can not be set to null. 
+            This property can be set to null. 
             </remarks>
-            <exception cref="T:System.ArgumentNullException">If you attempt to set to null.</exception>
         </member>
         <member name="P:Ekip.Framework.Entities.ClientBase.MiddleName">
             <summary>
