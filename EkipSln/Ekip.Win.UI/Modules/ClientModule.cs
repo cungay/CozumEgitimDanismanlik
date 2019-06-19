@@ -256,8 +256,16 @@ namespace Ekip.Win.UI.Modules
             editor.BeginInvoke(new System.Action(() =>
             {
                 var culture = System.Globalization.CultureInfo.CreateSpecificCulture("tr-TR");
-                editor.EditValue = Convert.ToString(editor.EditValue).ToUpper(culture);
-                editor.Select(editor.Text.Length + 1, 0);
+                if (editor.EditValue != null && !string.IsNullOrWhiteSpace(editor.EditValue.ToString()))
+                {
+                    editor.EditValue = Convert.ToString(editor.EditValue).ToUpper(culture);
+                    editor.Select(editor.Text.Length + 1, 0);
+                    //Client client = (editor.DataBindings[0].DataSource as Client);
+                    //if (client != null)
+                    //{
+                    //    client.AcceptChanges();
+                    //}
+                }
             }));
 
         }
@@ -577,7 +585,7 @@ namespace Ekip.Win.UI.Modules
 
             if (confirm == DialogResult.None || confirm == DialogResult.No)
             {
-                var fileNumber = fileNumbers.ElementAt(oldPageIndex);
+                var fileNumber = fileNumbers.ElementAt(pageIndex);
                 var client = clientService.GetByFileNumber(fileNumber);
                 if (client != null)
                 {
