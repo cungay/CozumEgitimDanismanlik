@@ -42,8 +42,8 @@ namespace Ekip.Framework.Entities
     [Description("Cinsiyet")]
     public enum Gender
     {
-        //[Description("Belirtilmedi")]
-        //None = 0,
+        [Description("Belirtilmedi")]
+        None = 0,
         [Description("Erkek")]
         Male = 1,
         [Description("Kız")]

@@ -412,6 +412,7 @@ namespace Ekip.Win.UI.Modules
             lkCalendarAge.DataBind(client);
             lkGender.DataBind(client);
             lkBlood.DataBind(client);
+            txtCountOfChild.DataBind(client);
             txtFullName.DataBind(client);
             txtMiddleName.DataBind(client);
             txtPediatrician.DataBind(client);

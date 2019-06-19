@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Ekip.Framework.Core
+namespace Ekip.Framework.Core.Configuration
 {
     public sealed class ConfigManager
     {
