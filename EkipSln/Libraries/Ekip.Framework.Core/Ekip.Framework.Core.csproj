@@ -58,6 +58,8 @@
     <Compile Include="Caching\MemoryCacheManager.cs" />
     <Compile Include="Caching\NullCache.cs" />
     <Compile Include="Caching\PerRequestCacheManager.cs" />
+    <Compile Include="Caching\RedisCacheManager.cs" />
+    <Compile Include="Configuration\RedisConfigurationManager.cs" />
     <Compile Include="Extensions\ClientExtensions.cs" />
     <Compile Include="Extensions\ConvertionExtensions.cs" />
     <Compile Include="Extensions\DataReaderExtensions.cs" />
