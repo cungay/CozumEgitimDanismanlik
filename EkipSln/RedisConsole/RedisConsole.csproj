@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CB26AE8-FA5B-4770-80E2-8C7C234F27E6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RedisConsole</RootNamespace>
+    <AssemblyName>RedisConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ekip.Framework.Data.Model\Ekip.Framework.Data.Model.csproj">
+      <Project>{5D89D68F-1CFE-42B6-8914-F1C595C5F294}</Project>
+      <Name>Ekip.Framework.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Core\Ekip.Framework.Core.csproj">
+      <Project>{a60fc179-2520-4044-ae82-c087cfc372a5}</Project>
+      <Name>Ekip.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Data.SqlClient\Ekip.Framework.Data.SqlClient.csproj">
+      <Project>{35328e34-1c95-4aa1-9335-5d4ee2b51d4c}</Project>
+      <Name>Ekip.Framework.Data.SqlClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Data\Ekip.Framework.Data.csproj">
+      <Project>{b09295ae-9ca1-4b68-9ac0-2f1475e1d5f9}</Project>
+      <Name>Ekip.Framework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Entities\Ekip.Framework.Entities.csproj">
+      <Project>{1f8eaf95-7f11-4db2-9d70-c0c7862050bb}</Project>
+      <Name>Ekip.Framework.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\Ekip.Framework.Services\Ekip.Framework.Services.csproj">
+      <Project>{cdcccfdd-b532-475e-9b8b-374ec5082f1e}</Project>
+      <Name>Ekip.Framework.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
