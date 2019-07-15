@@ -464,7 +464,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(565, 324, 562, 500);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(529, 324, 562, 500);
             this.layoutControl1.OptionsFocus.AllowFocusControlOnActivatedTabPage = true;
             this.layoutControl1.OptionsFocus.AllowFocusControlOnLabelClick = true;
             this.layoutControl1.OptionsFocus.EnableAutoTabOrder = false;
